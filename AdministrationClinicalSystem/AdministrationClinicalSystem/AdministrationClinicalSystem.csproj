@@ -45,15 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ACSLogin.cs">
+    <Compile Include="br.com.acs.controller\ACSLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ACSLogin.Designer.cs">
+    <Compile Include="br.com.acs.controller\ACSLogin.Designer.cs">
       <DependentUpon>ACSLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ACSLogin.resx">
+    <EmbeddedResource Include="br.com.acs.controller\ACSLogin.resx">
       <DependentUpon>ACSLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -79,7 +79,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="br.com.acs.controller\" />
     <Folder Include="br.com.acs.dao\" />
     <Folder Include="br.com.acs.factory\" />
     <Folder Include="br.com.acs.model\" />
