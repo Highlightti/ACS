@@ -16,5 +16,10 @@ namespace AdministrationClinicalSystem
         {
             InitializeComponent();
         }
+
+        private void ACSLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
