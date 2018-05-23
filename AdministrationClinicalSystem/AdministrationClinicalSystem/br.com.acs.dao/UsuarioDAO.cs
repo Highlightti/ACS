@@ -52,6 +52,10 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         #region Métodos para operações no Banco de Dados
         
+        /// <summary>
+        /// Método responsável por cadastrar usuários no Banco de Dados.
+        /// </summary>
+        /// <param name="usuario"></param>
         public void cadastrarUsuario(Usuario usuario)
         {
             try
