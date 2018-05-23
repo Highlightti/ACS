@@ -71,6 +71,7 @@
     <Compile Include="br.com.acs.factory\ConexaoMySQL.cs" />
     <Compile Include="br.com.acs.model\Equipamento.cs" />
     <Compile Include="br.com.acs.model\ManutencaoEquipamento.cs" />
+    <Compile Include="br.com.acs.model\SystemExceptions.cs" />
     <Compile Include="br.com.acs.model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

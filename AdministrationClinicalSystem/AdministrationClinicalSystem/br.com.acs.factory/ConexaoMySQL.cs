@@ -20,12 +20,12 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
             this.connection.Open();
         }
 
-        public MySqlConnection getConnection()
+        public MySqlConnection GetConnection()
         {
             return this.connection;
         }
 
-        public void close()
+        public void Close()
         {
             if (this.connection != null)
             {
@@ -40,13 +40,13 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
             }
         }
 
-        public void commit()
+        public void Commit()
         {
             transaction.Commit();
-            this.close();
+            this.Close();
         }
 
-        public void rollback()
+        public void Rollback()
         {
             if (this.connection != null)
             {
@@ -58,7 +58,7 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
                 {
                     //Logger.getLogger(ConexaoPostgreJDBC.class.getName()).log(Level.SEVERE, null, ex);
                 }finally{
-                    this.close();
+                    this.Close();
                 }
             }
         }

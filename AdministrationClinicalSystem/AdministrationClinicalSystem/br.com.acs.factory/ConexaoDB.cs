@@ -9,12 +9,12 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
 {
     interface ConexaoDB
     {
-        MySqlConnection getConnection();
+        MySqlConnection GetConnection();
         
-        void close();
+        void Close();
 
-        void commit();
+        void Commit();
 
-        void rollback();
+        void Rollback();
     }
 }
