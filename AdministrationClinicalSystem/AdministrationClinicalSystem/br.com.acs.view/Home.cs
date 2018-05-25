@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AdministrationClinicalSystem
+namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    public partial class ACSLogin : Form
+    public partial class Home : Form
     {
-        public ACSLogin()
+        public Home()
         {
             InitializeComponent();
-        }
-
-        private void ACSLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

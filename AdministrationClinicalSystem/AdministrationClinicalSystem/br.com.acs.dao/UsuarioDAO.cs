@@ -15,7 +15,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
     {
         #region Variáveis de Funcionamento
 
-        private ConexaoMySQL connection;
+        private static ConexaoMySQL connection;
         private static UsuarioDAO instance;
         private static MySqlCommand command;
 
@@ -44,7 +44,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         /// </summary>
         public UsuarioDAO()
         {
-            this.connection = new ConexaoMySQL();
+            connection = new ConexaoMySQL();
         }
 
         /// <summary>
@@ -399,7 +399,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         {
             try
             {
-
+                command = new MySqlCommand(INGRESSAR_USUARIO, connection.GetConnection());
             }
             catch
             {
@@ -413,6 +413,56 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         }
 
         #endregion
+
+
+        /*DAO
+         comando = select * from usuario;
+
+         MySqlAdapter Da = new MySqlAdapter();
+         Da.SelectCommand = comando;
+
+        DataTable Dt = new DataTable();
+
+        Da.Fill(Dt);
+
+        return Dt;
+         */
+
+        /*CONTROLLER
+         * 
+         * Classe dal = null;
+         * 
+         * 
+         public DataTable ExibirDadosDal()
+         {
+            try{
+                
+                DataTable dt = new DataTable();
+                dal = new ClasseDAL();
+
+                DataT = dal.ExibirDados();
+
+                return DataT;
+            }
+            catch(Exception erro)
+            {
+                throw erro;
+            }
+         }
+         */
+
+
+        /* View que estará chamando a controller
+         * 
+         * exibir dados
+         * 
+         * ClasseBLL bll = new ClasseBLL();
+         * 
+         * try{
+         *      dataGridView.DataSource = bll.ExibirDadosDal();
+         * }
+         * 
+         */
         
     }
 }

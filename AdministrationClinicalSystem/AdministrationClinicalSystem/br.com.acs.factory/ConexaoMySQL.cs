@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace AdministrationClinicalSystem.br.com.acs.factory
@@ -35,6 +36,7 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
                 }
                 catch (MySqlException ex)
                 {
+                    MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
                     //Logger.getLogger(ConexaoMySQL.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
@@ -56,8 +58,11 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
                 }
                 catch (MySqlException ex)
                 {
+                    MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
                     //Logger.getLogger(ConexaoPostgreJDBC.class.getName()).log(Level.SEVERE, null, ex);
-                }finally{
+                }
+                finally
+                {
                     this.Close();
                 }
             }
