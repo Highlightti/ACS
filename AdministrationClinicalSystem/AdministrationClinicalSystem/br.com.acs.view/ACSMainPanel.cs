@@ -88,7 +88,7 @@ namespace AdministrationClinicalSystem
         private void ACSLogin_Load(object sender, EventArgs e)
         {
             metroComboBox1.SelectedIndex = 1;
-            metroComboBox2.SelectedIndex = 6;
+            metroComboBox2.SelectedIndex = 5;
         }
 
         private void btnEquipamentos_Click(object sender, EventArgs e)
@@ -112,6 +112,11 @@ namespace AdministrationClinicalSystem
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void nomeUsuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
