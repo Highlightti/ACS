@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    public partial class Equipamentos : Form
+    public partial class ACSEquipamentos : Form
     {
-        public Equipamentos()
+        public ACSEquipamentos()
         {
             InitializeComponent();
         }

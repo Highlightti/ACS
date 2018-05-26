@@ -1,6 +1,6 @@
 ﻿namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    partial class Home
+    partial class ACSEquipamentos
     {
         /// <summary>
         /// Required designer variable.
@@ -34,14 +34,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 159);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(325, 203);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 42);
+            this.label1.Size = new System.Drawing.Size(332, 55);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Home";
+            this.label1.Text = "Equipamentos";
             // 
-            // Home
+            // Equipamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -49,8 +49,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Home";
-            this.Text = "Home";
+            this.Name = "Equipamentos";
+            this.Text = "Equipamentos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();

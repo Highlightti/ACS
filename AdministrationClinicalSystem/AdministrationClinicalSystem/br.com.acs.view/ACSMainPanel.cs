@@ -21,7 +21,7 @@ namespace AdministrationClinicalSystem
             this.StyleManager = metroStyleManagerMain;
 
             //Iniciando a aplicação com a página Home.
-            Home home = new Home();
+            ACSHome home = new ACSHome();
             NavigationScreen(home, contentPanel);
 
             //Caso o evento tenha ocorrido, termine toda a aplicação.
@@ -93,16 +93,25 @@ namespace AdministrationClinicalSystem
 
         private void btnEquipamentos_Click(object sender, EventArgs e)
         {
-            Equipamentos equipamentos = new Equipamentos();
+            ACSEquipamentos equipamentos = new ACSEquipamentos();
             NavigationScreen(equipamentos, contentPanel);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
+            ACSHome home = new ACSHome();
             NavigationScreen(home, contentPanel);
         }
 
-        
+        private void btnMeusDados_Click(object sender, EventArgs e)
+        {
+            ACSUsuario usuario = new ACSUsuario();
+            NavigationScreen(usuario, contentPanel);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
