@@ -43,7 +43,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";//
 
-        private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM USUARIO WHERE usuario = ? AND senha = MD5('?')";
+        private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM USUARIO WHERE usuario = ? AND senha = ?";
         
         #endregion
 
