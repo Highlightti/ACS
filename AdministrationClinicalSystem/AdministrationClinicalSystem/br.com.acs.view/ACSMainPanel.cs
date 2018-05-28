@@ -1,4 +1,5 @@
-﻿using AdministrationClinicalSystem.br.com.acs.view;
+﻿using AdministrationClinicalSystem.br.com.acs.controller;
+using AdministrationClinicalSystem.br.com.acs.view;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,8 +88,16 @@ namespace AdministrationClinicalSystem
 
         private void ACSLogin_Load(object sender, EventArgs e)
         {
-            metroComboBox1.SelectedIndex = 1;
-            metroComboBox2.SelectedIndex = 6;
+            //metroComboBox1.SelectedIndex = 1;
+            //metroComboBox2.SelectedIndex = 6;
+
+            this.StyleManager = metroStyleManagerMain;
+            metroStyleManagerMain.Theme = MetroFramework.MetroThemeStyle.Light;
+            metroStyleManagerMain.Style = MetroFramework.MetroColorStyle.Green;
+
+            UsuarioController uController = UsuarioController.getInstance();
+            nomeUsuario.Text = uController.usuarioSessao;
+
         }
 
         private void btnEquipamentos_Click(object sender, EventArgs e)
@@ -111,7 +120,11 @@ namespace AdministrationClinicalSystem
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MetroFramework.MetroMessageBox.Show(this, "Yes/No", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
         }
     }
 }

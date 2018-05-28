@@ -9,7 +9,7 @@ namespace AdministrationClinicalSystem.br.com.acs.model
     class Usuario
     {
         public int idUsuario { get; set; }
-        public string tipoUsuario { get; set; }
+        public string usuario { get; set; }
         public string nome { get; set; }
         public string email { get; set; }
         public string emailGrupo { get; set; }
@@ -22,10 +22,10 @@ namespace AdministrationClinicalSystem.br.com.acs.model
 
         public Usuario() { }
 
-        public Usuario(int idUsuario, string tipoUsuario, string nome, string email, string emailGrupo, string senha, int statusUsuario, DateTime dataModificacao, int usuarioModificacao, string usuarioException)
+        public Usuario(int idUsuario, string usuario, string nome, string email, string emailGrupo, string senha, int statusUsuario, DateTime dataModificacao, int usuarioModificacao, string usuarioException)
         {
             this.idUsuario = idUsuario;
-            this.tipoUsuario = tipoUsuario;
+            this.usuario = usuario;
             this.nome = nome;
             this.email = email;
             this.emailGrupo = emailGrupo;

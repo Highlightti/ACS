@@ -311,9 +311,9 @@
             this.nomeUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nomeUsuario.Location = new System.Drawing.Point(613, 27);
             this.nomeUsuario.Name = "nomeUsuario";
-            this.nomeUsuario.Size = new System.Drawing.Size(87, 19);
+            this.nomeUsuario.Size = new System.Drawing.Size(46, 19);
             this.nomeUsuario.TabIndex = 19;
-            this.nomeUsuario.Text = "Lenno Sousa";
+            this.nomeUsuario.Text = "Nome";
             this.nomeUsuario.UseCustomBackColor = true;
             this.nomeUsuario.UseCustomForeColor = true;
             this.nomeUsuario.UseStyleColors = true;

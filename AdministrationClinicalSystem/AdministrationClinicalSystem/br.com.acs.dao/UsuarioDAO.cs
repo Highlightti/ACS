@@ -11,7 +11,7 @@ using System.Data;
 
 namespace AdministrationClinicalSystem.br.com.acs.dao
 {
-    class UsuarioDAO
+    class UsuarioDAO : MetroFramework.Forms.MetroForm
     {
         #region Variáveis de Funcionamento
 
@@ -24,16 +24,26 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         #region Querys para operações no Banco de Dados
 
         private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, email_grupo, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, ?, ?, 1, SYSDATE(), ?)";//
+
         private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email, email_grupo FROM usuario WHERE id_usuario = ?";//
+
         private static string CONSULTAR_TODOS_USUARIOS_ATIVOS = "SELECT usuario, nome, email, email_grupo, status_usuario FROM usuario WHERE status_usuario = 1";//
+
         private static string CONSULTAR_TODOS_USUARIOS_INATIVOS = "SELECT usuario, nome, email, email_grupo, status_usuario FROM usuario WHERE status_usuario = 0";//
+
         private static string ATUALIZAR_USUARIO = "UPDATE usuario SET nome = ? WHERE id_usuario = ?";//
+
         private static string VERIFICAR_SENHA_USUARIO = "SELECT email FROM usuario WHERE senha = CRYPT(?, senha) AND id_usuario = ?";//
+
         private static string ATUALIZAR_SENHA_USUARIO = "UPDATE usuario SET senha = ? WHERE id_usuario = ?";//
+
         private static string VERIFICAR_EMAIL_USUARIO = "SELECT email FROM usuario WHERE email = ?";//
+
         private static string ATUALIZAR_DADOS_USUARIO = "UPDATE usuario SET email = ?, email_grupo = ? WHERE id_usuario = ?";//
+
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";//
-        private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM usuario WHERE email = ? AND senha = ?";
+
+        private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM USUARIO WHERE usuario = ? AND senha = MD5('?')";
         
         #endregion
 
@@ -61,8 +71,14 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         #endregion
 
+        #region Instâncias (Singleton Pattern).
+
+        SystemExceptionsMessages systemExMessages = SystemExceptionsMessages.getInstance();
+
+        #endregion
+
         #region Métodos para operações no Banco de Dados
-        
+
         /// <summary>
         /// Método responsável por cadastrar usuários no Banco de Dados.
         /// </summary>
@@ -72,7 +88,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
             try
             {
                 command = new MySqlCommand(CADASTRAR_USUARIO, connection.GetConnection());
-                command.Parameters.Add("@usuario", MySqlDbType.VarChar, 25).Value = usuario.tipoUsuario;
+                command.Parameters.Add("@usuario", MySqlDbType.VarChar, 25).Value = usuario.usuario;
                 command.Parameters.Add("@nome", MySqlDbType.VarChar, 70).Value = usuario.nome;
                 command.Parameters.Add("@email", MySqlDbType.VarChar, 70).Value = usuario.email;
                 command.Parameters.Add("@email_grupo", MySqlDbType.VarChar, 70).Value = usuario.emailGrupo;
@@ -147,7 +163,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 while (myDataReader.Read())
                 {
                     Usuario usuario = new Usuario();
-                    usuario.tipoUsuario = myDataReader.GetString("usuario");
+                    usuario.usuario = myDataReader.GetString("usuario");
                     usuario.nome = myDataReader.GetString("nome");
                     usuario.email = myDataReader.GetString("email");
                     usuario.emailGrupo = myDataReader.GetString("email_grupo");
@@ -189,7 +205,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 while (myDataReader.Read())
                 {
                     Usuario usuario = new Usuario();
-                    usuario.tipoUsuario = myDataReader.GetString("usuario");
+                    usuario.usuario = myDataReader.GetString("usuario");
                     usuario.nome = myDataReader.GetString("nome");
                     usuario.email = myDataReader.GetString("email");
                     usuario.emailGrupo = myDataReader.GetString("email_grupo");
@@ -400,16 +416,40 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
             try
             {
                 command = new MySqlCommand(INGRESSAR_USUARIO, connection.GetConnection());
-            }
-            catch
-            {
+                command.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = usuario.usuario;
+                command.Parameters.Add("@senha", MySqlDbType.VarChar).Value = usuario.senha;
+                command.CommandType = CommandType.Text;
 
+                MySqlDataReader myDataReader;
+                myDataReader = command.ExecuteReader();
+
+                if (myDataReader.Read())
+                {
+                    usuario.idUsuario = myDataReader.GetInt32(0);
+                    usuario.nome = myDataReader.GetString(1);
+                }
+                else
+                {
+                    usuario.nome = null;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Dados incorretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                usuario.usuarioException = systemExMessages.ERRO_CONEXÃO_BANCO;
             }
             finally
             {
-
+                command.Parameters.Clear();
+                connection.Close();
             }
+
             return usuario;
+        }
+
+        public void LogoutUsuario(Usuario usuario)
+        {
+            
         }
 
         #endregion

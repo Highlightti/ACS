@@ -82,12 +82,14 @@
       <DependentUpon>ACSMainPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.dao\EquipamentoDAO.cs" />
-    <Compile Include="br.com.acs.dao\UsuarioDAO.cs" />
+    <Compile Include="br.com.acs.dao\UsuarioDAO.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="br.com.acs.factory\ConexaoDB.cs" />
     <Compile Include="br.com.acs.factory\ConexaoMySQL.cs" />
     <Compile Include="br.com.acs.model\Equipamento.cs" />
     <Compile Include="br.com.acs.model\ManutencaoEquipamento.cs" />
-    <Compile Include="br.com.acs.model\SystemExceptions.cs" />
+    <Compile Include="br.com.acs.model\SystemExceptionsMessages.cs" />
     <Compile Include="br.com.acs.model\Usuario.cs" />
     <Compile Include="br.com.acs.view\ACSEquipamentos.cs">
       <SubType>Form</SubType>
