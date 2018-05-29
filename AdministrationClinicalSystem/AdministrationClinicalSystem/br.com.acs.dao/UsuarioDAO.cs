@@ -421,16 +421,24 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 command.CommandType = CommandType.Text;
 
                 MySqlDataReader myDataReader;
-                myDataReader = command.ExecuteReader();
+                try
+                {
+                    myDataReader = command.ExecuteReader();
 
-                if (myDataReader.Read())
-                {
-                    usuario.idUsuario = myDataReader.GetInt32(0);
-                    usuario.nome = myDataReader.GetString(1);
+
+                    if (myDataReader.Read())
+                    {
+                        usuario.idUsuario = myDataReader.GetInt32(0);
+                        usuario.nome = myDataReader.GetString(1);
+                    }
+                    else
+                    {
+                        usuario.nome = null;
+                    }
                 }
-                else
+                catch
                 {
-                    usuario.nome = null;
+                    Application.Restart();
                 }
             }
             catch (MySqlException ex)
