@@ -23,7 +23,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         #region Querys para operações no Banco de Dados
 
-        private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, email_grupo, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, ?, ?, 1, SYSDATE(), ?)";//
+        private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, email_grupo, senh a, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, ?, ?, 1, SYSDATE(), ?)";//
 
         private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email, email_grupo FROM usuario WHERE id_usuario = ?";//
 
@@ -43,7 +43,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";//
 
-        private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM USUARIO WHERE usuario = ? AND senha = ?";
+        private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM usuario WHERE usuario = ? AND senha = ?";
         
         #endregion
 
