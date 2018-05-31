@@ -14,6 +14,7 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
         private MySqlConnection connection = null;
         private MySqlTransaction transaction;
 
+
         #region Instâncias (Singleton Pattern).
 
         SystemExceptionsMessages systemExMessages = SystemExceptionsMessages.getInstance();
@@ -22,6 +23,7 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
 
         public ConexaoMySQL()
         {
+
             try
             {
                 string urlConexaoMySQL = "server=highlightti.com.br; port=3306; userid=highligh_devhml; database=highligh_ACS_Homologacao; password=bdhml@18";
@@ -31,9 +33,8 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
             }
             catch
             {
-                //deixar a menssagem explicita para desenvolvedores;
-                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Dados incorretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Restart();
             }
             
         }
