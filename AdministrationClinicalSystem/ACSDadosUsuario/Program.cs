@@ -1,11 +1,10 @@
-﻿using AdministrationClinicalSystem.br.com.acs.view;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AdministrationClinicalSystem
+namespace ACSDadosUsuario
 {
     static class Program
     {
@@ -17,7 +16,7 @@ namespace AdministrationClinicalSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ACSMainPanel());
+            Application.Run(new Form1());
         }
     }
 }

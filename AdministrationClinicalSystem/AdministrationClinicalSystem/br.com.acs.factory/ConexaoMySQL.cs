@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdministrationClinicalSystem.br.com.acs.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,17 +9,33 @@ using MySql.Data.MySqlClient;
 
 namespace AdministrationClinicalSystem.br.com.acs.factory
 {
-    class ConexaoMySQL : ConexaoDB
+    class ConexaoMySQL : MetroFramework.Forms.MetroForm, ConexaoDB
     {
         private MySqlConnection connection = null;
         private MySqlTransaction transaction;
 
+        #region Instâncias (Singleton Pattern).
+
+        SystemExceptionsMessages systemExMessages = SystemExceptionsMessages.getInstance();
+
+        #endregion
+
         public ConexaoMySQL()
         {
-            string urlConexaoMySQL = "server=highlightti.com.br; port=3306; userid=highligh_devhml; database=highligh_ACS_Homologacao; password=bdhml@18";
+            try
+            {
+                string urlConexaoMySQL = "server=highlightti.com.br; port=3306; userid=highligh_devhml; database=highligh_ACS_Homologacao; password=bdhml@18";
 
-            this.connection = new MySqlConnection(urlConexaoMySQL);
-            this.connection.Open();
+                this.connection = new MySqlConnection(urlConexaoMySQL);
+                this.connection.Open();
+            }
+            catch
+            {
+                //deixar a menssagem explicita para desenvolvedores;
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+            
         }
 
         public MySqlConnection GetConnection()

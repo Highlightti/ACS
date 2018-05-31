@@ -23,9 +23,11 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         #region Querys para operações no Banco de Dados
 
-        private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, email_grupo, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, ?, ?, 1, SYSDATE(), ?)";//
+        private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, MD5('?'), ?, SYSDATE(), ?)";//
 
-        private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email, email_grupo FROM usuario WHERE id_usuario = ?";//
+
+
+        private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email, FROM usuario WHERE id_usuario = ?";//
 
         private static string CONSULTAR_TODOS_USUARIOS_ATIVOS = "SELECT usuario, nome, email, email_grupo, status_usuario FROM usuario WHERE status_usuario = 1";//
 
@@ -43,8 +45,11 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";//
 
-        private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM USUARIO WHERE usuario = ? AND senha = MD5('?')";
-        
+
+
+        private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM usuario WHERE usuario = ? AND senha = ?";
+        //AND status_usuario = 1
+
         #endregion
 
         #region Métodos de Funcionamento
@@ -91,8 +96,8 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 command.Parameters.Add("@usuario", MySqlDbType.VarChar, 25).Value = usuario.usuario;
                 command.Parameters.Add("@nome", MySqlDbType.VarChar, 70).Value = usuario.nome;
                 command.Parameters.Add("@email", MySqlDbType.VarChar, 70).Value = usuario.email;
-                command.Parameters.Add("@email_grupo", MySqlDbType.VarChar, 70).Value = usuario.emailGrupo;
                 command.Parameters.Add("@senha", MySqlDbType.VarChar, 25).Value = usuario.senha;
+                command.Parameters.Add("@status_usuario", MySqlDbType.Enum).Value = 1;
                 command.Parameters.Add("@usuario_modificacao", MySqlDbType.UInt32).Value = usuario.idUsuarioLogado;
                 command.ExecuteNonQuery();
 
@@ -129,7 +134,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
                 usuario.nome = myDataReader.GetString(0);
                 usuario.email = myDataReader.GetString(1);
-                usuario.emailGrupo = myDataReader.GetString("email_grupo");
+                //usuario.emailGrupo = myDataReader.GetString("email_grupo");
             }
             catch(MySqlException ex)
             {
@@ -166,7 +171,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                     usuario.usuario = myDataReader.GetString("usuario");
                     usuario.nome = myDataReader.GetString("nome");
                     usuario.email = myDataReader.GetString("email");
-                    usuario.emailGrupo = myDataReader.GetString("email_grupo");
+                    //usuario.emailGrupo = myDataReader.GetString("email_grupo");
                     usuario.statusUsuario = myDataReader.GetInt16("status_usuario");
 
                     usuarios.Add(usuario);
@@ -208,7 +213,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                     usuario.usuario = myDataReader.GetString("usuario");
                     usuario.nome = myDataReader.GetString("nome");
                     usuario.email = myDataReader.GetString("email");
-                    usuario.emailGrupo = myDataReader.GetString("email_grupo");
+                    //usuario.emailGrupo = myDataReader.GetString("email_grupo");
                     usuario.statusUsuario = myDataReader.GetInt16("status_usuario");
 
                     usuarios.Add(usuario);
@@ -360,7 +365,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
             {
                 command = new MySqlCommand(ATUALIZAR_DADOS_USUARIO, connection.GetConnection());
                 command.Parameters.Add("@email", MySqlDbType.VarChar, 70).Value = usuario.email;
-                command.Parameters.Add("@email_grupo", MySqlDbType.VarChar, 70).Value = usuario.emailGrupo;
+                //command.Parameters.Add("@email_grupo", MySqlDbType.VarChar, 70).Value = usuario.emailGrupo;
                 command.Parameters.Add("@id_usuario", MySqlDbType.UInt32).Value = usuario.idUsuario;
                 command.CommandType = CommandType.Text;
                 command.ExecuteNonQuery();
@@ -421,21 +426,29 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 command.CommandType = CommandType.Text;
 
                 MySqlDataReader myDataReader;
-                myDataReader = command.ExecuteReader();
+                try
+                {
+                    myDataReader = command.ExecuteReader();
 
-                if (myDataReader.Read())
-                {
-                    usuario.idUsuario = myDataReader.GetInt32(0);
-                    usuario.nome = myDataReader.GetString(1);
+                    if (myDataReader.Read())
+                    {
+                        usuario.idUsuario = myDataReader.GetInt32(0);
+                        usuario.nome = myDataReader.GetString(1);
+                    }
+                    else
+                    {
+                        usuario.nome = null;
+                    }
                 }
-                else
+                catch
                 {
-                    usuario.nome = null;
+                    Application.Restart();
                 }
+                
             }
             catch (MySqlException ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Dados incorretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 usuario.usuarioException = systemExMessages.ERRO_CONEXÃO_BANCO;
             }
             finally
@@ -446,6 +459,10 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
             return usuario;
         }
+
+
+
+
 
         public void LogoutUsuario(Usuario usuario)
         {

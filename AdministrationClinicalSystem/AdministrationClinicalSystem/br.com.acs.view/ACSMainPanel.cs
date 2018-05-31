@@ -63,6 +63,7 @@ namespace AdministrationClinicalSystem
             form.TopLevel = false;
             panel.Controls.Clear();
             panel.Controls.Add(form);
+            
             form.Show();
         }
 
@@ -114,8 +115,9 @@ namespace AdministrationClinicalSystem
 
         private void btnMeusDados_Click(object sender, EventArgs e)
         {
-            ACSUsuario usuario = new ACSUsuario();
-            NavigationScreen(usuario, contentPanel);
+            //ACSUsuario usuario = new ACSUsuario();
+            ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
+            NavigationScreen(dadosUsuario, contentPanel);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

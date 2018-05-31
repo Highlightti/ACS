@@ -317,7 +317,6 @@
             this.nomeUsuario.UseCustomBackColor = true;
             this.nomeUsuario.UseCustomForeColor = true;
             this.nomeUsuario.UseStyleColors = true;
-            this.nomeUsuario.Click += new System.EventHandler(this.nomeUsuario_Click);
             // 
             // Ola
             // 
