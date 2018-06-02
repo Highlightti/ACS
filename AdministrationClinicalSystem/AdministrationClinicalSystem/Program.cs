@@ -17,7 +17,7 @@ namespace AdministrationClinicalSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ACSMainPanel());
+            Application.Run(new ACSLogin());
         }
     }
 }

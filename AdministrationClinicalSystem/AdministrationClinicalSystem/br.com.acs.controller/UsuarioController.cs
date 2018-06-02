@@ -1,5 +1,6 @@
 ﻿using AdministrationClinicalSystem.br.com.acs.dao;
 using AdministrationClinicalSystem.br.com.acs.model;
+using AdministrationClinicalSystem.br.com.acs.view;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
         private static UsuarioController instance;
         public int idUsuarioSessao = 0;
         public string usuarioSessao = "";
+        public string tipoUsuarioLogado = "";
 
         #endregion
 
@@ -59,6 +61,8 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
                 {
                     idUsuarioSessao = usuario.idUsuario;
                     usuarioSessao = usuario.nome;
+                    //tipoUsuarioLogado = usuario.tipoUsuarioLogado;
+                    tipoUsuarioLogado = "Administrador";
                 }
                 else
                 {
@@ -84,9 +88,28 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
 
         }
 
-        public Usuario consultarUsuario(Usuario usuario)
+        public void ConsultarUsuario(string tipoUsuarioLogado)
         {
-            return usuario;
+            Usuario usuario = new Usuario();
+            usuario.idUsuario = idUsuarioSessao;
+
+            UsuarioDAO uDAO = UsuarioDAO.getInstance();
+            usuario = uDAO.ConsultarUsuario(usuario);
+
+            if (tipoUsuarioLogado.Equals("Administrador"))
+            {
+                ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
+                
+                dadosUsuarioAdministrador.CarregaDadosUsuarioAdministrador(usuario);
+            }
+            else
+            {
+                ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
+                //passar a foto
+                dadosUsuario.usuarioTextMy.Text = usuario.usuario;
+                dadosUsuario.nomeTextMy.Text = usuario.nome;
+                dadosUsuario.emailTextMy.Text = usuario.email;
+            }
         }
 
         public void atualizarUsuario(Usuario usuario)

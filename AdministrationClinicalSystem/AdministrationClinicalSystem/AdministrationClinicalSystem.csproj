@@ -75,6 +75,12 @@
     <Compile Include="br.com.acs.view\ACSDadosUsuario.Designer.cs">
       <DependentUpon>ACSDadosUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSDadosUsuarioAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSDadosUsuarioAdministrador.Designer.cs">
+      <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.acs.view\ACSLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,16 +117,13 @@
     <Compile Include="br.com.acs.view\ACSHome.Designer.cs">
       <DependentUpon>ACSHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="br.com.acs.view\ACSUsuario.Designer.cs">
-      <DependentUpon>ACSUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="br.com.acs.view\ACSDadosUsuario.resx">
       <DependentUpon>ACSDadosUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSDadosUsuarioAdministrador.resx">
+      <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSLogin.resx">
       <DependentUpon>ACSLogin.cs</DependentUpon>
@@ -133,9 +136,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSHome.resx">
       <DependentUpon>ACSHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSUsuario.resx">
-      <DependentUpon>ACSUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

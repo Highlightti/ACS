@@ -17,6 +17,22 @@ namespace AdministrationClinicalSystem.br.com.acs.view
             InitializeComponent();
         }
 
+        private static ACSDadosUsuario instance;
+
+        /// <summary>
+        ///  Método responsável por criar uma instância do Form ACSDadosUsuario (Singleton Pattern).
+        /// </summary>
+        public static ACSDadosUsuario getInstance()
+        {
+            if (instance == null)
+            {
+                instance = new ACSDadosUsuario();
+            }
+            return instance;
+        }
+
+
+
         bool btnAlterarSenhaClick = false;
 
         private void btnAlterarSenhaSlide_Click(object sender, EventArgs e)

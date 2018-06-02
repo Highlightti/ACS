@@ -41,6 +41,19 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
 
         public MySqlConnection GetConnection()
         {
+            try
+            {
+                string urlConexaoMySQL = "server=highlightti.com.br; port=3306; userid=highligh_devhml; database=highligh_ACS_Homologacao; password=bdhml@18";
+
+                this.connection = new MySqlConnection(urlConexaoMySQL);
+                this.connection.Open();
+            }
+            catch
+            {
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Dados incorretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Restart();
+            }
+
             return this.connection;
         }
 

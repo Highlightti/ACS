@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdministrationClinicalSystem.br.com.acs.model
 {
-    class Usuario
+    public class Usuario
     {
         public int idUsuario { get; set; }
         public string usuario { get; set; }
@@ -17,11 +17,12 @@ namespace AdministrationClinicalSystem.br.com.acs.model
         public DateTime dataModificacao { get; set; }
         public int usuarioModificacao { get; set; }
         public int idUsuarioLogado { get; set; }
+        public string tipoUsuarioLogado { get; set; }
         public string usuarioException { get; set; }
 
         public Usuario() { }
 
-        public Usuario(int idUsuario, string usuario, string nome, string email, string senha, int statusUsuario, DateTime dataModificacao, int usuarioModificacao, string usuarioException)
+        public Usuario(int idUsuario, string usuario, string nome, string email, string senha, int statusUsuario, DateTime dataModificacao, int usuarioModificacao, string tipoUsuarioLogado, string usuarioException)
         {
             this.idUsuario = idUsuario;
             this.usuario = usuario;
@@ -32,6 +33,7 @@ namespace AdministrationClinicalSystem.br.com.acs.model
             this.dataModificacao = dataModificacao;
             this.usuarioModificacao = usuarioModificacao;
             this.idUsuarioLogado = idUsuarioLogado;
+            this.tipoUsuarioLogado = tipoUsuarioLogado;
             this.usuarioException = usuarioException;
         }
     }

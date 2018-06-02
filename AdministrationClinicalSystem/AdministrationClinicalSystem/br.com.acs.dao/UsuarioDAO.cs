@@ -24,10 +24,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         #region Querys para operações no Banco de Dados
 
         private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, MD5('?'), ?, SYSDATE(), ?)";//
-
-
-
-        private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email, FROM usuario WHERE id_usuario = ?";//
+        private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email FROM usuario WHERE id_usuario = 1";
 
         private static string CONSULTAR_TODOS_USUARIOS_ATIVOS = "SELECT usuario, nome, email, email_grupo, status_usuario FROM usuario WHERE status_usuario = 1";//
 
@@ -125,20 +122,30 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
             try
             {
                 command = new MySqlCommand(CONSULTAR_USUARIO, connection.GetConnection());
-                command.Parameters.Add("@id_usuario", MySqlDbType.UInt32).Value = usuario.idUsuario;
+                //command.Parameters.Add("@id_usuario", MySqlDbType.Int32).Value = usuario.idUsuario;
+                //command.Parameters.AddWithValue("?id_usuario", usuario.idUsuario.ToString());
                 command.CommandType = CommandType.Text;
 
                 MySqlDataReader myDataReader;
-                myDataReader = command.ExecuteReader();
-                myDataReader.Read();
 
-                usuario.nome = myDataReader.GetString(0);
-                usuario.email = myDataReader.GetString(1);
-                //usuario.emailGrupo = myDataReader.GetString("email_grupo");
+                    myDataReader = command.ExecuteReader();
+
+
+                //System.InvalidOperationException: 'Connection must be valid and open.'
+
+
+                myDataReader.Read();
+                    
+                        usuario.usuario = myDataReader.GetString(0);
+                        usuario.nome = myDataReader.GetString(1);
+                        usuario.email = myDataReader.GetString(2);
+                    
+
             }
             catch(MySqlException ex)
             {
-                MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
+                throw (ex);
+                //MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
             }
             finally
             {
@@ -439,12 +446,16 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                     {
                         usuario.nome = null;
                     }
+
+                    myDataReader.Close();
                 }
                 catch
                 {
                     Application.Restart();
                 }
+
                 
+
             }
             catch (MySqlException ex)
             {

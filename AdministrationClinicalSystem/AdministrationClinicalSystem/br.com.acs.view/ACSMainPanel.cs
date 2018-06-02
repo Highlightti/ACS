@@ -15,18 +15,31 @@ namespace AdministrationClinicalSystem
     public partial class ACSMainPanel : MetroFramework.Forms.MetroForm
     {
 
+        UsuarioController uController = UsuarioController.getInstance();
+
         public ACSMainPanel()
         {
             InitializeComponent();
             
             this.StyleManager = metroStyleManagerMain;
 
-            //Iniciando a aplicação com a página Home.
+            // Caso o evento tenha ocorrido, termine toda a aplicação.
+            this.Closed += (s, ev) => Application.Exit();
+        }
+
+        private void ACSLogin_Load(object sender, EventArgs e)
+        {
+            // Estilizando as cores da janela.
+            this.StyleManager = metroStyleManagerMain;
+            metroStyleManagerMain.Theme = MetroFramework.MetroThemeStyle.Light;
+            metroStyleManagerMain.Style = MetroFramework.MetroColorStyle.Blue;
+
+            // Iniciando a aplicação com a página Home.
             ACSHome home = new ACSHome();
             NavigationScreen(home, contentPanel);
 
-            //Caso o evento tenha ocorrido, termine toda a aplicação.
-            this.Closed += (s, ev) => Application.Exit();
+            // Atribuindo o nome do usuário logado á sessão iniciada.
+            nomeUsuario.Text = uController.usuarioSessao;
         }
 
         #region Menu Slide and Navigation Screen
@@ -63,48 +76,7 @@ namespace AdministrationClinicalSystem
             form.TopLevel = false;
             panel.Controls.Clear();
             panel.Controls.Add(form);
-            
             form.Show();
-        }
-
-        #endregion
-
-        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (metroComboBox1.SelectedIndex)
-            {
-                case 0:
-                    metroStyleManagerMain.Theme = MetroFramework.MetroThemeStyle.Dark;
-                    break;
-                case 1:
-                    metroStyleManagerMain.Theme = MetroFramework.MetroThemeStyle.Light;
-                    break;
-            }
-        }
-
-        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            metroStyleManagerMain.Style = (MetroFramework.MetroColorStyle)Convert.ToInt32(metroComboBox2.SelectedIndex);
-        }
-
-        private void ACSLogin_Load(object sender, EventArgs e)
-        {
-            //metroComboBox1.SelectedIndex = 1;
-            //metroComboBox2.SelectedIndex = 6;
-
-            this.StyleManager = metroStyleManagerMain;
-            metroStyleManagerMain.Theme = MetroFramework.MetroThemeStyle.Light;
-            metroStyleManagerMain.Style = MetroFramework.MetroColorStyle.Green;
-
-            UsuarioController uController = UsuarioController.getInstance();
-            nomeUsuario.Text = uController.usuarioSessao;
-
-        }
-
-        private void btnEquipamentos_Click(object sender, EventArgs e)
-        {
-            ACSEquipamentos equipamentos = new ACSEquipamentos();
-            NavigationScreen(equipamentos, contentPanel);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -113,20 +85,39 @@ namespace AdministrationClinicalSystem
             NavigationScreen(home, contentPanel);
         }
 
+        private void btnEquipamentos_Click(object sender, EventArgs e)
+        {
+            ACSEquipamentos equipamentos = new ACSEquipamentos();
+            NavigationScreen(equipamentos, contentPanel);
+        }
+
         private void btnMeusDados_Click(object sender, EventArgs e)
         {
-            //ACSUsuario usuario = new ACSUsuario();
-            ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
-            NavigationScreen(dadosUsuario, contentPanel);
+            if (uController.tipoUsuarioLogado.Equals("Administrador"))
+            {
+                ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
+                NavigationScreen(dadosUsuarioAdministrador, contentPanel);
+                uController.ConsultarUsuario(uController.tipoUsuarioLogado);
+            }
+            else
+            {
+                ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
+                NavigationScreen(dadosUsuario, contentPanel);
+                uController.ConsultarUsuario(uController.tipoUsuarioLogado);
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (MetroFramework.MetroMessageBox.Show(this, "Yes/No", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MetroFramework.MetroMessageBox.Show(this, "Yes/No", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 Application.Exit();
+
+                //limpar o nome do usuário instanciado na sessão quando fazer o logout.
             }
             
         }
+
+        #endregion
     }
 }
