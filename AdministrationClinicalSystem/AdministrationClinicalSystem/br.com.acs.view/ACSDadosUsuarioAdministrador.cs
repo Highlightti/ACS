@@ -17,6 +17,8 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         public ACSDadosUsuarioAdministrador()
         {
             InitializeComponent();
+
+            
         }
 
         UsuarioController uController = UsuarioController.getInstance();
@@ -29,11 +31,29 @@ namespace AdministrationClinicalSystem.br.com.acs.view
 
         private void ACSDadosUsuarioAdministrador_Load(object sender, EventArgs e)
         {
+            uController.ConsultarUsuario(uController.tipoUsuarioLogado);
+
             usuarioTextMy.Text = uController.readUsuario.ToString();
             nomeTextMy.Text = uController.readNome.ToString();
             emailTextMy.Text = uController.readEmail.ToString();
-            textBox1.Text = "Testeee caralho, meu ovo esquerdo  porrrraaaaaa";
-            //textBox1.Text = uController.readEmail;
+
+            
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            usuario.usuario = usuarioTextMy.Text;
+            usuario.nome = nomeTextMy.Text;
+            usuario.email = emailTextMy.Text;
+            usuario.idUsuario = uController.idUsuarioSessao;
+
+            usuario = uController.atualizarUsuario(usuario);
+
+            if(usuario != null)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Dados atualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
         }
     }
 }

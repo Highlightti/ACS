@@ -38,7 +38,11 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         private static string VERIFICAR_EMAIL_USUARIO = "SELECT email FROM usuario WHERE email = ?";//
 
-        private static string ATUALIZAR_DADOS_USUARIO = "UPDATE usuario SET email = ?, email_grupo = ? WHERE id_usuario = ?";//
+
+
+
+
+        private static string ATUALIZAR_DADOS_USUARIO = "UPDATE usuario SET usuario = ?, nome = ?, email = ? WHERE id_usuario = ?";
 
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";//
 
@@ -366,18 +370,21 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         /// Método responsável por atualizar dados dos usuários somente pelo usuário Administrador.
         /// </summary>
         /// <param name="usuario"></param>
-        public void AtualizarDadosUsuario(Usuario usuario)
+        public Usuario AtualizarDadosUsuario(Usuario usuario)
         {
             try
             {
                 command = new MySqlCommand(ATUALIZAR_DADOS_USUARIO, connection.GetConnection());
+
+                command.Parameters.Add("@usuario", MySqlDbType.VarChar, 70).Value = usuario.usuario;
+                command.Parameters.Add("@nome", MySqlDbType.VarChar, 70).Value = usuario.nome;
                 command.Parameters.Add("@email", MySqlDbType.VarChar, 70).Value = usuario.email;
-                //command.Parameters.Add("@email_grupo", MySqlDbType.VarChar, 70).Value = usuario.emailGrupo;
                 command.Parameters.Add("@id_usuario", MySqlDbType.UInt32).Value = usuario.idUsuario;
+
                 command.CommandType = CommandType.Text;
                 command.ExecuteNonQuery();
 
-                connection.Commit();
+                //connection.Commit();
             }
             catch (MySqlException ex)
             {
@@ -389,6 +396,8 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 command.Parameters.Clear();
                 connection.Close();
             }
+
+            return usuario;
         }
 
         /// <summary>

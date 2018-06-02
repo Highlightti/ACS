@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ACSDadosUsuario));
             this.metroTabControlDadosUsuario = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.alterarSenhaPanel = new System.Windows.Forms.Panel();
@@ -43,7 +44,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.metroLabelNome = new MetroFramework.Controls.MetroLabel();
             this.metroLabelEmail = new MetroFramework.Controls.MetroLabel();
             this.emailTextMy = new MetroFramework.Controls.MetroTextBox();
@@ -54,6 +54,7 @@
             this.btnAlterarSenhaSlide = new MetroFramework.Controls.MetroButton();
             this.btnAtualizar = new MetroFramework.Controls.MetroButton();
             this.metroStyleManagerDadosUsuario = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTabControlDadosUsuario.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.alterarSenhaPanel.SuspendLayout();
@@ -61,6 +62,7 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerDadosUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControlDadosUsuario
@@ -292,8 +294,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.metroButton3);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.metroLabelNome);
             this.panel3.Controls.Add(this.metroLabelEmail);
             this.panel3.Controls.Add(this.emailTextMy);
@@ -316,14 +318,6 @@
             this.metroButton3.TabIndex = 3;
             this.metroButton3.Text = "Alterar foto";
             this.metroButton3.UseSelectable = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Location = new System.Drawing.Point(86, 50);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(125, 125);
-            this.panel4.TabIndex = 3;
             // 
             // metroLabelNome
             // 
@@ -506,6 +500,17 @@
             // 
             this.metroStyleManagerDadosUsuario.Owner = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(85, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // ACSDadosUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,6 +531,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerDadosUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -543,7 +549,6 @@
         private MetroFramework.Controls.MetroLabel metroLabelUsuario;
         private MetroFramework.Controls.MetroLabel metroLabelNome;
         private MetroFramework.Controls.MetroLabel metroLabelEmail;
-        private System.Windows.Forms.Panel panel4;
         private MetroFramework.Controls.MetroButton metroButton3;
         private System.Windows.Forms.Panel alterarSenhaPanel;
         private MetroFramework.Controls.MetroButton metroButton4;
@@ -557,5 +562,6 @@
         public MetroFramework.Controls.MetroTextBox usuarioTextMy;
         public MetroFramework.Controls.MetroTextBox emailTextMy;
         public MetroFramework.Controls.MetroTextBox nomeTextMy;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

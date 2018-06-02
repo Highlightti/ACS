@@ -117,9 +117,12 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
             }
         }
 
-        public void atualizarUsuario(Usuario usuario)
+        public Usuario atualizarUsuario(Usuario usuario)
         {
+            UsuarioDAO uDAO = UsuarioDAO.getInstance();
+            usuario = uDAO.AtualizarDadosUsuario(usuario);
 
+            return usuario;
         }
 
         /// <summary>

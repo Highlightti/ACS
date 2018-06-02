@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ACSDadosUsuarioAdministrador));
             this.metroTabControlDadosUsuario = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.alterarSenhaPanel = new System.Windows.Forms.Panel();
@@ -42,6 +43,7 @@
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroLabelNome = new MetroFramework.Controls.MetroLabel();
             this.metroLabelEmail = new MetroFramework.Controls.MetroLabel();
@@ -67,30 +69,29 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.metroTabControlDadosUsuario.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.alterarSenhaPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControlDadosUsuario
             // 
             this.metroTabControlDadosUsuario.Controls.Add(this.metroTabPage1);
             this.metroTabControlDadosUsuario.Controls.Add(this.metroTabPage2);
+            this.metroTabControlDadosUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControlDadosUsuario.FontSize = MetroFramework.MetroTabControlSize.Tall;
-            this.metroTabControlDadosUsuario.Location = new System.Drawing.Point(43, 96);
+            this.metroTabControlDadosUsuario.Location = new System.Drawing.Point(0, 0);
             this.metroTabControlDadosUsuario.Name = "metroTabControlDadosUsuario";
-            this.metroTabControlDadosUsuario.SelectedIndex = 1;
+            this.metroTabControlDadosUsuario.SelectedIndex = 0;
             this.metroTabControlDadosUsuario.Size = new System.Drawing.Size(992, 552);
             this.metroTabControlDadosUsuario.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabControlDadosUsuario.TabIndex = 1;
@@ -98,7 +99,6 @@
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.textBox1);
             this.metroTabPage1.Controls.Add(this.alterarSenhaPanel);
             this.metroTabPage1.Controls.Add(this.panel1);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
@@ -327,6 +327,17 @@
             this.panel3.Size = new System.Drawing.Size(300, 450);
             this.panel3.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(86, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // metroButton3
             // 
             this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Medium;
@@ -513,6 +524,7 @@
             this.btnAtualizar.TabIndex = 3;
             this.btnAtualizar.Text = "Alterar Dados";
             this.btnAtualizar.UseSelectable = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // metroTabPage2
             // 
@@ -795,22 +807,6 @@
             this.metroButton5.Text = "Alterar Dados";
             this.metroButton5.UseSelectable = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(86, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.Location = new System.Drawing.Point(427, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 4;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -829,19 +825,18 @@
             this.Load += new System.EventHandler(this.ACSDadosUsuarioAdministrador_Load);
             this.metroTabControlDadosUsuario.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage1.PerformLayout();
             this.alterarSenhaPanel.ResumeLayout(false);
             this.alterarSenhaPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -884,10 +879,9 @@
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroTextBox usuarioTextMy;
         private MetroFramework.Controls.MetroTextBox nomeTextMy;
         private MetroFramework.Controls.MetroTextBox emailTextMy;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        public MetroFramework.Controls.MetroTextBox usuarioTextMy;
     }
 }
