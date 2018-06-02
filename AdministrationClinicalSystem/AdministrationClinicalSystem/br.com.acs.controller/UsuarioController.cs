@@ -18,6 +18,9 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
         public int idUsuarioSessao = 0;
         public string usuarioSessao = "";
         public string tipoUsuarioLogado = "";
+        public string readUsuario = "";
+        public string readNome = "";
+        public string readEmail = "";
 
         #endregion
 
@@ -99,8 +102,10 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
             if (tipoUsuarioLogado.Equals("Administrador"))
             {
                 ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
+                readUsuario = usuario.usuario;
+                readNome = usuario.nome;
+                readEmail = usuario.email;
                 
-                dadosUsuarioAdministrador.CarregaDadosUsuarioAdministrador(usuario);
             }
             else
             {

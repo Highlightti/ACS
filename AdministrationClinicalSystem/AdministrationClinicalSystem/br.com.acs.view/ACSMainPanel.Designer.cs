@@ -48,6 +48,7 @@
             this.userPanel = new System.Windows.Forms.Panel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMain)).BeginInit();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
@@ -328,11 +329,19 @@
             this.metroLabel2.UseCustomForeColor = true;
             this.metroLabel2.UseStyleColors = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(389, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 20);
+            this.textBox1.TabIndex = 18;
+            // 
             // ACSMainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 600);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.panel1);
@@ -347,6 +356,7 @@
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -369,6 +379,7 @@
         private System.Windows.Forms.Panel userPanel;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

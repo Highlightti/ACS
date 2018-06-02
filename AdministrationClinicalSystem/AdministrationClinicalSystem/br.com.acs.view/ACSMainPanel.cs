@@ -40,9 +40,16 @@ namespace AdministrationClinicalSystem
 
             // Atribuindo o nome do usuário logado á sessão iniciada.
             nomeUsuario.Text = uController.usuarioSessao;
+
+            
         }
 
         #region Menu Slide and Navigation Screen
+
+        public void carrega()
+        {
+            textBox1.Text = uController.readEmail;
+        }
 
         bool btnMenuClick = false;
 
@@ -74,7 +81,7 @@ namespace AdministrationClinicalSystem
         public void NavigationScreen(Form form, Panel panel)
         {
             form.TopLevel = false;
-            panel.Controls.Clear();
+            //panel.Controls.Clear();
             panel.Controls.Add(form);
             form.Show();
         }
@@ -98,6 +105,7 @@ namespace AdministrationClinicalSystem
                 ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
                 NavigationScreen(dadosUsuarioAdministrador, contentPanel);
                 uController.ConsultarUsuario(uController.tipoUsuarioLogado);
+                carrega();
             }
             else
             {

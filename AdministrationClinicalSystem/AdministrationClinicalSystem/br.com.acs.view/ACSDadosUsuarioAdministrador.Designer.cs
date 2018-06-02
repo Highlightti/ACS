@@ -87,11 +87,10 @@
             // 
             this.metroTabControlDadosUsuario.Controls.Add(this.metroTabPage1);
             this.metroTabControlDadosUsuario.Controls.Add(this.metroTabPage2);
-            this.metroTabControlDadosUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControlDadosUsuario.FontSize = MetroFramework.MetroTabControlSize.Tall;
-            this.metroTabControlDadosUsuario.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControlDadosUsuario.Location = new System.Drawing.Point(43, 96);
             this.metroTabControlDadosUsuario.Name = "metroTabControlDadosUsuario";
-            this.metroTabControlDadosUsuario.SelectedIndex = 0;
+            this.metroTabControlDadosUsuario.SelectedIndex = 1;
             this.metroTabControlDadosUsuario.Size = new System.Drawing.Size(992, 552);
             this.metroTabControlDadosUsuario.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabControlDadosUsuario.TabIndex = 1;
@@ -450,8 +449,7 @@
             this.usuarioTextMy.CustomButton.Visible = false;
             this.usuarioTextMy.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.usuarioTextMy.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.usuarioTextMy.Lines = new string[] {
-        "asd"};
+            this.usuarioTextMy.Lines = new string[0];
             this.usuarioTextMy.Location = new System.Drawing.Point(26, 271);
             this.usuarioTextMy.MaxLength = 50;
             this.usuarioTextMy.Name = "usuarioTextMy";
@@ -464,7 +462,6 @@
             this.usuarioTextMy.Size = new System.Drawing.Size(250, 25);
             this.usuarioTextMy.Style = MetroFramework.MetroColorStyle.Green;
             this.usuarioTextMy.TabIndex = 6;
-            this.usuarioTextMy.Text = "asd";
             this.usuarioTextMy.UseCustomForeColor = true;
             this.usuarioTextMy.UseSelectable = true;
             this.usuarioTextMy.WaterMarkColor = System.Drawing.Color.White;
@@ -828,6 +825,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ACSDadosUsuarioAdministrador";
             this.Text = "ACSDadosUsuarioAdministrador";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ACSDadosUsuarioAdministrador_Load);
             this.metroTabControlDadosUsuario.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();

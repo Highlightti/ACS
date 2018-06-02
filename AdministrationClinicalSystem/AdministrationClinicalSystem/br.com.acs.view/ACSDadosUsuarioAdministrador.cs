@@ -1,4 +1,5 @@
-﻿using AdministrationClinicalSystem.br.com.acs.model;
+﻿using AdministrationClinicalSystem.br.com.acs.controller;
+using AdministrationClinicalSystem.br.com.acs.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,15 +18,22 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         {
             InitializeComponent();
         }
-        
 
-        public void CarregaDadosUsuarioAdministrador(Usuario usuario)
+        UsuarioController uController = UsuarioController.getInstance();
+
+        string user = "";
+        string nome = "";
+        string email = "";
+
+        Usuario usuario = new Usuario();
+
+        private void ACSDadosUsuarioAdministrador_Load(object sender, EventArgs e)
         {
-            //passar a foto
-            usuarioTextMy.Text = usuario.usuario.ToString();
-            nomeTextMy.Text = usuario.nome.ToString();
-            emailTextMy.Text = usuario.email.ToString();
+            usuarioTextMy.Text = uController.readUsuario.ToString();
+            nomeTextMy.Text = uController.readNome.ToString();
+            emailTextMy.Text = uController.readEmail.ToString();
             textBox1.Text = "Testeee caralho, meu ovo esquerdo  porrrraaaaaa";
+            //textBox1.Text = uController.readEmail;
         }
     }
 }
