@@ -85,8 +85,7 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
                 {
                     idUsuarioSessao = usuario.idUsuario;
                     usuarioSessao = usuario.nome;
-                    //tipoUsuarioLogado = usuario.tipoUsuarioLogado;
-                    tipoUsuarioLogado = "Administrador";
+                    tipoUsuarioLogado = usuario.nivelAcesso.nomePerfil;
                 }
                 else
                 {

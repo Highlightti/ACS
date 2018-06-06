@@ -109,7 +109,7 @@ namespace AdministrationClinicalSystem
                     ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
                     NavigationScreen(dadosUsuarioAdministrador, contentPanel);
                 }
-                else
+                else if(uController.tipoUsuarioLogado.Equals("Gestor"))
                 {
                     ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
                     NavigationScreen(dadosUsuario, contentPanel);

@@ -38,7 +38,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         /*->*/private static string VERIFICAR_SENHA_USUARIO = "SELECT nome FROM usuario WHERE senha = MD5(?) AND id_usuario = ?";
         /*->*/private static string ATUALIZAR_SENHA_USUARIO = "UPDATE usuario SET senha = MD5(?) WHERE id_usuario = ?";
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";
-        /*->*/private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM usuario WHERE usuario = ? AND senha = MD5(?)";
+        /*->*/private static string INGRESSAR_USUARIO = "SELECT usuario.id_usuario, usuario.nome, nivel_acesso.nome_perfil FROM usuario JOIN usuario_acesso ON usuario.id_usuario=usuario_acesso.id_usuario JOIN nivel_acesso ON nivel_acesso.id_nivel_acesso=usuario_acesso.id_nivel_acesso WHERE usuario = ? AND senha = MD5(?)";
         private static string DESCARTAR_USUARIO = "INSERT INTO log (id_usuario, usuario, data_logout) values (?, ?, SYSDATE())";
         /*->*/private static string VERIFICAR_CONEXAO = "SELECT nome FROM usuario WHERE id_usuario = ?";
 
@@ -475,6 +475,11 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                     {
                         usuario.idUsuario = myDataReader.GetInt32(0);
                         usuario.nome = myDataReader.GetString(1);
+
+                        NivelAcesso nivelAcesso = new NivelAcesso();
+                        nivelAcesso.nomePerfil = myDataReader.GetString(2);
+
+                        usuario.nivelAcesso = nivelAcesso;
                     }
                     else
                     {
