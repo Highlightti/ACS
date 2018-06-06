@@ -1,4 +1,6 @@
 ﻿using AdministrationClinicalSystem.br.com.acs.controller;
+using AdministrationClinicalSystem.br.com.acs.factory;
+using AdministrationClinicalSystem.br.com.acs.model;
 using AdministrationClinicalSystem.br.com.acs.view;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,6 @@ namespace AdministrationClinicalSystem
 {
     public partial class ACSMainPanel : MetroFramework.Forms.MetroForm
     {
-
-        UsuarioController uController = UsuarioController.getInstance();
-
         public ACSMainPanel()
         {
             InitializeComponent();
@@ -27,7 +26,7 @@ namespace AdministrationClinicalSystem
             this.Closed += (s, ev) => Application.Exit();
         }
 
-        private void ACSLogin_Load(object sender, EventArgs e)
+        private void ACSMainPanel_Load(object sender, EventArgs e)
         {
             // Estilizando as cores da janela.
             this.StyleManager = metroStyleManagerMain;
@@ -40,12 +39,16 @@ namespace AdministrationClinicalSystem
 
             // Atribuindo o nome do usuário logado á sessão iniciada.
             nomeUsuario.Text = uController.usuarioSessao;
-
-            
         }
 
-        #region Menu Slide and Navigation Screen
+        #region Instâncias (Singleton Pattern).
 
+        UsuarioController uController = UsuarioController.getInstance();
+        SystemExceptionsMessages systemExMessages = SystemExceptionsMessages.getInstance();
+
+        #endregion
+
+        #region Menu Slide and Navigation Screen
 
         bool btnMenuClick = false;
 
@@ -82,35 +85,43 @@ namespace AdministrationClinicalSystem
             form.Show();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void BtnHome_Click(object sender, EventArgs e)
         {
             ACSHome home = new ACSHome();
             NavigationScreen(home, contentPanel);
         }
 
-        private void btnEquipamentos_Click(object sender, EventArgs e)
+        private void BtnEquipamentos_Click(object sender, EventArgs e)
         {
             ACSEquipamentos equipamentos = new ACSEquipamentos();
             NavigationScreen(equipamentos, contentPanel);
         }
 
-        private void btnMeusDados_Click(object sender, EventArgs e)
+        private void BtnMeusDados_Click(object sender, EventArgs e)
         {
-            if (uController.tipoUsuarioLogado.Equals("Administrador"))
+            Usuario usuario = new Usuario();
+            usuario = uController.VerificaConexãoBanco();
+
+            if (usuario != null)
             {
-                ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
-                NavigationScreen(dadosUsuarioAdministrador, contentPanel);
-                //uController.ConsultarUsuario(uController.tipoUsuarioLogado);
+                if (uController.tipoUsuarioLogado.Equals("Administrador"))
+                {
+                    ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
+                    NavigationScreen(dadosUsuarioAdministrador, contentPanel);
+                }
+                else
+                {
+                    ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
+                    NavigationScreen(dadosUsuario, contentPanel);
+                }
             }
             else
             {
-                ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
-                NavigationScreen(dadosUsuario, contentPanel);
-                uController.ConsultarUsuario(uController.tipoUsuarioLogado);
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void BtnLogout_Click(object sender, EventArgs e)
         {
             if (MetroFramework.MetroMessageBox.Show(this, "Yes/No", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {

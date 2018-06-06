@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="br.com.acs.controller\UsuarioController.cs" />
+    <Compile Include="br.com.acs.model\NivelAcesso.cs" />
     <Compile Include="br.com.acs.view\ACSDadosUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

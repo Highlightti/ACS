@@ -159,7 +159,7 @@
         TnpvFWxYExvWxIY1sWFNbFgTG9bEhvUYzPwBb9YE0bgJzPEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnHomeIcon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnHomeIcon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
         CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAAFxIAABcSAWef0lIAAAJbSURBVFhHzZXdThRBEIVBURTl
@@ -176,7 +176,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="btnEquipamentosIcon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BtnEquipamentosIcon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
         CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAAFxIAABcSAWef0lIAAAL0SURBVFhHzZdJqhRBEIaf8zyL

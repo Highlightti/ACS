@@ -18,9 +18,10 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
         public int idUsuarioSessao = 0;
         public string usuarioSessao = "";
         public string tipoUsuarioLogado = "";
-        public string readUsuario = "";
-        public string readNome = "";
-        public string readEmail = "";
+        public string emailUsuarioLogado = "";
+        public string localReadUsuario = "";
+        public string localReadNome = "";
+        public string localReadEmail = "";
 
         #endregion
 
@@ -47,6 +48,26 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
         #endregion
 
         #region Métodos Controllers
+
+
+
+        /// <summary>
+        /// Método responsável por verificar a conexão com o banco de dados.
+        /// </summary>
+        /// <returns>usuario</returns>
+        public Usuario VerificaConexãoBanco()
+        {
+            Usuario usuario = new Usuario();
+            usuario.idUsuario = idUsuarioSessao;
+
+            UsuarioDAO uDAO = UsuarioDAO.getInstance();
+
+            usuario = uDAO.VerificaConexaoBanco(usuario);
+
+            return usuario;
+        }
+
+
 
         /// <summary>
         /// Método controller responsável por receber a requisição da view e gerenciar as chamadas a classe UsuarioDAO.
@@ -77,6 +98,11 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
         }
 
 
+
+        /// <summary>
+        /// Método controller responsável por receber a requisição da view e realizar o Logout do usuário logado.
+        /// </summary>
+        /// <param name="usuario"></param>
         public void LogoutUsuario(Usuario usuario)
         {
             
@@ -86,11 +112,18 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
         /// Método controller para cadastrar usuário (Disponível apenas para usuário Administrativo do sistema, ou seja, HIGHLIGHTTI).
         /// </summary>
         /// <param name="usuario"></param>
-        public void cadastrarUsuario(Usuario usuario)
+        public Usuario CadastrarUsuario(Usuario usuario)
         {
+            UsuarioDAO uDAO = UsuarioDAO.getInstance();
+            usuario = uDAO.CadastrarUsuario(usuario);
 
+            return usuario;
         }
 
+        /// <summary>
+        /// Método controller responsável por receber a requisição da view para consultar os dados do usuário logado.
+        /// </summary>
+        /// <param name="tipoUsuarioLogado"></param>
         public void ConsultarUsuario(string tipoUsuarioLogado)
         {
             Usuario usuario = new Usuario();
@@ -101,26 +134,88 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
 
             if (tipoUsuarioLogado.Equals("Administrador"))
             {
-                ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
-                readUsuario = usuario.usuario;
-                readNome = usuario.nome;
-                readEmail = usuario.email;
-                
+                emailUsuarioLogado = usuario.email;
+
+                localReadUsuario = usuario.usuario;
+                localReadNome = usuario.nome;
+                localReadEmail = usuario.email;
             }
             else
             {
-                ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
-                //passar a foto
-                dadosUsuario.usuarioTextMy.Text = usuario.usuario;
-                dadosUsuario.nomeTextMy.Text = usuario.nome;
-                dadosUsuario.emailTextMy.Text = usuario.email;
+                emailUsuarioLogado = usuario.email;
+
+                localReadUsuario = usuario.usuario;
+                localReadNome = usuario.nome;
+                localReadEmail = usuario.email;
             }
         }
 
+        /// <summary>
+        /// Método controller para atualizar os dados do usuário.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         public Usuario atualizarUsuario(Usuario usuario)
         {
             UsuarioDAO uDAO = UsuarioDAO.getInstance();
-            usuario = uDAO.AtualizarDadosUsuario(usuario);
+
+            // Verifica se o e-mail que está sendo é igual ao do momento da consulta, se sim, libera a alteração direto.
+            if (usuario.email.Equals(emailUsuarioLogado))
+            {
+                usuario = uDAO.AtualizarDadosUsuario(usuario);
+            }
+            else
+            {
+                string novoEmail = usuario.email;
+
+                // Caso o e-mail seja diferente do passado no momento da consulta, faz uma verificação de todos os e-mails cadastrados para não ter conflito.
+                usuario = uDAO.VerificarEmailUsuario(usuario);
+
+                if(usuario != null)
+                {
+                    // Caso não retorne nada do banco de dados, significa que esse novo e-mail pode er cadastrado.
+                    if (usuario.email == null)
+                    {
+                        usuario.email = novoEmail;
+                        usuario = uDAO.AtualizarDadosUsuario(usuario);
+                    }
+                    else
+                    {
+                        //exibir mensagem ou atribuir mensagem alegando que não pode usar esse e-mail, pois já existe no banco.
+                        usuario.usuarioException = systemExMessages.MESSAGE_EMAIL_INVALIDO;
+                    }
+                }
+            }
+
+            return usuario;
+        }
+
+
+
+        /// <summary>
+        /// Método controller para verificar a autenticidade da senha antiga do usuário.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+        public Usuario VerificarSenhaUsuario(Usuario usuario)
+        {
+            UsuarioDAO uDAO = UsuarioDAO.getInstance();
+
+            usuario = uDAO.VerificarSenhaUsuario(usuario);
+
+            return usuario;
+        }
+
+        public Usuario AtualizarSenhaUsuario(Usuario usuario)
+        {
+            UsuarioDAO uDAO = UsuarioDAO.getInstance();
+
+            usuario = uDAO.AtualizarSenhaUsuario(usuario);
+
+            if(usuario == null)
+            {
+                usuario.usuarioException = systemExMessages.MESSAGE_ERRO_ATUALIZAR_SENHA;
+            }
 
             return usuario;
         }

@@ -12,9 +12,5 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
         MySqlConnection GetConnection();
         
         void Close();
-
-        void Commit();
-
-        void Rollback();
     }
 }

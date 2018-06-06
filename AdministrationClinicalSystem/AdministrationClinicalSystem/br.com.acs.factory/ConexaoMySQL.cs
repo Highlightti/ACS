@@ -4,16 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace AdministrationClinicalSystem.br.com.acs.factory
 {
-    class ConexaoMySQL : MetroFramework.Forms.MetroForm, ConexaoDB
+    class ConexaoMySQL : ConexaoDB
     {
         private MySqlConnection connection = null;
-        private MySqlTransaction transaction;
-
 
         #region Instâncias (Singleton Pattern).
 
@@ -21,23 +18,7 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
 
         #endregion
 
-        public ConexaoMySQL()
-        {
-
-            try
-            {
-                string urlConexaoMySQL = "server=highlightti.com.br; port=3306; userid=highligh_devhml; database=highligh_ACS_Homologacao; password=bdhml@18";
-
-                this.connection = new MySqlConnection(urlConexaoMySQL);
-                this.connection.Open();
-            }
-            catch
-            {
-                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Dados incorretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Restart();
-            }
-            
-        }
+        public ConexaoMySQL() { }
 
         public MySqlConnection GetConnection()
         {
@@ -48,10 +29,10 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
                 this.connection = new MySqlConnection(urlConexaoMySQL);
                 this.connection.Open();
             }
-            catch
+            catch(MySqlException mySqlEx)
             {
-                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Dados incorretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Restart();
+                this.connection = null;
+                throw (mySqlEx);
             }
 
             return this.connection;
@@ -67,34 +48,7 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
-                    //Logger.getLogger(ConexaoMySQL.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
-
-        public void Commit()
-        {
-            transaction.Commit();
-            this.Close();
-        }
-
-        public void Rollback()
-        {
-            if (this.connection != null)
-            {
-                try
-                {
-                    this.transaction.Rollback();
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
-                    //Logger.getLogger(ConexaoPostgreJDBC.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                finally
-                {
-                    this.Close();
+                    throw (ex);
                 }
             }
         }

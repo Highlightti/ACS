@@ -17,42 +17,212 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         public ACSDadosUsuarioAdministrador()
         {
             InitializeComponent();
-
-            
         }
-
-        UsuarioController uController = UsuarioController.getInstance();
-
-        string user = "";
-        string nome = "";
-        string email = "";
-
-        Usuario usuario = new Usuario();
 
         private void ACSDadosUsuarioAdministrador_Load(object sender, EventArgs e)
         {
             uController.ConsultarUsuario(uController.tipoUsuarioLogado);
 
-            usuarioTextMy.Text = uController.readUsuario.ToString();
-            nomeTextMy.Text = uController.readNome.ToString();
-            emailTextMy.Text = uController.readEmail.ToString();
+            usuarioTextMy.Text = uController.localReadUsuario.ToString();
+            nomeTextMy.Text = uController.localReadNome.ToString();
+            emailTextMy.Text = uController.localReadEmail.ToString();
 
-            
+            #region Carregando valores na comboBox de nível de usuário.
+
+
+            //--------->>>>>>>>>>>>>>//não popular a combo com objeto.....
+
+
+
+            //var dataSource = new List<NivelAcesso>();
+            //dataSource.Add(new NivelAcesso() { descricao = "Administrador"});
+            //dataSource.Add(new NivelAcesso() { descricao = "Gestor"});
+
+            //this.descricaoCombo.DataSource = dataSource;
+            //this.descricaoCombo.DisplayMember = "descricao";
+            //this.descricaoCombo.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            this.descricaoCombo.Items.Add("Administrador");
+            this.descricaoCombo.Items.Add("Gestor");
+
+            #endregion
+
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        #region Instâncias (Singleton Pattern). + Variáveis
+
+        UsuarioController uController = UsuarioController.getInstance();
+        SystemExceptionsMessages systemExMessages = SystemExceptionsMessages.getInstance();
+
+        bool btnAlterarSenhaClick = false;
+
+        #endregion
+
+        private void BtnAtualizar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
-            usuario.usuario = usuarioTextMy.Text;
-            usuario.nome = nomeTextMy.Text;
-            usuario.email = emailTextMy.Text;
-            usuario.idUsuario = uController.idUsuarioSessao;
-
-            usuario = uController.atualizarUsuario(usuario);
-
-            if(usuario != null)
+            if (!(usuarioTextMy.Text.Equals("") || nomeTextMy.Text.Equals("") || emailTextMy.Text.Equals("")))
             {
-                MetroFramework.MetroMessageBox.Show(this, "Dados atualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                Usuario usuario = new Usuario();
+                usuario.usuario = usuarioTextMy.Text;
+                usuario.nome = nomeTextMy.Text;
+                usuario.email = emailTextMy.Text;
+                usuario.idUsuario = uController.idUsuarioSessao;
+
+                usuario = uController.atualizarUsuario(usuario);
+
+                if (usuario != null)
+                {
+                    if (usuario.usuarioException == systemExMessages.MESSAGE_EMAIL_INVALIDO)
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_EMAIL_INVALIDO, systemExMessages.TITLE_EMAIL_INVALIDO, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_ATUALIZADOS, systemExMessages.TITLE_DADOS_ATUALIZADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_ERRO_ATUALIZAR_DADOS, systemExMessages.TITLE_ERRO_ATUALIZAR_DADOS, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_INVALIDOS, systemExMessages.TITLE_DADOS_INVALIDOS, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+        }
+
+        private void BtnAlterarSenhaSlide_Click(object sender, EventArgs e)
+        {
+            if (btnAlterarSenhaClick == false)
+            {
+                btnAlterarSenhaClick = true;
+                alterarSenhaPanel.Visible = true;
+
+                while (alterarSenhaPanel.Width <= 250)
+                {
+                    alterarSenhaPanel.Width += 4;
+                }
+            }
+            else
+            {
+                btnAlterarSenhaClick = false;
+
+                while (alterarSenhaPanel.Width > 10)
+                {
+                    alterarSenhaPanel.Width -= 4;
+                }
+
+                alterarSenhaPanel.Visible = false;
+            }
+        }
+
+        private void BtnAlterarSenha_Click(object sender, EventArgs e)
+        {
+            string newPass = newPassword.Text;
+            string repeatNewPass = repeatNewPassword.Text;
+
+            if (!(oldPassword.Text.Equals("") || newPassword.Text.Equals("") || repeatNewPassword.Text.Equals("")))
+            {
+                if (!(usuarioTextMy.Text.Equals(uController.localReadUsuario.ToString()) && nomeTextMy.Text.Equals(uController.localReadNome.ToString()) && emailTextMy.Text.Equals(uController.localReadEmail.ToString())))
+                {
+                    if (newPass.Equals(repeatNewPass))
+                    {
+                        Usuario usuario = new Usuario();
+                        usuario.idUsuario = uController.idUsuarioSessao;
+                        usuario.senha = oldPassword.Text;
+
+                        usuario = uController.VerificarSenhaUsuario(usuario);
+
+                        if (usuario != null)
+                        {
+                            usuario.senha = newPass;
+
+                            usuario = uController.AtualizarSenhaUsuario(usuario);
+
+                            if (usuario.usuarioException == null)
+                            {
+                                MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_SENHA_ATUALIZADA, systemExMessages.TITLE_SENHA_ATUALIZADA, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                oldPassword.Clear();
+                                newPassword.Clear();
+                                repeatNewPassword.Clear();
+
+                                BtnAlterarSenhaSlide_Click(sender, e);
+                            }
+                            else
+                            {
+                                MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_ERRO_ATUALIZAR_SENHA, systemExMessages.TITLE_ERRO_ATUALIZAR_SENHA, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            }
+                        }
+                        else
+                        {
+                            MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_SENHA_ANTIGA_ERRADA, systemExMessages.TITLE_SENHA_ANTIGA_ERRADA, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_MESMOS_DADOS, systemExMessages.TITLE_MESMOS_DADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_NOVA_SENHA_ERRO_REPETICAO, systemExMessages.TITLE_NOVA_SENHA_ERRO_REPETICAO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_INVALIDOS, systemExMessages.TITLE_DADOS_INVALIDOS, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void BtnTrocarFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+            if(!(newUsuarioText.Text.Equals("") || newNomeText.Text.Equals("") || newEmailText.Text.Equals("") || newSenhaText.Text.Equals("")))
+            {
+                NivelAcesso nivelAcesso = new NivelAcesso();
+                nivelAcesso.nomePerfil = descricaoCombo.SelectedItem.ToString();
+
+                if (nivelAcesso.nomePerfil.Equals("Administrador"))
+                {
+                    nivelAcesso.nivelAcessoUsuario = 1;
+                }
+                else if (nivelAcesso.nomePerfil.Equals("Gestor"))
+                {
+                    nivelAcesso.nivelAcessoUsuario = 2;
+                }
+
+                Usuario usuario = new Usuario();
+                usuario.usuario = newUsuarioText.Text;
+                usuario.nome = newNomeText.Text;
+                usuario.email = newEmailText.Text;
+                usuario.senha = newSenhaText.Text;
+                usuario.idUsuarioLogado = uController.idUsuarioSessao;
+                usuario.nivelAcesso = nivelAcesso;
+
+                usuario = uController.CadastrarUsuario(usuario);
+
+                if(usuario != null)
+                {
+                    //mensagem de sucesso.
+                    MetroFramework.MetroMessageBox.Show(this, "Foi", "Ae", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    //mensagem de erro com o banco.
+                    MetroFramework.MetroMessageBox.Show(this, "Deu pau no banco", "vish", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+
+            }
+            else
+            {
+                // informar que os campos estão vazios, por favor preencher
+                MetroFramework.MetroMessageBox.Show(this, "Preenche os campos ae fera", "Ops", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
