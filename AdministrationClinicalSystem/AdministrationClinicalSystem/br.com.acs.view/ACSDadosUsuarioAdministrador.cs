@@ -62,28 +62,35 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         {
             if (!(usuarioTextMy.Text.Equals("") || nomeTextMy.Text.Equals("") || emailTextMy.Text.Equals("")))
             {
-                Usuario usuario = new Usuario();
-                usuario.usuario = usuarioTextMy.Text;
-                usuario.nome = nomeTextMy.Text;
-                usuario.email = emailTextMy.Text;
-                usuario.idUsuario = uController.idUsuarioSessao;
-
-                usuario = uController.atualizarUsuario(usuario);
-
-                if (usuario != null)
+                if (!(usuarioTextMy.Text.Equals(uController.localReadUsuario.ToString()) && nomeTextMy.Text.Equals(uController.localReadNome.ToString()) && emailTextMy.Text.Equals(uController.localReadEmail.ToString())))
                 {
-                    if (usuario.usuarioException == systemExMessages.MESSAGE_EMAIL_INVALIDO)
+                    Usuario usuario = new Usuario();
+                    usuario.usuario = usuarioTextMy.Text;
+                    usuario.nome = nomeTextMy.Text;
+                    usuario.email = emailTextMy.Text;
+                    usuario.idUsuario = uController.idUsuarioSessao;
+
+                    usuario = uController.atualizarUsuario(usuario);
+
+                    if (usuario != null)
                     {
-                        MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_EMAIL_INVALIDO, systemExMessages.TITLE_EMAIL_INVALIDO, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        if (usuario.usuarioException == systemExMessages.MESSAGE_EMAIL_INVALIDO)
+                        {
+                            MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_EMAIL_INVALIDO, systemExMessages.TITLE_EMAIL_INVALIDO, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        }
+                        else
+                        {
+                            MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_ATUALIZADOS, systemExMessages.TITLE_DADOS_ATUALIZADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_ATUALIZADOS, systemExMessages.TITLE_DADOS_ATUALIZADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_ERRO_ATUALIZAR_DADOS, systemExMessages.TITLE_ERRO_ATUALIZAR_DADOS, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     }
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_ERRO_ATUALIZAR_DADOS, systemExMessages.TITLE_ERRO_ATUALIZAR_DADOS, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_NOVA_SENHA_ERRO_REPETICAO, systemExMessages.TITLE_NOVA_SENHA_ERRO_REPETICAO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
@@ -124,50 +131,43 @@ namespace AdministrationClinicalSystem.br.com.acs.view
 
             if (!(oldPassword.Text.Equals("") || newPassword.Text.Equals("") || repeatNewPassword.Text.Equals("")))
             {
-                if (!(usuarioTextMy.Text.Equals(uController.localReadUsuario.ToString()) && nomeTextMy.Text.Equals(uController.localReadNome.ToString()) && emailTextMy.Text.Equals(uController.localReadEmail.ToString())))
+                if (newPass.Equals(repeatNewPass))
                 {
-                    if (newPass.Equals(repeatNewPass))
+                    Usuario usuario = new Usuario();
+                    usuario.idUsuario = uController.idUsuarioSessao;
+                    usuario.senha = oldPassword.Text;
+
+                    usuario = uController.VerificarSenhaUsuario(usuario);
+
+                    if (usuario != null)
                     {
-                        Usuario usuario = new Usuario();
-                        usuario.idUsuario = uController.idUsuarioSessao;
-                        usuario.senha = oldPassword.Text;
+                        usuario.senha = newPass;
 
-                        usuario = uController.VerificarSenhaUsuario(usuario);
+                        usuario = uController.AtualizarSenhaUsuario(usuario);
 
-                        if (usuario != null)
+                        if (usuario.usuarioException == null)
                         {
-                            usuario.senha = newPass;
+                            MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_SENHA_ATUALIZADA, systemExMessages.TITLE_SENHA_ATUALIZADA, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            usuario = uController.AtualizarSenhaUsuario(usuario);
+                            oldPassword.Clear();
+                            newPassword.Clear();
+                            repeatNewPassword.Clear();
 
-                            if (usuario.usuarioException == null)
-                            {
-                                MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_SENHA_ATUALIZADA, systemExMessages.TITLE_SENHA_ATUALIZADA, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                oldPassword.Clear();
-                                newPassword.Clear();
-                                repeatNewPassword.Clear();
-
-                                BtnAlterarSenhaSlide_Click(sender, e);
-                            }
-                            else
-                            {
-                                MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_ERRO_ATUALIZAR_SENHA, systemExMessages.TITLE_ERRO_ATUALIZAR_SENHA, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                            }
+                            BtnAlterarSenhaSlide_Click(sender, e);
                         }
                         else
                         {
-                            MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_SENHA_ANTIGA_ERRADA, systemExMessages.TITLE_SENHA_ANTIGA_ERRADA, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_ERRO_ATUALIZAR_SENHA, systemExMessages.TITLE_ERRO_ATUALIZAR_SENHA, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                         }
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_MESMOS_DADOS, systemExMessages.TITLE_MESMOS_DADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_SENHA_ANTIGA_ERRADA, systemExMessages.TITLE_SENHA_ANTIGA_ERRADA, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_NOVA_SENHA_ERRO_REPETICAO, systemExMessages.TITLE_NOVA_SENHA_ERRO_REPETICAO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_MESMOS_DADOS, systemExMessages.TITLE_MESMOS_DADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else

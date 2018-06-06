@@ -29,16 +29,16 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         #region Querys para operações no Banco de Dados
 
-        private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, MD5('?'), ?, SYSDATE(), ?)";
+        private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, MD5(?), ?, SYSDATE(), ?)";
         /*->*/private static string CADASTRAR_USUARIO_ACESSO = "INSERT INTO usuario_acesso (id_usuario, id_nivel_acesso) VALUES (?, ?)";
         /*->*/private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email FROM usuario WHERE id_usuario = ?";
         private static string CONSULTAR_TODOS_USUARIOS = "SELECT usuario, nome, email, status_usuario FROM usuario WHERE status_usuario = 1";
         /*->*/private static string VERIFICAR_EMAIL_USUARIO = "SELECT email FROM usuario WHERE email = ?";
         /*->*/private static string ATUALIZAR_USUARIO = "UPDATE usuario SET usuario = ?, nome = ?, email = ? WHERE id_usuario = ?";
-        /*->*/private static string VERIFICAR_SENHA_USUARIO = "SELECT nome FROM usuario WHERE senha = ? AND id_usuario = ?";
-        /*->*/private static string ATUALIZAR_SENHA_USUARIO = "UPDATE usuario SET senha = ? WHERE id_usuario = ?";
+        /*->*/private static string VERIFICAR_SENHA_USUARIO = "SELECT nome FROM usuario WHERE senha = MD5(?) AND id_usuario = ?";
+        /*->*/private static string ATUALIZAR_SENHA_USUARIO = "UPDATE usuario SET senha = MD5(?) WHERE id_usuario = ?";
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";
-        /*->*/private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM usuario WHERE usuario = ? AND senha = ?";
+        /*->*/private static string INGRESSAR_USUARIO = "SELECT id_usuario, nome FROM usuario WHERE usuario = ? AND senha = MD5(?)";
         private static string DESCARTAR_USUARIO = "INSERT INTO log (id_usuario, usuario, data_logout) values (?, ?, SYSDATE())";
         /*->*/private static string VERIFICAR_CONEXAO = "SELECT nome FROM usuario WHERE id_usuario = ?";
 
@@ -357,8 +357,8 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
             try
             {
                 command = new MySqlCommand(VERIFICAR_SENHA_USUARIO, connection.GetConnection());
-                command.Parameters.AddWithValue("?senha", usuario.senha);
-                command.Parameters.AddWithValue("?id_usuario", usuario.idUsuario);
+                command.Parameters.Add("@senha", MySqlDbType.VarChar).Value = usuario.senha;
+                command.Parameters.Add("@id_usuario", MySqlDbType.UInt32).Value = usuario.idUsuario;
                 command.CommandType = CommandType.Text;
 
                 MySqlDataReader myDataReader;
