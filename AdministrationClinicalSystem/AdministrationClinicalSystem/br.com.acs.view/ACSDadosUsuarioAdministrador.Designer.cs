@@ -92,7 +92,7 @@
             this.metroTabControlDadosUsuario.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.metroTabControlDadosUsuario.Location = new System.Drawing.Point(0, 0);
             this.metroTabControlDadosUsuario.Name = "metroTabControlDadosUsuario";
-            this.metroTabControlDadosUsuario.SelectedIndex = 1;
+            this.metroTabControlDadosUsuario.SelectedIndex = 0;
             this.metroTabControlDadosUsuario.Size = new System.Drawing.Size(992, 552);
             this.metroTabControlDadosUsuario.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTabControlDadosUsuario.TabIndex = 1;

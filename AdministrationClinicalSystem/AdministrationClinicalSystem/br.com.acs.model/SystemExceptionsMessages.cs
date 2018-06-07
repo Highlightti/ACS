@@ -63,6 +63,13 @@ namespace AdministrationClinicalSystem.br.com.acs.model
         public string TITLE_ERRO_ATUALIZAR_SENHA = "Falha na conexão";
         public string MESSAGE_ERRO_ATUALIZAR_SENHA = "Houve uma falha ao tentar atualizar sua senha, por favor, verifique sua conexão com a internet.";
 
+
+
+
+
+        public string TITLE_ERRO_LOGOUT = "Falha ao sair do sistema";
+        public string MESSAGE_ERRO_LOGOUT = "Houve uma falha ao tentar sair do sistema, verifique sua conexão com a rede, e tente novamente caso queira mesmo sair.";
+
         #endregion
 
         #region Data Base Connection Messages

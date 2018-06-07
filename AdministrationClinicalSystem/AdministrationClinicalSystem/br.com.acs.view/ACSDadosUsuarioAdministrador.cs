@@ -29,19 +29,7 @@ namespace AdministrationClinicalSystem.br.com.acs.view
 
             #region Carregando valores na comboBox de nível de usuário.
 
-
-            //--------->>>>>>>>>>>>>>//não popular a combo com objeto.....
-
-
-
-            //var dataSource = new List<NivelAcesso>();
-            //dataSource.Add(new NivelAcesso() { descricao = "Administrador"});
-            //dataSource.Add(new NivelAcesso() { descricao = "Gestor"});
-
-            //this.descricaoCombo.DataSource = dataSource;
-            //this.descricaoCombo.DisplayMember = "descricao";
-            //this.descricaoCombo.DropDownStyle = ComboBoxStyle.DropDownList;
-
+            // Popular comboBox pelo Banco
             this.descricaoCombo.Items.Add("Administrador");
             this.descricaoCombo.Items.Add("Gestor");
 
@@ -225,5 +213,6 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 MetroFramework.MetroMessageBox.Show(this, "Preenche os campos ae fera", "Ops", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
     }
 }

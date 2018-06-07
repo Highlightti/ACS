@@ -260,7 +260,7 @@
             this.BtnMeusDados.Name = "BtnMeusDados";
             this.BtnMeusDados.Size = new System.Drawing.Size(200, 40);
             this.BtnMeusDados.TabIndex = 22;
-            this.BtnMeusDados.Text = "Meus Dados";
+            this.BtnMeusDados.Text = "Usuário";
             this.BtnMeusDados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMeusDados.UseVisualStyleBackColor = false;
             this.BtnMeusDados.Click += new System.EventHandler(this.BtnMeusDados_Click);

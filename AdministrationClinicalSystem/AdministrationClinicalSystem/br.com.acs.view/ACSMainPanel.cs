@@ -89,12 +89,22 @@ namespace AdministrationClinicalSystem
         {
             ACSHome home = new ACSHome();
             NavigationScreen(home, contentPanel);
+
+            if(btnMenuClick == true)
+            {
+                btnMenu_Click(sender, e);
+            }
         }
 
         private void BtnEquipamentos_Click(object sender, EventArgs e)
         {
             ACSEquipamentos equipamentos = new ACSEquipamentos();
             NavigationScreen(equipamentos, contentPanel);
+
+            if (btnMenuClick == true)
+            {
+                btnMenu_Click(sender, e);
+            }
         }
 
         private void BtnMeusDados_Click(object sender, EventArgs e)
@@ -108,11 +118,21 @@ namespace AdministrationClinicalSystem
                 {
                     ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
                     NavigationScreen(dadosUsuarioAdministrador, contentPanel);
+
+                    if (btnMenuClick == true)
+                    {
+                        btnMenu_Click(sender, e);
+                    }
                 }
                 else if(uController.tipoUsuarioLogado.Equals("Gestor"))
                 {
                     ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
                     NavigationScreen(dadosUsuario, contentPanel);
+
+                    if (btnMenuClick == true)
+                    {
+                        btnMenu_Click(sender, e);
+                    }
                 }
             }
             else
@@ -125,11 +145,22 @@ namespace AdministrationClinicalSystem
         {
             if (MetroFramework.MetroMessageBox.Show(this, "Yes/No", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Application.Exit();
+                Usuario usuario = new Usuario();
+                usuario = uController.LogoutUsuario();
 
-                //limpar o nome do usuário instanciado na sessão quando fazer o logout.
+                if (usuario.usuarioException == null)
+                {
+                    uController.idUsuarioSessao = 0;
+
+                    this.Hide();
+                    ACSLogin acsLogin = new ACSLogin();
+                    acsLogin.Show();
+                }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_ERRO_LOGOUT, systemExMessages.TITLE_ERRO_LOGOUT, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
             }
-            
         }
 
         #endregion

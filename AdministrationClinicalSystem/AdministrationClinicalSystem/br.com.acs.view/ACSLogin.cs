@@ -24,6 +24,8 @@ namespace AdministrationClinicalSystem.br.com.acs.view
             this.StyleManager = metroStyleManagerLogin;
             metroStyleManagerLogin.Theme = MetroFramework.MetroThemeStyle.Light;
             metroStyleManagerLogin.Style = MetroFramework.MetroColorStyle.White;
+
+            this.Closed += (s, ev) => Application.Exit();
         }
 
         #region Instâncias (Singleton Pattern).

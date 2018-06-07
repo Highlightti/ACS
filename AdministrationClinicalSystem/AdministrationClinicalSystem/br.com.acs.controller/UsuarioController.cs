@@ -102,10 +102,24 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
         /// Método controller responsável por receber a requisição da view e realizar o Logout do usuário logado.
         /// </summary>
         /// <param name="usuario"></param>
-        public void LogoutUsuario(Usuario usuario)
+        public Usuario LogoutUsuario()
         {
-            
+            Usuario usuario = new Usuario();
+            usuario.idUsuario = idUsuarioSessao;
+
+            UsuarioDAO uDAO = UsuarioDAO.getInstance();
+
+            usuario = uDAO.LogoutUsuario(usuario);
+
+            if(usuario.idUsuarioLogado == 0)
+            {
+                usuario.usuarioException = systemExMessages.MESSAGE_ERRO_LOGOUT;
+            }
+
+            return usuario;
         }
+
+
 
         /// <summary>
         /// Método controller para cadastrar usuário (Disponível apenas para usuário Administrativo do sistema, ou seja, HIGHLIGHTTI).
@@ -118,6 +132,8 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
 
             return usuario;
         }
+
+
 
         /// <summary>
         /// Método controller responsável por receber a requisição da view para consultar os dados do usuário logado.
@@ -148,6 +164,8 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
                 localReadEmail = usuario.email;
             }
         }
+
+
 
         /// <summary>
         /// Método controller para atualizar os dados do usuário.
@@ -205,6 +223,12 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
             return usuario;
         }
 
+
+        /// <summary>
+        /// Método controller para realizar a alteração da senha do usuário.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>usuario</returns>
         public Usuario AtualizarSenhaUsuario(Usuario usuario)
         {
             UsuarioDAO uDAO = UsuarioDAO.getInstance();
@@ -219,6 +243,8 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
             return usuario;
         }
 
+
+        
         /// <summary>
         /// Método controller para desativar usuário (Disponível apenas para usuário Administrativo do sistema, ou seja, HIGHLIGHTTI).
         /// </summary>
