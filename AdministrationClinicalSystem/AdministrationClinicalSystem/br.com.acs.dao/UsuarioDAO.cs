@@ -142,7 +142,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
                     command = new MySqlCommand(CADASTRAR_USUARIO_ACESSO, connection.GetConnection());
                     command.Parameters.AddWithValue("?id_usuario", idUsuario);
-                    command.Parameters.AddWithValue("?id_nivel_acesso", idNivelAcesso);
+                    command.Parameters.AddWithValue("?id_nivel_acesso", usuario.nivelAcesso.nivelAcessoUsuario);
 
                     try
                     {
