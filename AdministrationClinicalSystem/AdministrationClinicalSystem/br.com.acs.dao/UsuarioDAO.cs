@@ -29,17 +29,20 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         #region Querys para operações no Banco de Dados
 
+        /*->*/private static string CADASTRAR_TIPO_USUARIO = "INSERT INTO nivel_acesso (nome_perfil, nivel_acesso, data_modificacao, usuario_modificacao) VALUES (?, ?, SYSDATE(), ?)";
+        /*Agrupar a atribuição de acesso para um usuário junto da query de cadastro*/
         /*->*/private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, MD5(?), ?, SYSDATE(), ?)";
         /*->*/private static string CADASTRAR_USUARIO_ACESSO = "INSERT INTO usuario_acesso (id_usuario, id_nivel_acesso) VALUES (?, ?)";
         /*->*/private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email FROM usuario WHERE id_usuario = ?";
         private static string CONSULTAR_TODOS_USUARIOS = "SELECT usuario, nome, email, status_usuario FROM usuario WHERE status_usuario = 1";
+        /*Recuperar apenas para o adm os dados mais sensiveis para realizar alterações quando necessário daquele usuário específico*/
         /*->*/private static string VERIFICAR_EMAIL_USUARIO = "SELECT email FROM usuario WHERE email = ?";
         /*->*/private static string ATUALIZAR_USUARIO = "UPDATE usuario SET usuario = ?, nome = ?, email = ? WHERE id_usuario = ?";
         /*->*/private static string VERIFICAR_SENHA_USUARIO = "SELECT nome FROM usuario WHERE senha = MD5(?) AND id_usuario = ?";
         /*->*/private static string ATUALIZAR_SENHA_USUARIO = "UPDATE usuario SET senha = MD5(?) WHERE id_usuario = ?";
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";
         /*->*/private static string INGRESSAR_USUARIO = "SELECT usuario.id_usuario, usuario.nome, nivel_acesso.nome_perfil FROM usuario JOIN usuario_acesso ON usuario.id_usuario=usuario_acesso.id_usuario JOIN nivel_acesso ON nivel_acesso.id_nivel_acesso=usuario_acesso.id_nivel_acesso WHERE usuario = ? AND senha = MD5(?)";
-        private static string REGISTRAR_ACAO_USUARIO_LOGIN_LOGOUT = "INSERT INTO login (id_usuario, acao, data_hora) VALUES (?, ?, SYSDATE())";
+        /*->*/private static string REGISTRAR_ACAO_USUARIO_LOGIN_LOGOUT = "INSERT INTO login (id_usuario, acao, data_hora) VALUES (?, ?, SYSDATE())";
         /*->*/private static string VERIFICAR_CONEXAO = "SELECT nome FROM usuario WHERE id_usuario = ?";
 
         #endregion
@@ -102,6 +105,46 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
             {
                 throw (ex);
                 //MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
+            }
+            finally
+            {
+                command.Parameters.Clear();
+                connection.Close();
+            }
+
+            return usuario;
+        }
+
+
+
+        /// <summary>
+        /// Método responsável por cadastrar o tipo de usuário no Banco de Dados, para saber o seu nível de acesso no sistema.
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
+        internal Usuario CadastrarTipoUsuario(Usuario usuario)
+        {
+            try
+            {
+                command = new MySqlCommand(CADASTRAR_TIPO_USUARIO, connection.GetConnection());
+                command.Parameters.AddWithValue("?nome_perfil", usuario.nivelAcesso.nomePerfil);
+                command.Parameters.AddWithValue("?nivel_acesso", usuario.nivelAcesso.nivelAcesso);
+                command.Parameters.AddWithValue("?usuario_modificacao", usuario.idUsuarioLogado);
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (MySqlException ex)
+                {
+                    usuario = null;
+                    throw (ex);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                usuario = null;
+                throw (ex);
             }
             finally
             {

@@ -48,10 +48,12 @@
             this.BtnHome = new System.Windows.Forms.Button();
             this.BtnEquipamentos = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.subMenu = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMain)).BeginInit();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
             this.userPanel.SuspendLayout();
+            this.contentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroStyleManagerMain
@@ -193,9 +195,9 @@
             this.metroLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.metroLabel2.Location = new System.Drawing.Point(3, 59);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(143, 15);
+            this.metroLabel2.Size = new System.Drawing.Size(113, 15);
             this.metroLabel2.TabIndex = 20;
-            this.metroLabel2.Text = "Funciona TextBox FDP!!!";
+            this.metroLabel2.Text = "Exemplo Lembrete";
             this.metroLabel2.UseCustomBackColor = true;
             this.metroLabel2.UseCustomForeColor = true;
             this.metroLabel2.UseStyleColors = true;
@@ -319,14 +321,27 @@
             this.BtnEquipamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEquipamentos.UseVisualStyleBackColor = false;
             this.BtnEquipamentos.Click += new System.EventHandler(this.BtnEquipamentos_Click);
+            this.BtnEquipamentos.MouseLeave += new System.EventHandler(this.BtnEquipamentos_Hover);
+            this.BtnEquipamentos.MouseHover += new System.EventHandler(this.BtnEquipamentos_Hover);
             // 
             // contentPanel
             // 
+            this.contentPanel.Controls.Add(this.subMenu);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(60, 60);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(938, 520);
             this.contentPanel.TabIndex = 17;
+            // 
+            // subMenu
+            // 
+            this.subMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(132)))));
+            this.subMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.subMenu.Location = new System.Drawing.Point(0, 0);
+            this.subMenu.Name = "subMenu";
+            this.subMenu.Size = new System.Drawing.Size(400, 520);
+            this.subMenu.TabIndex = 16;
+            this.subMenu.Visible = false;
             // 
             // ACSMainPanel
             // 
@@ -345,6 +360,7 @@
             this.menu.ResumeLayout(false);
             this.userPanel.ResumeLayout(false);
             this.userPanel.PerformLayout();
+            this.contentPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -368,6 +384,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         public System.Windows.Forms.Button BtnMeusDados;
+        private System.Windows.Forms.Panel subMenu;
     }
 }
 

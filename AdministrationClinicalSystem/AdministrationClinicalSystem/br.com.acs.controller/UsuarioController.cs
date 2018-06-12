@@ -122,6 +122,21 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
 
 
         /// <summary>
+        /// Método controller para cadastrar tipo usuário (Disponível apenas para usuário Administrativo do sistema, ou seja, HIGHLIGHTTI).
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>usuario</returns>
+        public Usuario CadastrarTipoUsuario(Usuario usuario)
+        {
+            UsuarioDAO uDAO = UsuarioDAO.getInstance();
+            usuario = uDAO.CadastrarTipoUsuario(usuario);
+
+            return usuario;
+        }
+
+
+
+        /// <summary>
         /// Método controller para cadastrar usuário (Disponível apenas para usuário Administrativo do sistema, ou seja, HIGHLIGHTTI).
         /// </summary>
         /// <param name="usuario"></param>
@@ -253,6 +268,8 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
         {
 
         }
+
+        
 
         #endregion
     }

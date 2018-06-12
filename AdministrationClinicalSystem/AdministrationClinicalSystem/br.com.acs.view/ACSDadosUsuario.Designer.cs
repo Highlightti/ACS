@@ -390,7 +390,7 @@
             this.emailTextMy.SelectionStart = 0;
             this.emailTextMy.ShortcutsEnabled = true;
             this.emailTextMy.Size = new System.Drawing.Size(250, 25);
-            this.emailTextMy.Style = MetroFramework.MetroColorStyle.Green;
+            this.emailTextMy.Style = MetroFramework.MetroColorStyle.Blue;
             this.emailTextMy.TabIndex = 9;
             this.emailTextMy.UseCustomForeColor = true;
             this.emailTextMy.UseSelectable = true;
@@ -424,7 +424,7 @@
             this.nomeTextMy.SelectionStart = 0;
             this.nomeTextMy.ShortcutsEnabled = true;
             this.nomeTextMy.Size = new System.Drawing.Size(250, 25);
-            this.nomeTextMy.Style = MetroFramework.MetroColorStyle.Green;
+            this.nomeTextMy.Style = MetroFramework.MetroColorStyle.Blue;
             this.nomeTextMy.TabIndex = 8;
             this.nomeTextMy.UseCustomForeColor = true;
             this.nomeTextMy.UseSelectable = true;
@@ -459,7 +459,7 @@
             this.usuarioTextMy.SelectionStart = 0;
             this.usuarioTextMy.ShortcutsEnabled = true;
             this.usuarioTextMy.Size = new System.Drawing.Size(250, 25);
-            this.usuarioTextMy.Style = MetroFramework.MetroColorStyle.Green;
+            this.usuarioTextMy.Style = MetroFramework.MetroColorStyle.Blue;
             this.usuarioTextMy.TabIndex = 6;
             this.usuarioTextMy.UseCustomForeColor = true;
             this.usuarioTextMy.UseSelectable = true;

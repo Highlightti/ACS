@@ -51,6 +51,7 @@ namespace AdministrationClinicalSystem
         #region Menu Slide and Navigation Screen
 
         bool btnMenuClick = false;
+        bool btnSubMenuHover = false;
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -104,6 +105,31 @@ namespace AdministrationClinicalSystem
             if (btnMenuClick == true)
             {
                 btnMenu_Click(sender, e);
+            }
+        }
+
+        private void BtnEquipamentos_Hover(object sender, EventArgs e)
+        {
+            if (btnSubMenuHover == false)
+            {
+                btnSubMenuHover = true;
+                subMenu.Visible = true;
+
+                while (subMenu.Width <= 400)
+                {
+                    subMenu.Width += 4;
+                }
+            }
+            else
+            {
+                btnSubMenuHover = false;
+
+                while (subMenu.Width > 200)
+                {
+                    subMenu.Width -= 4;
+                }
+
+                subMenu.Visible = false;
             }
         }
 

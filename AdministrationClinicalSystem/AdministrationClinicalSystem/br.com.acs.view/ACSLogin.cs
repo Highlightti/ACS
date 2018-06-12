@@ -35,6 +35,8 @@ namespace AdministrationClinicalSystem.br.com.acs.view
 
         #endregion
 
+
+
         /// <summary>
         /// Método do evento Click do botão de Login.
         /// </summary>

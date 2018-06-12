@@ -30,6 +30,8 @@ namespace AdministrationClinicalSystem.br.com.acs.view
             #region Carregando valores na comboBox de nível de usuário.
 
             // Popular comboBox pelo Banco
+
+            //selecionar o id do nivel para ser usado quando cadastrar um usuário
             this.descricaoCombo.Items.Add("Administrador");
             this.descricaoCombo.Items.Add("Gestor");
 
@@ -43,6 +45,7 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         SystemExceptionsMessages systemExMessages = SystemExceptionsMessages.getInstance();
 
         bool btnAlterarSenhaClick = false;
+        bool btnCadastrarTipoUsuarioClick = false;
 
         #endregion
 
@@ -78,7 +81,7 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 }
                 else
                 {
-                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_NOVA_SENHA_ERRO_REPETICAO, systemExMessages.TITLE_NOVA_SENHA_ERRO_REPETICAO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_MESMOS_DADOS, systemExMessages.TITLE_MESMOS_DADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -213,6 +216,89 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 MetroFramework.MetroMessageBox.Show(this, "Preenche os campos ae fera", "Ops", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void BtnCadastrarTipoUsuarioSlide_Click(object sender, EventArgs e)
+        {
+            if (btnCadastrarTipoUsuarioClick == false)
+            {
+                btnCadastrarTipoUsuarioClick = true;
+
+                while (panelRegister.Width <= 600)
+                {
+                    panelRegister.Width += 4;
+                }
+
+                panelUserTypeRegister.Visible = true;
+            }
+            else
+            {
+                btnCadastrarTipoUsuarioClick = false;
+
+                panelUserTypeRegister.Visible = false;
+
+                while (panelRegister.Width > 300)
+                {
+                    panelRegister.Width -= 4;
+                }
+            }
+        }
+
+        private void BtnCadastrarTipoUsuario_Click(object sender, EventArgs e)
+        {
+            if (!(newTipoUsuarioText.Text.Equals("") || newNivelAcessoText.Text.Equals("")))
+            {
+                NivelAcesso nivelAcesso = new NivelAcesso();
+                nivelAcesso.nomePerfil = newTipoUsuarioText.Text;
+                nivelAcesso.nivelAcesso = newNivelAcessoText.Text;
+
+                Usuario usuario = new Usuario();
+                usuario.idUsuarioLogado = uController.idUsuarioSessao;
+                usuario.nivelAcesso = nivelAcesso;
+
+                usuario = uController.CadastrarTipoUsuario(usuario);
+
+                if (usuario != null)
+                {
+                    //mensagem de sucesso.
+                    MetroFramework.MetroMessageBox.Show(this, "Foi", "Ae", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    newTipoUsuarioText.Clear();
+                    newNivelAcessoText.Clear();
+
+                    BtnCadastrarTipoUsuarioSlide_Click(sender, e);
+                }
+                else
+                {
+                    //mensagem de erro com o banco.
+                    MetroFramework.MetroMessageBox.Show(this, "Deu pau no banco", "vish", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+            else
+            {
+                // informar que os campos estão vazios, por favor preencher
+                MetroFramework.MetroMessageBox.Show(this, "Preenche os campos ae fera", "Ops", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+
+
+
+        bool value = false;
+
+        private void metroToggle1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(value == false)
+            {
+                MessageBox.Show("Ta ativo");
+                value = true;
+            }
+            else
+            {
+                MessageBox.Show("Ta inativo");
+                value = false;
+            }
+        }
+
 
     }
 }

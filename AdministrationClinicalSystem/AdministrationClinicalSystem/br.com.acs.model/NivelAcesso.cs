@@ -9,6 +9,7 @@ namespace AdministrationClinicalSystem.br.com.acs.model
     public class NivelAcesso
     {
         public string nomePerfil { get; set; }
+        public string nivelAcesso { get; set; }
         public int nivelAcessoUsuario { get; set; }
     }
 }
