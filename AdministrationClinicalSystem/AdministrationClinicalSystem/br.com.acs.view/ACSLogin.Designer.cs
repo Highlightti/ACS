@@ -58,13 +58,13 @@
             this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBoxLogo.Location = new System.Drawing.Point(20, 60);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(260, 105);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(260, 89);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(202)))), ((int)(((byte)(127)))));
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Location = new System.Drawing.Point(51, 206);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 2);
@@ -92,7 +92,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(202)))), ((int)(((byte)(127)))));
+            this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel4.Location = new System.Drawing.Point(51, 251);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 2);
@@ -123,10 +123,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(202)))), ((int)(((byte)(127)))));
+            this.btnLogin.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(184)))), ((int)(((byte)(102)))));
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(211)))), ((int)(((byte)(152)))));
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
