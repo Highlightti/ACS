@@ -39,6 +39,7 @@ namespace AdministrationClinicalSystem
 
             // Atribuindo o nome do usuário logado á sessão iniciada.
             nomeUsuario.Text = uController.usuarioSessao;
+            BtnMeusDados.Text = uController.usuarioSessao;
         }
 
         #region Instâncias (Singleton Pattern).

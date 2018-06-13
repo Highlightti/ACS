@@ -38,11 +38,9 @@
             this.BtnEquipamentosIcon = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.Panel();
-            this.BtnMeusDados = new System.Windows.Forms.Panel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.nomeUsuario = new MetroFramework.Controls.MetroLabel();
-            this.Ola = new MetroFramework.Controls.MetroLabel();
             this.BtnUsuarios = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.BtnHome = new System.Windows.Forms.Button();
@@ -51,7 +49,7 @@
             this.subMenu = new System.Windows.Forms.Panel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnMeusDados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMain)).BeginInit();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
@@ -173,16 +171,6 @@
             this.menu.TabIndex = 16;
             this.menu.Visible = false;
             // 
-            // BtnMeusDados
-            // 
-            this.BtnMeusDados.BackColor = System.Drawing.Color.Transparent;
-            this.BtnMeusDados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMeusDados.Location = new System.Drawing.Point(244, 40);
-            this.BtnMeusDados.Name = "BtnMeusDados";
-            this.BtnMeusDados.Size = new System.Drawing.Size(200, 40);
-            this.BtnMeusDados.TabIndex = 0;
-            this.BtnMeusDados.Click += new System.EventHandler(this.BtnMeusDados_Click);
-            // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
@@ -221,7 +209,7 @@
             this.nomeUsuario.BackColor = System.Drawing.Color.Transparent;
             this.nomeUsuario.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.nomeUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nomeUsuario.Location = new System.Drawing.Point(83, 31);
+            this.nomeUsuario.Location = new System.Drawing.Point(275, 21);
             this.nomeUsuario.Name = "nomeUsuario";
             this.nomeUsuario.Size = new System.Drawing.Size(46, 19);
             this.nomeUsuario.TabIndex = 19;
@@ -229,21 +217,6 @@
             this.nomeUsuario.UseCustomBackColor = true;
             this.nomeUsuario.UseCustomForeColor = true;
             this.nomeUsuario.UseStyleColors = true;
-            // 
-            // Ola
-            // 
-            this.Ola.AutoSize = true;
-            this.Ola.BackColor = System.Drawing.Color.Transparent;
-            this.Ola.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.Ola.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Ola.Location = new System.Drawing.Point(483, 92);
-            this.Ola.Name = "Ola";
-            this.Ola.Size = new System.Drawing.Size(33, 19);
-            this.Ola.TabIndex = 17;
-            this.Ola.Text = "Olá,";
-            this.Ola.UseCustomBackColor = true;
-            this.Ola.UseCustomForeColor = true;
-            this.Ola.UseStyleColors = true;
             // 
             // BtnUsuarios
             // 
@@ -324,9 +297,8 @@
             // 
             // contentPanel
             // 
-            this.contentPanel.Controls.Add(this.Ola);
             this.contentPanel.Controls.Add(this.metroLabel2);
-            this.contentPanel.Controls.Add(this.BtnMeusDados);
+            this.contentPanel.Controls.Add(this.nomeUsuario);
             this.contentPanel.Controls.Add(this.button1);
             this.contentPanel.Controls.Add(this.subMenu);
             this.contentPanel.Controls.Add(this.metroLabel1);
@@ -351,7 +323,7 @@
             this.metroLabel3.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel3.ForeColor = System.Drawing.Color.LimeGreen;
-            this.metroLabel3.Location = new System.Drawing.Point(66, 31);
+            this.metroLabel3.Location = new System.Drawing.Point(67, 31);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(21, 19);
             this.metroLabel3.TabIndex = 21;
@@ -372,19 +344,21 @@
             this.button1.TabIndex = 20;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnMeusDados
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(60, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 40);
-            this.button2.TabIndex = 21;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.BtnMeusDados_Click);
+            this.BtnMeusDados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMeusDados.FlatAppearance.BorderSize = 0;
+            this.BtnMeusDados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnMeusDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnMeusDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMeusDados.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnMeusDados.Location = new System.Drawing.Point(82, 20);
+            this.BtnMeusDados.Name = "BtnMeusDados";
+            this.BtnMeusDados.Size = new System.Drawing.Size(178, 40);
+            this.BtnMeusDados.TabIndex = 21;
+            this.BtnMeusDados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMeusDados.UseVisualStyleBackColor = true;
+            this.BtnMeusDados.Click += new System.EventHandler(this.BtnMeusDados_Click);
             // 
             // ACSMainPanel
             // 
@@ -392,10 +366,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 600);
             this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.nomeUsuario);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.contentPanel);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnMeusDados);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnMenu);
             this.Name = "ACSMainPanel";
@@ -416,7 +389,6 @@
         private MetroFramework.Components.MetroStyleManager metroStyleManagerMain;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel menu;
-        private MetroFramework.Controls.MetroLabel Ola;
         private MetroFramework.Controls.MetroLabel nomeUsuario;
         private System.Windows.Forms.Button BtnEquipamentos;
         private System.Windows.Forms.Button BtnHome;
@@ -427,14 +399,13 @@
         private System.Windows.Forms.Button BtnHomeIcon;
         private System.Windows.Forms.Button BtnEquipamentosIcon;
         private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Panel BtnMeusDados;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         public System.Windows.Forms.Button BtnUsuarios;
         private System.Windows.Forms.Panel subMenu;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnMeusDados;
     }
 }
 
