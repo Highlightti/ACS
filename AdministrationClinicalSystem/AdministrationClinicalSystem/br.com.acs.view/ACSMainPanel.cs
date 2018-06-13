@@ -115,19 +115,19 @@ namespace AdministrationClinicalSystem
                 btnSubMenuHover = true;
                 subMenu.Visible = true;
 
-                while (subMenu.Width <= 400)
-                {
-                    subMenu.Width += 4;
-                }
+                //while (subMenu.Width <= 400)
+                //{
+                //    subMenu.Width += 4;
+                //}
             }
             else
             {
                 btnSubMenuHover = false;
 
-                while (subMenu.Width > 200)
-                {
-                    subMenu.Width -= 4;
-                }
+                //while (subMenu.Width > 200)
+                //{
+                //    subMenu.Width -= 4;
+                //}
 
                 subMenu.Visible = false;
             }
