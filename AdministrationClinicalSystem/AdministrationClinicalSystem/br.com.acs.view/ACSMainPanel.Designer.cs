@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ACSMainPanel));
             this.metroStyleManagerMain = new MetroFramework.Components.MetroStyleManager(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUsuariosIcon = new System.Windows.Forms.Button();
             this.btnLogoutIcon = new System.Windows.Forms.Button();
             this.BtnHomeIcon = new System.Windows.Forms.Button();
             this.BtnEquipamentosIcon = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.nomeUsuario = new MetroFramework.Controls.MetroLabel();
-            this.BtnUsuarios = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.BtnHome = new System.Windows.Forms.Button();
             this.BtnEquipamentos = new System.Windows.Forms.Button();
@@ -50,6 +48,8 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnMeusDados = new System.Windows.Forms.Button();
+            this.BtnUsuarios = new System.Windows.Forms.Button();
+            this.btnUsuariosIcon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMain)).BeginInit();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
@@ -72,23 +72,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(40, 520);
             this.panel1.TabIndex = 15;
-            // 
-            // btnUsuariosIcon
-            // 
-            this.btnUsuariosIcon.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsuariosIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUsuariosIcon.BackgroundImage")));
-            this.btnUsuariosIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUsuariosIcon.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnUsuariosIcon.FlatAppearance.BorderSize = 0;
-            this.btnUsuariosIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.btnUsuariosIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.btnUsuariosIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuariosIcon.Location = new System.Drawing.Point(0, 440);
-            this.btnUsuariosIcon.Name = "btnUsuariosIcon";
-            this.btnUsuariosIcon.Size = new System.Drawing.Size(40, 40);
-            this.btnUsuariosIcon.TabIndex = 23;
-            this.btnUsuariosIcon.UseVisualStyleBackColor = false;
-            this.btnUsuariosIcon.Click += new System.EventHandler(this.BtnMeusDados_Click);
             // 
             // btnLogoutIcon
             // 
@@ -218,25 +201,6 @@
             this.nomeUsuario.UseCustomForeColor = true;
             this.nomeUsuario.UseStyleColors = true;
             // 
-            // BtnUsuarios
-            // 
-            this.BtnUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.BtnUsuarios.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnUsuarios.FlatAppearance.BorderSize = 0;
-            this.BtnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUsuarios.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnUsuarios.Location = new System.Drawing.Point(0, 440);
-            this.BtnUsuarios.Name = "BtnUsuarios";
-            this.BtnUsuarios.Size = new System.Drawing.Size(200, 40);
-            this.BtnUsuarios.TabIndex = 22;
-            this.BtnUsuarios.Text = "Usuário";
-            this.BtnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUsuarios.UseVisualStyleBackColor = false;
-            this.BtnUsuarios.Click += new System.EventHandler(this.BtnMeusDados_Click);
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
@@ -264,7 +228,7 @@
             this.BtnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHome.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHome.Font = new System.Drawing.Font("Segoe UI Semilight", 14F);
             this.BtnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnHome.Location = new System.Drawing.Point(0, 0);
             this.BtnHome.Name = "BtnHome";
@@ -360,6 +324,42 @@
             this.BtnMeusDados.UseVisualStyleBackColor = true;
             this.BtnMeusDados.Click += new System.EventHandler(this.BtnMeusDados_Click);
             // 
+            // BtnUsuarios
+            // 
+            this.BtnUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.BtnUsuarios.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnUsuarios.FlatAppearance.BorderSize = 0;
+            this.BtnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUsuarios.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnUsuarios.Location = new System.Drawing.Point(0, 440);
+            this.BtnUsuarios.Name = "BtnUsuarios";
+            this.BtnUsuarios.Size = new System.Drawing.Size(200, 40);
+            this.BtnUsuarios.TabIndex = 22;
+            this.BtnUsuarios.Text = "Usuários";
+            this.BtnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUsuarios.UseVisualStyleBackColor = false;
+            this.BtnUsuarios.Click += new System.EventHandler(this.BtnUsuarios_Click);
+            // 
+            // btnUsuariosIcon
+            // 
+            this.btnUsuariosIcon.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuariosIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUsuariosIcon.BackgroundImage")));
+            this.btnUsuariosIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUsuariosIcon.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnUsuariosIcon.FlatAppearance.BorderSize = 0;
+            this.btnUsuariosIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.btnUsuariosIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.btnUsuariosIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuariosIcon.Location = new System.Drawing.Point(0, 440);
+            this.btnUsuariosIcon.Name = "btnUsuariosIcon";
+            this.btnUsuariosIcon.Size = new System.Drawing.Size(40, 40);
+            this.btnUsuariosIcon.TabIndex = 23;
+            this.btnUsuariosIcon.UseVisualStyleBackColor = false;
+            this.btnUsuariosIcon.Click += new System.EventHandler(this.BtnUsuarios_Click);
+            // 
             // ACSMainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,7 +393,6 @@
         private System.Windows.Forms.Button BtnEquipamentos;
         private System.Windows.Forms.Button BtnHome;
         private System.Windows.Forms.Panel contentPanel;
-        private System.Windows.Forms.Button btnUsuariosIcon;
         private System.Windows.Forms.Button btnLogoutIcon;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button BtnHomeIcon;
@@ -401,11 +400,12 @@
         private System.Windows.Forms.Button btnMenu;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        public System.Windows.Forms.Button BtnUsuarios;
         private System.Windows.Forms.Panel subMenu;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnMeusDados;
+        public System.Windows.Forms.Button BtnUsuarios;
+        private System.Windows.Forms.Button btnUsuariosIcon;
     }
 }
 

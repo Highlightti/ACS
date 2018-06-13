@@ -109,6 +109,27 @@ namespace AdministrationClinicalSystem
             }
         }
 
+        private void BtnUsuarios_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            usuario = uController.VerificaConexãoBanco();
+
+            if (usuario != null)
+            {
+                ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
+                NavigationScreen(dadosUsuarioAdministrador, contentPanel);
+
+                if (btnMenuClick == true)
+                {
+                    btnMenu_Click(sender, e);
+                }
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+        }
+
         private void BtnEquipamentos_Hover(object sender, EventArgs e)
         {
             if (btnSubMenuHover == false)
@@ -141,25 +162,12 @@ namespace AdministrationClinicalSystem
 
             if (usuario != null)
             {
-                if (uController.tipoUsuarioLogado.Equals("Administrador"))
-                {
-                    ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
-                    NavigationScreen(dadosUsuarioAdministrador, contentPanel);
+                ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
+                NavigationScreen(dadosUsuario, contentPanel);
 
-                    if (btnMenuClick == true)
-                    {
-                        btnMenu_Click(sender, e);
-                    }
-                }
-                else if(uController.tipoUsuarioLogado.Equals("Gestor"))
+                if (btnMenuClick == true)
                 {
-                    ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
-                    NavigationScreen(dadosUsuario, contentPanel);
-
-                    if (btnMenuClick == true)
-                    {
-                        btnMenu_Click(sender, e);
-                    }
+                    btnMenu_Click(sender, e);
                 }
             }
             else

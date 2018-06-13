@@ -124,15 +124,6 @@
     <value>49</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAAFxIAABcSAWef0lIAAAB5SURBVFhHzc0hCgAwEAPB/v/T
-        V3eijC1sYMyanJlJYyxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhfPyePhdjCWMJYwljCWMJ4+P39LkY
-        SxhLGEsYSxhLGB+/p8/FWMJYwljCWMJYwljCWMJYwljCWMJYwljC2DHnAq7X9gfSd2xMAAAAAElFTkSu
-        QmCC
-</value>
-  </data>
   <data name="btnUsuariosIcon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
@@ -202,6 +193,15 @@
         nLJwGrZhDze8RPDIiSeuqoKvBFWjithl4RV9RbhlXBXEX5/+WtpuCvJSbXaf8rq/SZ0BXs8RlP03D29n
         jKOVlPCfY+mxVR9N/uyk+5OMipl4UcSUeC5G2DmIZ+Hxf/VnZ/xw/yKYL0xqjn86XwpyNflw/++kzp5I
         nT2ROnsidfZE6uyJ1NkPk4VfES+NdJL6KekAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAAFxIAABcSAWef0lIAAAB5SURBVFhHzc0hCgAwEAPB/v/T
+        V3eijC1sYMyanJlJYyxhLGEsYSxhLGEsYSxhLGEsYSxhLGEsYSxhfPyePhdjCWMJYwljCWMJ4+P39LkY
+        SxhLGEsYSxhLGB+/p8/FWMJYwljCWMJYwljCWMJYwljCWMJYwljC2DHnAq7X9gfSd2xMAAAAAElFTkSu
+        QmCC
 </value>
   </data>
 </root>
