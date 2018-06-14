@@ -38,7 +38,6 @@ namespace AdministrationClinicalSystem
             NavigationScreen(home, contentPanel);
 
             // Atribuindo o nome do usuário logado á sessão iniciada.
-            nomeUsuario.Text = uController.usuarioSessao;
             BtnMeusDados.Text = uController.usuarioSessao;
         }
 
@@ -53,8 +52,11 @@ namespace AdministrationClinicalSystem
 
         bool btnMenuClick = false;
         bool btnSubMenuHover = false;
+        bool opa = false;
+        bool sub1 = false;
+        bool sub2 = false;
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void BtnMenu_Click(object sender, EventArgs e)
         {
             if (btnMenuClick == false)
             {
@@ -79,6 +81,57 @@ namespace AdministrationClinicalSystem
             }
         }
 
+
+        private void BtnSubMenuPatrimonio_Click(object sender, EventArgs e)
+        {
+            if (btnSubMenuHover == false)
+            {
+                btnSubMenuHover = true;
+                subMenuPatrimonio.Visible = true;
+
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = true;
+
+                while (subMenuPatrimonio.Width <= 400)
+                {
+                    subMenuPatrimonio.Width += 4;
+                }
+            }
+            else
+            {
+                btnSubMenuHover = false;
+
+                while (subMenuPatrimonio.Width > 12)
+                {
+                    subMenuPatrimonio.Width -= 4;
+                }
+
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+
+                subMenuPatrimonio.Visible = false;
+            }
+        }
+
+
+
+        private void submenu1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submenu2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
         public void NavigationScreen(Form form, Panel panel)
         {
             form.TopLevel = false;
@@ -94,7 +147,7 @@ namespace AdministrationClinicalSystem
 
             if(btnMenuClick == true)
             {
-                btnMenu_Click(sender, e);
+                BtnMenu_Click(sender, e);
             }
         }
 
@@ -105,7 +158,7 @@ namespace AdministrationClinicalSystem
 
             if (btnMenuClick == true)
             {
-                btnMenu_Click(sender, e);
+                BtnMenu_Click(sender, e);
             }
         }
 
@@ -121,37 +174,12 @@ namespace AdministrationClinicalSystem
 
                 if (btnMenuClick == true)
                 {
-                    btnMenu_Click(sender, e);
+                    BtnMenu_Click(sender, e);
                 }
             }
             else
             {
                 MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-            }
-        }
-
-        private void BtnEquipamentos_Hover(object sender, EventArgs e)
-        {
-            if (btnSubMenuHover == false)
-            {
-                btnSubMenuHover = true;
-                subMenu.Visible = true;
-
-                //while (subMenu.Width <= 400)
-                //{
-                //    subMenu.Width += 4;
-                //}
-            }
-            else
-            {
-                btnSubMenuHover = false;
-
-                //while (subMenu.Width > 200)
-                //{
-                //    subMenu.Width -= 4;
-                //}
-
-                subMenu.Visible = false;
             }
         }
 
@@ -167,7 +195,7 @@ namespace AdministrationClinicalSystem
 
                 if (btnMenuClick == true)
                 {
-                    btnMenu_Click(sender, e);
+                    BtnMenu_Click(sender, e);
                 }
             }
             else
@@ -199,5 +227,41 @@ namespace AdministrationClinicalSystem
         }
 
         #endregion
+
+        private void submenuopa_Click(object sender, EventArgs e)
+        {
+            if (btnSubMenuHover == false)
+            {
+                button6.Visible = true;
+                button7.Visible = true;
+
+                btnSubMenuHover = true;
+                panel2.Visible = true;
+
+                while (panel2.Width <= 400)
+                {
+                    panel2.Width += 4;
+                }
+            }
+            else
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+
+
+                button6.Visible = true;
+                button7.Visible = true;
+
+                //btnSubMenuHover = false;
+
+                while (panel2.Width > 12)
+                {
+                    panel2.Width -= 4;
+                }
+
+                panel2.Visible = false;
+            }
+        }
     }
 }

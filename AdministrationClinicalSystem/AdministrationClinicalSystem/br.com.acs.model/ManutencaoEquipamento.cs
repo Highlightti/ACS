@@ -8,12 +8,12 @@ namespace AdministrationClinicalSystem.br.com.acs.model
 {
     class ManutencaoEquipamento
     {
-        private int idManutencao { get; set; }
-        private Equipamento equipamento { get; set; }
-        private DateTime dataProblema { get; set; }
-        private DateTime dataEnvio { get; set; }
-        private DateTime dataRecebimento { get; set; }
-        private string descricaoProblema { get; set; }
-        private bool finalizarManutencao { get; set; }
+        public int idManutencao { get; set; }
+        public Equipamento equipamento { get; set; }
+        public DateTime dataProblema { get; set; }
+        public DateTime dataEnvio { get; set; }
+        public DateTime dataRecebimento { get; set; }
+        public string descricaoProblema { get; set; }
+        public bool finalizarManutencao { get; set; }
     }
 }

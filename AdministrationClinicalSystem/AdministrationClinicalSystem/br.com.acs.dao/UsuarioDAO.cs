@@ -6,12 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using System.Windows.Forms;
 using System.Data;
 
 namespace AdministrationClinicalSystem.br.com.acs.dao
 {
-    class UsuarioDAO : MetroFramework.Forms.MetroForm
+    class UsuarioDAO
     {
         #region Variáveis de Funcionamento
 
@@ -29,21 +28,32 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         #region Querys para operações no Banco de Dados
 
-        /*->*/private static string CADASTRAR_TIPO_USUARIO = "INSERT INTO nivel_acesso (nome_perfil, nivel_acesso, data_modificacao, usuario_modificacao) VALUES (?, ?, SYSDATE(), ?)";
+        /*->*/
+        private static string CADASTRAR_TIPO_USUARIO = "INSERT INTO nivel_acesso (nome_perfil, nivel_acesso, data_modificacao, usuario_modificacao) VALUES (?, ?, SYSDATE(), ?)";
         /*Agrupar a atribuição de acesso para um usuário junto da query de cadastro*/
-        /*->*/private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, MD5(?), ?, SYSDATE(), ?)";
-        /*->*/private static string CADASTRAR_USUARIO_ACESSO = "INSERT INTO usuario_acesso (id_usuario, id_nivel_acesso) VALUES (?, ?)";
-        /*->*/private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email FROM usuario WHERE id_usuario = ?";
+        /*->*/
+        private static string CADASTRAR_USUARIO = "INSERT INTO usuario (usuario, nome, email, senha, status_usuario, data_modificacao, usuario_modificacao) VALUES (?, ?, ?, MD5(?), ?, SYSDATE(), ?)";
+        /*->*/
+        private static string CADASTRAR_USUARIO_ACESSO = "INSERT INTO usuario_acesso (id_usuario, id_nivel_acesso) VALUES (?, ?)";
+        /*->*/
+        private static string CONSULTAR_USUARIO = "SELECT usuario, nome, email FROM usuario WHERE id_usuario = ?";
         private static string CONSULTAR_TODOS_USUARIOS = "SELECT usuario, nome, email, status_usuario FROM usuario WHERE status_usuario = 1";
         /*Recuperar apenas para o adm os dados mais sensiveis para realizar alterações quando necessário daquele usuário específico*/
-        /*->*/private static string VERIFICAR_EMAIL_USUARIO = "SELECT email FROM usuario WHERE email = ?";
-        /*->*/private static string ATUALIZAR_USUARIO = "UPDATE usuario SET usuario = ?, nome = ?, email = ? WHERE id_usuario = ?";
-        /*->*/private static string VERIFICAR_SENHA_USUARIO = "SELECT nome FROM usuario WHERE senha = MD5(?) AND id_usuario = ?";
-        /*->*/private static string ATUALIZAR_SENHA_USUARIO = "UPDATE usuario SET senha = MD5(?) WHERE id_usuario = ?";
+        /*->*/
+        private static string VERIFICAR_EMAIL_USUARIO = "SELECT email FROM usuario WHERE email = ?";
+        /*->*/
+        private static string ATUALIZAR_USUARIO = "UPDATE usuario SET usuario = ?, nome = ?, email = ? WHERE id_usuario = ?";
+        /*->*/
+        private static string VERIFICAR_SENHA_USUARIO = "SELECT nome FROM usuario WHERE senha = MD5(?) AND id_usuario = ?";
+        /*->*/
+        private static string ATUALIZAR_SENHA_USUARIO = "UPDATE usuario SET senha = MD5(?) WHERE id_usuario = ?";
         private static string DESATIVAR_USUARIO = "UPDATE usuario SET status_usuario = 0 WHERE id_usuario = ?";
-        /*->*/private static string INGRESSAR_USUARIO = "SELECT usuario.id_usuario, usuario.nome, nivel_acesso.nome_perfil FROM usuario JOIN usuario_acesso ON usuario.id_usuario=usuario_acesso.id_usuario JOIN nivel_acesso ON nivel_acesso.id_nivel_acesso=usuario_acesso.id_nivel_acesso WHERE usuario = ? AND senha = MD5(?)";
-        /*->*/private static string REGISTRAR_ACAO_USUARIO_LOGIN_LOGOUT = "INSERT INTO login (id_usuario, acao, data_hora) VALUES (?, ?, SYSDATE())";
-        /*->*/private static string VERIFICAR_CONEXAO = "SELECT nome FROM usuario WHERE id_usuario = ?";
+        /*->*/
+        private static string INGRESSAR_USUARIO = "SELECT usuario.id_usuario, usuario.nome, nivel_acesso.nome_perfil FROM usuario JOIN usuario_acesso ON usuario.id_usuario=usuario_acesso.id_usuario JOIN nivel_acesso ON nivel_acesso.id_nivel_acesso=usuario_acesso.id_nivel_acesso WHERE usuario = ? AND senha = MD5(?)";
+        /*->*/
+        private static string REGISTRAR_ACAO_USUARIO_LOGIN_LOGOUT = "INSERT INTO login (id_usuario, acao, data_hora) VALUES (?, ?, SYSDATE())";
+        /*->*/
+        private static string VERIFICAR_CONEXAO = "SELECT nome FROM usuario WHERE id_usuario = ?";
 
         #endregion
 
@@ -62,7 +72,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         /// </summary>
         public static UsuarioDAO getInstance()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = new UsuarioDAO();
             }
@@ -203,7 +213,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                     throw (ex);
                 }
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
                 usuario = null;
                 throw (ex);
@@ -246,9 +256,9 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 {
                     usuario = null;
                 }
-                
+
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
                 throw (ex);
                 //MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
@@ -279,7 +289,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
                 MySqlDataReader myDataReader;
                 myDataReader = command.ExecuteReader();
-                
+
                 while (myDataReader.Read())
                 {
                     Usuario usuario = new Usuario();
@@ -291,11 +301,11 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
                     usuarios.Add(usuario);
                 }
-                
+
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
-                MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
+                throw (ex);
             }
             finally
             {
@@ -323,8 +333,9 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
                 MySqlDataReader myDataReader;
 
-                try {
-                    
+                try
+                {
+
                     myDataReader = command.ExecuteReader();
 
                     if (myDataReader.Read())
@@ -376,8 +387,8 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
                 usuario = null;
+                throw (ex);
             }
             finally
             {
@@ -453,9 +464,9 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 {
                     usuario = null;
                 }
-                
+
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
                 throw (ex);
             }
@@ -482,9 +493,9 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 command.CommandType = CommandType.Text;
                 command.ExecuteNonQuery();
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
-                MessageBox.Show("Erro de comunicação com o Banco de Dados." + ex);
+                throw (ex);
             }
             finally
             {
@@ -538,17 +549,15 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
                     myDataReader.Close();
                 }
-                catch
+                catch (MySqlException ex)
                 {
-                    Application.Restart();
+                    throw (ex);
                 }
             }
             catch (MySqlException ex)
             {
                 usuario.usuarioException = systemExMessages.ERRO_CONEXÃO_BANCO;
                 throw (ex);
-                //MetroFramework.MetroMessageBox.Show(this, systemExMessages.ERRO_CONEXÃO_BANCO, "Erro de conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
             }
             finally
             {
@@ -592,6 +601,6 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         }
 
         #endregion
- 
+
     }
 }

@@ -44,6 +44,7 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -68,8 +69,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="br.com.acs.controller\FuncionarioController.cs" />
+    <Compile Include="br.com.acs.controller\PatrimonioController.cs" />
     <Compile Include="br.com.acs.controller\UsuarioController.cs" />
+    <Compile Include="br.com.acs.dao\PatrimonioDAO.cs" />
+    <Compile Include="br.com.acs.dao\UsuarioDAO.cs" />
+    <Compile Include="br.com.acs.factory\ConexaoMySQL.cs" />
+    <Compile Include="br.com.acs.model\Contato.cs" />
+    <Compile Include="br.com.acs.model\DocumentoPF.cs" />
+    <Compile Include="br.com.acs.model\DocumentoPJ.cs" />
+    <Compile Include="br.com.acs.model\Endereco.cs" />
+    <Compile Include="br.com.acs.model\Fornecedor.cs" />
+    <Compile Include="br.com.acs.model\Funcionario.cs" />
     <Compile Include="br.com.acs.model\NivelAcesso.cs" />
+    <Compile Include="br.com.acs.model\Patrimonio.cs" />
+    <Compile Include="br.com.acs.model\Pessoa.cs" />
     <Compile Include="br.com.acs.view\ACSDadosUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,13 +109,7 @@
       <DependentUpon>ACSMainPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.dao\EquipamentoDAO.cs" />
-    <Compile Include="br.com.acs.dao\UsuarioDAO.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="br.com.acs.factory\ConexaoDB.cs" />
-    <Compile Include="br.com.acs.factory\ConexaoMySQL.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="br.com.acs.model\Equipamento.cs" />
     <Compile Include="br.com.acs.model\ManutencaoEquipamento.cs" />
     <Compile Include="br.com.acs.model\SystemExceptionsMessages.cs" />

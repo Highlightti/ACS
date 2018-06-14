@@ -29,7 +29,7 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
                 this.connection = new MySqlConnection(urlConexaoMySQL);
                 this.connection.Open();
             }
-            catch(MySqlException mySqlEx)
+            catch (MySqlException mySqlEx)
             {
                 this.connection = null;
                 throw (mySqlEx);

@@ -8,19 +8,19 @@ namespace AdministrationClinicalSystem.br.com.acs.model
 {
     class Equipamento
     {
-        private int idEquipamento;
-        private string nome;
-        private int numeroSerie;
-        private string patrimonio;
-        private string modelo;
-        private string finalidade;
-        private string localizacaoNaClinica;
-        private DateTime dataManutencaoPreventiva;
-        private DateTime dataPeriodicidadeManutencaoPreventiva;
-        private DateTime dataCalibracao;
-        private string periodicidadeCalibracao;
-        private bool statusEquipamento;
-        private string observacoes;
+        public int idEquipamento;
+        public string nome;
+        public int numeroSerie;
+        public string patrimonio;
+        public string modelo;
+        public string finalidade;
+        public string localizacaoNaClinica;
+        public DateTime dataManutencaoPreventiva;
+        public DateTime dataPeriodicidadeManutencaoPreventiva;
+        public DateTime dataCalibracao;
+        public string periodicidadeCalibracao;
+        public bool statusEquipamento;
+        public string observacoes;
 
         public Equipamento() { }
 

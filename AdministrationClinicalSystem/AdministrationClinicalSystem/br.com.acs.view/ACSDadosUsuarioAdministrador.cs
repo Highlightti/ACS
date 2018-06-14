@@ -37,7 +37,6 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         UsuarioController uController = UsuarioController.getInstance();
         SystemExceptionsMessages systemExMessages = SystemExceptionsMessages.getInstance();
 
-        bool btnAlterarSenhaClick = false;
         bool btnCadastrarTipoUsuarioClick = false;
 
         #endregion
