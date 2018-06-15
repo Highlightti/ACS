@@ -51,10 +51,7 @@ namespace AdministrationClinicalSystem
         #region Menu Slide and Navigation Screen
 
         bool btnMenuClick = false;
-        bool btnSubMenuHover = false;
-        bool opa = false;
-        bool sub1 = false;
-        bool sub2 = false;
+        bool btnSubMenuClick = false;
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {
@@ -70,6 +67,25 @@ namespace AdministrationClinicalSystem
             }
             else
             {
+                if(btnSubMenuClick == true)
+                {
+                    btnSubMenuClick = false;
+
+                    while (subMenu.Width > 12)
+                    {
+                        subMenu.Width -= 4;
+                    }
+                    subMenu.Visible = false;
+
+                    btnMenuClick = false;
+
+                    while (menu.Width > 10)
+                    {
+                        menu.Width -= 4;
+                    }
+                    menu.Visible = false;
+                }
+
                 btnMenuClick = false;
 
                 while (menu.Width > 10)
@@ -81,37 +97,104 @@ namespace AdministrationClinicalSystem
             }
         }
 
-
-        private void BtnSubMenuPatrimonio_Click(object sender, EventArgs e)
+        private void BtnSubMenu_Click(object sender, EventArgs e, string tipoSubMenu)
         {
-            if (btnSubMenuHover == false)
+            if(btnSubMenuClick == false && btnMenuClick == false)
             {
-                btnSubMenuHover = true;
+                btnMenuClick = true;
+                menu.Visible = true;
+
+                while (menu.Width <= 200)
+                {
+                    menu.Width += 4;
+                }
+
+                btnSubMenuClick = true;
+                subMenu.Visible = true;
+
+                while (subMenu.Width <= 200)
+                {
+                    subMenu.Width += 4;
+                }
+
+                VerificaSubMenuParaAtivar(tipoSubMenu);
+            }
+            else if (btnSubMenuClick == false)
+            {
+                btnSubMenuClick = true;
+                subMenu.Visible = true;
+
+                while (subMenu.Width <= 200)
+                {
+                    subMenu.Width += 4;
+                }
+
+                VerificaSubMenuParaAtivar(tipoSubMenu);
+            }
+            else if (btnSubMenuClick == true)
+            {
+                ////comparar os panels com os botões de cada menu
+                //if (subMenuPatrimonio.Visible == true || subMenuFuncionarios.Visible == true)
+                //{
+
+                //}
+
+                VerificaSubMenuParaAtivar(tipoSubMenu);
+
+                VerificaSubMenuParaDesativar(tipoSubMenu);
+
+                // se o panel q está visivel for igual ao nome do submenu passado para ser ativado, o submenu inteiro será desativado.
+                //if(subMenuPatrimonio.Visible == false && tipoSubMenu.Equals("Patrimonio"))
+                //{
+                //    btnSubMenuClick = false;
+
+                //    //deixar invisivel o submenu do menu clicado
+
+                //    while (subMenu.Width > 12)
+                //    {
+                //        subMenu.Width -= 4;
+                //    }
+
+                //    subMenu.Visible = false;
+                //}
+            }
+        }
+
+        public void VerificaSubMenuParaAtivar(string tipoSubMenu)
+        {
+            if (tipoSubMenu.Equals("Patrimonio"))
+            {
+                //ativa os botões precionado
                 subMenuPatrimonio.Visible = true;
 
-                button1.Visible = true;
-                button2.Visible = true;
-                button3.Visible = true;
-
-                while (subMenuPatrimonio.Width <= 400)
-                {
-                    subMenuPatrimonio.Width += 4;
-                }
+                //desativa todos os outros submenus
+                subMenuFuncionarios.Visible = false;
             }
-            else
+            else if (tipoSubMenu.Equals("Funcionarios"))
             {
-                btnSubMenuHover = false;
+                //ativa os botões precionado
+                subMenuFuncionarios.Visible = true;
 
-                while (subMenuPatrimonio.Width > 12)
+                //desativa todos os outros submenus
+                subMenuPatrimonio.Visible = false;
+            }
+        }
+
+        public void VerificaSubMenuParaDesativar(string tipoSubMenu)
+        {
+            // se o panel q está visivel for igual ao nome do submenu passado para ser ativado, o submenu inteiro será desativado.
+            if (subMenuPatrimonio.Visible == false && tipoSubMenu.Equals("Patrimonio"))
+            {
+                btnSubMenuClick = false;
+
+                //deixar invisivel o submenu do menu clicado
+
+                while (subMenu.Width > 12)
                 {
-                    subMenuPatrimonio.Width -= 4;
+                    subMenu.Width -= 4;
                 }
 
-                button1.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
-
-                subMenuPatrimonio.Visible = false;
+                subMenu.Visible = false;
             }
         }
 
@@ -228,40 +311,18 @@ namespace AdministrationClinicalSystem
 
         #endregion
 
-        private void submenuopa_Click(object sender, EventArgs e)
+        private void BtnPatrimonio_Click(object sender, EventArgs e)
         {
-            if (btnSubMenuHover == false)
-            {
-                button6.Visible = true;
-                button7.Visible = true;
+            //Esse botão possui um sub menu, portanto tenho que ativá-lo.
+            string subMenu = "Patrimonio";
+            BtnSubMenu_Click(sender, e, subMenu);
+        }
 
-                btnSubMenuHover = true;
-                panel2.Visible = true;
-
-                while (panel2.Width <= 400)
-                {
-                    panel2.Width += 4;
-                }
-            }
-            else
-            {
-                button1.Visible = false;
-                button2.Visible = false;
-                button3.Visible = false;
-
-
-                button6.Visible = true;
-                button7.Visible = true;
-
-                //btnSubMenuHover = false;
-
-                while (panel2.Width > 12)
-                {
-                    panel2.Width -= 4;
-                }
-
-                panel2.Visible = false;
-            }
+        private void BtnFuncionarios_Click(object sender, EventArgs e)
+        {
+            //Esse botão possui um sub menu, portanto tenho que ativá-lo.
+            string subMenu = "Funcionarios";
+            BtnSubMenu_Click(sender, e, subMenu);
         }
     }
 }

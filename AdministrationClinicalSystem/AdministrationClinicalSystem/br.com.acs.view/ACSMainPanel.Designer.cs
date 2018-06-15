@@ -32,38 +32,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ACSMainPanel));
             this.metroStyleManagerMain = new MetroFramework.Components.MetroStyleManager(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnPatrimonioIcon = new System.Windows.Forms.Button();
             this.btnUsuariosIcon = new System.Windows.Forms.Button();
             this.btnLogoutIcon = new System.Windows.Forms.Button();
             this.BtnHomeIcon = new System.Windows.Forms.Button();
             this.BtnEquipamentosIcon = new System.Windows.Forms.Button();
             this.BtnMenu = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.Panel();
+            this.BtnPatrimonio = new System.Windows.Forms.Button();
+            this.BtnFuncionarios = new System.Windows.Forms.Button();
             this.BtnUsuarios = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.BtnHome = new System.Windows.Forms.Button();
-            this.BtnEquipamentos = new System.Windows.Forms.Button();
+            this.SubBtnEquipamentos = new System.Windows.Forms.Button();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.subMenuFuncionarios = new System.Windows.Forms.Panel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.BtnMeusDados = new System.Windows.Forms.Button();
+            this.subMenu = new System.Windows.Forms.Panel();
             this.subMenuPatrimonio = new System.Windows.Forms.Panel();
-            this.submenu1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.submenuopa = new System.Windows.Forms.Button();
-            this.submenu2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SubBtnControlePatrimonio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMain)).BeginInit();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
             this.contentPanel.SuspendLayout();
+            this.subMenu.SuspendLayout();
             this.subMenuPatrimonio.SuspendLayout();
-            this.submenu2.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroStyleManagerMain
@@ -73,6 +71,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.Controls.Add(this.BtnPatrimonioIcon);
             this.panel1.Controls.Add(this.btnUsuariosIcon);
             this.panel1.Controls.Add(this.btnLogoutIcon);
             this.panel1.Controls.Add(this.BtnHomeIcon);
@@ -82,6 +81,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(40, 520);
             this.panel1.TabIndex = 15;
+            // 
+            // BtnPatrimonioIcon
+            // 
+            this.BtnPatrimonioIcon.BackColor = System.Drawing.Color.Transparent;
+            this.BtnPatrimonioIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPatrimonioIcon.BackgroundImage")));
+            this.BtnPatrimonioIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPatrimonioIcon.FlatAppearance.BorderSize = 0;
+            this.BtnPatrimonioIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnPatrimonioIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnPatrimonioIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPatrimonioIcon.Location = new System.Drawing.Point(0, 40);
+            this.BtnPatrimonioIcon.Name = "BtnPatrimonioIcon";
+            this.BtnPatrimonioIcon.Size = new System.Drawing.Size(40, 40);
+            this.BtnPatrimonioIcon.TabIndex = 25;
+            this.BtnPatrimonioIcon.UseVisualStyleBackColor = false;
+            this.BtnPatrimonioIcon.Click += new System.EventHandler(this.BtnPatrimonio_Click);
             // 
             // btnUsuariosIcon
             // 
@@ -143,7 +158,7 @@
             this.BtnEquipamentosIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
             this.BtnEquipamentosIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
             this.BtnEquipamentosIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEquipamentosIcon.Location = new System.Drawing.Point(0, 40);
+            this.BtnEquipamentosIcon.Location = new System.Drawing.Point(0, 109);
             this.BtnEquipamentosIcon.Name = "BtnEquipamentosIcon";
             this.BtnEquipamentosIcon.Size = new System.Drawing.Size(40, 40);
             this.BtnEquipamentosIcon.TabIndex = 18;
@@ -170,17 +185,53 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.menu.Controls.Add(this.submenuopa);
+            this.menu.Controls.Add(this.BtnPatrimonio);
+            this.menu.Controls.Add(this.BtnFuncionarios);
             this.menu.Controls.Add(this.BtnUsuarios);
             this.menu.Controls.Add(this.btnLogout);
             this.menu.Controls.Add(this.BtnHome);
-            this.menu.Controls.Add(this.BtnEquipamentos);
             this.menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.menu.Location = new System.Drawing.Point(60, 60);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(200, 520);
             this.menu.TabIndex = 16;
             this.menu.Visible = false;
+            // 
+            // BtnPatrimonio
+            // 
+            this.BtnPatrimonio.BackColor = System.Drawing.Color.Transparent;
+            this.BtnPatrimonio.FlatAppearance.BorderSize = 0;
+            this.BtnPatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnPatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.BtnPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnPatrimonio.Location = new System.Drawing.Point(0, 40);
+            this.BtnPatrimonio.Name = "BtnPatrimonio";
+            this.BtnPatrimonio.Size = new System.Drawing.Size(205, 40);
+            this.BtnPatrimonio.TabIndex = 24;
+            this.BtnPatrimonio.Text = "Patrimonio";
+            this.BtnPatrimonio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPatrimonio.UseVisualStyleBackColor = false;
+            this.BtnPatrimonio.Click += new System.EventHandler(this.BtnPatrimonio_Click);
+            // 
+            // BtnFuncionarios
+            // 
+            this.BtnFuncionarios.BackColor = System.Drawing.Color.Transparent;
+            this.BtnFuncionarios.FlatAppearance.BorderSize = 0;
+            this.BtnFuncionarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnFuncionarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFuncionarios.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.BtnFuncionarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnFuncionarios.Location = new System.Drawing.Point(0, 155);
+            this.BtnFuncionarios.Name = "BtnFuncionarios";
+            this.BtnFuncionarios.Size = new System.Drawing.Size(205, 40);
+            this.BtnFuncionarios.TabIndex = 23;
+            this.BtnFuncionarios.Text = "Funcionários";
+            this.BtnFuncionarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFuncionarios.UseVisualStyleBackColor = false;
+            this.BtnFuncionarios.Click += new System.EventHandler(this.BtnFuncionarios_Click);
             // 
             // BtnUsuarios
             // 
@@ -190,7 +241,7 @@
             this.BtnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUsuarios.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUsuarios.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.BtnUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnUsuarios.Location = new System.Drawing.Point(0, 440);
             this.BtnUsuarios.Name = "BtnUsuarios";
@@ -209,7 +260,7 @@
             this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogout.Location = new System.Drawing.Point(0, 480);
             this.btnLogout.Name = "btnLogout";
@@ -228,7 +279,7 @@
             this.BtnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHome.Font = new System.Drawing.Font("Segoe UI Semilight", 14F);
+            this.BtnHome.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.BtnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnHome.Location = new System.Drawing.Point(0, 0);
             this.BtnHome.Name = "BtnHome";
@@ -239,23 +290,22 @@
             this.BtnHome.UseVisualStyleBackColor = false;
             this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // BtnEquipamentos
+            // SubBtnEquipamentos
             // 
-            this.BtnEquipamentos.BackColor = System.Drawing.Color.Transparent;
-            this.BtnEquipamentos.FlatAppearance.BorderSize = 0;
-            this.BtnEquipamentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnEquipamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnEquipamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEquipamentos.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEquipamentos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnEquipamentos.Location = new System.Drawing.Point(0, 40);
-            this.BtnEquipamentos.Name = "BtnEquipamentos";
-            this.BtnEquipamentos.Size = new System.Drawing.Size(205, 40);
-            this.BtnEquipamentos.TabIndex = 17;
-            this.BtnEquipamentos.Text = "Equipamentos";
-            this.BtnEquipamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEquipamentos.UseVisualStyleBackColor = false;
-            this.BtnEquipamentos.Click += new System.EventHandler(this.BtnSubMenuPatrimonio_Click);
+            this.SubBtnEquipamentos.BackColor = System.Drawing.Color.Transparent;
+            this.SubBtnEquipamentos.FlatAppearance.BorderSize = 0;
+            this.SubBtnEquipamentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnEquipamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnEquipamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubBtnEquipamentos.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.SubBtnEquipamentos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubBtnEquipamentos.Location = new System.Drawing.Point(0, 40);
+            this.SubBtnEquipamentos.Name = "SubBtnEquipamentos";
+            this.SubBtnEquipamentos.Size = new System.Drawing.Size(207, 40);
+            this.SubBtnEquipamentos.TabIndex = 17;
+            this.SubBtnEquipamentos.Text = "Equipamentos";
+            this.SubBtnEquipamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubBtnEquipamentos.UseVisualStyleBackColor = false;
             // 
             // metroLabel2
             // 
@@ -292,13 +342,30 @@
             // contentPanel
             // 
             this.contentPanel.Controls.Add(this.panel2);
-            this.contentPanel.Controls.Add(this.submenu1);
-            this.contentPanel.Controls.Add(this.submenu2);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contentPanel.Location = new System.Drawing.Point(60, 60);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(938, 520);
             this.contentPanel.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Red;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(400, 520);
+            this.panel2.TabIndex = 4;
+            this.panel2.Visible = false;
+            // 
+            // subMenuFuncionarios
+            // 
+            this.subMenuFuncionarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.subMenuFuncionarios.Location = new System.Drawing.Point(-2, 0);
+            this.subMenuFuncionarios.Name = "subMenuFuncionarios";
+            this.subMenuFuncionarios.Size = new System.Drawing.Size(211, 152);
+            this.subMenuFuncionarios.TabIndex = 0;
+            this.subMenuFuncionarios.Visible = false;
             // 
             // metroLabel3
             // 
@@ -306,7 +373,7 @@
             this.metroLabel3.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel3.ForeColor = System.Drawing.Color.LimeGreen;
-            this.metroLabel3.Location = new System.Drawing.Point(67, 31);
+            this.metroLabel3.Location = new System.Drawing.Point(67, 30);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(21, 19);
             this.metroLabel3.TabIndex = 21;
@@ -331,133 +398,64 @@
             this.BtnMeusDados.UseVisualStyleBackColor = true;
             this.BtnMeusDados.Click += new System.EventHandler(this.BtnMeusDados_Click);
             // 
+            // subMenu
+            // 
+            this.subMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(149)))));
+            this.subMenu.Controls.Add(this.subMenuPatrimonio);
+            this.subMenu.Controls.Add(this.subMenuFuncionarios);
+            this.subMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.subMenu.Location = new System.Drawing.Point(260, 60);
+            this.subMenu.Name = "subMenu";
+            this.subMenu.Size = new System.Drawing.Size(200, 520);
+            this.subMenu.TabIndex = 21;
+            this.subMenu.Visible = false;
+            // 
             // subMenuPatrimonio
             // 
-            this.subMenuPatrimonio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(149)))));
-            this.subMenuPatrimonio.Controls.Add(this.button3);
-            this.subMenuPatrimonio.Controls.Add(this.button2);
-            this.subMenuPatrimonio.Controls.Add(this.button1);
-            this.subMenuPatrimonio.Controls.Add(this.button7);
-            this.subMenuPatrimonio.Controls.Add(this.button6);
-            this.subMenuPatrimonio.Dock = System.Windows.Forms.DockStyle.Left;
-            this.subMenuPatrimonio.Location = new System.Drawing.Point(260, 60);
+            this.subMenuPatrimonio.BackColor = System.Drawing.Color.Transparent;
+            this.subMenuPatrimonio.Controls.Add(this.SubBtnControlePatrimonio);
+            this.subMenuPatrimonio.Controls.Add(this.label1);
+            this.subMenuPatrimonio.Controls.Add(this.SubBtnEquipamentos);
+            this.subMenuPatrimonio.Location = new System.Drawing.Point(0, 0);
             this.subMenuPatrimonio.Name = "subMenuPatrimonio";
-            this.subMenuPatrimonio.Size = new System.Drawing.Size(200, 520);
-            this.subMenuPatrimonio.TabIndex = 21;
+            this.subMenuPatrimonio.Size = new System.Drawing.Size(211, 216);
+            this.subMenuPatrimonio.TabIndex = 5;
             this.subMenuPatrimonio.Visible = false;
             // 
-            // submenu1
+            // label1
             // 
-            this.submenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.submenu1.Location = new System.Drawing.Point(577, 182);
-            this.submenu1.Name = "submenu1";
-            this.submenu1.Size = new System.Drawing.Size(200, 126);
-            this.submenu1.TabIndex = 0;
-            this.submenu1.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "subMenuPatrimonio";
+            this.label1.Visible = false;
             // 
-            // button1
+            // SubBtnControlePatrimonio
             // 
-            this.button1.Location = new System.Drawing.Point(28, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(28, 61);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 30);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(28, 97);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 30);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            // 
-            // submenuopa
-            // 
-            this.submenuopa.BackColor = System.Drawing.Color.Transparent;
-            this.submenuopa.FlatAppearance.BorderSize = 0;
-            this.submenuopa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.submenuopa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.submenuopa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submenuopa.Font = new System.Drawing.Font("Segoe UI Semilight", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submenuopa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.submenuopa.Location = new System.Drawing.Point(0, 86);
-            this.submenuopa.Name = "submenuopa";
-            this.submenuopa.Size = new System.Drawing.Size(205, 40);
-            this.submenuopa.TabIndex = 23;
-            this.submenuopa.Text = "Opa";
-            this.submenuopa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.submenuopa.UseVisualStyleBackColor = false;
-            this.submenuopa.Click += new System.EventHandler(this.submenuopa_Click);
-            // 
-            // submenu2
-            // 
-            this.submenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.submenu2.Controls.Add(this.button5);
-            this.submenu2.Location = new System.Drawing.Point(580, 50);
-            this.submenu2.Name = "submenu2";
-            this.submenu2.Size = new System.Drawing.Size(200, 126);
-            this.submenu2.TabIndex = 3;
-            this.submenu2.Visible = false;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(0, 72);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 30);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(11, 61);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 30);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(11, 25);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 30);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Red;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 520);
-            this.panel2.TabIndex = 4;
-            this.panel2.Visible = false;
+            this.SubBtnControlePatrimonio.BackColor = System.Drawing.Color.Transparent;
+            this.SubBtnControlePatrimonio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SubBtnControlePatrimonio.FlatAppearance.BorderSize = 0;
+            this.SubBtnControlePatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnControlePatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnControlePatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubBtnControlePatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.SubBtnControlePatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubBtnControlePatrimonio.Location = new System.Drawing.Point(0, 0);
+            this.SubBtnControlePatrimonio.Name = "SubBtnControlePatrimonio";
+            this.SubBtnControlePatrimonio.Size = new System.Drawing.Size(211, 40);
+            this.SubBtnControlePatrimonio.TabIndex = 18;
+            this.SubBtnControlePatrimonio.Text = "Controle Patrimonio";
+            this.SubBtnControlePatrimonio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubBtnControlePatrimonio.UseVisualStyleBackColor = false;
             // 
             // ACSMainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 600);
-            this.Controls.Add(this.subMenuPatrimonio);
+            this.Controls.Add(this.subMenu);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroLabel3);
@@ -474,8 +472,9 @@
             this.panel1.ResumeLayout(false);
             this.menu.ResumeLayout(false);
             this.contentPanel.ResumeLayout(false);
+            this.subMenu.ResumeLayout(false);
             this.subMenuPatrimonio.ResumeLayout(false);
-            this.submenu2.ResumeLayout(false);
+            this.subMenuPatrimonio.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,7 +484,7 @@
         private MetroFramework.Components.MetroStyleManager metroStyleManagerMain;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel menu;
-        private System.Windows.Forms.Button BtnEquipamentos;
+        private System.Windows.Forms.Button SubBtnEquipamentos;
         private System.Windows.Forms.Button BtnHome;
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Button btnLogoutIcon;
@@ -499,17 +498,15 @@
         private System.Windows.Forms.Button BtnMeusDados;
         public System.Windows.Forms.Button BtnUsuarios;
         private System.Windows.Forms.Button btnUsuariosIcon;
-        private System.Windows.Forms.Panel subMenuPatrimonio;
-        private System.Windows.Forms.Panel submenu1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel submenu2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button submenuopa;
+        private System.Windows.Forms.Panel subMenu;
+        private System.Windows.Forms.Panel subMenuFuncionarios;
+        private System.Windows.Forms.Button BtnFuncionarios;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BtnPatrimonio;
+        private System.Windows.Forms.Button BtnPatrimonioIcon;
+        private System.Windows.Forms.Panel subMenuPatrimonio;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SubBtnControlePatrimonio;
     }
 }
 
