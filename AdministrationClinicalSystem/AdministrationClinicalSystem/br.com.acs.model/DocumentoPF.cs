@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AdministrationClinicalSystem.br.com.acs.model
 {
-    class DocumentoPF
+    public class DocumentoPF
     {
         public string registroGeral { get; set; }
         public string cadastroPessoaFisica { get; set; }
         public string carteiraNacionalHabilitacao { get; set; }
+        public string programaIntegracaoSocial { get; set; }
 
         public DocumentoPF() { }
     }

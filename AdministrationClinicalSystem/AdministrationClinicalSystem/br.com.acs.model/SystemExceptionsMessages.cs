@@ -8,6 +8,7 @@ namespace AdministrationClinicalSystem.br.com.acs.model
 {
     class SystemExceptionsMessages
     {
+
         #region Singleton Pattern
 
         private static SystemExceptionsMessages instance;

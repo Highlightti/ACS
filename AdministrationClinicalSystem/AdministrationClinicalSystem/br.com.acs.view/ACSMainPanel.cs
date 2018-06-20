@@ -48,15 +48,27 @@ namespace AdministrationClinicalSystem
 
         #endregion
 
-        #region Menu Slide and Navigation Screen
+        #region Menu
 
+        #region Menu, Sub menu Slide and Navigation Screen
+
+        // Variáveis para fazer o controle de ações do menu e sub menu.
         bool btnMenuClick = false;
         bool btnSubMenuClick = false;
 
+
+
+        /// <summary>
+        /// Método responsável por fazer o controle de animação do menu principal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnMenu_Click(object sender, EventArgs e)
         {
+            // Verifica se o menu está fechado.
             if (btnMenuClick == false)
             {
+                // Se sim, deixa o menu visível e aplica o efeito de slide para apresentá-lo.
                 btnMenuClick = true;
                 menu.Visible = true;
 
@@ -67,8 +79,10 @@ namespace AdministrationClinicalSystem
             }
             else
             {
+                // Se não, verifica se o sub menu está aberto.
                 if(btnSubMenuClick == true)
                 {
+                    // E então fecha o sub menu, e em seguida fecha o menu principal.
                     btnSubMenuClick = false;
 
                     while (subMenu.Width > 12)
@@ -85,22 +99,35 @@ namespace AdministrationClinicalSystem
                     }
                     menu.Visible = false;
                 }
-
-                btnMenuClick = false;
-
-                while (menu.Width > 10)
+                else
                 {
-                    menu.Width -= 4;
-                }
+                    // Se não, se somente o menu principal está aberto, só ele será fechado.
+                    btnMenuClick = false;
 
-                menu.Visible = false;
+                    while (menu.Width > 10)
+                    {
+                        menu.Width -= 4;
+                    }
+
+                    menu.Visible = false;
+                }
             }
         }
 
+
+
+        /// <summary>
+        /// Método responsável por fazer o controle de animação do sub menu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <param name="tipoSubMenu"></param>
         private void BtnSubMenu_Click(object sender, EventArgs e, string tipoSubMenu)
         {
+            // Verifica se o sub menu e o menu principal estão fechados.
             if(btnSubMenuClick == false && btnMenuClick == false)
             {
+                // Se for verdadeiro, quando um menu tiver um sub menu, ele também poderá ser aberto clicando apenas no ícone.
                 btnMenuClick = true;
                 menu.Visible = true;
 
@@ -119,8 +146,10 @@ namespace AdministrationClinicalSystem
 
                 VerificaSubMenuParaAtivar(tipoSubMenu);
             }
+            // Verifica se o sub menu está fechado.
             else if (btnSubMenuClick == false)
             {
+                // Se sim, irá executar a ação para abrí-lo.
                 btnSubMenuClick = true;
                 subMenu.Visible = true;
 
@@ -129,92 +158,65 @@ namespace AdministrationClinicalSystem
                     subMenu.Width += 4;
                 }
 
+                // E irá chamar as opções do sub menu de acordo com o menu clicado.
                 VerificaSubMenuParaAtivar(tipoSubMenu);
             }
+            // Verifica se o sub menu está aberto.
             else if (btnSubMenuClick == true)
             {
-                ////comparar os panels com os botões de cada menu
-                //if (subMenuPatrimonio.Visible == true || subMenuFuncionarios.Visible == true)
-                //{
-
-                //}
-
+                // Se sim, alterna entre os sub menus de acordo com o menu principal clicado.
                 VerificaSubMenuParaAtivar(tipoSubMenu);
-
-                VerificaSubMenuParaDesativar(tipoSubMenu);
-
-                // se o panel q está visivel for igual ao nome do submenu passado para ser ativado, o submenu inteiro será desativado.
-                //if(subMenuPatrimonio.Visible == false && tipoSubMenu.Equals("Patrimonio"))
-                //{
-                //    btnSubMenuClick = false;
-
-                //    //deixar invisivel o submenu do menu clicado
-
-                //    while (subMenu.Width > 12)
-                //    {
-                //        subMenu.Width -= 4;
-                //    }
-
-                //    subMenu.Visible = false;
-                //}
             }
         }
 
+
+
+        /// <summary>
+        /// Método responsável por alternar entre os sub menus de acordo com o botão clicado do menu principal
+        /// 
+        /// Sempre que adicionar uma nova opção ao menu, e essa opção obter várias outras interna, terá de adicionar a 
+        /// sua verificação abaixo, para poder ser visualizada no mecanismo de funcionamento do menu do sistema.
+        /// </summary>
+        /// <param name="tipoSubMenu"></param>
         public void VerificaSubMenuParaAtivar(string tipoSubMenu)
         {
-            if (tipoSubMenu.Equals("Patrimonio"))
+            // Verifica qual sub menu está ativo, para poder desativá-lo e ativar outro.
+            if (tipoSubMenu.Equals("GestaoAdministrativa"))
             {
-                //ativa os botões precionado
-                subMenuPatrimonio.Visible = true;
+                //Ativa o sub menu selecionado.
+                subMenuGestaoAdministrativa.Visible = true;
 
-                //desativa todos os outros submenus
+                //Desativa os outros sub menus.
                 subMenuFuncionarios.Visible = false;
             }
             else if (tipoSubMenu.Equals("Funcionarios"))
             {
-                //ativa os botões precionado
                 subMenuFuncionarios.Visible = true;
 
-                //desativa todos os outros submenus
-                subMenuPatrimonio.Visible = false;
+                subMenuGestaoAdministrativa.Visible = false;
             }
         }
 
-        public void VerificaSubMenuParaDesativar(string tipoSubMenu)
+
+
+        /// <summary>
+        /// Método responsável por realizar a verificação se o menu está ou não aberto, para poder fechá-lo.
+        /// </summary>
+        public void VerificarFechamentoMenu(object sender, EventArgs e)
         {
-            // se o panel q está visivel for igual ao nome do submenu passado para ser ativado, o submenu inteiro será desativado.
-            if (subMenuPatrimonio.Visible == false && tipoSubMenu.Equals("Patrimonio"))
+            if (btnMenuClick == true)
             {
-                btnSubMenuClick = false;
-
-                //deixar invisivel o submenu do menu clicado
-
-                while (subMenu.Width > 12)
-                {
-                    subMenu.Width -= 4;
-                }
-
-                subMenu.Visible = false;
+                BtnMenu_Click(sender, e);
             }
         }
 
 
 
-        private void submenu1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void submenu2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-
-
+        /// <summary>
+        /// Método responsável por fazer o controle de navegação de telas.
+        /// </summary>
+        /// <param name="form"></param>
+        /// <param name="panel"></param>
         public void NavigationScreen(Form form, Panel panel)
         {
             form.TopLevel = false;
@@ -223,37 +225,17 @@ namespace AdministrationClinicalSystem
             form.Show();
         }
 
-        private void BtnHome_Click(object sender, EventArgs e)
-        {
-            ACSHome home = new ACSHome();
-            NavigationScreen(home, contentPanel);
+        #endregion
 
-            if(btnMenuClick == true)
-            {
-                BtnMenu_Click(sender, e);
-            }
-        }
-
-        private void BtnEquipamentos_Click(object sender, EventArgs e)
-        {
-            ACSEquipamentos equipamentos = new ACSEquipamentos();
-            NavigationScreen(equipamentos, contentPanel);
-
-            if (btnMenuClick == true)
-            {
-                BtnMenu_Click(sender, e);
-            }
-        }
-
-        private void BtnUsuarios_Click(object sender, EventArgs e)
+        private void BtnMeusDados_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
             usuario = uController.VerificaConexãoBanco();
 
             if (usuario != null)
             {
-                ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
-                NavigationScreen(dadosUsuarioAdministrador, contentPanel);
+                ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
+                NavigationScreen(dadosUsuario, contentPanel);
 
                 if (btnMenuClick == true)
                 {
@@ -266,15 +248,65 @@ namespace AdministrationClinicalSystem
             }
         }
 
-        private void BtnMeusDados_Click(object sender, EventArgs e)
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            ACSHome home = new ACSHome();
+            NavigationScreen(home, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
+        #region Menu e Sub menu Gestão Administrativa
+
+        private void BtnGestaoAdministrativa_Click(object sender, EventArgs e)
+        {
+            //Esse botão possui um sub menu, portanto tenho que ativá-lo.
+            string subMenu = "GestaoAdministrativa";
+            BtnSubMenu_Click(sender, e, subMenu);
+        }
+
+        private void SubBtnPatrimonio_Click(object sender, EventArgs e)
+        {
+            ACSPatrimonio patrimonio = new ACSPatrimonio();
+            NavigationScreen(patrimonio, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
+        private void SubBtnEquipamentos_Click(object sender, EventArgs e)
+        {
+            ACSEquipamentos equipamentos = new ACSEquipamentos();
+            NavigationScreen(equipamentos, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
+        private void SubBtnLocais_Click(object sender, EventArgs e)
+        {
+            ACSLocais locais = new ACSLocais();
+            NavigationScreen(locais, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
+        #endregion
+
+        private void BtnFuncionarios_Click(object sender, EventArgs e)
+        {
+            //Esse botão possui um sub menu, portanto tenho que ativá-lo.
+            string subMenu = "Funcionarios";
+            BtnSubMenu_Click(sender, e, subMenu);
+        }
+
+        private void BtnUsuarios_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
             usuario = uController.VerificaConexãoBanco();
 
             if (usuario != null)
             {
-                ACSDadosUsuario dadosUsuario = new ACSDadosUsuario();
-                NavigationScreen(dadosUsuario, contentPanel);
+                ACSDadosUsuarioAdministrador dadosUsuarioAdministrador = new ACSDadosUsuarioAdministrador();
+                NavigationScreen(dadosUsuarioAdministrador, contentPanel);
 
                 if (btnMenuClick == true)
                 {
@@ -311,18 +343,5 @@ namespace AdministrationClinicalSystem
 
         #endregion
 
-        private void BtnPatrimonio_Click(object sender, EventArgs e)
-        {
-            //Esse botão possui um sub menu, portanto tenho que ativá-lo.
-            string subMenu = "Patrimonio";
-            BtnSubMenu_Click(sender, e, subMenu);
-        }
-
-        private void BtnFuncionarios_Click(object sender, EventArgs e)
-        {
-            //Esse botão possui um sub menu, portanto tenho que ativá-lo.
-            string subMenu = "Funcionarios";
-            BtnSubMenu_Click(sender, e, subMenu);
-        }
     }
 }

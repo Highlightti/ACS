@@ -81,6 +81,7 @@
     <Compile Include="br.com.acs.model\Endereco.cs" />
     <Compile Include="br.com.acs.model\Fornecedor.cs" />
     <Compile Include="br.com.acs.model\Funcionario.cs" />
+    <Compile Include="br.com.acs.model\Log.cs" />
     <Compile Include="br.com.acs.model\NivelAcesso.cs" />
     <Compile Include="br.com.acs.model\Patrimonio.cs" />
     <Compile Include="br.com.acs.model\Pessoa.cs" />
@@ -95,6 +96,12 @@
     </Compile>
     <Compile Include="br.com.acs.view\ACSDadosUsuarioAdministrador.Designer.cs">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSLocais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSLocais.Designer.cs">
+      <DependentUpon>ACSLocais.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSLogin.cs">
       <SubType>Form</SubType>
@@ -125,6 +132,12 @@
     </Compile>
     <Compile Include="br.com.acs.view\ACSHome.Designer.cs">
       <DependentUpon>ACSHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSPatrimonio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSPatrimonio.Designer.cs">
+      <DependentUpon>ACSPatrimonio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

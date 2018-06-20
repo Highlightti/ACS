@@ -8,6 +8,21 @@ namespace AdministrationClinicalSystem.br.com.acs.model
 {
     public class Usuario
     {
+        /* Novo modelo a ser seguido.
+         * 
+        public int idUsuario { get; set; }
+        public int idUsuarioLogado { get; set; }
+        public int statusUsuario { get; set; }
+        public string usuario { get; set; }
+        public Pessoa pessoa { get; set; }
+        public string emailUsuario { get; set; }
+        public string senha { get; set; }
+        public string tipoUsuarioLogado { get; set; }
+        public string usuarioException { get; set; }
+        public NivelAcesso nivelAcesso { get; set; }
+        */
+
+
         public int idUsuario { get; set; }
         public int idUsuarioLogado { get; set; }
         public int statusUsuario { get; set; }
@@ -17,7 +32,6 @@ namespace AdministrationClinicalSystem.br.com.acs.model
         public string senha { get; set; }
         public string tipoUsuarioLogado { get; set; }
         public string usuarioException { get; set; }
-        public DateTime dataModificacao { get; set; }
         public NivelAcesso nivelAcesso { get; set; }
 
         public Usuario() { }
@@ -33,7 +47,6 @@ namespace AdministrationClinicalSystem.br.com.acs.model
             this.senha = senha;
             this.tipoUsuarioLogado = tipoUsuarioLogado;
             this.usuarioException = usuarioException;
-            this.dataModificacao = dataModificacao;
             this.nivelAcesso = nivelAcesso;
         }
     }
