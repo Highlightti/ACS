@@ -35,6 +35,28 @@ namespace AdministrationClinicalSystem.br.com.acs.model
 
         #endregion
 
+        #region Mensagens genéricas.
+
+        public string TITLE_DADOS_CADASTRADOS = "Dados cadastrados.";
+        public string MESSAGE_DADOS_CADASTRADOS = "\n" + "Informações cadastradas com sucesso!";
+
+        public string TITLE_DADOS_INVALIDOS_CADASTRO = "Dados inválidos.";
+        public string MESSAGE_DADOS_INVALIDOS_CADASTRO = "\n" + "Por favor, preencha os campos obrigatórios para concluir o cadastro.";
+
+        public string TITLE_FALHA_CONEXAO = "Falha na conexão.";
+        public string MESSAGE_FALHA_CONEXAO = "Houve uma falha ao tentar realizar essa operação, por favor, verifique sua conexão com a internet.";
+
+        #endregion
+
+
+        #region Mensagens para ações com a classe Pessoa.
+
+
+
+
+
+        #endregion
+
         #region Dados Usuário Messages
 
         public string TITLE_EMAIL_INVALIDO = "E-mail inválido";

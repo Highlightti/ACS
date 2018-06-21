@@ -71,8 +71,10 @@
   <ItemGroup>
     <Compile Include="br.com.acs.controller\FuncionarioController.cs" />
     <Compile Include="br.com.acs.controller\PatrimonioController.cs" />
+    <Compile Include="br.com.acs.controller\PessoaController.cs" />
     <Compile Include="br.com.acs.controller\UsuarioController.cs" />
     <Compile Include="br.com.acs.dao\PatrimonioDAO.cs" />
+    <Compile Include="br.com.acs.dao\PessoaDAO.cs" />
     <Compile Include="br.com.acs.dao\UsuarioDAO.cs" />
     <Compile Include="br.com.acs.factory\ConexaoMySQL.cs" />
     <Compile Include="br.com.acs.model\Contato.cs" />
