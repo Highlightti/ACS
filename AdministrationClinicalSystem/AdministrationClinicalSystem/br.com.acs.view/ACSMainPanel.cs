@@ -187,11 +187,11 @@ namespace AdministrationClinicalSystem
                 subMenuGestaoAdministrativa.Visible = true;
 
                 //Desativa os outros sub menus.
-                subMenuFuncionarios.Visible = false;
+                subMenuPessoas.Visible = false;
             }
-            else if (tipoSubMenu.Equals("Funcionarios"))
+            else if (tipoSubMenu.Equals("Pessoas"))
             {
-                subMenuFuncionarios.Visible = true;
+                subMenuPessoas.Visible = true;
 
                 subMenuGestaoAdministrativa.Visible = false;
             }
@@ -291,10 +291,22 @@ namespace AdministrationClinicalSystem
 
         #endregion
 
-        private void BtnFuncionarios_Click(object sender, EventArgs e)
+
+
+        private void SubBtnGestãoPessoas_Click(object sender, EventArgs e)
+        {
+            ACSPessoas pessoas = new ACSPessoas();
+            NavigationScreen(pessoas, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
+
+
+        private void BtnPessoas_Click(object sender, EventArgs e)
         {
             //Esse botão possui um sub menu, portanto tenho que ativá-lo.
-            string subMenu = "Funcionarios";
+            string subMenu = "Pessoas";
             BtnSubMenu_Click(sender, e, subMenu);
         }
 
@@ -342,6 +354,7 @@ namespace AdministrationClinicalSystem
         }
 
         #endregion
+
 
     }
 }
