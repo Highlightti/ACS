@@ -390,7 +390,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(2, 78);
+            this.button3.Location = new System.Drawing.Point(2, 80);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(206, 40);
             this.button3.TabIndex = 27;
@@ -407,7 +407,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(2, 38);
+            this.button2.Location = new System.Drawing.Point(2, 40);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(207, 40);
             this.button2.TabIndex = 26;
@@ -424,7 +424,7 @@
             this.SubBtnGestãoPessoas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubBtnGestãoPessoas.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.SubBtnGestãoPessoas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubBtnGestãoPessoas.Location = new System.Drawing.Point(2, 0);
+            this.SubBtnGestãoPessoas.Location = new System.Drawing.Point(2, 1);
             this.SubBtnGestãoPessoas.Name = "SubBtnGestãoPessoas";
             this.SubBtnGestãoPessoas.Size = new System.Drawing.Size(206, 40);
             this.SubBtnGestãoPessoas.TabIndex = 25;

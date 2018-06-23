@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainPessoa = new MetroFramework.Controls.MetroTabControl();
             this.TabCadastrarPessoa = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,8 +49,6 @@
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -75,21 +73,18 @@
             this.labelRg = new MetroFramework.Controls.MetroTextBox();
             this.labelComplemento = new MetroFramework.Controls.MetroTextBox();
             this.labelCpf = new MetroFramework.Controls.MetroTextBox();
-            this.labelCnh = new MetroFramework.Controls.MetroTextBox();
             this.labelNumero = new MetroFramework.Controls.MetroTextBox();
-            this.labelPis = new MetroFramework.Controls.MetroTextBox();
             this.labelRua = new MetroFramework.Controls.MetroTextBox();
             this.labelCep = new MetroFramework.Controls.MetroTextBox();
             this.TabConsultarPessoas = new MetroFramework.Controls.MetroTabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.ListaPessoas = new MetroFramework.Controls.MetroGrid();
             this.BottomOptionsPanel = new System.Windows.Forms.Panel();
             this.ListPessoasPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnOpcoesAvancadas = new System.Windows.Forms.Button();
             this.opcoesAvancadasPessoas = new System.Windows.Forms.Panel();
-            this.BtnPatrimonio = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnAtribuirFuncionário = new System.Windows.Forms.Button();
+            this.BtnAtribuirUsuarioSistema = new System.Windows.Forms.Button();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoCivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +92,7 @@
             this.DataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.MainPessoa.SuspendLayout();
             this.TabCadastrarPessoa.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -121,11 +117,9 @@
             // 
             // TabCadastrarPessoa
             // 
-            this.TabCadastrarPessoa.AutoScroll = true;
             this.TabCadastrarPessoa.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.AutoScrollMinSize = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.Controls.Add(this.panel2);
-            this.TabCadastrarPessoa.HorizontalScrollbar = true;
             this.TabCadastrarPessoa.HorizontalScrollbarBarColor = false;
             this.TabCadastrarPessoa.HorizontalScrollbarHighlightOnWheel = false;
             this.TabCadastrarPessoa.HorizontalScrollbarSize = 10;
@@ -135,8 +129,8 @@
             this.TabCadastrarPessoa.TabIndex = 0;
             this.TabCadastrarPessoa.Text = "     Cadastrar Pessoa  ";
             this.TabCadastrarPessoa.VerticalScrollbar = true;
-            this.TabCadastrarPessoa.VerticalScrollbarBarColor = true;
-            this.TabCadastrarPessoa.VerticalScrollbarHighlightOnWheel = true;
+            this.TabCadastrarPessoa.VerticalScrollbarBarColor = false;
+            this.TabCadastrarPessoa.VerticalScrollbarHighlightOnWheel = false;
             this.TabCadastrarPessoa.VerticalScrollbarSize = 10;
             // 
             // panel2
@@ -157,8 +151,6 @@
             this.panel2.Controls.Add(this.metroLabel14);
             this.panel2.Controls.Add(this.metroLabel13);
             this.panel2.Controls.Add(this.metroLabel12);
-            this.panel2.Controls.Add(this.metroLabel11);
-            this.panel2.Controls.Add(this.metroLabel10);
             this.panel2.Controls.Add(this.metroLabel9);
             this.panel2.Controls.Add(this.metroLabel8);
             this.panel2.Controls.Add(this.metroLabel7);
@@ -183,14 +175,12 @@
             this.panel2.Controls.Add(this.labelRg);
             this.panel2.Controls.Add(this.labelComplemento);
             this.panel2.Controls.Add(this.labelCpf);
-            this.panel2.Controls.Add(this.labelCnh);
             this.panel2.Controls.Add(this.labelNumero);
-            this.panel2.Controls.Add(this.labelPis);
             this.panel2.Controls.Add(this.labelRua);
             this.panel2.Controls.Add(this.labelCep);
             this.panel2.Location = new System.Drawing.Point(22, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(332, 1516);
+            this.panel2.Size = new System.Drawing.Size(332, 1405);
             this.panel2.TabIndex = 13;
             // 
             // labelDataNascimento
@@ -212,7 +202,7 @@
             this.BtnCadastrarPessoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadastrarPessoa.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.BtnCadastrarPessoa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCadastrarPessoa.Location = new System.Drawing.Point(66, 1439);
+            this.BtnCadastrarPessoa.Location = new System.Drawing.Point(66, 1329);
             this.BtnCadastrarPessoa.Name = "BtnCadastrarPessoa";
             this.BtnCadastrarPessoa.Size = new System.Drawing.Size(200, 40);
             this.BtnCadastrarPessoa.TabIndex = 44;
@@ -224,7 +214,7 @@
             // 
             this.metroLabel24.AutoSize = true;
             this.metroLabel24.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel24.Location = new System.Drawing.Point(39, 1356);
+            this.metroLabel24.Location = new System.Drawing.Point(39, 1246);
             this.metroLabel24.Name = "metroLabel24";
             this.metroLabel24.Size = new System.Drawing.Size(38, 15);
             this.metroLabel24.TabIndex = 43;
@@ -234,7 +224,7 @@
             // 
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel23.Location = new System.Drawing.Point(39, 1301);
+            this.metroLabel23.Location = new System.Drawing.Point(39, 1191);
             this.metroLabel23.Name = "metroLabel23";
             this.metroLabel23.Size = new System.Drawing.Size(40, 15);
             this.metroLabel23.TabIndex = 42;
@@ -244,7 +234,7 @@
             // 
             this.metroLabel22.AutoSize = true;
             this.metroLabel22.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel22.Location = new System.Drawing.Point(40, 1246);
+            this.metroLabel22.Location = new System.Drawing.Point(40, 1136);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(55, 15);
             this.metroLabel22.TabIndex = 41;
@@ -256,7 +246,7 @@
             this.metroLabel21.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.metroLabel21.Location = new System.Drawing.Point(39, 1198);
+            this.metroLabel21.Location = new System.Drawing.Point(39, 1088);
             this.metroLabel21.Name = "metroLabel21";
             this.metroLabel21.Size = new System.Drawing.Size(80, 25);
             this.metroLabel21.TabIndex = 40;
@@ -267,7 +257,7 @@
             // 
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel20.Location = new System.Drawing.Point(39, 1122);
+            this.metroLabel20.Location = new System.Drawing.Point(39, 1012);
             this.metroLabel20.Name = "metroLabel20";
             this.metroLabel20.Size = new System.Drawing.Size(79, 15);
             this.metroLabel20.TabIndex = 39;
@@ -277,7 +267,7 @@
             // 
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel19.Location = new System.Drawing.Point(39, 1061);
+            this.metroLabel19.Location = new System.Drawing.Point(39, 951);
             this.metroLabel19.Name = "metroLabel19";
             this.metroLabel19.Size = new System.Drawing.Size(42, 15);
             this.metroLabel19.TabIndex = 38;
@@ -287,7 +277,7 @@
             // 
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel18.Location = new System.Drawing.Point(39, 1000);
+            this.metroLabel18.Location = new System.Drawing.Point(39, 890);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(21, 15);
             this.metroLabel18.TabIndex = 37;
@@ -297,7 +287,7 @@
             // 
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel17.Location = new System.Drawing.Point(39, 945);
+            this.metroLabel17.Location = new System.Drawing.Point(39, 835);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(37, 15);
             this.metroLabel17.TabIndex = 36;
@@ -307,7 +297,7 @@
             // 
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel16.Location = new System.Drawing.Point(39, 890);
+            this.metroLabel16.Location = new System.Drawing.Point(39, 780);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(79, 15);
             this.metroLabel16.TabIndex = 35;
@@ -317,7 +307,7 @@
             // 
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel15.Location = new System.Drawing.Point(39, 835);
+            this.metroLabel15.Location = new System.Drawing.Point(39, 725);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(49, 15);
             this.metroLabel15.TabIndex = 34;
@@ -327,7 +317,7 @@
             // 
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel14.Location = new System.Drawing.Point(39, 780);
+            this.metroLabel14.Location = new System.Drawing.Point(39, 670);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(26, 15);
             this.metroLabel14.TabIndex = 33;
@@ -337,7 +327,7 @@
             // 
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel13.Location = new System.Drawing.Point(41, 725);
+            this.metroLabel13.Location = new System.Drawing.Point(41, 615);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(27, 15);
             this.metroLabel13.TabIndex = 32;
@@ -349,32 +339,12 @@
             this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.metroLabel12.Location = new System.Drawing.Point(39, 677);
+            this.metroLabel12.Location = new System.Drawing.Point(39, 567);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(91, 25);
             this.metroLabel12.TabIndex = 31;
             this.metroLabel12.Text = "Endereço";
             this.metroLabel12.UseCustomForeColor = true;
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel11.Location = new System.Drawing.Point(37, 607);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(23, 15);
-            this.metroLabel11.TabIndex = 30;
-            this.metroLabel11.Text = "PIS";
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel10.Location = new System.Drawing.Point(39, 552);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(31, 15);
-            this.metroLabel10.TabIndex = 29;
-            this.metroLabel10.Text = "CNH";
             // 
             // metroLabel9
             // 
@@ -489,7 +459,7 @@
             this.labelEmailPessoal.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelEmailPessoal.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelEmailPessoal.Lines = new string[0];
-            this.labelEmailPessoal.Location = new System.Drawing.Point(37, 1372);
+            this.labelEmailPessoal.Location = new System.Drawing.Point(37, 1262);
             this.labelEmailPessoal.MaxLength = 32767;
             this.labelEmailPessoal.Name = "labelEmailPessoal";
             this.labelEmailPessoal.PasswordChar = '\0';
@@ -557,7 +527,7 @@
             this.labelCelular.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelCelular.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelCelular.Lines = new string[0];
-            this.labelCelular.Location = new System.Drawing.Point(37, 1317);
+            this.labelCelular.Location = new System.Drawing.Point(37, 1207);
             this.labelCelular.MaxLength = 32767;
             this.labelCelular.Name = "labelCelular";
             this.labelCelular.PasswordChar = '\0';
@@ -624,7 +594,7 @@
             this.labelTelefone.CustomButton.Visible = false;
             this.labelTelefone.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelTelefone.Lines = new string[0];
-            this.labelTelefone.Location = new System.Drawing.Point(37, 1262);
+            this.labelTelefone.Location = new System.Drawing.Point(37, 1152);
             this.labelTelefone.MaxLength = 32767;
             this.labelTelefone.Name = "labelTelefone";
             this.labelTelefone.PasswordChar = '\0';
@@ -667,7 +637,7 @@
             this.comboTipoEndereco.ItemHeight = 23;
             this.comboTipoEndereco.Items.AddRange(new object[] {
             "tipo endereco"});
-            this.comboTipoEndereco.Location = new System.Drawing.Point(37, 1138);
+            this.comboTipoEndereco.Location = new System.Drawing.Point(37, 1028);
             this.comboTipoEndereco.Name = "comboTipoEndereco";
             this.comboTipoEndereco.Size = new System.Drawing.Size(150, 29);
             this.comboTipoEndereco.Style = MetroFramework.MetroColorStyle.Blue;
@@ -694,7 +664,7 @@
             this.comboCidade.ItemHeight = 23;
             this.comboCidade.Items.AddRange(new object[] {
             "cidade"});
-            this.comboCidade.Location = new System.Drawing.Point(37, 1077);
+            this.comboCidade.Location = new System.Drawing.Point(37, 967);
             this.comboCidade.Name = "comboCidade";
             this.comboCidade.Size = new System.Drawing.Size(175, 29);
             this.comboCidade.Style = MetroFramework.MetroColorStyle.Blue;
@@ -721,7 +691,7 @@
             this.comboEstado.ItemHeight = 23;
             this.comboEstado.Items.AddRange(new object[] {
             "estado"});
-            this.comboEstado.Location = new System.Drawing.Point(37, 1016);
+            this.comboEstado.Location = new System.Drawing.Point(37, 906);
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(65, 29);
             this.comboEstado.Style = MetroFramework.MetroColorStyle.Blue;
@@ -746,7 +716,7 @@
             this.labelBairro.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelBairro.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelBairro.Lines = new string[0];
-            this.labelBairro.Location = new System.Drawing.Point(37, 961);
+            this.labelBairro.Location = new System.Drawing.Point(37, 851);
             this.labelBairro.MaxLength = 32767;
             this.labelBairro.Name = "labelBairro";
             this.labelBairro.PasswordChar = '\0';
@@ -814,7 +784,7 @@
             this.labelComplemento.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelComplemento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelComplemento.Lines = new string[0];
-            this.labelComplemento.Location = new System.Drawing.Point(37, 906);
+            this.labelComplemento.Location = new System.Drawing.Point(37, 796);
             this.labelComplemento.MaxLength = 32767;
             this.labelComplemento.Name = "labelComplemento";
             this.labelComplemento.PasswordChar = '\0';
@@ -865,40 +835,6 @@
             this.labelCpf.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.labelCpf.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // labelCnh
-            // 
-            // 
-            // 
-            // 
-            this.labelCnh.CustomButton.Image = null;
-            this.labelCnh.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.labelCnh.CustomButton.Name = "";
-            this.labelCnh.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.labelCnh.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.labelCnh.CustomButton.TabIndex = 1;
-            this.labelCnh.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.labelCnh.CustomButton.UseSelectable = true;
-            this.labelCnh.CustomButton.Visible = false;
-            this.labelCnh.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.labelCnh.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelCnh.Lines = new string[0];
-            this.labelCnh.Location = new System.Drawing.Point(37, 568);
-            this.labelCnh.MaxLength = 32767;
-            this.labelCnh.Name = "labelCnh";
-            this.labelCnh.PasswordChar = '\0';
-            this.labelCnh.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.labelCnh.SelectedText = "";
-            this.labelCnh.SelectionLength = 0;
-            this.labelCnh.SelectionStart = 0;
-            this.labelCnh.ShortcutsEnabled = true;
-            this.labelCnh.Size = new System.Drawing.Size(150, 23);
-            this.labelCnh.Style = MetroFramework.MetroColorStyle.Blue;
-            this.labelCnh.TabIndex = 8;
-            this.labelCnh.UseCustomForeColor = true;
-            this.labelCnh.UseSelectable = true;
-            this.labelCnh.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.labelCnh.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // labelNumero
             // 
             // 
@@ -916,7 +852,7 @@
             this.labelNumero.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelNumero.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelNumero.Lines = new string[0];
-            this.labelNumero.Location = new System.Drawing.Point(37, 851);
+            this.labelNumero.Location = new System.Drawing.Point(37, 741);
             this.labelNumero.MaxLength = 32767;
             this.labelNumero.Name = "labelNumero";
             this.labelNumero.PasswordChar = '\0';
@@ -932,40 +868,6 @@
             this.labelNumero.UseSelectable = true;
             this.labelNumero.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.labelNumero.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // labelPis
-            // 
-            // 
-            // 
-            // 
-            this.labelPis.CustomButton.Image = null;
-            this.labelPis.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.labelPis.CustomButton.Name = "";
-            this.labelPis.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.labelPis.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.labelPis.CustomButton.TabIndex = 1;
-            this.labelPis.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.labelPis.CustomButton.UseSelectable = true;
-            this.labelPis.CustomButton.Visible = false;
-            this.labelPis.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.labelPis.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelPis.Lines = new string[0];
-            this.labelPis.Location = new System.Drawing.Point(37, 623);
-            this.labelPis.MaxLength = 32767;
-            this.labelPis.Name = "labelPis";
-            this.labelPis.PasswordChar = '\0';
-            this.labelPis.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.labelPis.SelectedText = "";
-            this.labelPis.SelectionLength = 0;
-            this.labelPis.SelectionStart = 0;
-            this.labelPis.ShortcutsEnabled = true;
-            this.labelPis.Size = new System.Drawing.Size(150, 23);
-            this.labelPis.Style = MetroFramework.MetroColorStyle.Blue;
-            this.labelPis.TabIndex = 9;
-            this.labelPis.UseCustomForeColor = true;
-            this.labelPis.UseSelectable = true;
-            this.labelPis.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.labelPis.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // labelRua
             // 
@@ -984,7 +886,7 @@
             this.labelRua.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelRua.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelRua.Lines = new string[0];
-            this.labelRua.Location = new System.Drawing.Point(37, 796);
+            this.labelRua.Location = new System.Drawing.Point(37, 686);
             this.labelRua.MaxLength = 32767;
             this.labelRua.Name = "labelRua";
             this.labelRua.PasswordChar = '\0';
@@ -1018,7 +920,7 @@
             this.labelCep.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelCep.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelCep.Lines = new string[0];
-            this.labelCep.Location = new System.Drawing.Point(37, 741);
+            this.labelCep.Location = new System.Drawing.Point(37, 631);
             this.labelCep.MaxLength = 32767;
             this.labelCep.Name = "labelCep";
             this.labelCep.PasswordChar = '\0';
@@ -1052,14 +954,6 @@
             this.TabConsultarPessoas.VerticalScrollbarSize = 10;
             this.TabConsultarPessoas.Paint += new System.Windows.Forms.PaintEventHandler(this.TabConsultarPessoas_Paint);
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(15, 633);
-            this.panel1.TabIndex = 1;
-            // 
             // ListaPessoas
             // 
             this.ListaPessoas.AllowUserToAddRows = false;
@@ -1069,14 +963,14 @@
             this.ListaPessoas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListaPessoas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ListaPessoas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.ListaPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaPessoas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
@@ -1086,14 +980,14 @@
             this.DataNascimento,
             this.Rg,
             this.Cpf});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle8;
             this.ListaPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListaPessoas.EnableHeadersVisualStyles = false;
             this.ListaPessoas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1102,14 +996,14 @@
             this.ListaPessoas.Name = "ListaPessoas";
             this.ListaPessoas.ReadOnly = true;
             this.ListaPessoas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.ListaPessoas.RowHeadersWidth = 10;
             this.ListaPessoas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.ListaPessoas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1131,6 +1025,7 @@
             // ListPessoasPanel
             // 
             this.ListPessoasPanel.Controls.Add(this.opcoesAvancadasPessoas);
+            this.ListPessoasPanel.Controls.Add(this.panel1);
             this.ListPessoasPanel.Controls.Add(this.ListaPessoas);
             this.ListPessoasPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListPessoasPanel.Location = new System.Drawing.Point(0, 0);
@@ -1175,8 +1070,8 @@
             // opcoesAvancadasPessoas
             // 
             this.opcoesAvancadasPessoas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.opcoesAvancadasPessoas.Controls.Add(this.button4);
-            this.opcoesAvancadasPessoas.Controls.Add(this.BtnPatrimonio);
+            this.opcoesAvancadasPessoas.Controls.Add(this.BtnAtribuirUsuarioSistema);
+            this.opcoesAvancadasPessoas.Controls.Add(this.BtnAtribuirFuncionário);
             this.opcoesAvancadasPessoas.Dock = System.Windows.Forms.DockStyle.Right;
             this.opcoesAvancadasPessoas.Location = new System.Drawing.Point(853, 0);
             this.opcoesAvancadasPessoas.Name = "opcoesAvancadasPessoas";
@@ -1184,40 +1079,40 @@
             this.opcoesAvancadasPessoas.TabIndex = 3;
             this.opcoesAvancadasPessoas.Visible = false;
             // 
-            // BtnPatrimonio
+            // BtnAtribuirFuncionário
             // 
-            this.BtnPatrimonio.BackColor = System.Drawing.Color.Transparent;
-            this.BtnPatrimonio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnPatrimonio.FlatAppearance.BorderSize = 0;
-            this.BtnPatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnPatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnPatrimonio.Location = new System.Drawing.Point(0, 0);
-            this.BtnPatrimonio.Name = "BtnPatrimonio";
-            this.BtnPatrimonio.Size = new System.Drawing.Size(200, 40);
-            this.BtnPatrimonio.TabIndex = 25;
-            this.BtnPatrimonio.Text = "Atribuir Funcionário";
-            this.BtnPatrimonio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPatrimonio.UseVisualStyleBackColor = false;
+            this.BtnAtribuirFuncionário.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAtribuirFuncionário.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAtribuirFuncionário.FlatAppearance.BorderSize = 0;
+            this.BtnAtribuirFuncionário.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtribuirFuncionário.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtribuirFuncionário.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAtribuirFuncionário.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnAtribuirFuncionário.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnAtribuirFuncionário.Location = new System.Drawing.Point(0, 0);
+            this.BtnAtribuirFuncionário.Name = "BtnAtribuirFuncionário";
+            this.BtnAtribuirFuncionário.Size = new System.Drawing.Size(200, 40);
+            this.BtnAtribuirFuncionário.TabIndex = 25;
+            this.BtnAtribuirFuncionário.Text = "Atribuir Funcionário";
+            this.BtnAtribuirFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAtribuirFuncionário.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // BtnAtribuirUsuarioSistema
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(0, 41);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(204, 40);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Atribuir Usuário Sistema";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnAtribuirUsuarioSistema.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAtribuirUsuarioSistema.FlatAppearance.BorderSize = 0;
+            this.BtnAtribuirUsuarioSistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtribuirUsuarioSistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtribuirUsuarioSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAtribuirUsuarioSistema.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnAtribuirUsuarioSistema.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnAtribuirUsuarioSistema.Location = new System.Drawing.Point(0, 41);
+            this.BtnAtribuirUsuarioSistema.Name = "BtnAtribuirUsuarioSistema";
+            this.BtnAtribuirUsuarioSistema.Size = new System.Drawing.Size(204, 40);
+            this.BtnAtribuirUsuarioSistema.TabIndex = 26;
+            this.BtnAtribuirUsuarioSistema.Text = "Atribuir Usuário Sistema";
+            this.BtnAtribuirUsuarioSistema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAtribuirUsuarioSistema.UseVisualStyleBackColor = false;
             // 
             // Nome
             // 
@@ -1261,13 +1156,21 @@
             this.Cpf.Name = "Cpf";
             this.Cpf.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(15, 541);
+            this.panel1.TabIndex = 4;
+            // 
             // ACSPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1061, 633);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.MainPessoa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ACSPessoas";
@@ -1296,10 +1199,8 @@
         private MetroFramework.Controls.MetroRadioButton chkMasculino;
         private MetroFramework.Controls.MetroRadioButton chkFeminino;
         private MetroFramework.Controls.MetroComboBox comboEstadoCivil;
-        private MetroFramework.Controls.MetroTextBox labelCnh;
         private MetroFramework.Controls.MetroTextBox labelCpf;
         private MetroFramework.Controls.MetroTextBox labelRg;
-        private MetroFramework.Controls.MetroTextBox labelPis;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroTextBox labelNumero;
         private MetroFramework.Controls.MetroTextBox labelRua;
@@ -1312,7 +1213,6 @@
         private MetroFramework.Controls.MetroTextBox labelEmailPessoal;
         private MetroFramework.Controls.MetroTextBox labelCelular;
         private MetroFramework.Controls.MetroTextBox labelTelefone;
-        private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
@@ -1321,8 +1221,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private System.Windows.Forms.Button BtnCadastrarPessoa;
         private MetroFramework.Controls.MetroLabel metroLabel24;
@@ -1345,8 +1243,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel opcoesAvancadasPessoas;
         private System.Windows.Forms.Button BtnOpcoesAvancadas;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button BtnPatrimonio;
+        private System.Windows.Forms.Button BtnAtribuirUsuarioSistema;
+        private System.Windows.Forms.Button BtnAtribuirFuncionário;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sobrenome;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoCivil;
@@ -1354,5 +1252,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DataNascimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -42,9 +42,16 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         private static string CADASTRAR_ENDERECO = "INSERT INTO endereco (cep, logradouro, numero, complemento, bairro, pais, estado, cidade, tipo_endereco, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE(), ?)";
         private static string CADASTRAR_CONTATO = "INSERT INTO contato (telefone, celular, email, site, tipo_contato, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, ?, ?, SYSDATE(), ?)";
-        private static string CADASTRAR_PESSOA = "INSERT INTO pessoa (nome, sobrenome, estado_civil, sexo, data_nascimento, rg, cpf, cnh, pis, endereco, contato, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE(), ?)";
+        private static string CADASTRAR_PESSOA = "INSERT INTO pessoa (nome, sobrenome, estado_civil, sexo, data_nascimento, rg, cpf, endereco, contato, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE(), ?)";
+        private static string CONSULTAR_PESSOAS = "";
 
 
+
+        /// <summary>
+        /// Método responsável por cadastrar os dados de pessoa no Banco de Dados.
+        /// </summary>
+        /// <param name="pessoa"></param>
+        /// <returns>Pessoa</returns>
         public Pessoa CadastrarPessoa(Pessoa pessoa)
         {
             long idEndereco, idContato = 0;
@@ -102,8 +109,6 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                         command.Parameters.AddWithValue("?data_nascimento", pessoa.dataNascimento);
                         command.Parameters.AddWithValue("?rg", pessoa.documentoPF.registroGeral);
                         command.Parameters.AddWithValue("?cpf", pessoa.documentoPF.cadastroPessoaFisica);
-                        command.Parameters.AddWithValue("?cnh", pessoa.documentoPF.carteiraNacionalHabilitacao);
-                        command.Parameters.AddWithValue("?pis", pessoa.documentoPF.programaIntegracaoSocial);
                         command.Parameters.AddWithValue("?endereco", idEndereco);
                         command.Parameters.AddWithValue("?contato", idContato);
                         command.Parameters.AddWithValue("?usuario_cadastro", idUsuarioSessao);
@@ -154,6 +159,30 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         }
 
 
+
+        /// <summary>
+        /// Método responsável por retornar os dados de pessoas cadastradas no Banco de Dados.
+        /// </summary>
+        /// <returns>List<Pessoa></returns>
+        public List<Pessoa> ConsultarPessoas()
+        {
+            List<Pessoa> pessoas = new List<Pessoa>();
+
+            try
+            {
+                command = new MySqlCommand(CONSULTAR_PESSOAS, connection.GetConnection());
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
+            }
+
+            return pessoas;
+        }
 
     }
 }

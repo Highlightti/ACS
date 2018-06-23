@@ -167,6 +167,9 @@
     <EmbeddedResource Include="br.com.acs.view\ACSHome.resx">
       <DependentUpon>ACSHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSPatrimonio.resx">
+      <DependentUpon>ACSPatrimonio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSPessoas.resx">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
     </EmbeddedResource>

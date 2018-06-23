@@ -58,8 +58,6 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 DocumentoPF documentoPF = new DocumentoPF();
                 documentoPF.registroGeral = labelRg.Text;
                 documentoPF.cadastroPessoaFisica = labelCpf.Text;
-                documentoPF.carteiraNacionalHabilitacao = labelCnh.Text;
-                documentoPF.programaIntegracaoSocial = labelPis.Text;
 
                 Endereco endereco = new Endereco();
                 endereco.cep = labelCep.Text;
