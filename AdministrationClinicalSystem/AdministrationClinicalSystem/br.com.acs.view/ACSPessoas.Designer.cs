@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainPessoa = new MetroFramework.Controls.MetroTabControl();
             this.TabCadastrarPessoa = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -92,7 +92,18 @@
             this.DataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Complemento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainPessoa.SuspendLayout();
             this.TabCadastrarPessoa.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -108,10 +119,10 @@
             this.MainPessoa.Controls.Add(this.TabCadastrarPessoa);
             this.MainPessoa.Controls.Add(this.TabConsultarPessoas);
             this.MainPessoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPessoa.Location = new System.Drawing.Point(0, 0);
+            this.MainPessoa.Location = new System.Drawing.Point(14, 0);
             this.MainPessoa.Name = "MainPessoa";
-            this.MainPessoa.SelectedIndex = 0;
-            this.MainPessoa.Size = new System.Drawing.Size(1061, 633);
+            this.MainPessoa.SelectedIndex = 1;
+            this.MainPessoa.Size = new System.Drawing.Size(1047, 633);
             this.MainPessoa.TabIndex = 0;
             this.MainPessoa.UseSelectable = true;
             // 
@@ -125,10 +136,9 @@
             this.TabCadastrarPessoa.HorizontalScrollbarSize = 10;
             this.TabCadastrarPessoa.Location = new System.Drawing.Point(4, 38);
             this.TabCadastrarPessoa.Name = "TabCadastrarPessoa";
-            this.TabCadastrarPessoa.Size = new System.Drawing.Size(1053, 591);
+            this.TabCadastrarPessoa.Size = new System.Drawing.Size(1039, 591);
             this.TabCadastrarPessoa.TabIndex = 0;
             this.TabCadastrarPessoa.Text = "     Cadastrar Pessoa  ";
-            this.TabCadastrarPessoa.VerticalScrollbar = true;
             this.TabCadastrarPessoa.VerticalScrollbarBarColor = false;
             this.TabCadastrarPessoa.VerticalScrollbarHighlightOnWheel = false;
             this.TabCadastrarPessoa.VerticalScrollbarSize = 10;
@@ -178,15 +188,16 @@
             this.panel2.Controls.Add(this.labelNumero);
             this.panel2.Controls.Add(this.labelRua);
             this.panel2.Controls.Add(this.labelCep);
-            this.panel2.Location = new System.Drawing.Point(22, 10);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(332, 1405);
+            this.panel2.Size = new System.Drawing.Size(1039, 591);
             this.panel2.TabIndex = 13;
             // 
             // labelDataNascimento
             // 
             this.labelDataNascimento.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.labelDataNascimento.Location = new System.Drawing.Point(37, 338);
+            this.labelDataNascimento.Location = new System.Drawing.Point(67, 338);
             this.labelDataNascimento.Mask = "00/00/0000";
             this.labelDataNascimento.Name = "labelDataNascimento";
             this.labelDataNascimento.Size = new System.Drawing.Size(64, 25);
@@ -202,7 +213,7 @@
             this.BtnCadastrarPessoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadastrarPessoa.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.BtnCadastrarPessoa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCadastrarPessoa.Location = new System.Drawing.Point(66, 1329);
+            this.BtnCadastrarPessoa.Location = new System.Drawing.Point(748, 482);
             this.BtnCadastrarPessoa.Name = "BtnCadastrarPessoa";
             this.BtnCadastrarPessoa.Size = new System.Drawing.Size(200, 40);
             this.BtnCadastrarPessoa.TabIndex = 44;
@@ -214,7 +225,7 @@
             // 
             this.metroLabel24.AutoSize = true;
             this.metroLabel24.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel24.Location = new System.Drawing.Point(39, 1246);
+            this.metroLabel24.Location = new System.Drawing.Point(715, 190);
             this.metroLabel24.Name = "metroLabel24";
             this.metroLabel24.Size = new System.Drawing.Size(38, 15);
             this.metroLabel24.TabIndex = 43;
@@ -224,7 +235,7 @@
             // 
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel23.Location = new System.Drawing.Point(39, 1191);
+            this.metroLabel23.Location = new System.Drawing.Point(715, 135);
             this.metroLabel23.Name = "metroLabel23";
             this.metroLabel23.Size = new System.Drawing.Size(40, 15);
             this.metroLabel23.TabIndex = 42;
@@ -234,7 +245,7 @@
             // 
             this.metroLabel22.AutoSize = true;
             this.metroLabel22.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel22.Location = new System.Drawing.Point(40, 1136);
+            this.metroLabel22.Location = new System.Drawing.Point(716, 85);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(55, 15);
             this.metroLabel22.TabIndex = 41;
@@ -246,7 +257,7 @@
             this.metroLabel21.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.metroLabel21.Location = new System.Drawing.Point(39, 1088);
+            this.metroLabel21.Location = new System.Drawing.Point(715, 37);
             this.metroLabel21.Name = "metroLabel21";
             this.metroLabel21.Size = new System.Drawing.Size(80, 25);
             this.metroLabel21.TabIndex = 40;
@@ -257,7 +268,7 @@
             // 
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel20.Location = new System.Drawing.Point(39, 1012);
+            this.metroLabel20.Location = new System.Drawing.Point(395, 490);
             this.metroLabel20.Name = "metroLabel20";
             this.metroLabel20.Size = new System.Drawing.Size(79, 15);
             this.metroLabel20.TabIndex = 39;
@@ -267,7 +278,7 @@
             // 
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel19.Location = new System.Drawing.Point(39, 951);
+            this.metroLabel19.Location = new System.Drawing.Point(395, 429);
             this.metroLabel19.Name = "metroLabel19";
             this.metroLabel19.Size = new System.Drawing.Size(42, 15);
             this.metroLabel19.TabIndex = 38;
@@ -277,7 +288,7 @@
             // 
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel18.Location = new System.Drawing.Point(39, 890);
+            this.metroLabel18.Location = new System.Drawing.Point(395, 368);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(21, 15);
             this.metroLabel18.TabIndex = 37;
@@ -287,7 +298,7 @@
             // 
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel17.Location = new System.Drawing.Point(39, 835);
+            this.metroLabel17.Location = new System.Drawing.Point(395, 300);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(37, 15);
             this.metroLabel17.TabIndex = 36;
@@ -297,7 +308,7 @@
             // 
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel16.Location = new System.Drawing.Point(39, 780);
+            this.metroLabel16.Location = new System.Drawing.Point(395, 245);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(79, 15);
             this.metroLabel16.TabIndex = 35;
@@ -307,7 +318,7 @@
             // 
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel15.Location = new System.Drawing.Point(39, 725);
+            this.metroLabel15.Location = new System.Drawing.Point(395, 190);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(49, 15);
             this.metroLabel15.TabIndex = 34;
@@ -317,7 +328,7 @@
             // 
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel14.Location = new System.Drawing.Point(39, 670);
+            this.metroLabel14.Location = new System.Drawing.Point(395, 135);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(26, 15);
             this.metroLabel14.TabIndex = 33;
@@ -327,7 +338,7 @@
             // 
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel13.Location = new System.Drawing.Point(41, 615);
+            this.metroLabel13.Location = new System.Drawing.Point(397, 85);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(27, 15);
             this.metroLabel13.TabIndex = 32;
@@ -339,7 +350,7 @@
             this.metroLabel12.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.metroLabel12.Location = new System.Drawing.Point(39, 567);
+            this.metroLabel12.Location = new System.Drawing.Point(395, 37);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(91, 25);
             this.metroLabel12.TabIndex = 31;
@@ -350,7 +361,7 @@
             // 
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel9.Location = new System.Drawing.Point(39, 497);
+            this.metroLabel9.Location = new System.Drawing.Point(69, 497);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(27, 15);
             this.metroLabel9.TabIndex = 28;
@@ -360,7 +371,7 @@
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel8.Location = new System.Drawing.Point(39, 442);
+            this.metroLabel8.Location = new System.Drawing.Point(69, 442);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(30, 15);
             this.metroLabel8.TabIndex = 27;
@@ -372,7 +383,7 @@
             this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.metroLabel7.Location = new System.Drawing.Point(37, 394);
+            this.metroLabel7.Location = new System.Drawing.Point(67, 394);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(119, 25);
             this.metroLabel7.TabIndex = 26;
@@ -383,7 +394,7 @@
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel6.Location = new System.Drawing.Point(39, 322);
+            this.metroLabel6.Location = new System.Drawing.Point(69, 322);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(99, 15);
             this.metroLabel6.TabIndex = 25;
@@ -393,7 +404,7 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel5.Location = new System.Drawing.Point(39, 251);
+            this.metroLabel5.Location = new System.Drawing.Point(69, 251);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(31, 15);
             this.metroLabel5.TabIndex = 24;
@@ -403,7 +414,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel3.Location = new System.Drawing.Point(39, 190);
+            this.metroLabel3.Location = new System.Drawing.Point(69, 190);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(63, 15);
             this.metroLabel3.TabIndex = 23;
@@ -413,7 +424,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel2.Location = new System.Drawing.Point(39, 135);
+            this.metroLabel2.Location = new System.Drawing.Point(69, 135);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(74, 15);
             this.metroLabel2.TabIndex = 22;
@@ -423,7 +434,7 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel4.Location = new System.Drawing.Point(39, 80);
+            this.metroLabel4.Location = new System.Drawing.Point(69, 85);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(47, 15);
             this.metroLabel4.TabIndex = 14;
@@ -435,7 +446,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.metroLabel1.Location = new System.Drawing.Point(37, 32);
+            this.metroLabel1.Location = new System.Drawing.Point(67, 37);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(141, 25);
             this.metroLabel1.TabIndex = 14;
@@ -459,7 +470,7 @@
             this.labelEmailPessoal.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelEmailPessoal.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelEmailPessoal.Lines = new string[0];
-            this.labelEmailPessoal.Location = new System.Drawing.Point(37, 1262);
+            this.labelEmailPessoal.Location = new System.Drawing.Point(713, 206);
             this.labelEmailPessoal.MaxLength = 32767;
             this.labelEmailPessoal.Name = "labelEmailPessoal";
             this.labelEmailPessoal.PasswordChar = '\0';
@@ -493,7 +504,7 @@
             this.labelNome.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelNome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelNome.Lines = new string[0];
-            this.labelNome.Location = new System.Drawing.Point(37, 96);
+            this.labelNome.Location = new System.Drawing.Point(67, 101);
             this.labelNome.MaxLength = 32767;
             this.labelNome.Name = "labelNome";
             this.labelNome.PasswordChar = '\0';
@@ -527,7 +538,7 @@
             this.labelCelular.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelCelular.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelCelular.Lines = new string[0];
-            this.labelCelular.Location = new System.Drawing.Point(37, 1207);
+            this.labelCelular.Location = new System.Drawing.Point(713, 151);
             this.labelCelular.MaxLength = 32767;
             this.labelCelular.Name = "labelCelular";
             this.labelCelular.PasswordChar = '\0';
@@ -561,7 +572,7 @@
             this.labelSobrenome.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelSobrenome.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelSobrenome.Lines = new string[0];
-            this.labelSobrenome.Location = new System.Drawing.Point(37, 151);
+            this.labelSobrenome.Location = new System.Drawing.Point(67, 151);
             this.labelSobrenome.MaxLength = 32767;
             this.labelSobrenome.Name = "labelSobrenome";
             this.labelSobrenome.PasswordChar = '\0';
@@ -594,7 +605,7 @@
             this.labelTelefone.CustomButton.Visible = false;
             this.labelTelefone.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelTelefone.Lines = new string[0];
-            this.labelTelefone.Location = new System.Drawing.Point(37, 1152);
+            this.labelTelefone.Location = new System.Drawing.Point(713, 101);
             this.labelTelefone.MaxLength = 32767;
             this.labelTelefone.Name = "labelTelefone";
             this.labelTelefone.PasswordChar = '\0';
@@ -622,7 +633,7 @@
             "Separado(a)",
             "Divorciado(a)",
             "Viúvo(a)"});
-            this.comboEstadoCivil.Location = new System.Drawing.Point(37, 206);
+            this.comboEstadoCivil.Location = new System.Drawing.Point(67, 206);
             this.comboEstadoCivil.Name = "comboEstadoCivil";
             this.comboEstadoCivil.Size = new System.Drawing.Size(175, 29);
             this.comboEstadoCivil.Style = MetroFramework.MetroColorStyle.Blue;
@@ -637,7 +648,7 @@
             this.comboTipoEndereco.ItemHeight = 23;
             this.comboTipoEndereco.Items.AddRange(new object[] {
             "tipo endereco"});
-            this.comboTipoEndereco.Location = new System.Drawing.Point(37, 1028);
+            this.comboTipoEndereco.Location = new System.Drawing.Point(393, 506);
             this.comboTipoEndereco.Name = "comboTipoEndereco";
             this.comboTipoEndereco.Size = new System.Drawing.Size(150, 29);
             this.comboTipoEndereco.Style = MetroFramework.MetroColorStyle.Blue;
@@ -649,7 +660,7 @@
             // 
             this.chkFeminino.AutoSize = true;
             this.chkFeminino.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.chkFeminino.Location = new System.Drawing.Point(49, 269);
+            this.chkFeminino.Location = new System.Drawing.Point(79, 269);
             this.chkFeminino.Name = "chkFeminino";
             this.chkFeminino.Size = new System.Drawing.Size(73, 15);
             this.chkFeminino.TabIndex = 3;
@@ -664,7 +675,7 @@
             this.comboCidade.ItemHeight = 23;
             this.comboCidade.Items.AddRange(new object[] {
             "cidade"});
-            this.comboCidade.Location = new System.Drawing.Point(37, 967);
+            this.comboCidade.Location = new System.Drawing.Point(393, 445);
             this.comboCidade.Name = "comboCidade";
             this.comboCidade.Size = new System.Drawing.Size(175, 29);
             this.comboCidade.Style = MetroFramework.MetroColorStyle.Blue;
@@ -676,7 +687,7 @@
             // 
             this.chkMasculino.AutoSize = true;
             this.chkMasculino.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.chkMasculino.Location = new System.Drawing.Point(49, 290);
+            this.chkMasculino.Location = new System.Drawing.Point(79, 290);
             this.chkMasculino.Name = "chkMasculino";
             this.chkMasculino.Size = new System.Drawing.Size(78, 15);
             this.chkMasculino.TabIndex = 4;
@@ -691,7 +702,7 @@
             this.comboEstado.ItemHeight = 23;
             this.comboEstado.Items.AddRange(new object[] {
             "estado"});
-            this.comboEstado.Location = new System.Drawing.Point(37, 906);
+            this.comboEstado.Location = new System.Drawing.Point(393, 384);
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(65, 29);
             this.comboEstado.Style = MetroFramework.MetroColorStyle.Blue;
@@ -716,7 +727,7 @@
             this.labelBairro.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelBairro.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelBairro.Lines = new string[0];
-            this.labelBairro.Location = new System.Drawing.Point(37, 851);
+            this.labelBairro.Location = new System.Drawing.Point(393, 316);
             this.labelBairro.MaxLength = 32767;
             this.labelBairro.Name = "labelBairro";
             this.labelBairro.PasswordChar = '\0';
@@ -750,7 +761,7 @@
             this.labelRg.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelRg.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelRg.Lines = new string[0];
-            this.labelRg.Location = new System.Drawing.Point(37, 458);
+            this.labelRg.Location = new System.Drawing.Point(67, 458);
             this.labelRg.MaxLength = 32767;
             this.labelRg.Name = "labelRg";
             this.labelRg.PasswordChar = '\0';
@@ -784,7 +795,7 @@
             this.labelComplemento.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelComplemento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelComplemento.Lines = new string[0];
-            this.labelComplemento.Location = new System.Drawing.Point(37, 796);
+            this.labelComplemento.Location = new System.Drawing.Point(393, 261);
             this.labelComplemento.MaxLength = 32767;
             this.labelComplemento.Name = "labelComplemento";
             this.labelComplemento.PasswordChar = '\0';
@@ -818,7 +829,7 @@
             this.labelCpf.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelCpf.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelCpf.Lines = new string[0];
-            this.labelCpf.Location = new System.Drawing.Point(37, 513);
+            this.labelCpf.Location = new System.Drawing.Point(67, 513);
             this.labelCpf.MaxLength = 32767;
             this.labelCpf.Name = "labelCpf";
             this.labelCpf.PasswordChar = '\0';
@@ -852,7 +863,7 @@
             this.labelNumero.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelNumero.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelNumero.Lines = new string[0];
-            this.labelNumero.Location = new System.Drawing.Point(37, 741);
+            this.labelNumero.Location = new System.Drawing.Point(393, 206);
             this.labelNumero.MaxLength = 32767;
             this.labelNumero.Name = "labelNumero";
             this.labelNumero.PasswordChar = '\0';
@@ -886,7 +897,7 @@
             this.labelRua.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelRua.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelRua.Lines = new string[0];
-            this.labelRua.Location = new System.Drawing.Point(37, 686);
+            this.labelRua.Location = new System.Drawing.Point(393, 151);
             this.labelRua.MaxLength = 32767;
             this.labelRua.Name = "labelRua";
             this.labelRua.PasswordChar = '\0';
@@ -920,7 +931,7 @@
             this.labelCep.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.labelCep.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelCep.Lines = new string[0];
-            this.labelCep.Location = new System.Drawing.Point(37, 631);
+            this.labelCep.Location = new System.Drawing.Point(393, 101);
             this.labelCep.MaxLength = 32767;
             this.labelCep.Name = "labelCep";
             this.labelCep.PasswordChar = '\0';
@@ -946,7 +957,7 @@
             this.TabConsultarPessoas.HorizontalScrollbarSize = 10;
             this.TabConsultarPessoas.Location = new System.Drawing.Point(4, 38);
             this.TabConsultarPessoas.Name = "TabConsultarPessoas";
-            this.TabConsultarPessoas.Size = new System.Drawing.Size(1053, 591);
+            this.TabConsultarPessoas.Size = new System.Drawing.Size(1039, 591);
             this.TabConsultarPessoas.TabIndex = 1;
             this.TabConsultarPessoas.Text = "  Consultar Pessoas  ";
             this.TabConsultarPessoas.VerticalScrollbarBarColor = true;
@@ -963,14 +974,14 @@
             this.ListaPessoas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListaPessoas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ListaPessoas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ListaPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaPessoas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
@@ -979,15 +990,26 @@
             this.Sexo,
             this.DataNascimento,
             this.Rg,
-            this.Cpf});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Cpf,
+            this.Cep,
+            this.Rua,
+            this.Numero,
+            this.Complemento,
+            this.Bairro,
+            this.Uf,
+            this.Cidade,
+            this.TipoEndereco,
+            this.Telefone,
+            this.Celular,
+            this.Email});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle2;
             this.ListaPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListaPessoas.EnableHeadersVisualStyles = false;
             this.ListaPessoas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -996,18 +1018,18 @@
             this.ListaPessoas.Name = "ListaPessoas";
             this.ListaPessoas.ReadOnly = true;
             this.ListaPessoas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.ListaPessoas.RowHeadersWidth = 10;
             this.ListaPessoas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.ListaPessoas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListaPessoas.Size = new System.Drawing.Size(1053, 541);
+            this.ListaPessoas.Size = new System.Drawing.Size(1039, 546);
             this.ListaPessoas.Style = MetroFramework.MetroColorStyle.Silver;
             this.ListaPessoas.TabIndex = 2;
             // 
@@ -1017,20 +1039,19 @@
             this.BottomOptionsPanel.Controls.Add(this.BtnOpcoesAvancadas);
             this.BottomOptionsPanel.Controls.Add(this.button1);
             this.BottomOptionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomOptionsPanel.Location = new System.Drawing.Point(0, 541);
+            this.BottomOptionsPanel.Location = new System.Drawing.Point(0, 546);
             this.BottomOptionsPanel.Name = "BottomOptionsPanel";
-            this.BottomOptionsPanel.Size = new System.Drawing.Size(1053, 50);
+            this.BottomOptionsPanel.Size = new System.Drawing.Size(1039, 45);
             this.BottomOptionsPanel.TabIndex = 3;
             // 
             // ListPessoasPanel
             // 
             this.ListPessoasPanel.Controls.Add(this.opcoesAvancadasPessoas);
-            this.ListPessoasPanel.Controls.Add(this.panel1);
             this.ListPessoasPanel.Controls.Add(this.ListaPessoas);
             this.ListPessoasPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListPessoasPanel.Location = new System.Drawing.Point(0, 0);
             this.ListPessoasPanel.Name = "ListPessoasPanel";
-            this.ListPessoasPanel.Size = new System.Drawing.Size(1053, 541);
+            this.ListPessoasPanel.Size = new System.Drawing.Size(1039, 546);
             this.ListPessoasPanel.TabIndex = 4;
             // 
             // button1
@@ -1042,7 +1063,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(15, 5);
+            this.button1.Location = new System.Drawing.Point(1, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 0;
@@ -1059,7 +1080,7 @@
             this.BtnOpcoesAvancadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOpcoesAvancadas.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnOpcoesAvancadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnOpcoesAvancadas.Location = new System.Drawing.Point(849, 5);
+            this.BtnOpcoesAvancadas.Location = new System.Drawing.Point(835, 3);
             this.BtnOpcoesAvancadas.Name = "BtnOpcoesAvancadas";
             this.BtnOpcoesAvancadas.Size = new System.Drawing.Size(205, 40);
             this.BtnOpcoesAvancadas.TabIndex = 2;
@@ -1073,9 +1094,9 @@
             this.opcoesAvancadasPessoas.Controls.Add(this.BtnAtribuirUsuarioSistema);
             this.opcoesAvancadasPessoas.Controls.Add(this.BtnAtribuirFuncionário);
             this.opcoesAvancadasPessoas.Dock = System.Windows.Forms.DockStyle.Right;
-            this.opcoesAvancadasPessoas.Location = new System.Drawing.Point(853, 0);
+            this.opcoesAvancadasPessoas.Location = new System.Drawing.Point(839, 0);
             this.opcoesAvancadasPessoas.Name = "opcoesAvancadasPessoas";
-            this.opcoesAvancadasPessoas.Size = new System.Drawing.Size(200, 541);
+            this.opcoesAvancadasPessoas.Size = new System.Drawing.Size(200, 546);
             this.opcoesAvancadasPessoas.TabIndex = 3;
             this.opcoesAvancadasPessoas.Visible = false;
             // 
@@ -1156,14 +1177,79 @@
             this.Cpf.Name = "Cpf";
             this.Cpf.ReadOnly = true;
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(15, 541);
-            this.panel1.TabIndex = 4;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(14, 633);
+            this.panel3.TabIndex = 45;
+            // 
+            // Cep
+            // 
+            this.Cep.HeaderText = "CEP";
+            this.Cep.Name = "Cep";
+            this.Cep.ReadOnly = true;
+            // 
+            // Rua
+            // 
+            this.Rua.HeaderText = "Rua";
+            this.Rua.Name = "Rua";
+            this.Rua.ReadOnly = true;
+            // 
+            // Numero
+            // 
+            this.Numero.HeaderText = "Número";
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            // 
+            // Complemento
+            // 
+            this.Complemento.HeaderText = "Complemento";
+            this.Complemento.Name = "Complemento";
+            this.Complemento.ReadOnly = true;
+            // 
+            // Bairro
+            // 
+            this.Bairro.HeaderText = "Bairro";
+            this.Bairro.Name = "Bairro";
+            this.Bairro.ReadOnly = true;
+            // 
+            // Uf
+            // 
+            this.Uf.HeaderText = "UF";
+            this.Uf.Name = "Uf";
+            this.Uf.ReadOnly = true;
+            // 
+            // Cidade
+            // 
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.ReadOnly = true;
+            // 
+            // TipoEndereco
+            // 
+            this.TipoEndereco.HeaderText = "TipoEndereco";
+            this.TipoEndereco.Name = "TipoEndereco";
+            this.TipoEndereco.ReadOnly = true;
+            // 
+            // Telefone
+            // 
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
+            // 
+            // Celular
+            // 
+            this.Celular.HeaderText = "Celular";
+            this.Celular.Name = "Celular";
+            this.Celular.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // ACSPessoas
             // 
@@ -1172,6 +1258,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1061, 633);
             this.Controls.Add(this.MainPessoa);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ACSPessoas";
             this.Text = "ACSPessoas";
@@ -1252,6 +1339,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DataNascimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Complemento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bairro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Uf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoEndereco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }
