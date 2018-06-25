@@ -99,11 +99,11 @@
     <Compile Include="br.com.acs.view\ACSDadosUsuarioAdministrador.Designer.cs">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSLocais.cs">
+    <Compile Include="br.com.acs.view\ACSLocalidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSLocais.Designer.cs">
-      <DependentUpon>ACSLocais.cs</DependentUpon>
+    <Compile Include="br.com.acs.view\ACSLocalidades.Designer.cs">
+      <DependentUpon>ACSLocalidades.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSLogin.cs">
       <SubType>Form</SubType>
@@ -147,6 +147,24 @@
     <Compile Include="br.com.acs.view\ACSPessoas.Designer.cs">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUpdatePessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUpdatePessoa.Designer.cs">
+      <DependentUpon>ACSWindowUpdatePessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUpdatePatrimonio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUpdatePatrimonio.Designer.cs">
+      <DependentUpon>ACSWindowUpdatePatrimonio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\images\ACSFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\images\ACSFornecedor.Designer.cs">
+      <DependentUpon>ACSFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="br.com.acs.view\ACSDadosUsuario.resx">
@@ -173,6 +191,9 @@
     <EmbeddedResource Include="br.com.acs.view\ACSPessoas.resx">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowUpdatePatrimonio.resx">
+      <DependentUpon>ACSWindowUpdatePatrimonio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -196,8 +217,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="br.com.acs.view\images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

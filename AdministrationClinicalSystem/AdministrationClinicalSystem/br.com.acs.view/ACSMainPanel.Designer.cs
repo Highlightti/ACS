@@ -468,7 +468,7 @@
             this.BtnMeusDados.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnMeusDados.Location = new System.Drawing.Point(82, 20);
             this.BtnMeusDados.Name = "BtnMeusDados";
-            this.BtnMeusDados.Size = new System.Drawing.Size(178, 40);
+            this.BtnMeusDados.Size = new System.Drawing.Size(210, 40);
             this.BtnMeusDados.TabIndex = 21;
             this.BtnMeusDados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnMeusDados.UseVisualStyleBackColor = true;
@@ -477,9 +477,9 @@
             // subMenu
             // 
             this.subMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(149)))));
-            this.subMenu.Controls.Add(this.subMenuPessoas);
             this.subMenu.Controls.Add(this.subMenuGestaoAdministrativa);
             this.subMenu.Controls.Add(this.subMenuPatrimonio);
+            this.subMenu.Controls.Add(this.subMenuPessoas);
             this.subMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.subMenu.Location = new System.Drawing.Point(260, 60);
             this.subMenu.Name = "subMenu";

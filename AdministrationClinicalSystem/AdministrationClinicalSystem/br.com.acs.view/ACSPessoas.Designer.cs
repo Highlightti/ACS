@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainPessoa = new MetroFramework.Controls.MetroTabControl();
             this.TabCadastrarPessoa = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -77,14 +77,11 @@
             this.labelRua = new MetroFramework.Controls.MetroTextBox();
             this.labelCep = new MetroFramework.Controls.MetroTextBox();
             this.TabConsultarPessoas = new MetroFramework.Controls.MetroTabPage();
-            this.ListaPessoas = new MetroFramework.Controls.MetroGrid();
-            this.BottomOptionsPanel = new System.Windows.Forms.Panel();
             this.ListPessoasPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.BtnOpcoesAvancadas = new System.Windows.Forms.Button();
             this.opcoesAvancadasPessoas = new System.Windows.Forms.Panel();
-            this.BtnAtribuirFuncionário = new System.Windows.Forms.Button();
             this.BtnAtribuirUsuarioSistema = new System.Windows.Forms.Button();
+            this.BtnAtribuirFuncionário = new System.Windows.Forms.Button();
+            this.ListaPessoas = new MetroFramework.Controls.MetroGrid();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoCivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +89,6 @@
             this.DataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,14 +100,18 @@
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BottomOptionsPanel = new System.Windows.Forms.Panel();
+            this.BtnOpcoesAvancadas = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.MainPessoa.SuspendLayout();
             this.TabCadastrarPessoa.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabConsultarPessoas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ListaPessoas)).BeginInit();
-            this.BottomOptionsPanel.SuspendLayout();
             this.ListPessoasPanel.SuspendLayout();
             this.opcoesAvancadasPessoas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaPessoas)).BeginInit();
+            this.BottomOptionsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPessoa
@@ -119,15 +119,16 @@
             this.MainPessoa.Controls.Add(this.TabCadastrarPessoa);
             this.MainPessoa.Controls.Add(this.TabConsultarPessoas);
             this.MainPessoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPessoa.Location = new System.Drawing.Point(14, 0);
+            this.MainPessoa.Location = new System.Drawing.Point(10, 0);
             this.MainPessoa.Name = "MainPessoa";
-            this.MainPessoa.SelectedIndex = 1;
-            this.MainPessoa.Size = new System.Drawing.Size(1047, 633);
+            this.MainPessoa.SelectedIndex = 0;
+            this.MainPessoa.Size = new System.Drawing.Size(1051, 633);
             this.MainPessoa.TabIndex = 0;
             this.MainPessoa.UseSelectable = true;
             // 
             // TabCadastrarPessoa
             // 
+            this.TabCadastrarPessoa.AutoScroll = true;
             this.TabCadastrarPessoa.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.AutoScrollMinSize = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.Controls.Add(this.panel2);
@@ -136,7 +137,7 @@
             this.TabCadastrarPessoa.HorizontalScrollbarSize = 10;
             this.TabCadastrarPessoa.Location = new System.Drawing.Point(4, 38);
             this.TabCadastrarPessoa.Name = "TabCadastrarPessoa";
-            this.TabCadastrarPessoa.Size = new System.Drawing.Size(1039, 591);
+            this.TabCadastrarPessoa.Size = new System.Drawing.Size(1043, 591);
             this.TabCadastrarPessoa.TabIndex = 0;
             this.TabCadastrarPessoa.Text = "     Cadastrar Pessoa  ";
             this.TabCadastrarPessoa.VerticalScrollbarBarColor = false;
@@ -191,7 +192,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1039, 591);
+            this.panel2.Size = new System.Drawing.Size(1043, 591);
             this.panel2.TabIndex = 13;
             // 
             // labelDataNascimento
@@ -957,13 +958,70 @@
             this.TabConsultarPessoas.HorizontalScrollbarSize = 10;
             this.TabConsultarPessoas.Location = new System.Drawing.Point(4, 38);
             this.TabConsultarPessoas.Name = "TabConsultarPessoas";
-            this.TabConsultarPessoas.Size = new System.Drawing.Size(1039, 591);
+            this.TabConsultarPessoas.Size = new System.Drawing.Size(1043, 591);
             this.TabConsultarPessoas.TabIndex = 1;
             this.TabConsultarPessoas.Text = "  Consultar Pessoas  ";
             this.TabConsultarPessoas.VerticalScrollbarBarColor = true;
             this.TabConsultarPessoas.VerticalScrollbarHighlightOnWheel = false;
             this.TabConsultarPessoas.VerticalScrollbarSize = 10;
             this.TabConsultarPessoas.Paint += new System.Windows.Forms.PaintEventHandler(this.TabConsultarPessoas_Paint);
+            // 
+            // ListPessoasPanel
+            // 
+            this.ListPessoasPanel.Controls.Add(this.opcoesAvancadasPessoas);
+            this.ListPessoasPanel.Controls.Add(this.ListaPessoas);
+            this.ListPessoasPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListPessoasPanel.Location = new System.Drawing.Point(0, 0);
+            this.ListPessoasPanel.Name = "ListPessoasPanel";
+            this.ListPessoasPanel.Size = new System.Drawing.Size(1043, 546);
+            this.ListPessoasPanel.TabIndex = 4;
+            // 
+            // opcoesAvancadasPessoas
+            // 
+            this.opcoesAvancadasPessoas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.opcoesAvancadasPessoas.Controls.Add(this.BtnAtribuirUsuarioSistema);
+            this.opcoesAvancadasPessoas.Controls.Add(this.BtnAtribuirFuncionário);
+            this.opcoesAvancadasPessoas.Dock = System.Windows.Forms.DockStyle.Right;
+            this.opcoesAvancadasPessoas.Location = new System.Drawing.Point(843, 0);
+            this.opcoesAvancadasPessoas.Name = "opcoesAvancadasPessoas";
+            this.opcoesAvancadasPessoas.Size = new System.Drawing.Size(200, 546);
+            this.opcoesAvancadasPessoas.TabIndex = 3;
+            this.opcoesAvancadasPessoas.Visible = false;
+            // 
+            // BtnAtribuirUsuarioSistema
+            // 
+            this.BtnAtribuirUsuarioSistema.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAtribuirUsuarioSistema.FlatAppearance.BorderSize = 0;
+            this.BtnAtribuirUsuarioSistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtribuirUsuarioSistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtribuirUsuarioSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAtribuirUsuarioSistema.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnAtribuirUsuarioSistema.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnAtribuirUsuarioSistema.Location = new System.Drawing.Point(0, 41);
+            this.BtnAtribuirUsuarioSistema.Name = "BtnAtribuirUsuarioSistema";
+            this.BtnAtribuirUsuarioSistema.Size = new System.Drawing.Size(204, 40);
+            this.BtnAtribuirUsuarioSistema.TabIndex = 26;
+            this.BtnAtribuirUsuarioSistema.Text = "Atribuir Usuário Sistema";
+            this.BtnAtribuirUsuarioSistema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAtribuirUsuarioSistema.UseVisualStyleBackColor = false;
+            // 
+            // BtnAtribuirFuncionário
+            // 
+            this.BtnAtribuirFuncionário.BackColor = System.Drawing.Color.Transparent;
+            this.BtnAtribuirFuncionário.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAtribuirFuncionário.FlatAppearance.BorderSize = 0;
+            this.BtnAtribuirFuncionário.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtribuirFuncionário.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtribuirFuncionário.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAtribuirFuncionário.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnAtribuirFuncionário.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnAtribuirFuncionário.Location = new System.Drawing.Point(0, 0);
+            this.BtnAtribuirFuncionário.Name = "BtnAtribuirFuncionário";
+            this.BtnAtribuirFuncionário.Size = new System.Drawing.Size(200, 40);
+            this.BtnAtribuirFuncionário.TabIndex = 25;
+            this.BtnAtribuirFuncionário.Text = "Atribuir Funcionário";
+            this.BtnAtribuirFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAtribuirFuncionário.UseVisualStyleBackColor = false;
             // 
             // ListaPessoas
             // 
@@ -974,14 +1032,14 @@
             this.ListaPessoas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListaPessoas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ListaPessoas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ListaPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaPessoas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
@@ -1002,14 +1060,14 @@
             this.Telefone,
             this.Celular,
             this.Email});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle5;
             this.ListaPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListaPessoas.EnableHeadersVisualStyles = false;
             this.ListaPessoas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1018,122 +1076,20 @@
             this.ListaPessoas.Name = "ListaPessoas";
             this.ListaPessoas.ReadOnly = true;
             this.ListaPessoas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ListaPessoas.RowHeadersWidth = 10;
             this.ListaPessoas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.ListaPessoas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListaPessoas.Size = new System.Drawing.Size(1039, 546);
+            this.ListaPessoas.Size = new System.Drawing.Size(1043, 546);
             this.ListaPessoas.Style = MetroFramework.MetroColorStyle.Silver;
             this.ListaPessoas.TabIndex = 2;
-            // 
-            // BottomOptionsPanel
-            // 
-            this.BottomOptionsPanel.BackColor = System.Drawing.Color.Transparent;
-            this.BottomOptionsPanel.Controls.Add(this.BtnOpcoesAvancadas);
-            this.BottomOptionsPanel.Controls.Add(this.button1);
-            this.BottomOptionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomOptionsPanel.Location = new System.Drawing.Point(0, 546);
-            this.BottomOptionsPanel.Name = "BottomOptionsPanel";
-            this.BottomOptionsPanel.Size = new System.Drawing.Size(1039, 45);
-            this.BottomOptionsPanel.TabIndex = 3;
-            // 
-            // ListPessoasPanel
-            // 
-            this.ListPessoasPanel.Controls.Add(this.opcoesAvancadasPessoas);
-            this.ListPessoasPanel.Controls.Add(this.ListaPessoas);
-            this.ListPessoasPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListPessoasPanel.Location = new System.Drawing.Point(0, 0);
-            this.ListPessoasPanel.Name = "ListPessoasPanel";
-            this.ListPessoasPanel.Size = new System.Drawing.Size(1039, 546);
-            this.ListPessoasPanel.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Atualizar Dados";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // BtnOpcoesAvancadas
-            // 
-            this.BtnOpcoesAvancadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnOpcoesAvancadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.BtnOpcoesAvancadas.FlatAppearance.BorderSize = 0;
-            this.BtnOpcoesAvancadas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnOpcoesAvancadas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnOpcoesAvancadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnOpcoesAvancadas.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnOpcoesAvancadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnOpcoesAvancadas.Location = new System.Drawing.Point(835, 3);
-            this.BtnOpcoesAvancadas.Name = "BtnOpcoesAvancadas";
-            this.BtnOpcoesAvancadas.Size = new System.Drawing.Size(205, 40);
-            this.BtnOpcoesAvancadas.TabIndex = 2;
-            this.BtnOpcoesAvancadas.Text = "Opções Avançadas";
-            this.BtnOpcoesAvancadas.UseVisualStyleBackColor = false;
-            this.BtnOpcoesAvancadas.Click += new System.EventHandler(this.BtnOpcoesAvancadas_Click);
-            // 
-            // opcoesAvancadasPessoas
-            // 
-            this.opcoesAvancadasPessoas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.opcoesAvancadasPessoas.Controls.Add(this.BtnAtribuirUsuarioSistema);
-            this.opcoesAvancadasPessoas.Controls.Add(this.BtnAtribuirFuncionário);
-            this.opcoesAvancadasPessoas.Dock = System.Windows.Forms.DockStyle.Right;
-            this.opcoesAvancadasPessoas.Location = new System.Drawing.Point(839, 0);
-            this.opcoesAvancadasPessoas.Name = "opcoesAvancadasPessoas";
-            this.opcoesAvancadasPessoas.Size = new System.Drawing.Size(200, 546);
-            this.opcoesAvancadasPessoas.TabIndex = 3;
-            this.opcoesAvancadasPessoas.Visible = false;
-            // 
-            // BtnAtribuirFuncionário
-            // 
-            this.BtnAtribuirFuncionário.BackColor = System.Drawing.Color.Transparent;
-            this.BtnAtribuirFuncionário.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnAtribuirFuncionário.FlatAppearance.BorderSize = 0;
-            this.BtnAtribuirFuncionário.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnAtribuirFuncionário.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnAtribuirFuncionário.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAtribuirFuncionário.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnAtribuirFuncionário.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtribuirFuncionário.Location = new System.Drawing.Point(0, 0);
-            this.BtnAtribuirFuncionário.Name = "BtnAtribuirFuncionário";
-            this.BtnAtribuirFuncionário.Size = new System.Drawing.Size(200, 40);
-            this.BtnAtribuirFuncionário.TabIndex = 25;
-            this.BtnAtribuirFuncionário.Text = "Atribuir Funcionário";
-            this.BtnAtribuirFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAtribuirFuncionário.UseVisualStyleBackColor = false;
-            // 
-            // BtnAtribuirUsuarioSistema
-            // 
-            this.BtnAtribuirUsuarioSistema.BackColor = System.Drawing.Color.Transparent;
-            this.BtnAtribuirUsuarioSistema.FlatAppearance.BorderSize = 0;
-            this.BtnAtribuirUsuarioSistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnAtribuirUsuarioSistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnAtribuirUsuarioSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAtribuirUsuarioSistema.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnAtribuirUsuarioSistema.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtribuirUsuarioSistema.Location = new System.Drawing.Point(0, 41);
-            this.BtnAtribuirUsuarioSistema.Name = "BtnAtribuirUsuarioSistema";
-            this.BtnAtribuirUsuarioSistema.Size = new System.Drawing.Size(204, 40);
-            this.BtnAtribuirUsuarioSistema.TabIndex = 26;
-            this.BtnAtribuirUsuarioSistema.Text = "Atribuir Usuário Sistema";
-            this.BtnAtribuirUsuarioSistema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAtribuirUsuarioSistema.UseVisualStyleBackColor = false;
             // 
             // Nome
             // 
@@ -1176,14 +1132,6 @@
             this.Cpf.HeaderText = "CPF";
             this.Cpf.Name = "Cpf";
             this.Cpf.ReadOnly = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(14, 633);
-            this.panel3.TabIndex = 45;
             // 
             // Cep
             // 
@@ -1251,6 +1199,59 @@
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             // 
+            // BottomOptionsPanel
+            // 
+            this.BottomOptionsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.BottomOptionsPanel.Controls.Add(this.BtnOpcoesAvancadas);
+            this.BottomOptionsPanel.Controls.Add(this.button1);
+            this.BottomOptionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomOptionsPanel.Location = new System.Drawing.Point(0, 546);
+            this.BottomOptionsPanel.Name = "BottomOptionsPanel";
+            this.BottomOptionsPanel.Size = new System.Drawing.Size(1043, 45);
+            this.BottomOptionsPanel.TabIndex = 3;
+            // 
+            // BtnOpcoesAvancadas
+            // 
+            this.BtnOpcoesAvancadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnOpcoesAvancadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnOpcoesAvancadas.FlatAppearance.BorderSize = 0;
+            this.BtnOpcoesAvancadas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnOpcoesAvancadas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnOpcoesAvancadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOpcoesAvancadas.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnOpcoesAvancadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnOpcoesAvancadas.Location = new System.Drawing.Point(839, 3);
+            this.BtnOpcoesAvancadas.Name = "BtnOpcoesAvancadas";
+            this.BtnOpcoesAvancadas.Size = new System.Drawing.Size(205, 40);
+            this.BtnOpcoesAvancadas.TabIndex = 2;
+            this.BtnOpcoesAvancadas.Text = "Opções Avançadas";
+            this.BtnOpcoesAvancadas.UseVisualStyleBackColor = false;
+            this.BtnOpcoesAvancadas.Click += new System.EventHandler(this.BtnOpcoesAvancadas_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(1, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Atualizar Dados";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 633);
+            this.panel3.TabIndex = 45;
+            // 
             // ACSPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1268,10 +1269,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.TabConsultarPessoas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ListaPessoas)).EndInit();
-            this.BottomOptionsPanel.ResumeLayout(false);
             this.ListPessoasPanel.ResumeLayout(false);
             this.opcoesAvancadasPessoas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ListaPessoas)).EndInit();
+            this.BottomOptionsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

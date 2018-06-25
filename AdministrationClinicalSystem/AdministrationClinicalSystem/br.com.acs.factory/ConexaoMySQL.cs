@@ -38,6 +38,24 @@ namespace AdministrationClinicalSystem.br.com.acs.factory
             return this.connection;
         }
 
+        public MySqlConnection GetConnectionDev()
+        {
+            try
+            {
+                string urlConexaoMySQL = "server=highlightti.com.br; port=3306; userid=highligh_devhml; database=highligh_ACS_Desenvolvimento; password=bdhml@18";
+
+                this.connection = new MySqlConnection(urlConexaoMySQL);
+                this.connection.Open();
+            }
+            catch (MySqlException mySqlEx)
+            {
+                this.connection = null;
+                throw (mySqlEx);
+            }
+
+            return this.connection;
+        }
+
         public void Close()
         {
             if (this.connection != null)

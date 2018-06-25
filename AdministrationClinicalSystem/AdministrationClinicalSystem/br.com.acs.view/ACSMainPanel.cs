@@ -38,7 +38,7 @@ namespace AdministrationClinicalSystem
             NavigationScreen(home, contentPanel);
 
             // Atribuindo o nome do usuário logado á sessão iniciada.
-            BtnMeusDados.Text = uController.usuarioSessao;
+            BtnMeusDados.Text = "Olá, " + uController.usuarioSessao;
         }
 
         #region Instâncias (Singleton Pattern).
@@ -84,32 +84,32 @@ namespace AdministrationClinicalSystem
                 {
                     // E então fecha o sub menu, e em seguida fecha o menu principal.
                     btnSubMenuClick = false;
-
+                    subMenu.Visible = false;
                     while (subMenu.Width > 12)
                     {
                         subMenu.Width -= 4;
                     }
-                    subMenu.Visible = false;
+                    
 
                     btnMenuClick = false;
-
+                    menu.Visible = false;
                     while (menu.Width > 10)
                     {
                         menu.Width -= 4;
                     }
-                    menu.Visible = false;
+                    
                 }
                 else
                 {
                     // Se não, se somente o menu principal está aberto, só ele será fechado.
                     btnMenuClick = false;
-
+                    menu.Visible = false;
                     while (menu.Width > 10)
                     {
                         menu.Width -= 4;
                     }
 
-                    menu.Visible = false;
+                    
                 }
             }
         }
@@ -283,7 +283,7 @@ namespace AdministrationClinicalSystem
 
         private void SubBtnLocais_Click(object sender, EventArgs e)
         {
-            ACSLocais locais = new ACSLocais();
+            ACSLocalidades locais = new ACSLocalidades();
             NavigationScreen(locais, contentPanel);
 
             VerificarFechamentoMenu(sender, e);

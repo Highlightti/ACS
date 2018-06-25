@@ -1,6 +1,6 @@
 ﻿namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    partial class ACSLocais
+    partial class ACSLocalidades
     {
         /// <summary>
         /// Required designer variable.
