@@ -16,5 +16,12 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         {
             InitializeComponent();
         }
+
+        private void BtnDetalhesLocalidade_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowUpdateLocalidades acswLocalidades = new ACSWindowUpdateLocalidades();
+            acswLocalidades.Show();
+        }
     }
 }
