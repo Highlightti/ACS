@@ -58,11 +58,12 @@
             this.BtnMeusDados = new System.Windows.Forms.Button();
             this.subMenu = new System.Windows.Forms.Panel();
             this.subMenuGestaoAdministrativa = new System.Windows.Forms.Panel();
-            this.SubBtnLocais = new System.Windows.Forms.Button();
+            this.SubBtnLocalidades = new System.Windows.Forms.Button();
             this.SubBtnPatrimonio = new System.Windows.Forms.Button();
             this.subMenuGestãoAdministrativa = new System.Windows.Forms.Label();
             this.subMenuPatrimonio = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.SubBtnFornecedores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMain)).BeginInit();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
@@ -308,7 +309,7 @@
             this.SubBtnEquipamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubBtnEquipamentos.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.SubBtnEquipamentos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubBtnEquipamentos.Location = new System.Drawing.Point(3, 80);
+            this.SubBtnEquipamentos.Location = new System.Drawing.Point(3, 120);
             this.SubBtnEquipamentos.Name = "SubBtnEquipamentos";
             this.SubBtnEquipamentos.Size = new System.Drawing.Size(207, 40);
             this.SubBtnEquipamentos.TabIndex = 17;
@@ -490,8 +491,9 @@
             // subMenuGestaoAdministrativa
             // 
             this.subMenuGestaoAdministrativa.BackColor = System.Drawing.Color.Transparent;
+            this.subMenuGestaoAdministrativa.Controls.Add(this.SubBtnFornecedores);
             this.subMenuGestaoAdministrativa.Controls.Add(this.SubBtnEquipamentos);
-            this.subMenuGestaoAdministrativa.Controls.Add(this.SubBtnLocais);
+            this.subMenuGestaoAdministrativa.Controls.Add(this.SubBtnLocalidades);
             this.subMenuGestaoAdministrativa.Controls.Add(this.SubBtnPatrimonio);
             this.subMenuGestaoAdministrativa.Controls.Add(this.subMenuGestãoAdministrativa);
             this.subMenuGestaoAdministrativa.Location = new System.Drawing.Point(-3, 0);
@@ -500,23 +502,23 @@
             this.subMenuGestaoAdministrativa.TabIndex = 1;
             this.subMenuGestaoAdministrativa.Visible = false;
             // 
-            // SubBtnLocais
+            // SubBtnLocalidades
             // 
-            this.SubBtnLocais.BackColor = System.Drawing.Color.Transparent;
-            this.SubBtnLocais.FlatAppearance.BorderSize = 0;
-            this.SubBtnLocais.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.SubBtnLocais.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.SubBtnLocais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubBtnLocais.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.SubBtnLocais.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubBtnLocais.Location = new System.Drawing.Point(3, 40);
-            this.SubBtnLocais.Name = "SubBtnLocais";
-            this.SubBtnLocais.Size = new System.Drawing.Size(211, 40);
-            this.SubBtnLocais.TabIndex = 19;
-            this.SubBtnLocais.Text = "Localidades";
-            this.SubBtnLocais.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubBtnLocais.UseVisualStyleBackColor = false;
-            this.SubBtnLocais.Click += new System.EventHandler(this.SubBtnLocais_Click);
+            this.SubBtnLocalidades.BackColor = System.Drawing.Color.Transparent;
+            this.SubBtnLocalidades.FlatAppearance.BorderSize = 0;
+            this.SubBtnLocalidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnLocalidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnLocalidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubBtnLocalidades.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.SubBtnLocalidades.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubBtnLocalidades.Location = new System.Drawing.Point(3, 0);
+            this.SubBtnLocalidades.Name = "SubBtnLocalidades";
+            this.SubBtnLocalidades.Size = new System.Drawing.Size(211, 40);
+            this.SubBtnLocalidades.TabIndex = 19;
+            this.SubBtnLocalidades.Text = "Localidades";
+            this.SubBtnLocalidades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubBtnLocalidades.UseVisualStyleBackColor = false;
+            this.SubBtnLocalidades.Click += new System.EventHandler(this.SubBtnLocalidades_Click);
             // 
             // SubBtnPatrimonio
             // 
@@ -527,7 +529,7 @@
             this.SubBtnPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubBtnPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.SubBtnPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubBtnPatrimonio.Location = new System.Drawing.Point(3, 0);
+            this.SubBtnPatrimonio.Location = new System.Drawing.Point(3, 80);
             this.SubBtnPatrimonio.Name = "SubBtnPatrimonio";
             this.SubBtnPatrimonio.Size = new System.Drawing.Size(211, 40);
             this.SubBtnPatrimonio.TabIndex = 18;
@@ -565,6 +567,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "subMenuPatrimonio";
             this.label1.Visible = false;
+            // 
+            // SubBtnFornecedores
+            // 
+            this.SubBtnFornecedores.BackColor = System.Drawing.Color.Transparent;
+            this.SubBtnFornecedores.FlatAppearance.BorderSize = 0;
+            this.SubBtnFornecedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnFornecedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubBtnFornecedores.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.SubBtnFornecedores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubBtnFornecedores.Location = new System.Drawing.Point(3, 40);
+            this.SubBtnFornecedores.Name = "SubBtnFornecedores";
+            this.SubBtnFornecedores.Size = new System.Drawing.Size(211, 40);
+            this.SubBtnFornecedores.TabIndex = 20;
+            this.SubBtnFornecedores.Text = "Fornecedores";
+            this.SubBtnFornecedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubBtnFornecedores.UseVisualStyleBackColor = false;
+            this.SubBtnFornecedores.Click += new System.EventHandler(this.SubBtnFornecedores_Click);
             // 
             // ACSMainPanel
             // 
@@ -630,11 +650,12 @@
         private System.Windows.Forms.Panel subMenuGestaoAdministrativa;
         private System.Windows.Forms.Label subMenuGestãoAdministrativa;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button SubBtnLocais;
+        private System.Windows.Forms.Button SubBtnLocalidades;
         public System.Windows.Forms.Button button3;
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button SubBtnGestãoPessoas;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button SubBtnFornecedores;
     }
 }
 

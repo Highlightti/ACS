@@ -265,6 +265,22 @@ namespace AdministrationClinicalSystem
             BtnSubMenu_Click(sender, e, subMenu);
         }
 
+        private void SubBtnLocalidades_Click(object sender, EventArgs e)
+        {
+            ACSLocalidades locais = new ACSLocalidades();
+            NavigationScreen(locais, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
+        private void SubBtnFornecedores_Click(object sender, EventArgs e)
+        {
+            ACSFornecedor fornecedor = new ACSFornecedor();
+            NavigationScreen(fornecedor, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
         private void SubBtnPatrimonio_Click(object sender, EventArgs e)
         {
             ACSPatrimonio patrimonio = new ACSPatrimonio();
@@ -277,14 +293,6 @@ namespace AdministrationClinicalSystem
         {
             ACSEquipamentos equipamentos = new ACSEquipamentos();
             NavigationScreen(equipamentos, contentPanel);
-
-            VerificarFechamentoMenu(sender, e);
-        }
-
-        private void SubBtnLocais_Click(object sender, EventArgs e)
-        {
-            ACSLocalidades locais = new ACSLocalidades();
-            NavigationScreen(locais, contentPanel);
 
             VerificarFechamentoMenu(sender, e);
         }
@@ -353,8 +361,9 @@ namespace AdministrationClinicalSystem
             }
         }
 
+
         #endregion
 
-
+        
     }
 }

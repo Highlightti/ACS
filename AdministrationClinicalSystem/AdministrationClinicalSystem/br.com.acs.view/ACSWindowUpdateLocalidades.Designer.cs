@@ -130,11 +130,13 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.metroLabel1.Location = new System.Drawing.Point(83, 20);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(185, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(182, 25);
             this.metroLabel1.TabIndex = 82;
-            this.metroLabel1.Text = "Detalhes Patrimônio";
+            this.metroLabel1.Text = "Detalhes Localidade";
+            this.metroLabel1.UseCustomForeColor = true;
             // 
             // ACSWindowUpdateLocalidades
             // 
@@ -143,7 +145,13 @@
             this.ClientSize = new System.Drawing.Size(350, 300);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(350, 300);
+            this.MinimumSize = new System.Drawing.Size(350, 300);
             this.Name = "ACSWindowUpdateLocalidades";
+            this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

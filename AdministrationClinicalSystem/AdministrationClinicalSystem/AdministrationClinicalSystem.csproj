@@ -99,6 +99,12 @@
     <Compile Include="br.com.acs.view\ACSDadosUsuarioAdministrador.Designer.cs">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSFornecedor.Designer.cs">
+      <DependentUpon>ACSFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.acs.view\ACSLocalidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,12 @@
     <Compile Include="br.com.acs.view\ACSPessoas.Designer.cs">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUpdateFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUpdateFornecedor.Designer.cs">
+      <DependentUpon>ACSWindowUpdateFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.acs.view\ACSWindowUpdateLocalidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,12 +176,6 @@
     </Compile>
     <Compile Include="br.com.acs.view\ACSWindowUpdatePatrimonio.Designer.cs">
       <DependentUpon>ACSWindowUpdatePatrimonio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="br.com.acs.view\ACSFornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="br.com.acs.view\ACSFornecedor.Designer.cs">
-      <DependentUpon>ACSFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSPessoas.resx">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowUpdateFornecedor.resx">
+      <DependentUpon>ACSWindowUpdateFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowUpdateLocalidades.resx">
       <DependentUpon>ACSWindowUpdateLocalidades.cs</DependentUpon>

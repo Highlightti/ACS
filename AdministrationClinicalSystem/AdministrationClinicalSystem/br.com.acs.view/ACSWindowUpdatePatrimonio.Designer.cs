@@ -42,7 +42,7 @@
             this.labelVidaUtil = new MetroFramework.Controls.MetroLabel();
             this.txtNumeroSerie = new MetroFramework.Controls.MetroTextBox();
             this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.BtnAtualizarPatrimonio = new System.Windows.Forms.Button();
+            this.BtnCadastrarPatrimonio = new System.Windows.Forms.Button();
             this.labelTempoVidaUtil = new MetroFramework.Controls.MetroLabel();
             this.labelDataNascimento = new MetroFramework.Controls.MetroLabel();
             this.labelNumeroSerie = new MetroFramework.Controls.MetroLabel();
@@ -327,21 +327,21 @@
             this.txtDataNascimento.TabIndex = 61;
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
-            // BtnAtualizarPatrimonio
+            // BtnCadastrarPatrimonio
             // 
-            this.BtnAtualizarPatrimonio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.BtnAtualizarPatrimonio.FlatAppearance.BorderSize = 0;
-            this.BtnAtualizarPatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnAtualizarPatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnAtualizarPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAtualizarPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.BtnAtualizarPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtualizarPatrimonio.Location = new System.Drawing.Point(47, 642);
-            this.BtnAtualizarPatrimonio.Name = "BtnAtualizarPatrimonio";
-            this.BtnAtualizarPatrimonio.Size = new System.Drawing.Size(200, 40);
-            this.BtnAtualizarPatrimonio.TabIndex = 67;
-            this.BtnAtualizarPatrimonio.Text = "Atualizar Dados";
-            this.BtnAtualizarPatrimonio.UseVisualStyleBackColor = false;
+            this.BtnCadastrarPatrimonio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnCadastrarPatrimonio.FlatAppearance.BorderSize = 0;
+            this.BtnCadastrarPatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnCadastrarPatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnCadastrarPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCadastrarPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.BtnCadastrarPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnCadastrarPatrimonio.Location = new System.Drawing.Point(47, 642);
+            this.BtnCadastrarPatrimonio.Name = "BtnCadastrarPatrimonio";
+            this.BtnCadastrarPatrimonio.Size = new System.Drawing.Size(200, 40);
+            this.BtnCadastrarPatrimonio.TabIndex = 67;
+            this.BtnCadastrarPatrimonio.Text = "Atualizar Dados";
+            this.BtnCadastrarPatrimonio.UseVisualStyleBackColor = false;
             // 
             // labelTempoVidaUtil
             // 
@@ -481,11 +481,13 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.metroLabel1.Location = new System.Drawing.Point(83, 20);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(185, 25);
             this.metroLabel1.TabIndex = 81;
             this.metroLabel1.Text = "Detalhes Patrimônio";
+            this.metroLabel1.UseCustomForeColor = true;
             // 
             // panel1
             // 
@@ -498,7 +500,7 @@
             this.panel1.Controls.Add(this.labelFornecedor);
             this.panel1.Controls.Add(this.labelDataNascimento);
             this.panel1.Controls.Add(this.txtNomePatrimonio);
-            this.panel1.Controls.Add(this.BtnAtualizarPatrimonio);
+            this.panel1.Controls.Add(this.BtnCadastrarPatrimonio);
             this.panel1.Controls.Add(this.txtVidaUtil);
             this.panel1.Controls.Add(this.labelLocalidade);
             this.panel1.Controls.Add(this.txtObservacoes);
@@ -523,7 +525,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(350, 500);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroLabel1);
@@ -557,7 +558,7 @@
         private MetroFramework.Controls.MetroLabel labelVidaUtil;
         private MetroFramework.Controls.MetroTextBox txtNumeroSerie;
         private System.Windows.Forms.MaskedTextBox txtDataNascimento;
-        private System.Windows.Forms.Button BtnAtualizarPatrimonio;
+        private System.Windows.Forms.Button BtnCadastrarPatrimonio;
         private MetroFramework.Controls.MetroLabel labelTempoVidaUtil;
         private MetroFramework.Controls.MetroLabel labelDataNascimento;
         private MetroFramework.Controls.MetroLabel labelNumeroSerie;

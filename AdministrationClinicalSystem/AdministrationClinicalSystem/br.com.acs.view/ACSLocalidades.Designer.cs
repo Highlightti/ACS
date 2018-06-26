@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.leftSidePanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MainPanelConsulta = new MetroFramework.Controls.MetroTabControl();
+            this.MainTabsLocalidades = new MetroFramework.Controls.MetroTabControl();
             this.TabCadastrarPessoa = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,7 +52,7 @@
             this.Localidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.MainPanelConsulta.SuspendLayout();
+            this.MainTabsLocalidades.SuspendLayout();
             this.TabCadastrarPessoa.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabConsultarPessoas.SuspendLayout();
@@ -77,7 +77,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.metroLabel1.Location = new System.Drawing.Point(6, 5);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(111, 25);
@@ -96,33 +96,31 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.MainPanelConsulta);
+            this.panel1.Controls.Add(this.MainTabsLocalidades);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(10, 35);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 582);
             this.panel1.TabIndex = 51;
             // 
-            // MainPanelConsulta
+            // MainTabsLocalidades
             // 
-            this.MainPanelConsulta.Controls.Add(this.TabCadastrarPessoa);
-            this.MainPanelConsulta.Controls.Add(this.TabConsultarPessoas);
-            this.MainPanelConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanelConsulta.Location = new System.Drawing.Point(0, 0);
-            this.MainPanelConsulta.Name = "MainPanelConsulta";
-            this.MainPanelConsulta.SelectedIndex = 1;
-            this.MainPanelConsulta.Size = new System.Drawing.Size(1024, 582);
-            this.MainPanelConsulta.TabIndex = 2;
-            this.MainPanelConsulta.UseSelectable = true;
+            this.MainTabsLocalidades.Controls.Add(this.TabCadastrarPessoa);
+            this.MainTabsLocalidades.Controls.Add(this.TabConsultarPessoas);
+            this.MainTabsLocalidades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainTabsLocalidades.Location = new System.Drawing.Point(0, 0);
+            this.MainTabsLocalidades.Name = "MainTabsLocalidades";
+            this.MainTabsLocalidades.SelectedIndex = 0;
+            this.MainTabsLocalidades.Size = new System.Drawing.Size(1024, 582);
+            this.MainTabsLocalidades.TabIndex = 2;
+            this.MainTabsLocalidades.UseSelectable = true;
             // 
             // TabCadastrarPessoa
             // 
-            this.TabCadastrarPessoa.AutoScroll = true;
             this.TabCadastrarPessoa.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.AutoScrollMinSize = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.Controls.Add(this.metroLabel25);
             this.TabCadastrarPessoa.Controls.Add(this.panel2);
-            this.TabCadastrarPessoa.HorizontalScrollbar = true;
             this.TabCadastrarPessoa.HorizontalScrollbarBarColor = false;
             this.TabCadastrarPessoa.HorizontalScrollbarHighlightOnWheel = false;
             this.TabCadastrarPessoa.HorizontalScrollbarSize = 10;
@@ -130,8 +128,7 @@
             this.TabCadastrarPessoa.Name = "TabCadastrarPessoa";
             this.TabCadastrarPessoa.Size = new System.Drawing.Size(1016, 540);
             this.TabCadastrarPessoa.TabIndex = 0;
-            this.TabCadastrarPessoa.Text = "     Cadastro     ";
-            this.TabCadastrarPessoa.VerticalScrollbar = true;
+            this.TabCadastrarPessoa.Text = "     Cadastrar     ";
             this.TabCadastrarPessoa.VerticalScrollbarBarColor = true;
             this.TabCadastrarPessoa.VerticalScrollbarHighlightOnWheel = true;
             this.TabCadastrarPessoa.VerticalScrollbarSize = 10;
@@ -144,9 +141,9 @@
             this.metroLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.metroLabel25.Location = new System.Drawing.Point(38, 6);
             this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(161, 25);
+            this.metroLabel25.Size = new System.Drawing.Size(191, 25);
             this.metroLabel25.TabIndex = 14;
-            this.metroLabel25.Text = "Dados Localidade";
+            this.metroLabel25.Text = "Informe a Localidade";
             this.metroLabel25.UseCustomForeColor = true;
             // 
             // panel2
@@ -256,25 +253,25 @@
             this.ListaPessoas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListaPessoas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ListaPessoas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.ListaPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaPessoas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Localidade});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle14;
             this.ListaPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListaPessoas.EnableHeadersVisualStyles = false;
             this.ListaPessoas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -283,14 +280,14 @@
             this.ListaPessoas.Name = "ListaPessoas";
             this.ListaPessoas.ReadOnly = true;
             this.ListaPessoas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.ListaPessoas.RowHeadersWidth = 10;
             this.ListaPessoas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.ListaPessoas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -369,7 +366,7 @@
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.MainPanelConsulta.ResumeLayout(false);
+            this.MainTabsLocalidades.ResumeLayout(false);
             this.TabCadastrarPessoa.ResumeLayout(false);
             this.TabCadastrarPessoa.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -389,7 +386,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.Panel leftSidePanel;
         private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroTabControl MainPanelConsulta;
+        private MetroFramework.Controls.MetroTabControl MainTabsLocalidades;
         private MetroFramework.Controls.MetroTabPage TabCadastrarPessoa;
         private MetroFramework.Controls.MetroLabel metroLabel25;
         private System.Windows.Forms.Panel panel2;

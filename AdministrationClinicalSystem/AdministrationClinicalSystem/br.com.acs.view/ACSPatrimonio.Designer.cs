@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.MainPanelConsulta = new MetroFramework.Controls.MetroTabControl();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.MainTabsPatrimonio = new MetroFramework.Controls.MetroTabControl();
             this.TabCadastrarPessoa = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
@@ -80,7 +80,7 @@
             this.Observacoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.MainPanelConsulta.SuspendLayout();
+            this.MainTabsPatrimonio.SuspendLayout();
             this.TabCadastrarPessoa.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabConsultarPessoas.SuspendLayout();
@@ -92,26 +92,24 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // MainPanelConsulta
+            // MainTabsPatrimonio
             // 
-            this.MainPanelConsulta.Controls.Add(this.TabCadastrarPessoa);
-            this.MainPanelConsulta.Controls.Add(this.TabConsultarPessoas);
-            this.MainPanelConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanelConsulta.Location = new System.Drawing.Point(0, 0);
-            this.MainPanelConsulta.Name = "MainPanelConsulta";
-            this.MainPanelConsulta.SelectedIndex = 1;
-            this.MainPanelConsulta.Size = new System.Drawing.Size(1012, 596);
-            this.MainPanelConsulta.TabIndex = 1;
-            this.MainPanelConsulta.UseSelectable = true;
+            this.MainTabsPatrimonio.Controls.Add(this.TabCadastrarPessoa);
+            this.MainTabsPatrimonio.Controls.Add(this.TabConsultarPessoas);
+            this.MainTabsPatrimonio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainTabsPatrimonio.Location = new System.Drawing.Point(0, 0);
+            this.MainTabsPatrimonio.Name = "MainTabsPatrimonio";
+            this.MainTabsPatrimonio.SelectedIndex = 0;
+            this.MainTabsPatrimonio.Size = new System.Drawing.Size(1012, 596);
+            this.MainTabsPatrimonio.TabIndex = 1;
+            this.MainTabsPatrimonio.UseSelectable = true;
             // 
             // TabCadastrarPessoa
             // 
-            this.TabCadastrarPessoa.AutoScroll = true;
             this.TabCadastrarPessoa.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.AutoScrollMinSize = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.Controls.Add(this.metroLabel25);
             this.TabCadastrarPessoa.Controls.Add(this.panel2);
-            this.TabCadastrarPessoa.HorizontalScrollbar = true;
             this.TabCadastrarPessoa.HorizontalScrollbarBarColor = false;
             this.TabCadastrarPessoa.HorizontalScrollbarHighlightOnWheel = false;
             this.TabCadastrarPessoa.HorizontalScrollbarSize = 10;
@@ -119,8 +117,7 @@
             this.TabCadastrarPessoa.Name = "TabCadastrarPessoa";
             this.TabCadastrarPessoa.Size = new System.Drawing.Size(1004, 554);
             this.TabCadastrarPessoa.TabIndex = 0;
-            this.TabCadastrarPessoa.Text = "     Cadastro     ";
-            this.TabCadastrarPessoa.VerticalScrollbar = true;
+            this.TabCadastrarPessoa.Text = "     Cadastrar     ";
             this.TabCadastrarPessoa.VerticalScrollbarBarColor = true;
             this.TabCadastrarPessoa.VerticalScrollbarHighlightOnWheel = true;
             this.TabCadastrarPessoa.VerticalScrollbarSize = 10;
@@ -351,14 +348,14 @@
             this.ListaPessoas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListaPessoas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ListaPessoas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.ListaPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaPessoas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Status,
@@ -372,14 +369,14 @@
             this.DataCompra,
             this.Valor,
             this.Observacoes});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle11;
             this.ListaPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListaPessoas.EnableHeadersVisualStyles = false;
             this.ListaPessoas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -388,14 +385,14 @@
             this.ListaPessoas.Name = "ListaPessoas";
             this.ListaPessoas.ReadOnly = true;
             this.ListaPessoas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.ListaPessoas.RowHeadersWidth = 10;
             this.ListaPessoas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.ListaPessoas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -724,7 +721,7 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.MainPanelConsulta);
+            this.mainPanel.Controls.Add(this.MainTabsPatrimonio);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(10, 35);
             this.mainPanel.Name = "mainPanel";
@@ -736,7 +733,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.metroLabel1.Location = new System.Drawing.Point(6, 5);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(106, 25);
@@ -846,7 +843,7 @@
             this.Name = "ACSPatrimonio";
             this.Text = "ACSPatrimonio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.MainPanelConsulta.ResumeLayout(false);
+            this.MainTabsPatrimonio.ResumeLayout(false);
             this.TabCadastrarPessoa.ResumeLayout(false);
             this.TabCadastrarPessoa.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -866,7 +863,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTabControl MainPanelConsulta;
+        private MetroFramework.Controls.MetroTabControl MainTabsPatrimonio;
         private MetroFramework.Controls.MetroTabPage TabCadastrarPessoa;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.MaskedTextBox txtDataNascimento;
