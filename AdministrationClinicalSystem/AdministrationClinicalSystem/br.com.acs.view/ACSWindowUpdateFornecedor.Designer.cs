@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnInativarFornecedor = new System.Windows.Forms.Button();
             this.labelSite = new MetroFramework.Controls.MetroLabel();
             this.txtSite = new MetroFramework.Controls.MetroTextBox();
             this.labelEmail = new MetroFramework.Controls.MetroLabel();
@@ -43,7 +44,6 @@
             this.txtRazaoSocial = new MetroFramework.Controls.MetroTextBox();
             this.txtCNPJ = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.BtnInativarFornecedor = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,11 +71,27 @@
             this.panel2.Size = new System.Drawing.Size(310, 420);
             this.panel2.TabIndex = 14;
             // 
+            // BtnInativarFornecedor
+            // 
+            this.BtnInativarFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnInativarFornecedor.FlatAppearance.BorderSize = 0;
+            this.BtnInativarFornecedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnInativarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnInativarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInativarFornecedor.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnInativarFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnInativarFornecedor.Location = new System.Drawing.Point(73, 449);
+            this.BtnInativarFornecedor.Name = "BtnInativarFornecedor";
+            this.BtnInativarFornecedor.Size = new System.Drawing.Size(150, 35);
+            this.BtnInativarFornecedor.TabIndex = 62;
+            this.BtnInativarFornecedor.Text = "Excluir Fornecedor";
+            this.BtnInativarFornecedor.UseVisualStyleBackColor = false;
+            // 
             // labelSite
             // 
             this.labelSite.AutoSize = true;
             this.labelSite.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelSite.Location = new System.Drawing.Point(25, 325);
+            this.labelSite.Location = new System.Drawing.Point(25, 324);
             this.labelSite.Name = "labelSite";
             this.labelSite.Size = new System.Drawing.Size(25, 15);
             this.labelSite.TabIndex = 61;
@@ -98,7 +114,7 @@
             this.txtSite.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtSite.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtSite.Lines = new string[0];
-            this.txtSite.Location = new System.Drawing.Point(23, 341);
+            this.txtSite.Location = new System.Drawing.Point(23, 340);
             this.txtSite.MaxLength = 32767;
             this.txtSite.Name = "txtSite";
             this.txtSite.PasswordChar = '\0';
@@ -119,7 +135,7 @@
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelEmail.Location = new System.Drawing.Point(23, 265);
+            this.labelEmail.Location = new System.Drawing.Point(23, 264);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(38, 15);
             this.labelEmail.TabIndex = 59;
@@ -142,7 +158,7 @@
             this.txtEmail.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(21, 281);
+            this.txtEmail.Location = new System.Drawing.Point(21, 280);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -163,7 +179,7 @@
             // 
             this.labelCelular.AutoSize = true;
             this.labelCelular.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelCelular.Location = new System.Drawing.Point(21, 205);
+            this.labelCelular.Location = new System.Drawing.Point(21, 204);
             this.labelCelular.Name = "labelCelular";
             this.labelCelular.Size = new System.Drawing.Size(40, 15);
             this.labelCelular.TabIndex = 49;
@@ -186,7 +202,7 @@
             this.txtCelular.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtCelular.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtCelular.Lines = new string[0];
-            this.txtCelular.Location = new System.Drawing.Point(19, 221);
+            this.txtCelular.Location = new System.Drawing.Point(19, 220);
             this.txtCelular.MaxLength = 32767;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.PasswordChar = '\0';
@@ -220,7 +236,7 @@
             this.txtTelefone.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtTelefone.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtTelefone.Lines = new string[0];
-            this.txtTelefone.Location = new System.Drawing.Point(19, 161);
+            this.txtTelefone.Location = new System.Drawing.Point(19, 160);
             this.txtTelefone.MaxLength = 32767;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.PasswordChar = '\0';
@@ -244,11 +260,11 @@
             this.BtnAtualizarFornecedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnAtualizarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnAtualizarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAtualizarFornecedor.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.BtnAtualizarFornecedor.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnAtualizarFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtualizarFornecedor.Location = new System.Drawing.Point(48, 410);
+            this.BtnAtualizarFornecedor.Location = new System.Drawing.Point(73, 394);
             this.BtnAtualizarFornecedor.Name = "BtnAtualizarFornecedor";
-            this.BtnAtualizarFornecedor.Size = new System.Drawing.Size(200, 40);
+            this.BtnAtualizarFornecedor.Size = new System.Drawing.Size(150, 35);
             this.BtnAtualizarFornecedor.TabIndex = 44;
             this.BtnAtualizarFornecedor.Text = "Atualizar Fornecedor";
             this.BtnAtualizarFornecedor.UseVisualStyleBackColor = false;
@@ -257,7 +273,7 @@
             // 
             this.labelTelefone.AutoSize = true;
             this.labelTelefone.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelTelefone.Location = new System.Drawing.Point(21, 145);
+            this.labelTelefone.Location = new System.Drawing.Point(21, 144);
             this.labelTelefone.Name = "labelTelefone";
             this.labelTelefone.Size = new System.Drawing.Size(47, 15);
             this.labelTelefone.TabIndex = 23;
@@ -267,7 +283,7 @@
             // 
             this.labelCNPJ.AutoSize = true;
             this.labelCNPJ.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelCNPJ.Location = new System.Drawing.Point(21, 85);
+            this.labelCNPJ.Location = new System.Drawing.Point(21, 84);
             this.labelCNPJ.Name = "labelCNPJ";
             this.labelCNPJ.Size = new System.Drawing.Size(33, 15);
             this.labelCNPJ.TabIndex = 22;
@@ -277,7 +293,7 @@
             // 
             this.labelRazaoSocial.AutoSize = true;
             this.labelRazaoSocial.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelRazaoSocial.Location = new System.Drawing.Point(21, 25);
+            this.labelRazaoSocial.Location = new System.Drawing.Point(21, 24);
             this.labelRazaoSocial.Name = "labelRazaoSocial";
             this.labelRazaoSocial.Size = new System.Drawing.Size(69, 15);
             this.labelRazaoSocial.TabIndex = 14;
@@ -300,7 +316,7 @@
             this.txtRazaoSocial.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtRazaoSocial.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtRazaoSocial.Lines = new string[0];
-            this.txtRazaoSocial.Location = new System.Drawing.Point(19, 41);
+            this.txtRazaoSocial.Location = new System.Drawing.Point(19, 40);
             this.txtRazaoSocial.MaxLength = 32767;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.PasswordChar = '\0';
@@ -334,7 +350,7 @@
             this.txtCNPJ.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtCNPJ.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtCNPJ.Lines = new string[0];
-            this.txtCNPJ.Location = new System.Drawing.Point(19, 101);
+            this.txtCNPJ.Location = new System.Drawing.Point(19, 100);
             this.txtCNPJ.MaxLength = 32767;
             this.txtCNPJ.Name = "txtCNPJ";
             this.txtCNPJ.PasswordChar = '\0';
@@ -363,22 +379,6 @@
             this.metroLabel1.TabIndex = 82;
             this.metroLabel1.Text = "Detalhes Fornecedor";
             this.metroLabel1.UseCustomForeColor = true;
-            // 
-            // BtnInativarFornecedor
-            // 
-            this.BtnInativarFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.BtnInativarFornecedor.FlatAppearance.BorderSize = 0;
-            this.BtnInativarFornecedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnInativarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnInativarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInativarFornecedor.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.BtnInativarFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnInativarFornecedor.Location = new System.Drawing.Point(48, 465);
-            this.BtnInativarFornecedor.Name = "BtnInativarFornecedor";
-            this.BtnInativarFornecedor.Size = new System.Drawing.Size(200, 40);
-            this.BtnInativarFornecedor.TabIndex = 62;
-            this.BtnInativarFornecedor.Text = "Excluir Fornecedor";
-            this.BtnInativarFornecedor.UseVisualStyleBackColor = false;
             // 
             // ACSWindowUpdateFornecedor
             // 

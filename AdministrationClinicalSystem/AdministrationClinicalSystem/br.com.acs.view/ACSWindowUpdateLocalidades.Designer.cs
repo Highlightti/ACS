@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnInativarLocalidade = new System.Windows.Forms.Button();
             this.BtnAtualizarLocalidade = new System.Windows.Forms.Button();
             this.labelNumeroPatrimonio = new MetroFramework.Controls.MetroLabel();
             this.txtDescricaoLocalidade = new MetroFramework.Controls.MetroTextBox();
-            this.BtnInativarLocalidade = new System.Windows.Forms.Button();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,22 @@
             this.panel1.Size = new System.Drawing.Size(310, 220);
             this.panel1.TabIndex = 0;
             // 
+            // BtnInativarLocalidade
+            // 
+            this.BtnInativarLocalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnInativarLocalidade.FlatAppearance.BorderSize = 0;
+            this.BtnInativarLocalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnInativarLocalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnInativarLocalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInativarLocalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnInativarLocalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnInativarLocalidade.Location = new System.Drawing.Point(77, 148);
+            this.BtnInativarLocalidade.Name = "BtnInativarLocalidade";
+            this.BtnInativarLocalidade.Size = new System.Drawing.Size(150, 35);
+            this.BtnInativarLocalidade.TabIndex = 48;
+            this.BtnInativarLocalidade.Text = "Excluir Localidade";
+            this.BtnInativarLocalidade.UseVisualStyleBackColor = false;
+            // 
             // BtnAtualizarLocalidade
             // 
             this.BtnAtualizarLocalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
@@ -56,11 +72,11 @@
             this.BtnAtualizarLocalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnAtualizarLocalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnAtualizarLocalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAtualizarLocalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.BtnAtualizarLocalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnAtualizarLocalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtualizarLocalidade.Location = new System.Drawing.Point(52, 97);
+            this.BtnAtualizarLocalidade.Location = new System.Drawing.Point(77, 99);
             this.BtnAtualizarLocalidade.Name = "BtnAtualizarLocalidade";
-            this.BtnAtualizarLocalidade.Size = new System.Drawing.Size(200, 40);
+            this.BtnAtualizarLocalidade.Size = new System.Drawing.Size(150, 35);
             this.BtnAtualizarLocalidade.TabIndex = 47;
             this.BtnAtualizarLocalidade.Text = "Atualizar Localidade";
             this.BtnAtualizarLocalidade.UseVisualStyleBackColor = false;
@@ -69,7 +85,7 @@
             // 
             this.labelNumeroPatrimonio.AutoSize = true;
             this.labelNumeroPatrimonio.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelNumeroPatrimonio.Location = new System.Drawing.Point(28, 36);
+            this.labelNumeroPatrimonio.Location = new System.Drawing.Point(28, 24);
             this.labelNumeroPatrimonio.Name = "labelNumeroPatrimonio";
             this.labelNumeroPatrimonio.Size = new System.Drawing.Size(111, 15);
             this.labelNumeroPatrimonio.TabIndex = 46;
@@ -92,7 +108,7 @@
             this.txtDescricaoLocalidade.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtDescricaoLocalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtDescricaoLocalidade.Lines = new string[0];
-            this.txtDescricaoLocalidade.Location = new System.Drawing.Point(26, 52);
+            this.txtDescricaoLocalidade.Location = new System.Drawing.Point(26, 40);
             this.txtDescricaoLocalidade.MaxLength = 32767;
             this.txtDescricaoLocalidade.Name = "txtDescricaoLocalidade";
             this.txtDescricaoLocalidade.PasswordChar = '\0';
@@ -108,22 +124,6 @@
             this.txtDescricaoLocalidade.UseSelectable = true;
             this.txtDescricaoLocalidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDescricaoLocalidade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // BtnInativarLocalidade
-            // 
-            this.BtnInativarLocalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.BtnInativarLocalidade.FlatAppearance.BorderSize = 0;
-            this.BtnInativarLocalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnInativarLocalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnInativarLocalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInativarLocalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.BtnInativarLocalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnInativarLocalidade.Location = new System.Drawing.Point(52, 155);
-            this.BtnInativarLocalidade.Name = "BtnInativarLocalidade";
-            this.BtnInativarLocalidade.Size = new System.Drawing.Size(200, 40);
-            this.BtnInativarLocalidade.TabIndex = 48;
-            this.BtnInativarLocalidade.Text = "Excluir Localidade";
-            this.BtnInativarLocalidade.UseVisualStyleBackColor = false;
             // 
             // metroLabel1
             // 

@@ -334,11 +334,11 @@
             this.BtnCadastrarPatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnCadastrarPatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnCadastrarPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastrarPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.BtnCadastrarPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnCadastrarPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCadastrarPatrimonio.Location = new System.Drawing.Point(47, 642);
+            this.BtnCadastrarPatrimonio.Location = new System.Drawing.Point(72, 642);
             this.BtnCadastrarPatrimonio.Name = "BtnCadastrarPatrimonio";
-            this.BtnCadastrarPatrimonio.Size = new System.Drawing.Size(200, 40);
+            this.BtnCadastrarPatrimonio.Size = new System.Drawing.Size(150, 35);
             this.BtnCadastrarPatrimonio.TabIndex = 67;
             this.BtnCadastrarPatrimonio.Text = "Atualizar Dados";
             this.BtnCadastrarPatrimonio.UseVisualStyleBackColor = false;

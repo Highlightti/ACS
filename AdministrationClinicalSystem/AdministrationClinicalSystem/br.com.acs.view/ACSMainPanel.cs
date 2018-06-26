@@ -289,6 +289,14 @@ namespace AdministrationClinicalSystem
             VerificarFechamentoMenu(sender, e);
         }
 
+        private void SubBtnFinalidades_Click(object sender, EventArgs e)
+        {
+            ACSFinalidades finalidades = new ACSFinalidades();
+            NavigationScreen(finalidades, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
         private void SubBtnEquipamentos_Click(object sender, EventArgs e)
         {
             ACSEquipamentos equipamentos = new ACSEquipamentos();
@@ -360,6 +368,7 @@ namespace AdministrationClinicalSystem
                 }
             }
         }
+
 
 
         #endregion

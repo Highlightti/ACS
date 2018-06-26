@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.leftSidePanel = new System.Windows.Forms.Panel();
@@ -53,7 +53,7 @@
             this.txtCNPJ = new MetroFramework.Controls.MetroTextBox();
             this.TabConsultarPessoas = new MetroFramework.Controls.MetroTabPage();
             this.ListPessoasPanel = new System.Windows.Forms.Panel();
-            this.ListaPessoas = new MetroFramework.Controls.MetroGrid();
+            this.ListaFornecedores = new MetroFramework.Controls.MetroGrid();
             this.RazaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +70,7 @@
             this.panel2.SuspendLayout();
             this.TabConsultarPessoas.SuspendLayout();
             this.ListPessoasPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ListaPessoas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaFornecedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.BottomOptionsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -346,11 +346,11 @@
             this.BtnCadastrarFornecedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnCadastrarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.BtnCadastrarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastrarFornecedor.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.BtnCadastrarFornecedor.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnCadastrarFornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCadastrarFornecedor.Location = new System.Drawing.Point(66, 412);
+            this.BtnCadastrarFornecedor.Location = new System.Drawing.Point(91, 412);
             this.BtnCadastrarFornecedor.Name = "BtnCadastrarFornecedor";
-            this.BtnCadastrarFornecedor.Size = new System.Drawing.Size(200, 40);
+            this.BtnCadastrarFornecedor.Size = new System.Drawing.Size(150, 35);
             this.BtnCadastrarFornecedor.TabIndex = 44;
             this.BtnCadastrarFornecedor.Text = "Cadastrar";
             this.BtnCadastrarFornecedor.UseVisualStyleBackColor = false;
@@ -473,68 +473,68 @@
             // ListPessoasPanel
             // 
             this.ListPessoasPanel.BackColor = System.Drawing.Color.Transparent;
-            this.ListPessoasPanel.Controls.Add(this.ListaPessoas);
+            this.ListPessoasPanel.Controls.Add(this.ListaFornecedores);
             this.ListPessoasPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListPessoasPanel.Location = new System.Drawing.Point(0, 35);
             this.ListPessoasPanel.Name = "ListPessoasPanel";
             this.ListPessoasPanel.Size = new System.Drawing.Size(947, 435);
             this.ListPessoasPanel.TabIndex = 4;
             // 
-            // ListaPessoas
+            // ListaFornecedores
             // 
-            this.ListaPessoas.AllowUserToAddRows = false;
-            this.ListaPessoas.AllowUserToDeleteRows = false;
-            this.ListaPessoas.AllowUserToResizeRows = false;
-            this.ListaPessoas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ListaPessoas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListaPessoas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.ListaPessoas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.ListaPessoas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaPessoas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ListaFornecedores.AllowUserToAddRows = false;
+            this.ListaFornecedores.AllowUserToDeleteRows = false;
+            this.ListaFornecedores.AllowUserToResizeRows = false;
+            this.ListaFornecedores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ListaFornecedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListaFornecedores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.ListaFornecedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.ListaFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListaFornecedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RazaoSocial,
             this.Cnpj,
             this.Telefone,
             this.Celular,
             this.Email,
             this.Site});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListaPessoas.DefaultCellStyle = dataGridViewCellStyle14;
-            this.ListaPessoas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListaPessoas.EnableHeadersVisualStyles = false;
-            this.ListaPessoas.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ListaPessoas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ListaPessoas.Location = new System.Drawing.Point(0, 0);
-            this.ListaPessoas.Name = "ListaPessoas";
-            this.ListaPessoas.ReadOnly = true;
-            this.ListaPessoas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaPessoas.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.ListaPessoas.RowHeadersWidth = 10;
-            this.ListaPessoas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.ListaPessoas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListaPessoas.Size = new System.Drawing.Size(947, 435);
-            this.ListaPessoas.Style = MetroFramework.MetroColorStyle.Silver;
-            this.ListaPessoas.TabIndex = 2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListaFornecedores.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ListaFornecedores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListaFornecedores.EnableHeadersVisualStyles = false;
+            this.ListaFornecedores.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ListaFornecedores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ListaFornecedores.Location = new System.Drawing.Point(0, 0);
+            this.ListaFornecedores.Name = "ListaFornecedores";
+            this.ListaFornecedores.ReadOnly = true;
+            this.ListaFornecedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaFornecedores.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.ListaFornecedores.RowHeadersWidth = 10;
+            this.ListaFornecedores.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.ListaFornecedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListaFornecedores.Size = new System.Drawing.Size(947, 435);
+            this.ListaFornecedores.Style = MetroFramework.MetroColorStyle.Silver;
+            this.ListaFornecedores.TabIndex = 2;
             // 
             // RazaoSocial
             // 
@@ -644,7 +644,7 @@
             this.panel2.PerformLayout();
             this.TabConsultarPessoas.ResumeLayout(false);
             this.ListPessoasPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ListaPessoas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaFornecedores)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.BottomOptionsPanel.ResumeLayout(false);
@@ -676,7 +676,7 @@
         private MetroFramework.Controls.MetroTextBox txtCNPJ;
         private MetroFramework.Controls.MetroTabPage TabConsultarPessoas;
         private System.Windows.Forms.Panel ListPessoasPanel;
-        private MetroFramework.Controls.MetroGrid ListaPessoas;
+        private MetroFramework.Controls.MetroGrid ListaFornecedores;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazaoSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;

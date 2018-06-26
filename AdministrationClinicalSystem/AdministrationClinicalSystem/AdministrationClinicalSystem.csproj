@@ -99,6 +99,12 @@
     <Compile Include="br.com.acs.view\ACSDadosUsuarioAdministrador.Designer.cs">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSFinalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSFinalidades.Designer.cs">
+      <DependentUpon>ACSFinalidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.acs.view\ACSFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,12 @@
     <Compile Include="br.com.acs.view\ACSPessoas.Designer.cs">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUpdateFinalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUpdateFinalidades.Designer.cs">
+      <DependentUpon>ACSWindowUpdateFinalidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.acs.view\ACSWindowUpdateFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +197,9 @@
     <EmbeddedResource Include="br.com.acs.view\ACSDadosUsuarioAdministrador.resx">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSFinalidades.resx">
+      <DependentUpon>ACSFinalidades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSFornecedor.resx">
       <DependentUpon>ACSFornecedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSPessoas.resx">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowUpdateFinalidades.resx">
+      <DependentUpon>ACSWindowUpdateFinalidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowUpdateFornecedor.resx">
       <DependentUpon>ACSWindowUpdateFornecedor.cs</DependentUpon>
