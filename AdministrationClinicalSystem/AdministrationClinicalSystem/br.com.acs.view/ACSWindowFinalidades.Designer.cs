@@ -1,6 +1,6 @@
 ﻿namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    partial class ACSWindowUpdateFinalidades
+    partial class ACSWindowFinalidades
     {
         /// <summary>
         /// Required designer variable.

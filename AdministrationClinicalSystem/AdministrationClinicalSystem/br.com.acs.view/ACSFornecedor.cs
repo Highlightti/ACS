@@ -20,7 +20,7 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         private void BtnDetalhesFornecedor_Click(object sender, EventArgs e)
         {
             //adicionar verificação para não permitir abrir mais de uma tela.
-            ACSWindowUpdateFornecedor acswFornecedor = new ACSWindowUpdateFornecedor();
+            ACSWindowFornecedor acswFornecedor = new ACSWindowFornecedor();
             acswFornecedor.Show();
         }
     }

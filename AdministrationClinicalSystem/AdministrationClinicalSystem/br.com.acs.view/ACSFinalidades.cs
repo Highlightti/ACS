@@ -20,7 +20,7 @@ namespace AdministrationClinicalSystem.br.com.acs.view
         private void BtnDetalhesFinalidade_Click(object sender, EventArgs e)
         {
             //adicionar verificação para não permitir abrir mais de uma tela.
-            ACSWindowUpdateFinalidades acswfinalidades = new ACSWindowUpdateFinalidades();
+            ACSWindowFinalidades acswfinalidades = new ACSWindowFinalidades();
             acswfinalidades.Show();
         }
     }
