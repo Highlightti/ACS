@@ -30,19 +30,8 @@
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnAtualizarDadosEquipamento = new System.Windows.Forms.Button();
-            this.comboLocalidade = new MetroFramework.Controls.MetroComboBox();
-            this.labelLocalidade = new MetroFramework.Controls.MetroLabel();
-            this.txtModelo = new MetroFramework.Controls.MetroTextBox();
-            this.labelModelo = new MetroFramework.Controls.MetroLabel();
-            this.labelFinalidade = new MetroFramework.Controls.MetroLabel();
-            this.comboFinalidade = new MetroFramework.Controls.MetroComboBox();
-            this.comboFornecedor = new MetroFramework.Controls.MetroComboBox();
-            this.txtNumeroSerie = new MetroFramework.Controls.MetroTextBox();
-            this.labelNumeroSerie = new MetroFramework.Controls.MetroLabel();
-            this.labelNomePatrimonio = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtNomePatrimonio = new MetroFramework.Controls.MetroTextBox();
+            this.toggleStatusEquipamento = new MetroFramework.Controls.MetroToggle();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.labelTempoCAL = new MetroFramework.Controls.MetroLabel();
             this.txtDataCalibracao = new System.Windows.Forms.MaskedTextBox();
             this.comboTempoCAL = new MetroFramework.Controls.MetroComboBox();
@@ -57,8 +46,20 @@
             this.labelManutencaoPreventiva = new MetroFramework.Controls.MetroLabel();
             this.labelPeriodicidadeMP = new MetroFramework.Controls.MetroLabel();
             this.txtPeriodicidadeMP = new MetroFramework.Controls.MetroTextBox();
-            this.toggleStatusEquipamento = new MetroFramework.Controls.MetroToggle();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.comboLocalidade = new MetroFramework.Controls.MetroComboBox();
+            this.labelLocalidade = new MetroFramework.Controls.MetroLabel();
+            this.txtModelo = new MetroFramework.Controls.MetroTextBox();
+            this.labelModelo = new MetroFramework.Controls.MetroLabel();
+            this.labelFinalidade = new MetroFramework.Controls.MetroLabel();
+            this.comboFinalidade = new MetroFramework.Controls.MetroComboBox();
+            this.comboFornecedor = new MetroFramework.Controls.MetroComboBox();
+            this.txtNumeroSerie = new MetroFramework.Controls.MetroTextBox();
+            this.labelNumeroSerie = new MetroFramework.Controls.MetroLabel();
+            this.labelNomePatrimonio = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.txtNomePatrimonio = new MetroFramework.Controls.MetroTextBox();
+            this.BtnAtualizarDadosEquipamento = new System.Windows.Forms.Button();
+            this.BtnInativarEquipamento = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +79,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.BtnInativarEquipamento);
             this.panel1.Controls.Add(this.toggleStatusEquipamento);
             this.panel1.Controls.Add(this.metroLabel3);
             this.panel1.Controls.Add(this.labelTempoCAL);
@@ -113,230 +115,26 @@
             this.panel1.Size = new System.Drawing.Size(310, 420);
             this.panel1.TabIndex = 83;
             // 
-            // BtnAtualizarDadosEquipamento
+            // toggleStatusEquipamento
             // 
-            this.BtnAtualizarDadosEquipamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.BtnAtualizarDadosEquipamento.FlatAppearance.BorderSize = 0;
-            this.BtnAtualizarDadosEquipamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnAtualizarDadosEquipamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnAtualizarDadosEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAtualizarDadosEquipamento.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnAtualizarDadosEquipamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtualizarDadosEquipamento.Location = new System.Drawing.Point(72, 824);
-            this.BtnAtualizarDadosEquipamento.Name = "BtnAtualizarDadosEquipamento";
-            this.BtnAtualizarDadosEquipamento.Size = new System.Drawing.Size(150, 35);
-            this.BtnAtualizarDadosEquipamento.TabIndex = 67;
-            this.BtnAtualizarDadosEquipamento.Text = "Atualizar Dados";
-            this.BtnAtualizarDadosEquipamento.UseVisualStyleBackColor = false;
+            this.toggleStatusEquipamento.AutoSize = true;
+            this.toggleStatusEquipamento.DisplayStatus = false;
+            this.toggleStatusEquipamento.Location = new System.Drawing.Point(48, 40);
+            this.toggleStatusEquipamento.Name = "toggleStatusEquipamento";
+            this.toggleStatusEquipamento.Size = new System.Drawing.Size(50, 17);
+            this.toggleStatusEquipamento.TabIndex = 84;
+            this.toggleStatusEquipamento.Text = "Off";
+            this.toggleStatusEquipamento.UseSelectable = true;
             // 
-            // comboLocalidade
+            // metroLabel3
             // 
-            this.comboLocalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboLocalidade.FormattingEnabled = true;
-            this.comboLocalidade.ItemHeight = 23;
-            this.comboLocalidade.Items.AddRange(new object[] {
-            "cidade"});
-            this.comboLocalidade.Location = new System.Drawing.Point(17, 397);
-            this.comboLocalidade.Name = "comboLocalidade";
-            this.comboLocalidade.Size = new System.Drawing.Size(258, 29);
-            this.comboLocalidade.Style = MetroFramework.MetroColorStyle.Blue;
-            this.comboLocalidade.TabIndex = 79;
-            this.comboLocalidade.UseCustomForeColor = true;
-            this.comboLocalidade.UseSelectable = true;
-            // 
-            // labelLocalidade
-            // 
-            this.labelLocalidade.AutoSize = true;
-            this.labelLocalidade.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelLocalidade.Location = new System.Drawing.Point(19, 381);
-            this.labelLocalidade.Name = "labelLocalidade";
-            this.labelLocalidade.Size = new System.Drawing.Size(60, 15);
-            this.labelLocalidade.TabIndex = 78;
-            this.labelLocalidade.Text = "Localidade";
-            // 
-            // txtModelo
-            // 
-            // 
-            // 
-            // 
-            this.txtModelo.CustomButton.Image = null;
-            this.txtModelo.CustomButton.Location = new System.Drawing.Point(236, 1);
-            this.txtModelo.CustomButton.Name = "";
-            this.txtModelo.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtModelo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtModelo.CustomButton.TabIndex = 1;
-            this.txtModelo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtModelo.CustomButton.UseSelectable = true;
-            this.txtModelo.CustomButton.Visible = false;
-            this.txtModelo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtModelo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtModelo.Lines = new string[0];
-            this.txtModelo.Location = new System.Drawing.Point(17, 276);
-            this.txtModelo.MaxLength = 32767;
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.PasswordChar = '\0';
-            this.txtModelo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtModelo.SelectedText = "";
-            this.txtModelo.SelectionLength = 0;
-            this.txtModelo.SelectionStart = 0;
-            this.txtModelo.ShortcutsEnabled = true;
-            this.txtModelo.Size = new System.Drawing.Size(258, 23);
-            this.txtModelo.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtModelo.TabIndex = 77;
-            this.txtModelo.UseCustomForeColor = true;
-            this.txtModelo.UseSelectable = true;
-            this.txtModelo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtModelo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // labelModelo
-            // 
-            this.labelModelo.AutoSize = true;
-            this.labelModelo.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelModelo.Location = new System.Drawing.Point(19, 260);
-            this.labelModelo.Name = "labelModelo";
-            this.labelModelo.Size = new System.Drawing.Size(46, 15);
-            this.labelModelo.TabIndex = 76;
-            this.labelModelo.Text = "Modelo";
-            // 
-            // labelFinalidade
-            // 
-            this.labelFinalidade.AutoSize = true;
-            this.labelFinalidade.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelFinalidade.Location = new System.Drawing.Point(19, 315);
-            this.labelFinalidade.Name = "labelFinalidade";
-            this.labelFinalidade.Size = new System.Drawing.Size(57, 15);
-            this.labelFinalidade.TabIndex = 75;
-            this.labelFinalidade.Text = "Finalidade";
-            // 
-            // comboFinalidade
-            // 
-            this.comboFinalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboFinalidade.FormattingEnabled = true;
-            this.comboFinalidade.ItemHeight = 23;
-            this.comboFinalidade.Items.AddRange(new object[] {
-            "cidade"});
-            this.comboFinalidade.Location = new System.Drawing.Point(17, 331);
-            this.comboFinalidade.Name = "comboFinalidade";
-            this.comboFinalidade.Size = new System.Drawing.Size(258, 29);
-            this.comboFinalidade.Style = MetroFramework.MetroColorStyle.Blue;
-            this.comboFinalidade.TabIndex = 74;
-            this.comboFinalidade.UseCustomForeColor = true;
-            this.comboFinalidade.UseSelectable = true;
-            // 
-            // comboFornecedor
-            // 
-            this.comboFornecedor.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboFornecedor.FormattingEnabled = true;
-            this.comboFornecedor.ItemHeight = 23;
-            this.comboFornecedor.Items.AddRange(new object[] {
-            "cidade"});
-            this.comboFornecedor.Location = new System.Drawing.Point(17, 96);
-            this.comboFornecedor.Name = "comboFornecedor";
-            this.comboFornecedor.Size = new System.Drawing.Size(258, 29);
-            this.comboFornecedor.Style = MetroFramework.MetroColorStyle.Blue;
-            this.comboFornecedor.TabIndex = 73;
-            this.comboFornecedor.UseCustomForeColor = true;
-            this.comboFornecedor.UseSelectable = true;
-            // 
-            // txtNumeroSerie
-            // 
-            // 
-            // 
-            // 
-            this.txtNumeroSerie.CustomButton.Image = null;
-            this.txtNumeroSerie.CustomButton.Location = new System.Drawing.Point(236, 1);
-            this.txtNumeroSerie.CustomButton.Name = "";
-            this.txtNumeroSerie.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNumeroSerie.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNumeroSerie.CustomButton.TabIndex = 1;
-            this.txtNumeroSerie.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNumeroSerie.CustomButton.UseSelectable = true;
-            this.txtNumeroSerie.CustomButton.Visible = false;
-            this.txtNumeroSerie.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtNumeroSerie.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtNumeroSerie.Lines = new string[0];
-            this.txtNumeroSerie.Location = new System.Drawing.Point(17, 216);
-            this.txtNumeroSerie.MaxLength = 32767;
-            this.txtNumeroSerie.Name = "txtNumeroSerie";
-            this.txtNumeroSerie.PasswordChar = '\0';
-            this.txtNumeroSerie.ReadOnly = true;
-            this.txtNumeroSerie.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNumeroSerie.SelectedText = "";
-            this.txtNumeroSerie.SelectionLength = 0;
-            this.txtNumeroSerie.SelectionStart = 0;
-            this.txtNumeroSerie.ShortcutsEnabled = true;
-            this.txtNumeroSerie.Size = new System.Drawing.Size(258, 23);
-            this.txtNumeroSerie.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNumeroSerie.TabIndex = 72;
-            this.txtNumeroSerie.UseCustomForeColor = true;
-            this.txtNumeroSerie.UseSelectable = true;
-            this.txtNumeroSerie.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNumeroSerie.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // labelNumeroSerie
-            // 
-            this.labelNumeroSerie.AutoSize = true;
-            this.labelNumeroSerie.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelNumeroSerie.Location = new System.Drawing.Point(19, 200);
-            this.labelNumeroSerie.Name = "labelNumeroSerie";
-            this.labelNumeroSerie.Size = new System.Drawing.Size(63, 15);
-            this.labelNumeroSerie.TabIndex = 71;
-            this.labelNumeroSerie.Text = "Nº de série";
-            // 
-            // labelNomePatrimonio
-            // 
-            this.labelNomePatrimonio.AutoSize = true;
-            this.labelNomePatrimonio.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelNomePatrimonio.Location = new System.Drawing.Point(19, 140);
-            this.labelNomePatrimonio.Name = "labelNomePatrimonio";
-            this.labelNomePatrimonio.Size = new System.Drawing.Size(109, 15);
-            this.labelNomePatrimonio.TabIndex = 70;
-            this.labelNomePatrimonio.Text = "Nome equipamento";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel2.Location = new System.Drawing.Point(19, 80);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 15);
-            this.metroLabel2.TabIndex = 69;
-            this.metroLabel2.Text = "Patrimônio";
-            // 
-            // txtNomePatrimonio
-            // 
-            // 
-            // 
-            // 
-            this.txtNomePatrimonio.CustomButton.Image = null;
-            this.txtNomePatrimonio.CustomButton.Location = new System.Drawing.Point(236, 1);
-            this.txtNomePatrimonio.CustomButton.Name = "";
-            this.txtNomePatrimonio.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNomePatrimonio.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNomePatrimonio.CustomButton.TabIndex = 1;
-            this.txtNomePatrimonio.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNomePatrimonio.CustomButton.UseSelectable = true;
-            this.txtNomePatrimonio.CustomButton.Visible = false;
-            this.txtNomePatrimonio.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtNomePatrimonio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtNomePatrimonio.Lines = new string[0];
-            this.txtNomePatrimonio.Location = new System.Drawing.Point(17, 156);
-            this.txtNomePatrimonio.MaxLength = 32767;
-            this.txtNomePatrimonio.Name = "txtNomePatrimonio";
-            this.txtNomePatrimonio.PasswordChar = '\0';
-            this.txtNomePatrimonio.ReadOnly = true;
-            this.txtNomePatrimonio.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNomePatrimonio.SelectedText = "";
-            this.txtNomePatrimonio.SelectionLength = 0;
-            this.txtNomePatrimonio.SelectionStart = 0;
-            this.txtNomePatrimonio.ShortcutsEnabled = true;
-            this.txtNomePatrimonio.Size = new System.Drawing.Size(258, 23);
-            this.txtNomePatrimonio.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNomePatrimonio.TabIndex = 68;
-            this.txtNomePatrimonio.UseCustomForeColor = true;
-            this.txtNomePatrimonio.UseSelectable = true;
-            this.txtNomePatrimonio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNomePatrimonio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel3.Location = new System.Drawing.Point(19, 22);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(108, 15);
+            this.metroLabel3.TabIndex = 94;
+            this.metroLabel3.Text = "Status Equipamento";
             // 
             // labelTempoCAL
             // 
@@ -561,26 +359,246 @@
             this.txtPeriodicidadeMP.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPeriodicidadeMP.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // toggleStatusEquipamento
+            // comboLocalidade
             // 
-            this.toggleStatusEquipamento.AutoSize = true;
-            this.toggleStatusEquipamento.DisplayStatus = false;
-            this.toggleStatusEquipamento.Location = new System.Drawing.Point(48, 40);
-            this.toggleStatusEquipamento.Name = "toggleStatusEquipamento";
-            this.toggleStatusEquipamento.Size = new System.Drawing.Size(50, 17);
-            this.toggleStatusEquipamento.TabIndex = 84;
-            this.toggleStatusEquipamento.Text = "Off";
-            this.toggleStatusEquipamento.UseSelectable = true;
+            this.comboLocalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.comboLocalidade.FormattingEnabled = true;
+            this.comboLocalidade.ItemHeight = 23;
+            this.comboLocalidade.Items.AddRange(new object[] {
+            "cidade"});
+            this.comboLocalidade.Location = new System.Drawing.Point(17, 397);
+            this.comboLocalidade.Name = "comboLocalidade";
+            this.comboLocalidade.Size = new System.Drawing.Size(258, 29);
+            this.comboLocalidade.Style = MetroFramework.MetroColorStyle.Blue;
+            this.comboLocalidade.TabIndex = 79;
+            this.comboLocalidade.UseCustomForeColor = true;
+            this.comboLocalidade.UseSelectable = true;
             // 
-            // metroLabel3
+            // labelLocalidade
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel3.Location = new System.Drawing.Point(19, 22);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(108, 15);
-            this.metroLabel3.TabIndex = 94;
-            this.metroLabel3.Text = "Status Equipamento";
+            this.labelLocalidade.AutoSize = true;
+            this.labelLocalidade.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelLocalidade.Location = new System.Drawing.Point(19, 381);
+            this.labelLocalidade.Name = "labelLocalidade";
+            this.labelLocalidade.Size = new System.Drawing.Size(60, 15);
+            this.labelLocalidade.TabIndex = 78;
+            this.labelLocalidade.Text = "Localidade";
+            // 
+            // txtModelo
+            // 
+            // 
+            // 
+            // 
+            this.txtModelo.CustomButton.Image = null;
+            this.txtModelo.CustomButton.Location = new System.Drawing.Point(236, 1);
+            this.txtModelo.CustomButton.Name = "";
+            this.txtModelo.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtModelo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtModelo.CustomButton.TabIndex = 1;
+            this.txtModelo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtModelo.CustomButton.UseSelectable = true;
+            this.txtModelo.CustomButton.Visible = false;
+            this.txtModelo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtModelo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtModelo.Lines = new string[0];
+            this.txtModelo.Location = new System.Drawing.Point(17, 276);
+            this.txtModelo.MaxLength = 32767;
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.PasswordChar = '\0';
+            this.txtModelo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtModelo.SelectedText = "";
+            this.txtModelo.SelectionLength = 0;
+            this.txtModelo.SelectionStart = 0;
+            this.txtModelo.ShortcutsEnabled = true;
+            this.txtModelo.Size = new System.Drawing.Size(258, 23);
+            this.txtModelo.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtModelo.TabIndex = 77;
+            this.txtModelo.UseCustomForeColor = true;
+            this.txtModelo.UseSelectable = true;
+            this.txtModelo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtModelo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // labelModelo
+            // 
+            this.labelModelo.AutoSize = true;
+            this.labelModelo.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelModelo.Location = new System.Drawing.Point(19, 260);
+            this.labelModelo.Name = "labelModelo";
+            this.labelModelo.Size = new System.Drawing.Size(46, 15);
+            this.labelModelo.TabIndex = 76;
+            this.labelModelo.Text = "Modelo";
+            // 
+            // labelFinalidade
+            // 
+            this.labelFinalidade.AutoSize = true;
+            this.labelFinalidade.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelFinalidade.Location = new System.Drawing.Point(19, 315);
+            this.labelFinalidade.Name = "labelFinalidade";
+            this.labelFinalidade.Size = new System.Drawing.Size(57, 15);
+            this.labelFinalidade.TabIndex = 75;
+            this.labelFinalidade.Text = "Finalidade";
+            // 
+            // comboFinalidade
+            // 
+            this.comboFinalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.comboFinalidade.FormattingEnabled = true;
+            this.comboFinalidade.ItemHeight = 23;
+            this.comboFinalidade.Items.AddRange(new object[] {
+            "cidade"});
+            this.comboFinalidade.Location = new System.Drawing.Point(17, 331);
+            this.comboFinalidade.Name = "comboFinalidade";
+            this.comboFinalidade.Size = new System.Drawing.Size(258, 29);
+            this.comboFinalidade.Style = MetroFramework.MetroColorStyle.Blue;
+            this.comboFinalidade.TabIndex = 74;
+            this.comboFinalidade.UseCustomForeColor = true;
+            this.comboFinalidade.UseSelectable = true;
+            // 
+            // comboFornecedor
+            // 
+            this.comboFornecedor.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.comboFornecedor.FormattingEnabled = true;
+            this.comboFornecedor.ItemHeight = 23;
+            this.comboFornecedor.Items.AddRange(new object[] {
+            "cidade"});
+            this.comboFornecedor.Location = new System.Drawing.Point(17, 96);
+            this.comboFornecedor.Name = "comboFornecedor";
+            this.comboFornecedor.Size = new System.Drawing.Size(258, 29);
+            this.comboFornecedor.Style = MetroFramework.MetroColorStyle.Blue;
+            this.comboFornecedor.TabIndex = 73;
+            this.comboFornecedor.UseCustomForeColor = true;
+            this.comboFornecedor.UseSelectable = true;
+            // 
+            // txtNumeroSerie
+            // 
+            // 
+            // 
+            // 
+            this.txtNumeroSerie.CustomButton.Image = null;
+            this.txtNumeroSerie.CustomButton.Location = new System.Drawing.Point(236, 1);
+            this.txtNumeroSerie.CustomButton.Name = "";
+            this.txtNumeroSerie.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtNumeroSerie.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNumeroSerie.CustomButton.TabIndex = 1;
+            this.txtNumeroSerie.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNumeroSerie.CustomButton.UseSelectable = true;
+            this.txtNumeroSerie.CustomButton.Visible = false;
+            this.txtNumeroSerie.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtNumeroSerie.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtNumeroSerie.Lines = new string[0];
+            this.txtNumeroSerie.Location = new System.Drawing.Point(17, 216);
+            this.txtNumeroSerie.MaxLength = 32767;
+            this.txtNumeroSerie.Name = "txtNumeroSerie";
+            this.txtNumeroSerie.PasswordChar = '\0';
+            this.txtNumeroSerie.ReadOnly = true;
+            this.txtNumeroSerie.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNumeroSerie.SelectedText = "";
+            this.txtNumeroSerie.SelectionLength = 0;
+            this.txtNumeroSerie.SelectionStart = 0;
+            this.txtNumeroSerie.ShortcutsEnabled = true;
+            this.txtNumeroSerie.Size = new System.Drawing.Size(258, 23);
+            this.txtNumeroSerie.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNumeroSerie.TabIndex = 72;
+            this.txtNumeroSerie.UseCustomForeColor = true;
+            this.txtNumeroSerie.UseSelectable = true;
+            this.txtNumeroSerie.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNumeroSerie.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // labelNumeroSerie
+            // 
+            this.labelNumeroSerie.AutoSize = true;
+            this.labelNumeroSerie.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelNumeroSerie.Location = new System.Drawing.Point(19, 200);
+            this.labelNumeroSerie.Name = "labelNumeroSerie";
+            this.labelNumeroSerie.Size = new System.Drawing.Size(63, 15);
+            this.labelNumeroSerie.TabIndex = 71;
+            this.labelNumeroSerie.Text = "Nº de série";
+            // 
+            // labelNomePatrimonio
+            // 
+            this.labelNomePatrimonio.AutoSize = true;
+            this.labelNomePatrimonio.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelNomePatrimonio.Location = new System.Drawing.Point(19, 140);
+            this.labelNomePatrimonio.Name = "labelNomePatrimonio";
+            this.labelNomePatrimonio.Size = new System.Drawing.Size(109, 15);
+            this.labelNomePatrimonio.TabIndex = 70;
+            this.labelNomePatrimonio.Text = "Nome equipamento";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel2.Location = new System.Drawing.Point(19, 80);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(61, 15);
+            this.metroLabel2.TabIndex = 69;
+            this.metroLabel2.Text = "Patrimônio";
+            // 
+            // txtNomePatrimonio
+            // 
+            // 
+            // 
+            // 
+            this.txtNomePatrimonio.CustomButton.Image = null;
+            this.txtNomePatrimonio.CustomButton.Location = new System.Drawing.Point(236, 1);
+            this.txtNomePatrimonio.CustomButton.Name = "";
+            this.txtNomePatrimonio.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtNomePatrimonio.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNomePatrimonio.CustomButton.TabIndex = 1;
+            this.txtNomePatrimonio.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNomePatrimonio.CustomButton.UseSelectable = true;
+            this.txtNomePatrimonio.CustomButton.Visible = false;
+            this.txtNomePatrimonio.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtNomePatrimonio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtNomePatrimonio.Lines = new string[0];
+            this.txtNomePatrimonio.Location = new System.Drawing.Point(17, 156);
+            this.txtNomePatrimonio.MaxLength = 32767;
+            this.txtNomePatrimonio.Name = "txtNomePatrimonio";
+            this.txtNomePatrimonio.PasswordChar = '\0';
+            this.txtNomePatrimonio.ReadOnly = true;
+            this.txtNomePatrimonio.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNomePatrimonio.SelectedText = "";
+            this.txtNomePatrimonio.SelectionLength = 0;
+            this.txtNomePatrimonio.SelectionStart = 0;
+            this.txtNomePatrimonio.ShortcutsEnabled = true;
+            this.txtNomePatrimonio.Size = new System.Drawing.Size(258, 23);
+            this.txtNomePatrimonio.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNomePatrimonio.TabIndex = 68;
+            this.txtNomePatrimonio.UseCustomForeColor = true;
+            this.txtNomePatrimonio.UseSelectable = true;
+            this.txtNomePatrimonio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNomePatrimonio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BtnAtualizarDadosEquipamento
+            // 
+            this.BtnAtualizarDadosEquipamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnAtualizarDadosEquipamento.FlatAppearance.BorderSize = 0;
+            this.BtnAtualizarDadosEquipamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtualizarDadosEquipamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtualizarDadosEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAtualizarDadosEquipamento.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnAtualizarDadosEquipamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnAtualizarDadosEquipamento.Location = new System.Drawing.Point(72, 824);
+            this.BtnAtualizarDadosEquipamento.Name = "BtnAtualizarDadosEquipamento";
+            this.BtnAtualizarDadosEquipamento.Size = new System.Drawing.Size(150, 35);
+            this.BtnAtualizarDadosEquipamento.TabIndex = 67;
+            this.BtnAtualizarDadosEquipamento.Text = "Atualizar Dados";
+            this.BtnAtualizarDadosEquipamento.UseVisualStyleBackColor = false;
+            // 
+            // BtnInativarEquipamento
+            // 
+            this.BtnInativarEquipamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnInativarEquipamento.FlatAppearance.BorderSize = 0;
+            this.BtnInativarEquipamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnInativarEquipamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnInativarEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInativarEquipamento.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnInativarEquipamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnInativarEquipamento.Location = new System.Drawing.Point(70, 879);
+            this.BtnInativarEquipamento.Name = "BtnInativarEquipamento";
+            this.BtnInativarEquipamento.Size = new System.Drawing.Size(150, 35);
+            this.BtnInativarEquipamento.TabIndex = 95;
+            this.BtnInativarEquipamento.Text = "Excluir Equipamento";
+            this.BtnInativarEquipamento.UseVisualStyleBackColor = false;
             // 
             // ACSWindowEquipamentos
             // 
@@ -636,5 +654,6 @@
         private MetroFramework.Controls.MetroTextBox txtPeriodicidadeMP;
         private MetroFramework.Controls.MetroToggle toggleStatusEquipamento;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.Button BtnInativarEquipamento;
     }
 }

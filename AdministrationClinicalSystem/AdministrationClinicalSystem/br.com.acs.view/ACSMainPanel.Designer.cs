@@ -58,13 +58,13 @@
             this.BtnMeusDados = new System.Windows.Forms.Button();
             this.subMenu = new System.Windows.Forms.Panel();
             this.subMenuGestaoAdministrativa = new System.Windows.Forms.Panel();
+            this.SubBtnFinalidades = new System.Windows.Forms.Button();
             this.SubBtnFornecedores = new System.Windows.Forms.Button();
             this.SubBtnLocalidades = new System.Windows.Forms.Button();
             this.SubBtnPatrimonio = new System.Windows.Forms.Button();
             this.subMenuGestãoAdministrativa = new System.Windows.Forms.Label();
             this.subMenuPatrimonio = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.SubBtnFinalidades = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMain)).BeginInit();
             this.panel1.SuspendLayout();
             this.menu.SuspendLayout();
@@ -334,6 +334,7 @@
             this.metroLabel2.UseCustomBackColor = true;
             this.metroLabel2.UseCustomForeColor = true;
             this.metroLabel2.UseStyleColors = true;
+            this.metroLabel2.Visible = false;
             // 
             // metroLabel1
             // 
@@ -350,6 +351,7 @@
             this.metroLabel1.UseCustomBackColor = true;
             this.metroLabel1.UseCustomForeColor = true;
             this.metroLabel1.UseStyleColors = true;
+            this.metroLabel1.Visible = false;
             // 
             // contentPanel
             // 
@@ -504,6 +506,24 @@
             this.subMenuGestaoAdministrativa.TabIndex = 1;
             this.subMenuGestaoAdministrativa.Visible = false;
             // 
+            // SubBtnFinalidades
+            // 
+            this.SubBtnFinalidades.BackColor = System.Drawing.Color.Transparent;
+            this.SubBtnFinalidades.FlatAppearance.BorderSize = 0;
+            this.SubBtnFinalidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnFinalidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.SubBtnFinalidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubBtnFinalidades.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.SubBtnFinalidades.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubBtnFinalidades.Location = new System.Drawing.Point(2, 120);
+            this.SubBtnFinalidades.Name = "SubBtnFinalidades";
+            this.SubBtnFinalidades.Size = new System.Drawing.Size(211, 40);
+            this.SubBtnFinalidades.TabIndex = 21;
+            this.SubBtnFinalidades.Text = "Finalidades";
+            this.SubBtnFinalidades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubBtnFinalidades.UseVisualStyleBackColor = false;
+            this.SubBtnFinalidades.Click += new System.EventHandler(this.SubBtnFinalidades_Click);
+            // 
             // SubBtnFornecedores
             // 
             this.SubBtnFornecedores.BackColor = System.Drawing.Color.Transparent;
@@ -587,24 +607,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "subMenuPatrimonio";
             this.label1.Visible = false;
-            // 
-            // SubBtnFinalidades
-            // 
-            this.SubBtnFinalidades.BackColor = System.Drawing.Color.Transparent;
-            this.SubBtnFinalidades.FlatAppearance.BorderSize = 0;
-            this.SubBtnFinalidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.SubBtnFinalidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.SubBtnFinalidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubBtnFinalidades.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.SubBtnFinalidades.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubBtnFinalidades.Location = new System.Drawing.Point(2, 120);
-            this.SubBtnFinalidades.Name = "SubBtnFinalidades";
-            this.SubBtnFinalidades.Size = new System.Drawing.Size(211, 40);
-            this.SubBtnFinalidades.TabIndex = 21;
-            this.SubBtnFinalidades.Text = "Finalidades";
-            this.SubBtnFinalidades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubBtnFinalidades.UseVisualStyleBackColor = false;
-            this.SubBtnFinalidades.Click += new System.EventHandler(this.SubBtnFinalidades_Click);
             // 
             // ACSMainPanel
             // 

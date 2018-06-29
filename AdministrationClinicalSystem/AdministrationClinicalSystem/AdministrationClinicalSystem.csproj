@@ -171,17 +171,35 @@
     <Compile Include="br.com.acs.view\ACSWindowEquipamentosCalibracoes.Designer.cs">
       <DependentUpon>ACSWindowEquipamentosCalibracoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowEquipamentosCalibracoesUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowEquipamentosCalibracoesUpdate.Designer.cs">
+      <DependentUpon>ACSWindowEquipamentosCalibracoesUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.acs.view\ACSWindowEquipamentosCorretivas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="br.com.acs.view\ACSWindowEquipamentosCorretivas.Designer.cs">
       <DependentUpon>ACSWindowEquipamentosCorretivas.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowEquipamentosCorretivasUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowEquipamentosCorretivasUpdate.Designer.cs">
+      <DependentUpon>ACSWindowEquipamentosCorretivasUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.acs.view\ACSWindowEquipamentosPreventivas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="br.com.acs.view\ACSWindowEquipamentosPreventivas.Designer.cs">
       <DependentUpon>ACSWindowEquipamentosPreventivas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowEquipamentosPreventivasUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowEquipamentosPreventivasUpdate.Designer.cs">
+      <DependentUpon>ACSWindowEquipamentosPreventivasUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSWindowFinalidades.cs">
       <SubType>Form</SubType>
@@ -250,6 +268,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentos.resx">
       <DependentUpon>ACSWindowEquipamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentosCalibracoes.resx">
+      <DependentUpon>ACSWindowEquipamentosCalibracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentosCalibracoesUpdate.resx">
+      <DependentUpon>ACSWindowEquipamentosCalibracoesUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentosCorretivas.resx">
+      <DependentUpon>ACSWindowEquipamentosCorretivas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentosCorretivasUpdate.resx">
+      <DependentUpon>ACSWindowEquipamentosCorretivasUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentosPreventivas.resx">
+      <DependentUpon>ACSWindowEquipamentosPreventivas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentosPreventivasUpdate.resx">
+      <DependentUpon>ACSWindowEquipamentosPreventivasUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowFinalidades.resx">
       <DependentUpon>ACSWindowFinalidades.cs</DependentUpon>

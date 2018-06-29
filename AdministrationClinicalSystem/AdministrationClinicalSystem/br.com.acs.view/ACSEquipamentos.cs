@@ -50,5 +50,47 @@ namespace AdministrationClinicalSystem.br.com.acs.view
             ACSWindowEquipamentos acswEquipamento = new ACSWindowEquipamentos();
             acswEquipamento.Show();
         }
+
+        private void BtnCalibrarEquipamento_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowEquipamentosCalibracoes acswEquipamentoCalibracao = new ACSWindowEquipamentosCalibracoes();
+            acswEquipamentoCalibracao.Show();
+        }
+
+        private void BtnDetalheCalibracao_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowEquipamentosCalibracoesUpdate acswEquipamentoCalibracaoUpdate = new ACSWindowEquipamentosCalibracoesUpdate();
+            acswEquipamentoCalibracaoUpdate.Show();
+        }
+
+        private void BtnManutencaoPreventiva_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowEquipamentosPreventivas acswEquipamentoPreventiva = new ACSWindowEquipamentosPreventivas();
+            acswEquipamentoPreventiva.Show();
+        }
+
+        private void BtnDetalhePreventivas_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowEquipamentosPreventivasUpdate acswEquipamentoPreventivaUpdate = new ACSWindowEquipamentosPreventivasUpdate();
+            acswEquipamentoPreventivaUpdate.Show();
+        }
+
+        private void BtnManutencaoCorretiva_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowEquipamentosCorretivas acswEquipamentoCorretiva = new ACSWindowEquipamentosCorretivas();
+            acswEquipamentoCorretiva.Show();
+        }
+
+        private void BtnDetalheCorretivas_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowEquipamentosCorretivasUpdate acswEquipamentoCorretivasUpdate = new ACSWindowEquipamentosCorretivasUpdate();
+            acswEquipamentoCorretivasUpdate.Show();
+        }
     }
 }

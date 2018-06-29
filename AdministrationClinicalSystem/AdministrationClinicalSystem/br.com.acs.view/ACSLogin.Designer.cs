@@ -53,19 +53,17 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(20, 60);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(78, 27);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(260, 89);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(150, 150);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Location = new System.Drawing.Point(51, 206);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel1.Location = new System.Drawing.Point(51, 222);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 2);
             this.panel1.TabIndex = 2;
@@ -75,7 +73,7 @@
             this.panelUsuario.BackColor = System.Drawing.Color.Transparent;
             this.panelUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelUsuario.BackgroundImage")));
             this.panelUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelUsuario.Location = new System.Drawing.Point(54, 183);
+            this.panelUsuario.Location = new System.Drawing.Point(54, 199);
             this.panelUsuario.Name = "panelUsuario";
             this.panelUsuario.Size = new System.Drawing.Size(20, 20);
             this.panelUsuario.TabIndex = 3;
@@ -85,15 +83,15 @@
             this.panelSenha.BackColor = System.Drawing.Color.Transparent;
             this.panelSenha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelSenha.BackgroundImage")));
             this.panelSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelSenha.Location = new System.Drawing.Point(54, 228);
+            this.panelSenha.Location = new System.Drawing.Point(54, 244);
             this.panelSenha.Name = "panelSenha";
             this.panelSenha.Size = new System.Drawing.Size(20, 20);
             this.panelSenha.TabIndex = 6;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel4.Location = new System.Drawing.Point(51, 251);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.panel4.Location = new System.Drawing.Point(51, 267);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 2);
             this.panel4.TabIndex = 5;
@@ -103,7 +101,7 @@
             this.usuarioTextLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usuarioTextLogin.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioTextLogin.ForeColor = System.Drawing.Color.Gray;
-            this.usuarioTextLogin.Location = new System.Drawing.Point(78, 183);
+            this.usuarioTextLogin.Location = new System.Drawing.Point(78, 199);
             this.usuarioTextLogin.MaxLength = 75;
             this.usuarioTextLogin.Name = "usuarioTextLogin";
             this.usuarioTextLogin.Size = new System.Drawing.Size(173, 20);
@@ -114,7 +112,7 @@
             this.senhaTextLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.senhaTextLogin.Font = new System.Drawing.Font("Segoe UI Semilight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.senhaTextLogin.ForeColor = System.Drawing.Color.Gray;
-            this.senhaTextLogin.Location = new System.Drawing.Point(78, 228);
+            this.senhaTextLogin.Location = new System.Drawing.Point(78, 244);
             this.senhaTextLogin.MaxLength = 75;
             this.senhaTextLogin.Name = "senhaTextLogin";
             this.senhaTextLogin.PasswordChar = '•';
@@ -123,16 +121,16 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(86, 276);
+            this.btnLogin.Location = new System.Drawing.Point(23, 289);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(130, 33);
+            this.btnLogin.Size = new System.Drawing.Size(254, 33);
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -143,7 +141,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel1.Location = new System.Drawing.Point(57, 354);
+            this.metroLabel1.Location = new System.Drawing.Point(57, 338);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(186, 15);
             this.metroLabel1.TabIndex = 13;
@@ -157,7 +155,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.metroLabel2.Location = new System.Drawing.Point(90, 373);
+            this.metroLabel2.Location = new System.Drawing.Point(90, 357);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(121, 15);
             this.metroLabel2.TabIndex = 14;
@@ -181,10 +179,11 @@
             this.Controls.Add(this.panelUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBoxLogo);
+            this.DisplayHeader = false;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 400);
-            this.MinimumSize = new System.Drawing.Size(300, 400);
             this.Name = "ACSLogin";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
