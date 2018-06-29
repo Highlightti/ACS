@@ -521,7 +521,7 @@
             this.panel1.Size = new System.Drawing.Size(310, 420);
             this.panel1.TabIndex = 82;
             // 
-            // ACSWindowUpdatePatrimonio
+            // ACSWindowPatrimonio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -531,7 +531,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(350, 500);
             this.MinimumSize = new System.Drawing.Size(350, 500);
-            this.Name = "ACSWindowUpdatePatrimonio";
+            this.Name = "ACSWindowPatrimonio";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

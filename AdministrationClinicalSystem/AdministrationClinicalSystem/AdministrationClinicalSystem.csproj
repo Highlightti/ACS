@@ -248,6 +248,9 @@
     <EmbeddedResource Include="br.com.acs.view\ACSPessoas.resx">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentos.resx">
+      <DependentUpon>ACSWindowEquipamentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowFinalidades.resx">
       <DependentUpon>ACSWindowFinalidades.cs</DependentUpon>
     </EmbeddedResource>
