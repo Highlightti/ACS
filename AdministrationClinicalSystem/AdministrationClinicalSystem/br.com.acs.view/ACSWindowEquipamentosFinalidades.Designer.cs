@@ -1,6 +1,6 @@
 ﻿namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    partial class ACSWindowFinalidades
+    partial class ACSWindowEquipamentosFinalidades
     {
         /// <summary>
         /// Required designer variable.
@@ -59,21 +59,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(310, 220);
+            this.panel1.Size = new System.Drawing.Size(310, 170);
             this.panel1.TabIndex = 83;
             // 
             // BtnInativarFinalidade
             // 
-            this.BtnInativarFinalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnInativarFinalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BtnInativarFinalidade.FlatAppearance.BorderSize = 0;
-            this.BtnInativarFinalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnInativarFinalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnInativarFinalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnInativarFinalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BtnInativarFinalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnInativarFinalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnInativarFinalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnInativarFinalidade.Location = new System.Drawing.Point(77, 148);
+            this.BtnInativarFinalidade.Location = new System.Drawing.Point(159, 109);
             this.BtnInativarFinalidade.Name = "BtnInativarFinalidade";
-            this.BtnInativarFinalidade.Size = new System.Drawing.Size(150, 35);
+            this.BtnInativarFinalidade.Size = new System.Drawing.Size(125, 35);
             this.BtnInativarFinalidade.TabIndex = 48;
             this.BtnInativarFinalidade.Text = "Excluir Finalidade";
             this.BtnInativarFinalidade.UseVisualStyleBackColor = false;
@@ -87,11 +87,11 @@
             this.BtnAtualizarFinalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAtualizarFinalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnAtualizarFinalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtualizarFinalidade.Location = new System.Drawing.Point(77, 99);
+            this.BtnAtualizarFinalidade.Location = new System.Drawing.Point(26, 109);
             this.BtnAtualizarFinalidade.Name = "BtnAtualizarFinalidade";
-            this.BtnAtualizarFinalidade.Size = new System.Drawing.Size(150, 35);
+            this.BtnAtualizarFinalidade.Size = new System.Drawing.Size(125, 35);
             this.BtnAtualizarFinalidade.TabIndex = 47;
-            this.BtnAtualizarFinalidade.Text = "Atualizar Finalidade";
+            this.BtnAtualizarFinalidade.Text = "Atualizar";
             this.BtnAtualizarFinalidade.UseVisualStyleBackColor = false;
             // 
             // labelDescicaoFinalidade
@@ -138,17 +138,17 @@
             this.txtDescricaoFinalidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDescricaoFinalidade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // ACSWindowUpdateFinalidades
+            // ACSWindowEquipamentosFinalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 300);
+            this.ClientSize = new System.Drawing.Size(350, 250);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(350, 300);
-            this.MinimumSize = new System.Drawing.Size(350, 300);
-            this.Name = "ACSWindowUpdateFinalidades";
+            this.MaximumSize = new System.Drawing.Size(350, 250);
+            this.MinimumSize = new System.Drawing.Size(350, 250);
+            this.Name = "ACSWindowEquipamentosFinalidades";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

@@ -30,6 +30,8 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 {
                     opcoesAvancadasEquipamentos.Width += 4;
                 }
+
+                BtnOpcoesAvancadas.Text = "Fechar";
             }
             else
             {
@@ -41,6 +43,8 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 }
 
                 opcoesAvancadasEquipamentos.Visible = false;
+
+                BtnOpcoesAvancadas.Text = "Opções Avançadas";
             }
         }
 
@@ -91,6 +95,36 @@ namespace AdministrationClinicalSystem.br.com.acs.view
             //adicionar verificação para não permitir abrir mais de uma tela.
             ACSWindowEquipamentosCorretivasUpdate acswEquipamentoCorretivasUpdate = new ACSWindowEquipamentosCorretivasUpdate();
             acswEquipamentoCorretivasUpdate.Show();
+        }
+
+
+        bool novaFinalidade = false; 
+
+        private void BtnNovaFinalidade_Click(object sender, EventArgs e)
+        {
+            if(novaFinalidade == false)
+            {
+                novaFinalidade = true;
+
+                panelNovaFinalidade.Visible = true;
+
+                BtnNovaFinalidade.Text = "Fechar";
+            }
+            else
+            {
+                novaFinalidade = false;
+
+                panelNovaFinalidade.Visible = false;
+
+                BtnNovaFinalidade.Text = "Nova Finalidade";
+            } 
+        }
+
+        private void BtnDetalhesFinalidade_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowEquipamentosFinalidades acswfinalidades = new ACSWindowEquipamentosFinalidades();
+            acswfinalidades.Show();
         }
     }
 }

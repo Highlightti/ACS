@@ -32,8 +32,8 @@
             this.txtObservacoes = new MetroFramework.Controls.MetroTextBox();
             this.labelValor = new MetroFramework.Controls.MetroLabel();
             this.txtValor = new MetroFramework.Controls.MetroTextBox();
-            this.labelLocalidade = new MetroFramework.Controls.MetroLabel();
-            this.comboLocalidade = new MetroFramework.Controls.MetroComboBox();
+            this.labelSetor = new MetroFramework.Controls.MetroLabel();
+            this.comboSetor = new MetroFramework.Controls.MetroComboBox();
             this.labelFornecedor = new MetroFramework.Controls.MetroLabel();
             this.comboFornecedor = new MetroFramework.Controls.MetroComboBox();
             this.labelNumeroNotaFiscal = new MetroFramework.Controls.MetroLabel();
@@ -41,8 +41,7 @@
             this.txtVidaUtil = new MetroFramework.Controls.MetroTextBox();
             this.labelVidaUtil = new MetroFramework.Controls.MetroLabel();
             this.txtNumeroSerie = new MetroFramework.Controls.MetroTextBox();
-            this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.BtnCadastrarPatrimonio = new System.Windows.Forms.Button();
+            this.BtnAtualizarPatrimonio = new System.Windows.Forms.Button();
             this.labelTempoVidaUtil = new MetroFramework.Controls.MetroLabel();
             this.labelDataNascimento = new MetroFramework.Controls.MetroLabel();
             this.labelNumeroSerie = new MetroFramework.Controls.MetroLabel();
@@ -53,6 +52,7 @@
             this.comboTempoVidaUtil = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateCompra = new MetroFramework.Controls.MetroDateTime();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,30 +145,30 @@
             this.txtValor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtValor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // labelLocalidade
+            // labelSetor
             // 
-            this.labelLocalidade.AutoSize = true;
-            this.labelLocalidade.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelLocalidade.Location = new System.Drawing.Point(20, 259);
-            this.labelLocalidade.Name = "labelLocalidade";
-            this.labelLocalidade.Size = new System.Drawing.Size(60, 15);
-            this.labelLocalidade.TabIndex = 76;
-            this.labelLocalidade.Text = "Localidade";
+            this.labelSetor.AutoSize = true;
+            this.labelSetor.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelSetor.Location = new System.Drawing.Point(20, 259);
+            this.labelSetor.Name = "labelSetor";
+            this.labelSetor.Size = new System.Drawing.Size(34, 15);
+            this.labelSetor.TabIndex = 76;
+            this.labelSetor.Text = "Setor";
             // 
-            // comboLocalidade
+            // comboSetor
             // 
-            this.comboLocalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboLocalidade.FormattingEnabled = true;
-            this.comboLocalidade.ItemHeight = 23;
-            this.comboLocalidade.Items.AddRange(new object[] {
+            this.comboSetor.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.comboSetor.FormattingEnabled = true;
+            this.comboSetor.ItemHeight = 23;
+            this.comboSetor.Items.AddRange(new object[] {
             "cidade"});
-            this.comboLocalidade.Location = new System.Drawing.Point(18, 275);
-            this.comboLocalidade.Name = "comboLocalidade";
-            this.comboLocalidade.Size = new System.Drawing.Size(258, 29);
-            this.comboLocalidade.Style = MetroFramework.MetroColorStyle.Blue;
-            this.comboLocalidade.TabIndex = 75;
-            this.comboLocalidade.UseCustomForeColor = true;
-            this.comboLocalidade.UseSelectable = true;
+            this.comboSetor.Location = new System.Drawing.Point(18, 275);
+            this.comboSetor.Name = "comboSetor";
+            this.comboSetor.Size = new System.Drawing.Size(258, 29);
+            this.comboSetor.Style = MetroFramework.MetroColorStyle.Blue;
+            this.comboSetor.TabIndex = 75;
+            this.comboSetor.UseCustomForeColor = true;
+            this.comboSetor.UseSelectable = true;
             // 
             // labelFornecedor
             // 
@@ -317,31 +317,21 @@
             this.txtNumeroSerie.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNumeroSerie.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txtDataNascimento
+            // BtnAtualizarPatrimonio
             // 
-            this.txtDataNascimento.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.txtDataNascimento.Location = new System.Drawing.Point(18, 467);
-            this.txtDataNascimento.Mask = "00/00/0000";
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(64, 25);
-            this.txtDataNascimento.TabIndex = 61;
-            this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
-            // 
-            // BtnCadastrarPatrimonio
-            // 
-            this.BtnCadastrarPatrimonio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.BtnCadastrarPatrimonio.FlatAppearance.BorderSize = 0;
-            this.BtnCadastrarPatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnCadastrarPatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnCadastrarPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastrarPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnCadastrarPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCadastrarPatrimonio.Location = new System.Drawing.Point(72, 642);
-            this.BtnCadastrarPatrimonio.Name = "BtnCadastrarPatrimonio";
-            this.BtnCadastrarPatrimonio.Size = new System.Drawing.Size(150, 35);
-            this.BtnCadastrarPatrimonio.TabIndex = 67;
-            this.BtnCadastrarPatrimonio.Text = "Atualizar Dados";
-            this.BtnCadastrarPatrimonio.UseVisualStyleBackColor = false;
+            this.BtnAtualizarPatrimonio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnAtualizarPatrimonio.FlatAppearance.BorderSize = 0;
+            this.BtnAtualizarPatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtualizarPatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnAtualizarPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAtualizarPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnAtualizarPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnAtualizarPatrimonio.Location = new System.Drawing.Point(72, 642);
+            this.BtnAtualizarPatrimonio.Name = "BtnAtualizarPatrimonio";
+            this.BtnAtualizarPatrimonio.Size = new System.Drawing.Size(150, 35);
+            this.BtnAtualizarPatrimonio.TabIndex = 67;
+            this.BtnAtualizarPatrimonio.Text = "Atualizar Dados";
+            this.BtnAtualizarPatrimonio.UseVisualStyleBackColor = false;
             // 
             // labelTempoVidaUtil
             // 
@@ -357,7 +347,7 @@
             // 
             this.labelDataNascimento.AutoSize = true;
             this.labelDataNascimento.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelDataNascimento.Location = new System.Drawing.Point(20, 451);
+            this.labelDataNascimento.Location = new System.Drawing.Point(20, 446);
             this.labelDataNascimento.Name = "labelDataNascimento";
             this.labelDataNascimento.Size = new System.Drawing.Size(73, 15);
             this.labelDataNascimento.TabIndex = 65;
@@ -492,23 +482,23 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.dateCompra);
             this.panel1.Controls.Add(this.labelNumeroPatrimonio);
             this.panel1.Controls.Add(this.comboTempoVidaUtil);
             this.panel1.Controls.Add(this.labelTempoVidaUtil);
-            this.panel1.Controls.Add(this.comboLocalidade);
+            this.panel1.Controls.Add(this.comboSetor);
             this.panel1.Controls.Add(this.labelObservacoes);
             this.panel1.Controls.Add(this.labelFornecedor);
             this.panel1.Controls.Add(this.labelDataNascimento);
             this.panel1.Controls.Add(this.txtNomePatrimonio);
-            this.panel1.Controls.Add(this.BtnCadastrarPatrimonio);
+            this.panel1.Controls.Add(this.BtnAtualizarPatrimonio);
             this.panel1.Controls.Add(this.txtVidaUtil);
-            this.panel1.Controls.Add(this.labelLocalidade);
+            this.panel1.Controls.Add(this.labelSetor);
             this.panel1.Controls.Add(this.txtObservacoes);
             this.panel1.Controls.Add(this.comboFornecedor);
             this.panel1.Controls.Add(this.labelVidaUtil);
             this.panel1.Controls.Add(this.labelNumeroSerie);
             this.panel1.Controls.Add(this.txtNumeroPatrimonio);
-            this.panel1.Controls.Add(this.txtDataNascimento);
             this.panel1.Controls.Add(this.txtNumeroNotaFiscal);
             this.panel1.Controls.Add(this.txtValor);
             this.panel1.Controls.Add(this.labelValor);
@@ -520,6 +510,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 420);
             this.panel1.TabIndex = 82;
+            // 
+            // dateCompra
+            // 
+            this.dateCompra.CustomFormat = "dd/MM/yyyy";
+            this.dateCompra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateCompra.Location = new System.Drawing.Point(18, 464);
+            this.dateCompra.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateCompra.Name = "dateCompra";
+            this.dateCompra.Size = new System.Drawing.Size(125, 29);
+            this.dateCompra.TabIndex = 81;
             // 
             // ACSWindowPatrimonio
             // 
@@ -548,8 +548,8 @@
         private MetroFramework.Controls.MetroTextBox txtObservacoes;
         private MetroFramework.Controls.MetroLabel labelValor;
         private MetroFramework.Controls.MetroTextBox txtValor;
-        private MetroFramework.Controls.MetroLabel labelLocalidade;
-        private MetroFramework.Controls.MetroComboBox comboLocalidade;
+        private MetroFramework.Controls.MetroLabel labelSetor;
+        private MetroFramework.Controls.MetroComboBox comboSetor;
         private MetroFramework.Controls.MetroLabel labelFornecedor;
         private MetroFramework.Controls.MetroComboBox comboFornecedor;
         private MetroFramework.Controls.MetroLabel labelNumeroNotaFiscal;
@@ -557,8 +557,7 @@
         private MetroFramework.Controls.MetroTextBox txtVidaUtil;
         private MetroFramework.Controls.MetroLabel labelVidaUtil;
         private MetroFramework.Controls.MetroTextBox txtNumeroSerie;
-        private System.Windows.Forms.MaskedTextBox txtDataNascimento;
-        private System.Windows.Forms.Button BtnCadastrarPatrimonio;
+        private System.Windows.Forms.Button BtnAtualizarPatrimonio;
         private MetroFramework.Controls.MetroLabel labelTempoVidaUtil;
         private MetroFramework.Controls.MetroLabel labelDataNascimento;
         private MetroFramework.Controls.MetroLabel labelNumeroSerie;
@@ -569,5 +568,6 @@
         private MetroFramework.Controls.MetroComboBox comboTempoVidaUtil;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.Panel panel1;
+        private MetroFramework.Controls.MetroDateTime dateCompra;
     }
 }

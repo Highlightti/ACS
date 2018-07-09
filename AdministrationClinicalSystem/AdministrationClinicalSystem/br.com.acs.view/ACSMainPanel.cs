@@ -265,10 +265,10 @@ namespace AdministrationClinicalSystem
             BtnSubMenu_Click(sender, e, subMenu);
         }
 
-        private void SubBtnLocalidades_Click(object sender, EventArgs e)
+        private void SubBtnSetores_Click(object sender, EventArgs e)
         {
-            ACSLocalidades locais = new ACSLocalidades();
-            NavigationScreen(locais, contentPanel);
+            ACSSetores setores = new ACSSetores();
+            NavigationScreen(setores, contentPanel);
 
             VerificarFechamentoMenu(sender, e);
         }
@@ -285,14 +285,6 @@ namespace AdministrationClinicalSystem
         {
             ACSPatrimonio patrimonio = new ACSPatrimonio();
             NavigationScreen(patrimonio, contentPanel);
-
-            VerificarFechamentoMenu(sender, e);
-        }
-
-        private void SubBtnFinalidades_Click(object sender, EventArgs e)
-        {
-            ACSFinalidades finalidades = new ACSFinalidades();
-            NavigationScreen(finalidades, contentPanel);
 
             VerificarFechamentoMenu(sender, e);
         }

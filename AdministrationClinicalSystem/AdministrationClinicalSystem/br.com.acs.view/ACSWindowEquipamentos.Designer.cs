@@ -30,36 +30,36 @@
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dateCalibracao = new MetroFramework.Controls.MetroDateTime();
+            this.dateManutencaoPreventiva = new MetroFramework.Controls.MetroDateTime();
+            this.BtnInativarEquipamento = new System.Windows.Forms.Button();
             this.toggleStatusEquipamento = new MetroFramework.Controls.MetroToggle();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.labelStatusEquipamento = new MetroFramework.Controls.MetroLabel();
             this.labelTempoCAL = new MetroFramework.Controls.MetroLabel();
-            this.txtDataCalibracao = new System.Windows.Forms.MaskedTextBox();
             this.comboTempoCAL = new MetroFramework.Controls.MetroComboBox();
             this.labelCalibracao = new MetroFramework.Controls.MetroLabel();
             this.labelObservacoes = new MetroFramework.Controls.MetroLabel();
             this.txtObservacoes = new MetroFramework.Controls.MetroTextBox();
             this.labelPeriodicidadeCAL = new MetroFramework.Controls.MetroLabel();
             this.txtPeriodicidadeCAL = new MetroFramework.Controls.MetroTextBox();
-            this.labelTempo = new MetroFramework.Controls.MetroLabel();
-            this.txtDataManutencaoPreventiva = new System.Windows.Forms.MaskedTextBox();
-            this.comboTempo = new MetroFramework.Controls.MetroComboBox();
+            this.labelTempoPeriodicidade = new MetroFramework.Controls.MetroLabel();
+            this.comboTempoPeriodicidade = new MetroFramework.Controls.MetroComboBox();
             this.labelManutencaoPreventiva = new MetroFramework.Controls.MetroLabel();
             this.labelPeriodicidadeMP = new MetroFramework.Controls.MetroLabel();
             this.txtPeriodicidadeMP = new MetroFramework.Controls.MetroTextBox();
-            this.comboLocalidade = new MetroFramework.Controls.MetroComboBox();
-            this.labelLocalidade = new MetroFramework.Controls.MetroLabel();
+            this.comboSetor = new MetroFramework.Controls.MetroComboBox();
+            this.labelSetor = new MetroFramework.Controls.MetroLabel();
             this.txtModelo = new MetroFramework.Controls.MetroTextBox();
             this.labelModelo = new MetroFramework.Controls.MetroLabel();
             this.labelFinalidade = new MetroFramework.Controls.MetroLabel();
             this.comboFinalidade = new MetroFramework.Controls.MetroComboBox();
-            this.comboFornecedor = new MetroFramework.Controls.MetroComboBox();
+            this.comboPatrimonio = new MetroFramework.Controls.MetroComboBox();
             this.txtNumeroSerie = new MetroFramework.Controls.MetroTextBox();
             this.labelNumeroSerie = new MetroFramework.Controls.MetroLabel();
-            this.labelNomePatrimonio = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtNomePatrimonio = new MetroFramework.Controls.MetroTextBox();
+            this.labelNomeEquipamento = new MetroFramework.Controls.MetroLabel();
+            this.labelPatrimonio = new MetroFramework.Controls.MetroLabel();
+            this.txtNomeEquipamento = new MetroFramework.Controls.MetroTextBox();
             this.BtnAtualizarDadosEquipamento = new System.Windows.Forms.Button();
-            this.BtnInativarEquipamento = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,41 +79,77 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.dateCalibracao);
+            this.panel1.Controls.Add(this.dateManutencaoPreventiva);
             this.panel1.Controls.Add(this.BtnInativarEquipamento);
             this.panel1.Controls.Add(this.toggleStatusEquipamento);
-            this.panel1.Controls.Add(this.metroLabel3);
+            this.panel1.Controls.Add(this.labelStatusEquipamento);
             this.panel1.Controls.Add(this.labelTempoCAL);
-            this.panel1.Controls.Add(this.txtDataCalibracao);
             this.panel1.Controls.Add(this.comboTempoCAL);
             this.panel1.Controls.Add(this.labelCalibracao);
             this.panel1.Controls.Add(this.labelObservacoes);
             this.panel1.Controls.Add(this.txtObservacoes);
             this.panel1.Controls.Add(this.labelPeriodicidadeCAL);
             this.panel1.Controls.Add(this.txtPeriodicidadeCAL);
-            this.panel1.Controls.Add(this.labelTempo);
-            this.panel1.Controls.Add(this.txtDataManutencaoPreventiva);
-            this.panel1.Controls.Add(this.comboTempo);
+            this.panel1.Controls.Add(this.labelTempoPeriodicidade);
+            this.panel1.Controls.Add(this.comboTempoPeriodicidade);
             this.panel1.Controls.Add(this.labelManutencaoPreventiva);
             this.panel1.Controls.Add(this.labelPeriodicidadeMP);
             this.panel1.Controls.Add(this.txtPeriodicidadeMP);
-            this.panel1.Controls.Add(this.comboLocalidade);
-            this.panel1.Controls.Add(this.labelLocalidade);
+            this.panel1.Controls.Add(this.comboSetor);
+            this.panel1.Controls.Add(this.labelSetor);
             this.panel1.Controls.Add(this.txtModelo);
             this.panel1.Controls.Add(this.labelModelo);
             this.panel1.Controls.Add(this.labelFinalidade);
             this.panel1.Controls.Add(this.comboFinalidade);
-            this.panel1.Controls.Add(this.comboFornecedor);
+            this.panel1.Controls.Add(this.comboPatrimonio);
             this.panel1.Controls.Add(this.txtNumeroSerie);
             this.panel1.Controls.Add(this.labelNumeroSerie);
-            this.panel1.Controls.Add(this.labelNomePatrimonio);
-            this.panel1.Controls.Add(this.metroLabel2);
-            this.panel1.Controls.Add(this.txtNomePatrimonio);
+            this.panel1.Controls.Add(this.labelNomeEquipamento);
+            this.panel1.Controls.Add(this.labelPatrimonio);
+            this.panel1.Controls.Add(this.txtNomeEquipamento);
             this.panel1.Controls.Add(this.BtnAtualizarDadosEquipamento);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 420);
             this.panel1.TabIndex = 83;
+            // 
+            // dateCalibracao
+            // 
+            this.dateCalibracao.CustomFormat = "dd/MM/yyyy";
+            this.dateCalibracao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateCalibracao.Location = new System.Drawing.Point(17, 585);
+            this.dateCalibracao.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateCalibracao.Name = "dateCalibracao";
+            this.dateCalibracao.Size = new System.Drawing.Size(125, 29);
+            this.dateCalibracao.TabIndex = 97;
+            // 
+            // dateManutencaoPreventiva
+            // 
+            this.dateManutencaoPreventiva.CustomFormat = "dd/MM/yyyy";
+            this.dateManutencaoPreventiva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateManutencaoPreventiva.Location = new System.Drawing.Point(17, 463);
+            this.dateManutencaoPreventiva.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateManutencaoPreventiva.Name = "dateManutencaoPreventiva";
+            this.dateManutencaoPreventiva.Size = new System.Drawing.Size(125, 29);
+            this.dateManutencaoPreventiva.TabIndex = 96;
+            // 
+            // BtnInativarEquipamento
+            // 
+            this.BtnInativarEquipamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnInativarEquipamento.FlatAppearance.BorderSize = 0;
+            this.BtnInativarEquipamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnInativarEquipamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnInativarEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInativarEquipamento.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnInativarEquipamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnInativarEquipamento.Location = new System.Drawing.Point(149, 839);
+            this.BtnInativarEquipamento.Name = "BtnInativarEquipamento";
+            this.BtnInativarEquipamento.Size = new System.Drawing.Size(126, 35);
+            this.BtnInativarEquipamento.TabIndex = 95;
+            this.BtnInativarEquipamento.Text = "Excluir";
+            this.BtnInativarEquipamento.UseVisualStyleBackColor = false;
             // 
             // toggleStatusEquipamento
             // 
@@ -126,15 +162,15 @@
             this.toggleStatusEquipamento.Text = "Off";
             this.toggleStatusEquipamento.UseSelectable = true;
             // 
-            // metroLabel3
+            // labelStatusEquipamento
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel3.Location = new System.Drawing.Point(19, 22);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(108, 15);
-            this.metroLabel3.TabIndex = 94;
-            this.metroLabel3.Text = "Status Equipamento";
+            this.labelStatusEquipamento.AutoSize = true;
+            this.labelStatusEquipamento.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelStatusEquipamento.Location = new System.Drawing.Point(19, 22);
+            this.labelStatusEquipamento.Name = "labelStatusEquipamento";
+            this.labelStatusEquipamento.Size = new System.Drawing.Size(108, 15);
+            this.labelStatusEquipamento.TabIndex = 94;
+            this.labelStatusEquipamento.Text = "Status Equipamento";
             // 
             // labelTempoCAL
             // 
@@ -145,16 +181,6 @@
             this.labelTempoCAL.Size = new System.Drawing.Size(41, 15);
             this.labelTempoCAL.TabIndex = 89;
             this.labelTempoCAL.Text = "Tempo";
-            // 
-            // txtDataCalibracao
-            // 
-            this.txtDataCalibracao.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.txtDataCalibracao.Location = new System.Drawing.Point(17, 585);
-            this.txtDataCalibracao.Mask = "00/00/0000";
-            this.txtDataCalibracao.Name = "txtDataCalibracao";
-            this.txtDataCalibracao.Size = new System.Drawing.Size(64, 25);
-            this.txtDataCalibracao.TabIndex = 92;
-            this.txtDataCalibracao.ValidatingType = typeof(System.DateTime);
             // 
             // comboTempoCAL
             // 
@@ -242,7 +268,7 @@
             // 
             // 
             this.txtPeriodicidadeCAL.CustomButton.Image = null;
-            this.txtPeriodicidadeCAL.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.txtPeriodicidadeCAL.CustomButton.Location = new System.Drawing.Point(74, 1);
             this.txtPeriodicidadeCAL.CustomButton.Name = "";
             this.txtPeriodicidadeCAL.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPeriodicidadeCAL.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -262,7 +288,7 @@
             this.txtPeriodicidadeCAL.SelectionLength = 0;
             this.txtPeriodicidadeCAL.SelectionStart = 0;
             this.txtPeriodicidadeCAL.ShortcutsEnabled = true;
-            this.txtPeriodicidadeCAL.Size = new System.Drawing.Size(75, 23);
+            this.txtPeriodicidadeCAL.Size = new System.Drawing.Size(96, 23);
             this.txtPeriodicidadeCAL.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPeriodicidadeCAL.TabIndex = 91;
             this.txtPeriodicidadeCAL.UseCustomForeColor = true;
@@ -270,40 +296,30 @@
             this.txtPeriodicidadeCAL.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPeriodicidadeCAL.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // labelTempo
+            // labelTempoPeriodicidade
             // 
-            this.labelTempo.AutoSize = true;
-            this.labelTempo.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelTempo.Location = new System.Drawing.Point(151, 507);
-            this.labelTempo.Name = "labelTempo";
-            this.labelTempo.Size = new System.Drawing.Size(41, 15);
-            this.labelTempo.TabIndex = 83;
-            this.labelTempo.Text = "Tempo";
+            this.labelTempoPeriodicidade.AutoSize = true;
+            this.labelTempoPeriodicidade.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelTempoPeriodicidade.Location = new System.Drawing.Point(151, 507);
+            this.labelTempoPeriodicidade.Name = "labelTempoPeriodicidade";
+            this.labelTempoPeriodicidade.Size = new System.Drawing.Size(41, 15);
+            this.labelTempoPeriodicidade.TabIndex = 83;
+            this.labelTempoPeriodicidade.Text = "Tempo";
             // 
-            // txtDataManutencaoPreventiva
+            // comboTempoPeriodicidade
             // 
-            this.txtDataManutencaoPreventiva.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.txtDataManutencaoPreventiva.Location = new System.Drawing.Point(17, 463);
-            this.txtDataManutencaoPreventiva.Mask = "00/00/0000";
-            this.txtDataManutencaoPreventiva.Name = "txtDataManutencaoPreventiva";
-            this.txtDataManutencaoPreventiva.Size = new System.Drawing.Size(64, 25);
-            this.txtDataManutencaoPreventiva.TabIndex = 86;
-            this.txtDataManutencaoPreventiva.ValidatingType = typeof(System.DateTime);
-            // 
-            // comboTempo
-            // 
-            this.comboTempo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboTempo.FormattingEnabled = true;
-            this.comboTempo.ItemHeight = 23;
-            this.comboTempo.Items.AddRange(new object[] {
+            this.comboTempoPeriodicidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.comboTempoPeriodicidade.FormattingEnabled = true;
+            this.comboTempoPeriodicidade.ItemHeight = 23;
+            this.comboTempoPeriodicidade.Items.AddRange(new object[] {
             "estado"});
-            this.comboTempo.Location = new System.Drawing.Point(149, 523);
-            this.comboTempo.Name = "comboTempo";
-            this.comboTempo.Size = new System.Drawing.Size(126, 29);
-            this.comboTempo.Style = MetroFramework.MetroColorStyle.Blue;
-            this.comboTempo.TabIndex = 82;
-            this.comboTempo.UseCustomForeColor = true;
-            this.comboTempo.UseSelectable = true;
+            this.comboTempoPeriodicidade.Location = new System.Drawing.Point(149, 523);
+            this.comboTempoPeriodicidade.Name = "comboTempoPeriodicidade";
+            this.comboTempoPeriodicidade.Size = new System.Drawing.Size(126, 29);
+            this.comboTempoPeriodicidade.Style = MetroFramework.MetroColorStyle.Blue;
+            this.comboTempoPeriodicidade.TabIndex = 82;
+            this.comboTempoPeriodicidade.UseCustomForeColor = true;
+            this.comboTempoPeriodicidade.UseSelectable = true;
             // 
             // labelManutencaoPreventiva
             // 
@@ -331,7 +347,7 @@
             // 
             // 
             this.txtPeriodicidadeMP.CustomButton.Image = null;
-            this.txtPeriodicidadeMP.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.txtPeriodicidadeMP.CustomButton.Location = new System.Drawing.Point(74, 1);
             this.txtPeriodicidadeMP.CustomButton.Name = "";
             this.txtPeriodicidadeMP.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtPeriodicidadeMP.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -351,7 +367,7 @@
             this.txtPeriodicidadeMP.SelectionLength = 0;
             this.txtPeriodicidadeMP.SelectionStart = 0;
             this.txtPeriodicidadeMP.ShortcutsEnabled = true;
-            this.txtPeriodicidadeMP.Size = new System.Drawing.Size(75, 23);
+            this.txtPeriodicidadeMP.Size = new System.Drawing.Size(96, 23);
             this.txtPeriodicidadeMP.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPeriodicidadeMP.TabIndex = 85;
             this.txtPeriodicidadeMP.UseCustomForeColor = true;
@@ -359,30 +375,30 @@
             this.txtPeriodicidadeMP.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPeriodicidadeMP.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // comboLocalidade
+            // comboSetor
             // 
-            this.comboLocalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboLocalidade.FormattingEnabled = true;
-            this.comboLocalidade.ItemHeight = 23;
-            this.comboLocalidade.Items.AddRange(new object[] {
+            this.comboSetor.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.comboSetor.FormattingEnabled = true;
+            this.comboSetor.ItemHeight = 23;
+            this.comboSetor.Items.AddRange(new object[] {
             "cidade"});
-            this.comboLocalidade.Location = new System.Drawing.Point(17, 397);
-            this.comboLocalidade.Name = "comboLocalidade";
-            this.comboLocalidade.Size = new System.Drawing.Size(258, 29);
-            this.comboLocalidade.Style = MetroFramework.MetroColorStyle.Blue;
-            this.comboLocalidade.TabIndex = 79;
-            this.comboLocalidade.UseCustomForeColor = true;
-            this.comboLocalidade.UseSelectable = true;
+            this.comboSetor.Location = new System.Drawing.Point(17, 397);
+            this.comboSetor.Name = "comboSetor";
+            this.comboSetor.Size = new System.Drawing.Size(258, 29);
+            this.comboSetor.Style = MetroFramework.MetroColorStyle.Blue;
+            this.comboSetor.TabIndex = 79;
+            this.comboSetor.UseCustomForeColor = true;
+            this.comboSetor.UseSelectable = true;
             // 
-            // labelLocalidade
+            // labelSetor
             // 
-            this.labelLocalidade.AutoSize = true;
-            this.labelLocalidade.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelLocalidade.Location = new System.Drawing.Point(19, 381);
-            this.labelLocalidade.Name = "labelLocalidade";
-            this.labelLocalidade.Size = new System.Drawing.Size(60, 15);
-            this.labelLocalidade.TabIndex = 78;
-            this.labelLocalidade.Text = "Localidade";
+            this.labelSetor.AutoSize = true;
+            this.labelSetor.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelSetor.Location = new System.Drawing.Point(19, 381);
+            this.labelSetor.Name = "labelSetor";
+            this.labelSetor.Size = new System.Drawing.Size(34, 15);
+            this.labelSetor.TabIndex = 78;
+            this.labelSetor.Text = "Setor";
             // 
             // txtModelo
             // 
@@ -453,20 +469,20 @@
             this.comboFinalidade.UseCustomForeColor = true;
             this.comboFinalidade.UseSelectable = true;
             // 
-            // comboFornecedor
+            // comboPatrimonio
             // 
-            this.comboFornecedor.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.comboFornecedor.FormattingEnabled = true;
-            this.comboFornecedor.ItemHeight = 23;
-            this.comboFornecedor.Items.AddRange(new object[] {
+            this.comboPatrimonio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.comboPatrimonio.FormattingEnabled = true;
+            this.comboPatrimonio.ItemHeight = 23;
+            this.comboPatrimonio.Items.AddRange(new object[] {
             "cidade"});
-            this.comboFornecedor.Location = new System.Drawing.Point(17, 96);
-            this.comboFornecedor.Name = "comboFornecedor";
-            this.comboFornecedor.Size = new System.Drawing.Size(258, 29);
-            this.comboFornecedor.Style = MetroFramework.MetroColorStyle.Blue;
-            this.comboFornecedor.TabIndex = 73;
-            this.comboFornecedor.UseCustomForeColor = true;
-            this.comboFornecedor.UseSelectable = true;
+            this.comboPatrimonio.Location = new System.Drawing.Point(17, 96);
+            this.comboPatrimonio.Name = "comboPatrimonio";
+            this.comboPatrimonio.Size = new System.Drawing.Size(258, 29);
+            this.comboPatrimonio.Style = MetroFramework.MetroColorStyle.Blue;
+            this.comboPatrimonio.TabIndex = 73;
+            this.comboPatrimonio.UseCustomForeColor = true;
+            this.comboPatrimonio.UseSelectable = true;
             // 
             // txtNumeroSerie
             // 
@@ -513,60 +529,60 @@
             this.labelNumeroSerie.TabIndex = 71;
             this.labelNumeroSerie.Text = "Nº de série";
             // 
-            // labelNomePatrimonio
+            // labelNomeEquipamento
             // 
-            this.labelNomePatrimonio.AutoSize = true;
-            this.labelNomePatrimonio.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelNomePatrimonio.Location = new System.Drawing.Point(19, 140);
-            this.labelNomePatrimonio.Name = "labelNomePatrimonio";
-            this.labelNomePatrimonio.Size = new System.Drawing.Size(109, 15);
-            this.labelNomePatrimonio.TabIndex = 70;
-            this.labelNomePatrimonio.Text = "Nome equipamento";
+            this.labelNomeEquipamento.AutoSize = true;
+            this.labelNomeEquipamento.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelNomeEquipamento.Location = new System.Drawing.Point(19, 140);
+            this.labelNomeEquipamento.Name = "labelNomeEquipamento";
+            this.labelNomeEquipamento.Size = new System.Drawing.Size(109, 15);
+            this.labelNomeEquipamento.TabIndex = 70;
+            this.labelNomeEquipamento.Text = "Nome equipamento";
             // 
-            // metroLabel2
+            // labelPatrimonio
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel2.Location = new System.Drawing.Point(19, 80);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 15);
-            this.metroLabel2.TabIndex = 69;
-            this.metroLabel2.Text = "Patrimônio";
+            this.labelPatrimonio.AutoSize = true;
+            this.labelPatrimonio.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelPatrimonio.Location = new System.Drawing.Point(19, 80);
+            this.labelPatrimonio.Name = "labelPatrimonio";
+            this.labelPatrimonio.Size = new System.Drawing.Size(61, 15);
+            this.labelPatrimonio.TabIndex = 69;
+            this.labelPatrimonio.Text = "Patrimônio";
             // 
-            // txtNomePatrimonio
-            // 
-            // 
+            // txtNomeEquipamento
             // 
             // 
-            this.txtNomePatrimonio.CustomButton.Image = null;
-            this.txtNomePatrimonio.CustomButton.Location = new System.Drawing.Point(236, 1);
-            this.txtNomePatrimonio.CustomButton.Name = "";
-            this.txtNomePatrimonio.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtNomePatrimonio.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNomePatrimonio.CustomButton.TabIndex = 1;
-            this.txtNomePatrimonio.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtNomePatrimonio.CustomButton.UseSelectable = true;
-            this.txtNomePatrimonio.CustomButton.Visible = false;
-            this.txtNomePatrimonio.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtNomePatrimonio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtNomePatrimonio.Lines = new string[0];
-            this.txtNomePatrimonio.Location = new System.Drawing.Point(17, 156);
-            this.txtNomePatrimonio.MaxLength = 32767;
-            this.txtNomePatrimonio.Name = "txtNomePatrimonio";
-            this.txtNomePatrimonio.PasswordChar = '\0';
-            this.txtNomePatrimonio.ReadOnly = true;
-            this.txtNomePatrimonio.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtNomePatrimonio.SelectedText = "";
-            this.txtNomePatrimonio.SelectionLength = 0;
-            this.txtNomePatrimonio.SelectionStart = 0;
-            this.txtNomePatrimonio.ShortcutsEnabled = true;
-            this.txtNomePatrimonio.Size = new System.Drawing.Size(258, 23);
-            this.txtNomePatrimonio.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtNomePatrimonio.TabIndex = 68;
-            this.txtNomePatrimonio.UseCustomForeColor = true;
-            this.txtNomePatrimonio.UseSelectable = true;
-            this.txtNomePatrimonio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtNomePatrimonio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // 
+            this.txtNomeEquipamento.CustomButton.Image = null;
+            this.txtNomeEquipamento.CustomButton.Location = new System.Drawing.Point(236, 1);
+            this.txtNomeEquipamento.CustomButton.Name = "";
+            this.txtNomeEquipamento.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtNomeEquipamento.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNomeEquipamento.CustomButton.TabIndex = 1;
+            this.txtNomeEquipamento.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNomeEquipamento.CustomButton.UseSelectable = true;
+            this.txtNomeEquipamento.CustomButton.Visible = false;
+            this.txtNomeEquipamento.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtNomeEquipamento.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtNomeEquipamento.Lines = new string[0];
+            this.txtNomeEquipamento.Location = new System.Drawing.Point(17, 156);
+            this.txtNomeEquipamento.MaxLength = 32767;
+            this.txtNomeEquipamento.Name = "txtNomeEquipamento";
+            this.txtNomeEquipamento.PasswordChar = '\0';
+            this.txtNomeEquipamento.ReadOnly = true;
+            this.txtNomeEquipamento.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNomeEquipamento.SelectedText = "";
+            this.txtNomeEquipamento.SelectionLength = 0;
+            this.txtNomeEquipamento.SelectionStart = 0;
+            this.txtNomeEquipamento.ShortcutsEnabled = true;
+            this.txtNomeEquipamento.Size = new System.Drawing.Size(258, 23);
+            this.txtNomeEquipamento.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNomeEquipamento.TabIndex = 68;
+            this.txtNomeEquipamento.UseCustomForeColor = true;
+            this.txtNomeEquipamento.UseSelectable = true;
+            this.txtNomeEquipamento.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNomeEquipamento.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // BtnAtualizarDadosEquipamento
             // 
@@ -577,28 +593,12 @@
             this.BtnAtualizarDadosEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAtualizarDadosEquipamento.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
             this.BtnAtualizarDadosEquipamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAtualizarDadosEquipamento.Location = new System.Drawing.Point(72, 824);
+            this.BtnAtualizarDadosEquipamento.Location = new System.Drawing.Point(17, 839);
             this.BtnAtualizarDadosEquipamento.Name = "BtnAtualizarDadosEquipamento";
-            this.BtnAtualizarDadosEquipamento.Size = new System.Drawing.Size(150, 35);
+            this.BtnAtualizarDadosEquipamento.Size = new System.Drawing.Size(125, 35);
             this.BtnAtualizarDadosEquipamento.TabIndex = 67;
-            this.BtnAtualizarDadosEquipamento.Text = "Atualizar Dados";
+            this.BtnAtualizarDadosEquipamento.Text = "Atualizar";
             this.BtnAtualizarDadosEquipamento.UseVisualStyleBackColor = false;
-            // 
-            // BtnInativarEquipamento
-            // 
-            this.BtnInativarEquipamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.BtnInativarEquipamento.FlatAppearance.BorderSize = 0;
-            this.BtnInativarEquipamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnInativarEquipamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnInativarEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInativarEquipamento.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnInativarEquipamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnInativarEquipamento.Location = new System.Drawing.Point(70, 879);
-            this.BtnInativarEquipamento.Name = "BtnInativarEquipamento";
-            this.BtnInativarEquipamento.Size = new System.Drawing.Size(150, 35);
-            this.BtnInativarEquipamento.TabIndex = 95;
-            this.BtnInativarEquipamento.Text = "Excluir Equipamento";
-            this.BtnInativarEquipamento.UseVisualStyleBackColor = false;
             // 
             // ACSWindowEquipamentos
             // 
@@ -626,34 +626,34 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnAtualizarDadosEquipamento;
-        private MetroFramework.Controls.MetroComboBox comboLocalidade;
-        private MetroFramework.Controls.MetroLabel labelLocalidade;
+        private MetroFramework.Controls.MetroComboBox comboSetor;
+        private MetroFramework.Controls.MetroLabel labelSetor;
         private MetroFramework.Controls.MetroTextBox txtModelo;
         private MetroFramework.Controls.MetroLabel labelModelo;
         private MetroFramework.Controls.MetroLabel labelFinalidade;
         private MetroFramework.Controls.MetroComboBox comboFinalidade;
-        private MetroFramework.Controls.MetroComboBox comboFornecedor;
+        private MetroFramework.Controls.MetroComboBox comboPatrimonio;
         private MetroFramework.Controls.MetroTextBox txtNumeroSerie;
         private MetroFramework.Controls.MetroLabel labelNumeroSerie;
-        private MetroFramework.Controls.MetroLabel labelNomePatrimonio;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox txtNomePatrimonio;
+        private MetroFramework.Controls.MetroLabel labelNomeEquipamento;
+        private MetroFramework.Controls.MetroLabel labelPatrimonio;
+        private MetroFramework.Controls.MetroTextBox txtNomeEquipamento;
         private MetroFramework.Controls.MetroLabel labelTempoCAL;
-        private System.Windows.Forms.MaskedTextBox txtDataCalibracao;
         private MetroFramework.Controls.MetroComboBox comboTempoCAL;
         private MetroFramework.Controls.MetroLabel labelCalibracao;
         private MetroFramework.Controls.MetroLabel labelObservacoes;
         private MetroFramework.Controls.MetroTextBox txtObservacoes;
         private MetroFramework.Controls.MetroLabel labelPeriodicidadeCAL;
         private MetroFramework.Controls.MetroTextBox txtPeriodicidadeCAL;
-        private MetroFramework.Controls.MetroLabel labelTempo;
-        private System.Windows.Forms.MaskedTextBox txtDataManutencaoPreventiva;
-        private MetroFramework.Controls.MetroComboBox comboTempo;
+        private MetroFramework.Controls.MetroLabel labelTempoPeriodicidade;
+        private MetroFramework.Controls.MetroComboBox comboTempoPeriodicidade;
         private MetroFramework.Controls.MetroLabel labelManutencaoPreventiva;
         private MetroFramework.Controls.MetroLabel labelPeriodicidadeMP;
         private MetroFramework.Controls.MetroTextBox txtPeriodicidadeMP;
         private MetroFramework.Controls.MetroToggle toggleStatusEquipamento;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel labelStatusEquipamento;
         private System.Windows.Forms.Button BtnInativarEquipamento;
+        private MetroFramework.Controls.MetroDateTime dateManutencaoPreventiva;
+        private MetroFramework.Controls.MetroDateTime dateCalibracao;
     }
 }

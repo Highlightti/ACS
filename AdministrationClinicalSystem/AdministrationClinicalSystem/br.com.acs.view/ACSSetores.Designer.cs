@@ -1,6 +1,6 @@
 ﻿namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    partial class ACSLocalidades
+    partial class ACSSetores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.leftSidePanel = new System.Windows.Forms.Panel();
@@ -39,17 +39,17 @@
             this.TabCadastrarPessoa = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.BtnCadastrarPatrimonio = new System.Windows.Forms.Button();
-            this.labelDescricaoLocalidade = new MetroFramework.Controls.MetroLabel();
-            this.txtDescricaoLocalidade = new MetroFramework.Controls.MetroTextBox();
+            this.BtnCadastrarSetor = new System.Windows.Forms.Button();
+            this.labelDescricaoSetor = new MetroFramework.Controls.MetroLabel();
+            this.txtDescricaoSetor = new MetroFramework.Controls.MetroTextBox();
             this.TabConsultarPessoas = new MetroFramework.Controls.MetroTabPage();
             this.ListPessoasPanel = new System.Windows.Forms.Panel();
             this.ListaLocalidades = new MetroFramework.Controls.MetroGrid();
-            this.Localidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.BottomOptionsPanel = new System.Windows.Forms.Panel();
             this.BtnDetalhesLocalidade = new System.Windows.Forms.Button();
+            this.Setor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.MainTabsLocalidades.SuspendLayout();
@@ -80,9 +80,9 @@
             this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.metroLabel1.Location = new System.Drawing.Point(6, 5);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(111, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(75, 25);
             this.metroLabel1.TabIndex = 15;
-            this.metroLabel1.Text = "Localidades";
+            this.metroLabel1.Text = "Setores";
             this.metroLabel1.UseCustomForeColor = true;
             // 
             // leftSidePanel
@@ -110,7 +110,7 @@
             this.MainTabsLocalidades.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTabsLocalidades.Location = new System.Drawing.Point(0, 0);
             this.MainTabsLocalidades.Name = "MainTabsLocalidades";
-            this.MainTabsLocalidades.SelectedIndex = 0;
+            this.MainTabsLocalidades.SelectedIndex = 1;
             this.MainTabsLocalidades.Size = new System.Drawing.Size(1024, 582);
             this.MainTabsLocalidades.TabIndex = 2;
             this.MainTabsLocalidades.UseSelectable = true;
@@ -122,6 +122,7 @@
             this.TabCadastrarPessoa.AutoScrollMinSize = new System.Drawing.Size(10, 10);
             this.TabCadastrarPessoa.Controls.Add(this.metroLabel25);
             this.TabCadastrarPessoa.Controls.Add(this.panel2);
+            this.TabCadastrarPessoa.HorizontalScrollbar = true;
             this.TabCadastrarPessoa.HorizontalScrollbarBarColor = false;
             this.TabCadastrarPessoa.HorizontalScrollbarHighlightOnWheel = false;
             this.TabCadastrarPessoa.HorizontalScrollbarSize = 10;
@@ -130,6 +131,7 @@
             this.TabCadastrarPessoa.Size = new System.Drawing.Size(1016, 540);
             this.TabCadastrarPessoa.TabIndex = 0;
             this.TabCadastrarPessoa.Text = "     Cadastrar     ";
+            this.TabCadastrarPessoa.VerticalScrollbar = true;
             this.TabCadastrarPessoa.VerticalScrollbarBarColor = true;
             this.TabCadastrarPessoa.VerticalScrollbarHighlightOnWheel = true;
             this.TabCadastrarPessoa.VerticalScrollbarSize = 10;
@@ -142,81 +144,81 @@
             this.metroLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.metroLabel25.Location = new System.Drawing.Point(38, 6);
             this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(191, 25);
+            this.metroLabel25.Size = new System.Drawing.Size(146, 25);
             this.metroLabel25.TabIndex = 14;
-            this.metroLabel25.Text = "Informe a Localidade";
+            this.metroLabel25.Text = "Informe o Setor";
             this.metroLabel25.UseCustomForeColor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.BtnCadastrarPatrimonio);
-            this.panel2.Controls.Add(this.labelDescricaoLocalidade);
-            this.panel2.Controls.Add(this.txtDescricaoLocalidade);
+            this.panel2.Controls.Add(this.BtnCadastrarSetor);
+            this.panel2.Controls.Add(this.labelDescricaoSetor);
+            this.panel2.Controls.Add(this.txtDescricaoSetor);
             this.panel2.Location = new System.Drawing.Point(0, 37);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(318, 248);
             this.panel2.TabIndex = 13;
             // 
-            // BtnCadastrarPatrimonio
+            // BtnCadastrarSetor
             // 
-            this.BtnCadastrarPatrimonio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
-            this.BtnCadastrarPatrimonio.FlatAppearance.BorderSize = 0;
-            this.BtnCadastrarPatrimonio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnCadastrarPatrimonio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnCadastrarPatrimonio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastrarPatrimonio.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnCadastrarPatrimonio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCadastrarPatrimonio.Location = new System.Drawing.Point(85, 154);
-            this.BtnCadastrarPatrimonio.Name = "BtnCadastrarPatrimonio";
-            this.BtnCadastrarPatrimonio.Size = new System.Drawing.Size(150, 35);
-            this.BtnCadastrarPatrimonio.TabIndex = 44;
-            this.BtnCadastrarPatrimonio.Text = "Cadastrar";
-            this.BtnCadastrarPatrimonio.UseVisualStyleBackColor = false;
+            this.BtnCadastrarSetor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(181)))));
+            this.BtnCadastrarSetor.FlatAppearance.BorderSize = 0;
+            this.BtnCadastrarSetor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnCadastrarSetor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnCadastrarSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCadastrarSetor.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnCadastrarSetor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnCadastrarSetor.Location = new System.Drawing.Point(85, 154);
+            this.BtnCadastrarSetor.Name = "BtnCadastrarSetor";
+            this.BtnCadastrarSetor.Size = new System.Drawing.Size(150, 35);
+            this.BtnCadastrarSetor.TabIndex = 44;
+            this.BtnCadastrarSetor.Text = "Cadastrar";
+            this.BtnCadastrarSetor.UseVisualStyleBackColor = false;
             // 
-            // labelDescricaoLocalidade
+            // labelDescricaoSetor
             // 
-            this.labelDescricaoLocalidade.AutoSize = true;
-            this.labelDescricaoLocalidade.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelDescricaoLocalidade.Location = new System.Drawing.Point(39, 25);
-            this.labelDescricaoLocalidade.Name = "labelDescricaoLocalidade";
-            this.labelDescricaoLocalidade.Size = new System.Drawing.Size(111, 15);
-            this.labelDescricaoLocalidade.TabIndex = 14;
-            this.labelDescricaoLocalidade.Text = "Descrição Localidade";
+            this.labelDescricaoSetor.AutoSize = true;
+            this.labelDescricaoSetor.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelDescricaoSetor.Location = new System.Drawing.Point(39, 25);
+            this.labelDescricaoSetor.Name = "labelDescricaoSetor";
+            this.labelDescricaoSetor.Size = new System.Drawing.Size(85, 15);
+            this.labelDescricaoSetor.TabIndex = 14;
+            this.labelDescricaoSetor.Text = "Descrição Setor";
             // 
-            // txtDescricaoLocalidade
-            // 
-            // 
+            // txtDescricaoSetor
             // 
             // 
-            this.txtDescricaoLocalidade.CustomButton.Image = null;
-            this.txtDescricaoLocalidade.CustomButton.Location = new System.Drawing.Point(236, 1);
-            this.txtDescricaoLocalidade.CustomButton.Name = "";
-            this.txtDescricaoLocalidade.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtDescricaoLocalidade.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDescricaoLocalidade.CustomButton.TabIndex = 1;
-            this.txtDescricaoLocalidade.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDescricaoLocalidade.CustomButton.UseSelectable = true;
-            this.txtDescricaoLocalidade.CustomButton.Visible = false;
-            this.txtDescricaoLocalidade.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtDescricaoLocalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtDescricaoLocalidade.Lines = new string[0];
-            this.txtDescricaoLocalidade.Location = new System.Drawing.Point(37, 41);
-            this.txtDescricaoLocalidade.MaxLength = 32767;
-            this.txtDescricaoLocalidade.Name = "txtDescricaoLocalidade";
-            this.txtDescricaoLocalidade.PasswordChar = '\0';
-            this.txtDescricaoLocalidade.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDescricaoLocalidade.SelectedText = "";
-            this.txtDescricaoLocalidade.SelectionLength = 0;
-            this.txtDescricaoLocalidade.SelectionStart = 0;
-            this.txtDescricaoLocalidade.ShortcutsEnabled = true;
-            this.txtDescricaoLocalidade.Size = new System.Drawing.Size(258, 23);
-            this.txtDescricaoLocalidade.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDescricaoLocalidade.TabIndex = 0;
-            this.txtDescricaoLocalidade.UseCustomForeColor = true;
-            this.txtDescricaoLocalidade.UseSelectable = true;
-            this.txtDescricaoLocalidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDescricaoLocalidade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // 
+            this.txtDescricaoSetor.CustomButton.Image = null;
+            this.txtDescricaoSetor.CustomButton.Location = new System.Drawing.Point(236, 1);
+            this.txtDescricaoSetor.CustomButton.Name = "";
+            this.txtDescricaoSetor.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtDescricaoSetor.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDescricaoSetor.CustomButton.TabIndex = 1;
+            this.txtDescricaoSetor.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDescricaoSetor.CustomButton.UseSelectable = true;
+            this.txtDescricaoSetor.CustomButton.Visible = false;
+            this.txtDescricaoSetor.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtDescricaoSetor.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtDescricaoSetor.Lines = new string[0];
+            this.txtDescricaoSetor.Location = new System.Drawing.Point(37, 41);
+            this.txtDescricaoSetor.MaxLength = 32767;
+            this.txtDescricaoSetor.Name = "txtDescricaoSetor";
+            this.txtDescricaoSetor.PasswordChar = '\0';
+            this.txtDescricaoSetor.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDescricaoSetor.SelectedText = "";
+            this.txtDescricaoSetor.SelectionLength = 0;
+            this.txtDescricaoSetor.SelectionStart = 0;
+            this.txtDescricaoSetor.ShortcutsEnabled = true;
+            this.txtDescricaoSetor.Size = new System.Drawing.Size(258, 23);
+            this.txtDescricaoSetor.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDescricaoSetor.TabIndex = 0;
+            this.txtDescricaoSetor.UseCustomForeColor = true;
+            this.txtDescricaoSetor.UseSelectable = true;
+            this.txtDescricaoSetor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDescricaoSetor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // TabConsultarPessoas
             // 
@@ -254,25 +256,25 @@
             this.ListaLocalidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListaLocalidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ListaLocalidades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaLocalidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaLocalidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ListaLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaLocalidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Localidade});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListaLocalidades.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Setor});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListaLocalidades.DefaultCellStyle = dataGridViewCellStyle2;
             this.ListaLocalidades.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListaLocalidades.EnableHeadersVisualStyles = false;
             this.ListaLocalidades.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -281,26 +283,20 @@
             this.ListaLocalidades.Name = "ListaLocalidades";
             this.ListaLocalidades.ReadOnly = true;
             this.ListaLocalidades.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaLocalidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaLocalidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.ListaLocalidades.RowHeadersWidth = 10;
             this.ListaLocalidades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.ListaLocalidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListaLocalidades.Size = new System.Drawing.Size(1016, 470);
             this.ListaLocalidades.Style = MetroFramework.MetroColorStyle.Silver;
             this.ListaLocalidades.TabIndex = 2;
-            // 
-            // Localidade
-            // 
-            this.Localidade.HeaderText = "Localidade";
-            this.Localidade.Name = "Localidade";
-            this.Localidade.ReadOnly = true;
             // 
             // panel3
             // 
@@ -320,9 +316,9 @@
             this.metroLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.metroLabel2.Location = new System.Drawing.Point(38, 6);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(181, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(145, 25);
             this.metroLabel2.TabIndex = 15;
-            this.metroLabel2.Text = "Lista de Localidades";
+            this.metroLabel2.Text = "Lista de Setores";
             this.metroLabel2.UseCustomForeColor = true;
             // 
             // BottomOptionsPanel
@@ -351,6 +347,12 @@
             this.BtnDetalhesLocalidade.Text = "Detalhes";
             this.BtnDetalhesLocalidade.UseVisualStyleBackColor = false;
             this.BtnDetalhesLocalidade.Click += new System.EventHandler(this.BtnDetalhesLocalidade_Click);
+            // 
+            // Setor
+            // 
+            this.Setor.HeaderText = "Setor";
+            this.Setor.Name = "Setor";
+            this.Setor.ReadOnly = true;
             // 
             // ACSLocalidades
             // 
@@ -391,9 +393,9 @@
         private MetroFramework.Controls.MetroTabPage TabCadastrarPessoa;
         private MetroFramework.Controls.MetroLabel metroLabel25;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button BtnCadastrarPatrimonio;
-        private MetroFramework.Controls.MetroLabel labelDescricaoLocalidade;
-        private MetroFramework.Controls.MetroTextBox txtDescricaoLocalidade;
+        private System.Windows.Forms.Button BtnCadastrarSetor;
+        private MetroFramework.Controls.MetroLabel labelDescricaoSetor;
+        private MetroFramework.Controls.MetroTextBox txtDescricaoSetor;
         private MetroFramework.Controls.MetroTabPage TabConsultarPessoas;
         private System.Windows.Forms.Panel ListPessoasPanel;
         private MetroFramework.Controls.MetroGrid ListaLocalidades;
@@ -401,6 +403,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.Panel BottomOptionsPanel;
         private System.Windows.Forms.Button BtnDetalhesLocalidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Localidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Setor;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    public partial class ACSWindowLocalidades : MetroFramework.Forms.MetroForm
+    public partial class ACSWindowEquipamentosFinalidades : MetroFramework.Forms.MetroForm
     {
-        public ACSWindowLocalidades()
+        public ACSWindowEquipamentosFinalidades()
         {
             InitializeComponent();
         }

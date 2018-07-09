@@ -30,13 +30,13 @@
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.labelDataEnvio = new MetroFramework.Controls.MetroLabel();
+            this.labelDataRetorno = new MetroFramework.Controls.MetroLabel();
             this.labelObservacoes = new MetroFramework.Controls.MetroLabel();
             this.BtnAtualizarPreventiva = new System.Windows.Forms.Button();
             this.txtObservacoes = new MetroFramework.Controls.MetroTextBox();
+            this.dateRetorno = new MetroFramework.Controls.MetroDateTime();
+            this.dateEnvio = new MetroFramework.Controls.MetroDateTime();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,10 +56,10 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.metroDateTime2);
-            this.panel1.Controls.Add(this.metroDateTime1);
-            this.panel1.Controls.Add(this.metroLabel13);
-            this.panel1.Controls.Add(this.metroLabel14);
+            this.panel1.Controls.Add(this.dateRetorno);
+            this.panel1.Controls.Add(this.dateEnvio);
+            this.panel1.Controls.Add(this.labelDataEnvio);
+            this.panel1.Controls.Add(this.labelDataRetorno);
             this.panel1.Controls.Add(this.labelObservacoes);
             this.panel1.Controls.Add(this.BtnAtualizarPreventiva);
             this.panel1.Controls.Add(this.txtObservacoes);
@@ -69,41 +69,25 @@
             this.panel1.Size = new System.Drawing.Size(310, 345);
             this.panel1.TabIndex = 89;
             // 
-            // metroDateTime2
+            // labelDataEnvio
             // 
-            this.metroDateTime2.Location = new System.Drawing.Point(25, 100);
-            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime2.Name = "metroDateTime2";
-            this.metroDateTime2.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTime2.TabIndex = 90;
+            this.labelDataEnvio.AutoSize = true;
+            this.labelDataEnvio.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelDataEnvio.Location = new System.Drawing.Point(27, 22);
+            this.labelDataEnvio.Name = "labelDataEnvio";
+            this.labelDataEnvio.Size = new System.Drawing.Size(76, 15);
+            this.labelDataEnvio.TabIndex = 88;
+            this.labelDataEnvio.Text = "Data de Envio";
             // 
-            // metroDateTime1
+            // labelDataRetorno
             // 
-            this.metroDateTime1.Location = new System.Drawing.Point(25, 38);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
-            this.metroDateTime1.TabIndex = 89;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel13.Location = new System.Drawing.Point(27, 22);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(76, 15);
-            this.metroLabel13.TabIndex = 88;
-            this.metroLabel13.Text = "Data de Envio";
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel14.Location = new System.Drawing.Point(27, 84);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(91, 15);
-            this.metroLabel14.TabIndex = 87;
-            this.metroLabel14.Text = "Data de Retorno";
+            this.labelDataRetorno.AutoSize = true;
+            this.labelDataRetorno.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelDataRetorno.Location = new System.Drawing.Point(27, 84);
+            this.labelDataRetorno.Name = "labelDataRetorno";
+            this.labelDataRetorno.Size = new System.Drawing.Size(91, 15);
+            this.labelDataRetorno.TabIndex = 87;
+            this.labelDataRetorno.Text = "Data de Retorno";
             // 
             // labelObservacoes
             // 
@@ -166,6 +150,26 @@
             this.txtObservacoes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtObservacoes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // dateRetorno
+            // 
+            this.dateRetorno.CustomFormat = "dd/MM/yyyy";
+            this.dateRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateRetorno.Location = new System.Drawing.Point(25, 100);
+            this.dateRetorno.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateRetorno.Name = "dateRetorno";
+            this.dateRetorno.Size = new System.Drawing.Size(125, 29);
+            this.dateRetorno.TabIndex = 100;
+            // 
+            // dateEnvio
+            // 
+            this.dateEnvio.CustomFormat = "dd/MM/yyyy";
+            this.dateEnvio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateEnvio.Location = new System.Drawing.Point(25, 38);
+            this.dateEnvio.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateEnvio.Name = "dateEnvio";
+            this.dateEnvio.Size = new System.Drawing.Size(125, 29);
+            this.dateEnvio.TabIndex = 99;
+            // 
             // ACSWindowEquipamentosPreventivasUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,12 +195,12 @@
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroDateTime metroDateTime2;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroLabel labelDataEnvio;
+        private MetroFramework.Controls.MetroLabel labelDataRetorno;
         private MetroFramework.Controls.MetroLabel labelObservacoes;
         private System.Windows.Forms.Button BtnAtualizarPreventiva;
         private MetroFramework.Controls.MetroTextBox txtObservacoes;
+        private MetroFramework.Controls.MetroDateTime dateRetorno;
+        private MetroFramework.Controls.MetroDateTime dateEnvio;
     }
 }

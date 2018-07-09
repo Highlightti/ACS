@@ -99,23 +99,17 @@
     <Compile Include="br.com.acs.view\ACSDadosUsuarioAdministrador.Designer.cs">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSFinalidades.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="br.com.acs.view\ACSFinalidades.Designer.cs">
-      <DependentUpon>ACSFinalidades.cs</DependentUpon>
-    </Compile>
     <Compile Include="br.com.acs.view\ACSFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="br.com.acs.view\ACSFornecedor.Designer.cs">
       <DependentUpon>ACSFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSLocalidades.cs">
+    <Compile Include="br.com.acs.view\ACSSetores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSLocalidades.Designer.cs">
-      <DependentUpon>ACSLocalidades.cs</DependentUpon>
+    <Compile Include="br.com.acs.view\ACSSetores.Designer.cs">
+      <DependentUpon>ACSSetores.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSLogin.cs">
       <SubType>Form</SubType>
@@ -201,11 +195,11 @@
     <Compile Include="br.com.acs.view\ACSWindowEquipamentosPreventivasUpdate.Designer.cs">
       <DependentUpon>ACSWindowEquipamentosPreventivasUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSWindowFinalidades.cs">
+    <Compile Include="br.com.acs.view\ACSWindowEquipamentosFinalidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSWindowFinalidades.Designer.cs">
-      <DependentUpon>ACSWindowFinalidades.cs</DependentUpon>
+    <Compile Include="br.com.acs.view\ACSWindowEquipamentosFinalidades.Designer.cs">
+      <DependentUpon>ACSWindowEquipamentosFinalidades.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSWindowFornecedor.cs">
       <SubType>Form</SubType>
@@ -213,11 +207,11 @@
     <Compile Include="br.com.acs.view\ACSWindowFornecedor.Designer.cs">
       <DependentUpon>ACSWindowFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSWindowLocalidades.cs">
+    <Compile Include="br.com.acs.view\ACSWindowSetor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSWindowLocalidades.Designer.cs">
-      <DependentUpon>ACSWindowLocalidades.cs</DependentUpon>
+    <Compile Include="br.com.acs.view\ACSWindowSetor.Designer.cs">
+      <DependentUpon>ACSWindowSetor.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSWindowPessoa.cs">
       <SubType>Form</SubType>
@@ -239,14 +233,11 @@
     <EmbeddedResource Include="br.com.acs.view\ACSDadosUsuarioAdministrador.resx">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSFinalidades.resx">
-      <DependentUpon>ACSFinalidades.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSFornecedor.resx">
       <DependentUpon>ACSFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSLocalidades.resx">
-      <DependentUpon>ACSLocalidades.cs</DependentUpon>
+    <EmbeddedResource Include="br.com.acs.view\ACSSetores.resx">
+      <DependentUpon>ACSSetores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSLogin.resx">
       <DependentUpon>ACSLogin.cs</DependentUpon>
@@ -287,14 +278,14 @@
     <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentosPreventivasUpdate.resx">
       <DependentUpon>ACSWindowEquipamentosPreventivasUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSWindowFinalidades.resx">
-      <DependentUpon>ACSWindowFinalidades.cs</DependentUpon>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentosFinalidades.resx">
+      <DependentUpon>ACSWindowEquipamentosFinalidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowFornecedor.resx">
       <DependentUpon>ACSWindowFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSWindowLocalidades.resx">
-      <DependentUpon>ACSWindowLocalidades.cs</DependentUpon>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowSetor.resx">
+      <DependentUpon>ACSWindowSetor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowPatrimonio.resx">
       <DependentUpon>ACSWindowPatrimonio.cs</DependentUpon>

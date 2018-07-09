@@ -30,13 +30,13 @@
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelDataEnvio = new MetroFramework.Controls.MetroLabel();
+            this.labelDataRetorno = new MetroFramework.Controls.MetroLabel();
             this.labelObservacoes = new MetroFramework.Controls.MetroLabel();
             this.BtnAtualizarCalibracao = new System.Windows.Forms.Button();
             this.txtObservacoes = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.comboDateSaida = new MetroFramework.Controls.MetroDateTime();
-            this.comboDateRetorno = new MetroFramework.Controls.MetroDateTime();
+            this.dateEnvio = new MetroFramework.Controls.MetroDateTime();
+            this.dateRetorno = new MetroFramework.Controls.MetroDateTime();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,10 +56,10 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.comboDateRetorno);
-            this.panel1.Controls.Add(this.comboDateSaida);
-            this.panel1.Controls.Add(this.metroLabel13);
-            this.panel1.Controls.Add(this.metroLabel14);
+            this.panel1.Controls.Add(this.dateRetorno);
+            this.panel1.Controls.Add(this.dateEnvio);
+            this.panel1.Controls.Add(this.labelDataEnvio);
+            this.panel1.Controls.Add(this.labelDataRetorno);
             this.panel1.Controls.Add(this.labelObservacoes);
             this.panel1.Controls.Add(this.BtnAtualizarCalibracao);
             this.panel1.Controls.Add(this.txtObservacoes);
@@ -68,6 +68,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 345);
             this.panel1.TabIndex = 88;
+            // 
+            // labelDataEnvio
+            // 
+            this.labelDataEnvio.AutoSize = true;
+            this.labelDataEnvio.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelDataEnvio.Location = new System.Drawing.Point(27, 22);
+            this.labelDataEnvio.Name = "labelDataEnvio";
+            this.labelDataEnvio.Size = new System.Drawing.Size(76, 15);
+            this.labelDataEnvio.TabIndex = 88;
+            this.labelDataEnvio.Text = "Data de Envio";
+            // 
+            // labelDataRetorno
+            // 
+            this.labelDataRetorno.AutoSize = true;
+            this.labelDataRetorno.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelDataRetorno.Location = new System.Drawing.Point(27, 84);
+            this.labelDataRetorno.Name = "labelDataRetorno";
+            this.labelDataRetorno.Size = new System.Drawing.Size(91, 15);
+            this.labelDataRetorno.TabIndex = 87;
+            this.labelDataRetorno.Text = "Data de Retorno";
             // 
             // labelObservacoes
             // 
@@ -130,41 +150,25 @@
             this.txtObservacoes.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtObservacoes.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel13
+            // dateEnvio
             // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel13.Location = new System.Drawing.Point(27, 22);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(76, 15);
-            this.metroLabel13.TabIndex = 88;
-            this.metroLabel13.Text = "Data de Envio";
+            this.dateEnvio.CustomFormat = "dd/MM/yyyy";
+            this.dateEnvio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateEnvio.Location = new System.Drawing.Point(25, 38);
+            this.dateEnvio.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateEnvio.Name = "dateEnvio";
+            this.dateEnvio.Size = new System.Drawing.Size(125, 29);
+            this.dateEnvio.TabIndex = 97;
             // 
-            // metroLabel14
+            // dateRetorno
             // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel14.Location = new System.Drawing.Point(27, 84);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(91, 15);
-            this.metroLabel14.TabIndex = 87;
-            this.metroLabel14.Text = "Data de Retorno";
-            // 
-            // comboDateSaida
-            // 
-            this.comboDateSaida.Location = new System.Drawing.Point(25, 38);
-            this.comboDateSaida.MinimumSize = new System.Drawing.Size(0, 29);
-            this.comboDateSaida.Name = "comboDateSaida";
-            this.comboDateSaida.Size = new System.Drawing.Size(200, 29);
-            this.comboDateSaida.TabIndex = 89;
-            // 
-            // comboDateRetorno
-            // 
-            this.comboDateRetorno.Location = new System.Drawing.Point(25, 100);
-            this.comboDateRetorno.MinimumSize = new System.Drawing.Size(0, 29);
-            this.comboDateRetorno.Name = "comboDateRetorno";
-            this.comboDateRetorno.Size = new System.Drawing.Size(200, 29);
-            this.comboDateRetorno.TabIndex = 90;
+            this.dateRetorno.CustomFormat = "dd/MM/yyyy";
+            this.dateRetorno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateRetorno.Location = new System.Drawing.Point(25, 100);
+            this.dateRetorno.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateRetorno.Name = "dateRetorno";
+            this.dateRetorno.Size = new System.Drawing.Size(125, 29);
+            this.dateRetorno.TabIndex = 98;
             // 
             // ACSWindowEquipamentosCalibracoesUpdate
             // 
@@ -192,9 +196,9 @@
         private MetroFramework.Controls.MetroLabel labelObservacoes;
         private System.Windows.Forms.Button BtnAtualizarCalibracao;
         private MetroFramework.Controls.MetroTextBox txtObservacoes;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroLabel metroLabel14;
-        private MetroFramework.Controls.MetroDateTime comboDateRetorno;
-        private MetroFramework.Controls.MetroDateTime comboDateSaida;
+        private MetroFramework.Controls.MetroLabel labelDataEnvio;
+        private MetroFramework.Controls.MetroLabel labelDataRetorno;
+        private MetroFramework.Controls.MetroDateTime dateRetorno;
+        private MetroFramework.Controls.MetroDateTime dateEnvio;
     }
 }

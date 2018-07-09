@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    public partial class ACSFinalidades : Form
+    public partial class ACSSetores : Form
     {
-        public ACSFinalidades()
+        public ACSSetores()
         {
             InitializeComponent();
         }
 
-        private void BtnDetalhesFinalidade_Click(object sender, EventArgs e)
+        private void BtnDetalhesLocalidade_Click(object sender, EventArgs e)
         {
             //adicionar verificação para não permitir abrir mais de uma tela.
-            ACSWindowFinalidades acswfinalidades = new ACSWindowFinalidades();
-            acswfinalidades.Show();
+            ACSWindowSetor acswLocalidades = new ACSWindowSetor();
+            acswLocalidades.Show();
         }
     }
 }
