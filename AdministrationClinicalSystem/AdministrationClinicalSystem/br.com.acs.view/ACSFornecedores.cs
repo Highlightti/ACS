@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    public partial class ACSPatrimonio : Form
+    public partial class ACSFornecedores : Form
     {
-        public ACSPatrimonio()
+        public ACSFornecedores()
         {
             InitializeComponent();
         }
 
-        private void BtnDetalhesPatrimonio_Click(object sender, EventArgs e)
+        private void BtnDetalhesFornecedor_Click(object sender, EventArgs e)
         {
             //adicionar verificação para não permitir abrir mais de uma tela.
-            ACSWindowPatrimonio acswPatrimonio = new ACSWindowPatrimonio();
-            acswPatrimonio.Show();
+            ACSWindowFornecedor acswFornecedor = new ACSWindowFornecedor();
+            acswFornecedor.Show();
         }
     }
 }

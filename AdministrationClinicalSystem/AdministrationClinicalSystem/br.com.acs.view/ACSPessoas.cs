@@ -37,11 +37,11 @@ namespace AdministrationClinicalSystem.br.com.acs.view
              * 
              */
 
-            if(!(labelNome.Text.Equals("") || labelSobrenome.Text.Equals("") || labelDataNascimento.Text.Equals("") || labelRg.Text.Equals("") || labelTelefone.Text.Equals("")))
+            if(!(txtNome.Text.Equals("") || txtSobrenome.Text.Equals("") || labelDataNascimento.Text.Equals("") || txtRg.Text.Equals("") || labelTelefone.Text.Equals("")))
             {
                 Pessoa pessoa = new Pessoa();
-                pessoa.nome = labelNome.Text;
-                pessoa.sobrenome = labelSobrenome.Text;
+                pessoa.nome = txtNome.Text;
+                pessoa.sobrenome = txtSobrenome.Text;
                 pessoa.estadoCivil = comboEstadoCivil.SelectedItem.ToString();
 
                 if (chkFeminino.Checked)
@@ -56,8 +56,8 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 pessoa.dataNascimento = DateTime.Parse(labelDataNascimento.Text, new CultureInfo("pt-BR", true));
 
                 DocumentoPF documentoPF = new DocumentoPF();
-                documentoPF.registroGeral = labelRg.Text;
-                documentoPF.cadastroPessoaFisica = labelCpf.Text;
+                documentoPF.registroGeral = txtRg.Text;
+                documentoPF.cadastroPessoaFisica = txtCpf.Text;
 
                 Endereco endereco = new Endereco();
                 endereco.cep = labelCep.Text;
@@ -115,6 +115,8 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 {
                     opcoesAvancadasPessoas.Width += 4;
                 }
+
+                BtnOpcoesAvancadas.Text = "Fechar";
             }
             else
             {
@@ -126,7 +128,28 @@ namespace AdministrationClinicalSystem.br.com.acs.view
                 }
 
                 opcoesAvancadasPessoas.Visible = false;
+
+                BtnOpcoesAvancadas.Text = "Opções Avançadas";
             }
+        }
+
+        private void BtnAtribuirUsuarioSistema_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowPessoaUsuario acswPessoaUsuario = new ACSWindowPessoaUsuario();
+            acswPessoaUsuario.Show();
+        }
+
+        private void BtnCadastrarTipoUsuario_Click(object sender, EventArgs e)
+        {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowUsuarioNivelAcesso acswUsuarioNivelAcesso = new ACSWindowUsuarioNivelAcesso();
+            acswUsuarioNivelAcesso.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

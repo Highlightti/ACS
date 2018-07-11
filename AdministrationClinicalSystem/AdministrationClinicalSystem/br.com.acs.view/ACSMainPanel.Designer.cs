@@ -50,8 +50,8 @@
             this.contentPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.subMenuPessoas = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SubBtnUsuariosSistema = new System.Windows.Forms.Button();
+            this.SubBtnFuncionarios = new System.Windows.Forms.Button();
             this.SubBtnGestãoPessoas = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -374,8 +374,8 @@
             // subMenuPessoas
             // 
             this.subMenuPessoas.BackColor = System.Drawing.Color.Transparent;
-            this.subMenuPessoas.Controls.Add(this.button3);
-            this.subMenuPessoas.Controls.Add(this.button2);
+            this.subMenuPessoas.Controls.Add(this.SubBtnUsuariosSistema);
+            this.subMenuPessoas.Controls.Add(this.SubBtnFuncionarios);
             this.subMenuPessoas.Controls.Add(this.SubBtnGestãoPessoas);
             this.subMenuPessoas.Controls.Add(this.label2);
             this.subMenuPessoas.Location = new System.Drawing.Point(-2, 0);
@@ -384,39 +384,41 @@
             this.subMenuPessoas.TabIndex = 0;
             this.subMenuPessoas.Visible = false;
             // 
-            // button3
+            // SubBtnUsuariosSistema
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(2, 80);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(206, 40);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Usuários Sistema";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.SubBtnUsuariosSistema.BackColor = System.Drawing.Color.Transparent;
+            this.SubBtnUsuariosSistema.FlatAppearance.BorderSize = 0;
+            this.SubBtnUsuariosSistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.SubBtnUsuariosSistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.SubBtnUsuariosSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubBtnUsuariosSistema.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.SubBtnUsuariosSistema.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubBtnUsuariosSistema.Location = new System.Drawing.Point(2, 79);
+            this.SubBtnUsuariosSistema.Name = "SubBtnUsuariosSistema";
+            this.SubBtnUsuariosSistema.Size = new System.Drawing.Size(206, 40);
+            this.SubBtnUsuariosSistema.TabIndex = 27;
+            this.SubBtnUsuariosSistema.Text = "Usuários Sistema";
+            this.SubBtnUsuariosSistema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubBtnUsuariosSistema.UseVisualStyleBackColor = false;
+            this.SubBtnUsuariosSistema.Click += new System.EventHandler(this.SubBtnUsuariosSistema_Click);
             // 
-            // button2
+            // SubBtnFuncionarios
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(2, 40);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 40);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Funcionários (Exames)";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.SubBtnFuncionarios.BackColor = System.Drawing.Color.Transparent;
+            this.SubBtnFuncionarios.FlatAppearance.BorderSize = 0;
+            this.SubBtnFuncionarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.SubBtnFuncionarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.SubBtnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubBtnFuncionarios.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.SubBtnFuncionarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubBtnFuncionarios.Location = new System.Drawing.Point(2, 39);
+            this.SubBtnFuncionarios.Name = "SubBtnFuncionarios";
+            this.SubBtnFuncionarios.Size = new System.Drawing.Size(207, 40);
+            this.SubBtnFuncionarios.TabIndex = 26;
+            this.SubBtnFuncionarios.Text = "Funcionários";
+            this.SubBtnFuncionarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubBtnFuncionarios.UseVisualStyleBackColor = false;
+            this.SubBtnFuncionarios.Click += new System.EventHandler(this.SubBtnFuncionarios_Click);
             // 
             // SubBtnGestãoPessoas
             // 
@@ -427,11 +429,11 @@
             this.SubBtnGestãoPessoas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubBtnGestãoPessoas.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.SubBtnGestãoPessoas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SubBtnGestãoPessoas.Location = new System.Drawing.Point(2, 1);
+            this.SubBtnGestãoPessoas.Location = new System.Drawing.Point(2, 0);
             this.SubBtnGestãoPessoas.Name = "SubBtnGestãoPessoas";
             this.SubBtnGestãoPessoas.Size = new System.Drawing.Size(206, 40);
             this.SubBtnGestãoPessoas.TabIndex = 25;
-            this.SubBtnGestãoPessoas.Text = "Gestão de pessoas";
+            this.SubBtnGestãoPessoas.Text = "Gestão Pessoas";
             this.SubBtnGestãoPessoas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubBtnGestãoPessoas.UseVisualStyleBackColor = false;
             this.SubBtnGestãoPessoas.Click += new System.EventHandler(this.SubBtnGestãoPessoas_Click);
@@ -480,9 +482,9 @@
             // subMenu
             // 
             this.subMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(149)))));
+            this.subMenu.Controls.Add(this.subMenuPessoas);
             this.subMenu.Controls.Add(this.subMenuGestaoAdministrativa);
             this.subMenu.Controls.Add(this.subMenuPatrimonio);
-            this.subMenu.Controls.Add(this.subMenuPessoas);
             this.subMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.subMenu.Location = new System.Drawing.Point(260, 60);
             this.subMenu.Name = "subMenu";
@@ -653,8 +655,8 @@
         private System.Windows.Forms.Label subMenuGestãoAdministrativa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button SubBtnSetores;
-        public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button SubBtnUsuariosSistema;
+        public System.Windows.Forms.Button SubBtnFuncionarios;
         public System.Windows.Forms.Button SubBtnGestãoPessoas;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button SubBtnFornecedores;

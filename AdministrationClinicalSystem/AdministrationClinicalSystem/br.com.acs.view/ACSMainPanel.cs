@@ -275,7 +275,7 @@ namespace AdministrationClinicalSystem
 
         private void SubBtnFornecedores_Click(object sender, EventArgs e)
         {
-            ACSFornecedor fornecedor = new ACSFornecedor();
+            ACSFornecedores fornecedor = new ACSFornecedores();
             NavigationScreen(fornecedor, contentPanel);
 
             VerificarFechamentoMenu(sender, e);
@@ -283,7 +283,7 @@ namespace AdministrationClinicalSystem
 
         private void SubBtnPatrimonio_Click(object sender, EventArgs e)
         {
-            ACSPatrimonio patrimonio = new ACSPatrimonio();
+            ACSPatrimonios patrimonio = new ACSPatrimonios();
             NavigationScreen(patrimonio, contentPanel);
 
             VerificarFechamentoMenu(sender, e);
@@ -299,17 +299,7 @@ namespace AdministrationClinicalSystem
 
         #endregion
 
-
-
-        private void SubBtnGestãoPessoas_Click(object sender, EventArgs e)
-        {
-            ACSPessoas pessoas = new ACSPessoas();
-            NavigationScreen(pessoas, contentPanel);
-
-            VerificarFechamentoMenu(sender, e);
-        }
-
-
+        #region Menu e Sub menu Pessoas
 
         private void BtnPessoas_Click(object sender, EventArgs e)
         {
@@ -317,6 +307,29 @@ namespace AdministrationClinicalSystem
             string subMenu = "Pessoas";
             BtnSubMenu_Click(sender, e, subMenu);
         }
+
+        private void SubBtnGestãoPessoas_Click(object sender, EventArgs e)
+        {
+            ACSPessoa pessoas = new ACSPessoa();
+            NavigationScreen(pessoas, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
+        private void SubBtnFuncionarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubBtnUsuariosSistema_Click(object sender, EventArgs e)
+        {
+            ACSUsuarios usuarios = new ACSUsuarios();
+            NavigationScreen(usuarios, contentPanel);
+
+            VerificarFechamentoMenu(sender, e);
+        }
+
+        #endregion
 
         private void BtnUsuarios_Click(object sender, EventArgs e)
         {
@@ -360,6 +373,8 @@ namespace AdministrationClinicalSystem
                 }
             }
         }
+
+
 
 
 

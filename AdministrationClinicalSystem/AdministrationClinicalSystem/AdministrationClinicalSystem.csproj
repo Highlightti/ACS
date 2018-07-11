@@ -99,11 +99,17 @@
     <Compile Include="br.com.acs.view\ACSDadosUsuarioAdministrador.Designer.cs">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSFornecedor.cs">
+    <Compile Include="br.com.acs.view\ACSFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSFornecedor.Designer.cs">
-      <DependentUpon>ACSFornecedor.cs</DependentUpon>
+    <Compile Include="br.com.acs.view\ACSFornecedores.Designer.cs">
+      <DependentUpon>ACSFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSPessoa.Designer.cs">
+      <DependentUpon>ACSPessoa.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSSetores.cs">
       <SubType>Form</SubType>
@@ -141,17 +147,23 @@
     <Compile Include="br.com.acs.view\ACSHome.Designer.cs">
       <DependentUpon>ACSHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSPatrimonio.cs">
+    <Compile Include="br.com.acs.view\ACSPatrimonios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSPatrimonio.Designer.cs">
-      <DependentUpon>ACSPatrimonio.cs</DependentUpon>
+    <Compile Include="br.com.acs.view\ACSPatrimonios.Designer.cs">
+      <DependentUpon>ACSPatrimonios.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="br.com.acs.view\ACSPessoas.Designer.cs">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSUsuarios.Designer.cs">
+      <DependentUpon>ACSUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSWindowEquipamentos.cs">
       <SubType>Form</SubType>
@@ -207,6 +219,24 @@
     <Compile Include="br.com.acs.view\ACSWindowFornecedor.Designer.cs">
       <DependentUpon>ACSWindowFornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowPessoaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowPessoaFuncionario.Designer.cs">
+      <DependentUpon>ACSWindowPessoaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowPessoaJuridico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowPessoaJuridico.Designer.cs">
+      <DependentUpon>ACSWindowPessoaJuridico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowPessoaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowPessoaUsuario.Designer.cs">
+      <DependentUpon>ACSWindowPessoaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="br.com.acs.view\ACSWindowSetor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +255,24 @@
     <Compile Include="br.com.acs.view\ACSWindowPatrimonio.Designer.cs">
       <DependentUpon>ACSWindowPatrimonio.cs</DependentUpon>
     </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUsuario.Designer.cs">
+      <DependentUpon>ACSWindowUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUsuarioNivelAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUsuarioNivelAcesso.Designer.cs">
+      <DependentUpon>ACSWindowUsuarioNivelAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUsuarioRedefinirSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="br.com.acs.view\ACSWindowUsuarioRedefinirSenha.Designer.cs">
+      <DependentUpon>ACSWindowUsuarioRedefinirSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="br.com.acs.view\ACSDadosUsuario.resx">
@@ -233,8 +281,11 @@
     <EmbeddedResource Include="br.com.acs.view\ACSDadosUsuarioAdministrador.resx">
       <DependentUpon>ACSDadosUsuarioAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSFornecedor.resx">
-      <DependentUpon>ACSFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="br.com.acs.view\ACSFornecedores.resx">
+      <DependentUpon>ACSFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSPessoa.resx">
+      <DependentUpon>ACSPessoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSSetores.resx">
       <DependentUpon>ACSSetores.cs</DependentUpon>
@@ -251,11 +302,14 @@
     <EmbeddedResource Include="br.com.acs.view\ACSHome.resx">
       <DependentUpon>ACSHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSPatrimonio.resx">
-      <DependentUpon>ACSPatrimonio.cs</DependentUpon>
+    <EmbeddedResource Include="br.com.acs.view\ACSPatrimonios.resx">
+      <DependentUpon>ACSPatrimonios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSPessoas.resx">
       <DependentUpon>ACSPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSUsuarios.resx">
+      <DependentUpon>ACSUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowEquipamentos.resx">
       <DependentUpon>ACSWindowEquipamentos.cs</DependentUpon>
@@ -284,11 +338,26 @@
     <EmbeddedResource Include="br.com.acs.view\ACSWindowFornecedor.resx">
       <DependentUpon>ACSWindowFornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowPessoa.resx">
+      <DependentUpon>ACSWindowPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowPessoaUsuario.resx">
+      <DependentUpon>ACSWindowPessoaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowSetor.resx">
       <DependentUpon>ACSWindowSetor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSWindowPatrimonio.resx">
       <DependentUpon>ACSWindowPatrimonio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowUsuario.resx">
+      <DependentUpon>ACSWindowUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowUsuarioNivelAcesso.resx">
+      <DependentUpon>ACSWindowUsuarioNivelAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="br.com.acs.view\ACSWindowUsuarioRedefinirSenha.resx">
+      <DependentUpon>ACSWindowUsuarioRedefinirSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

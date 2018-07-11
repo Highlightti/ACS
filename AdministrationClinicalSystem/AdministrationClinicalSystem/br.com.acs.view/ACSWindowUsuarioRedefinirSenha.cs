@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    public partial class ACSWindowPessoa : MetroFramework.Forms.MetroForm
+    public partial class ACSWindowUsuarioRedefinirSenha : MetroFramework.Forms.MetroForm
     {
-        public ACSWindowPessoa()
+        public ACSWindowUsuarioRedefinirSenha()
         {
             InitializeComponent();
         }

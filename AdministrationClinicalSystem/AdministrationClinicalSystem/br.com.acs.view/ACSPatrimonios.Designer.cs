@@ -1,6 +1,6 @@
 ﻿namespace AdministrationClinicalSystem.br.com.acs.view
 {
-    partial class ACSPatrimonio
+    partial class ACSPatrimonios
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             this.TabCadastrarPessoa = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateCompra = new MetroFramework.Controls.MetroDateTime();
             this.labelObservacoes = new MetroFramework.Controls.MetroLabel();
             this.txtObservacoes = new MetroFramework.Controls.MetroTextBox();
             this.labelValor = new MetroFramework.Controls.MetroLabel();
@@ -79,7 +80,6 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.dateCompra = new MetroFramework.Controls.MetroDateTime();
             this.MainTabsPatrimonio.SuspendLayout();
             this.TabCadastrarPessoa.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -99,7 +99,7 @@
             this.MainTabsPatrimonio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTabsPatrimonio.Location = new System.Drawing.Point(0, 0);
             this.MainTabsPatrimonio.Name = "MainTabsPatrimonio";
-            this.MainTabsPatrimonio.SelectedIndex = 0;
+            this.MainTabsPatrimonio.SelectedIndex = 1;
             this.MainTabsPatrimonio.Size = new System.Drawing.Size(1012, 596);
             this.MainTabsPatrimonio.TabIndex = 1;
             this.MainTabsPatrimonio.UseSelectable = true;
@@ -168,6 +168,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(638, 440);
             this.panel2.TabIndex = 13;
+            // 
+            // dateCompra
+            // 
+            this.dateCompra.CustomFormat = "dd/MM/yyyy";
+            this.dateCompra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateCompra.Location = new System.Drawing.Point(340, 158);
+            this.dateCompra.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateCompra.Name = "dateCompra";
+            this.dateCompra.Size = new System.Drawing.Size(125, 29);
+            this.dateCompra.TabIndex = 74;
             // 
             // labelObservacoes
             // 
@@ -823,17 +833,7 @@
             this.mainPanel.Size = new System.Drawing.Size(1012, 596);
             this.mainPanel.TabIndex = 48;
             // 
-            // dateCompra
-            // 
-            this.dateCompra.CustomFormat = "dd/MM/yyyy";
-            this.dateCompra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateCompra.Location = new System.Drawing.Point(340, 158);
-            this.dateCompra.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dateCompra.Name = "dateCompra";
-            this.dateCompra.Size = new System.Drawing.Size(125, 29);
-            this.dateCompra.TabIndex = 74;
-            // 
-            // ACSPatrimonio
+            // ACSPatrimonios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -843,7 +843,7 @@
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftSidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ACSPatrimonio";
+            this.Name = "ACSPatrimonios";
             this.Text = "ACSPatrimonio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MainTabsPatrimonio.ResumeLayout(false);
