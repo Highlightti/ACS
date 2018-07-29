@@ -40,11 +40,21 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
 
         #endregion
 
-        private static string CADASTRAR_ENDERECO = "INSERT INTO endereco (cep, logradouro, numero, complemento, bairro, pais, estado, cidade, tipo_endereco, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE(), ?)";
-        private static string CADASTRAR_CONTATO = "INSERT INTO contato (telefone, celular, email, site, tipo_contato, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, ?, ?, SYSDATE(), ?)";
+        private static string CADASTRAR_ENDERECO = "INSERT INTO endereco (cep, logradouro, numero, complemento, bairro, pais, estado, cidade, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, SYSDATE(), ?)";
+        private static string CADASTRAR_CONTATO = "INSERT INTO contato (telefone, celular, email, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, SYSDATE(), ?)";
         private static string CADASTRAR_PESSOA = "INSERT INTO pessoa (nome, sobrenome, estado_civil, sexo, data_nascimento, rg, cpf, endereco, contato, data_cadastro, usuario_cadastro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, SYSDATE(), ?)";
-        private static string CONSULTAR_PESSOAS = "";
+        private static string CONSULTAR_PESSOAS = "SELECT pessoa.id_pessoa, pessoa.nome, pessoa.sobrenome, pessoa.estado_civil, pessoa.sexo, pessoa.datanascimento, pessoa.rg, pessoa.cpf, endereco.id_endereco, endereco.cep, endereco.logradouro, endereco.numero, endereco.complemento, endereco.bairro, endereco.cidade, endereco.estado, contato.id_contato, contato.telefone, contato.celular, contato.email FROM pessoa JOIN endereco ON pessoa.endereco = endereco.id_endereco JOIN contato ON pessoa.contato = contato.id_contato  ORDER BY pessoa.nome ASC LIMIT 50";
 
+
+
+        //SELECT usuario.id_usuario, usuario.nome, nivel_acesso.nome_perfil FROM usuario JOIN usuario_acesso ON usuario.id_usuario= usuario_acesso.id_usuario JOIN nivel_acesso ON nivel_acesso.id_nivel_acesso= usuario_acesso.id_nivel_acesso WHERE usuario = ? AND senha = MD5(?)"
+
+
+
+        /*
+         * limitar a consulta a 50 pessoas
+         * fazer um count de pessoas e retornar esse valor
+         */
 
 
         /// <summary>
@@ -68,7 +78,6 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                 command.Parameters.AddWithValue("?pais", pessoa.endereco.pais);
                 command.Parameters.AddWithValue("?estado", pessoa.endereco.estado);
                 command.Parameters.AddWithValue("?cidade", pessoa.endereco.cidade);
-                command.Parameters.AddWithValue("?tipo_endereco", pessoa.endereco.tipoEndereco);
                 command.Parameters.AddWithValue("?usuario_cadastro", idUsuarioSessao);
 
                 try
@@ -86,8 +95,6 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
                     command.Parameters.AddWithValue("?telefone", pessoa.contato.telefone);
                     command.Parameters.AddWithValue("?celular", pessoa.contato.celular);
                     command.Parameters.AddWithValue("?email", pessoa.contato.email);
-                    command.Parameters.AddWithValue("?site", pessoa.contato.site);
-                    command.Parameters.AddWithValue("?tipo_contato", pessoa.contato.tipoContato);
                     command.Parameters.AddWithValue("?usuario_cadastro", idUsuarioSessao);
 
                     try
@@ -164,7 +171,7 @@ namespace AdministrationClinicalSystem.br.com.acs.dao
         /// Método responsável por retornar os dados de pessoas cadastradas no Banco de Dados.
         /// </summary>
         /// <returns>List<Pessoa></returns>
-        public List<Pessoa> ConsultarPessoas()
+        public List<Pessoa> ListarPessoas()
         {
             List<Pessoa> pessoas = new List<Pessoa>();
 

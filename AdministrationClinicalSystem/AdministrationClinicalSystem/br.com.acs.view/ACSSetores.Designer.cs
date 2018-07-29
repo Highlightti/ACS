@@ -45,11 +45,11 @@
             this.TabConsultarPessoas = new MetroFramework.Controls.MetroTabPage();
             this.ListPessoasPanel = new System.Windows.Forms.Panel();
             this.ListaLocalidades = new MetroFramework.Controls.MetroGrid();
+            this.Setor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.BottomOptionsPanel = new System.Windows.Forms.Panel();
             this.BtnDetalhesLocalidade = new System.Windows.Forms.Button();
-            this.Setor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.MainTabsLocalidades.SuspendLayout();
@@ -110,7 +110,7 @@
             this.MainTabsLocalidades.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTabsLocalidades.Location = new System.Drawing.Point(0, 0);
             this.MainTabsLocalidades.Name = "MainTabsLocalidades";
-            this.MainTabsLocalidades.SelectedIndex = 1;
+            this.MainTabsLocalidades.SelectedIndex = 0;
             this.MainTabsLocalidades.Size = new System.Drawing.Size(1024, 582);
             this.MainTabsLocalidades.TabIndex = 2;
             this.MainTabsLocalidades.UseSelectable = true;
@@ -175,6 +175,7 @@
             this.BtnCadastrarSetor.TabIndex = 44;
             this.BtnCadastrarSetor.Text = "Cadastrar";
             this.BtnCadastrarSetor.UseVisualStyleBackColor = false;
+            this.BtnCadastrarSetor.Click += new System.EventHandler(this.BtnCadastrarSetor_Click);
             // 
             // labelDescricaoSetor
             // 
@@ -298,6 +299,12 @@
             this.ListaLocalidades.Style = MetroFramework.MetroColorStyle.Silver;
             this.ListaLocalidades.TabIndex = 2;
             // 
+            // Setor
+            // 
+            this.Setor.HeaderText = "Setor";
+            this.Setor.Name = "Setor";
+            this.Setor.ReadOnly = true;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
@@ -348,13 +355,7 @@
             this.BtnDetalhesLocalidade.UseVisualStyleBackColor = false;
             this.BtnDetalhesLocalidade.Click += new System.EventHandler(this.BtnDetalhesLocalidade_Click);
             // 
-            // Setor
-            // 
-            this.Setor.HeaderText = "Setor";
-            this.Setor.Name = "Setor";
-            this.Setor.ReadOnly = true;
-            // 
-            // ACSLocalidades
+            // ACSSetores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -363,7 +364,7 @@
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftSidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ACSLocalidades";
+            this.Name = "ACSSetores";
             this.Text = "ACSLocalidades";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.topPanel.ResumeLayout(false);

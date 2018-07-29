@@ -23,5 +23,10 @@ namespace AdministrationClinicalSystem.br.com.acs.view
             ACSWindowSetor acswLocalidades = new ACSWindowSetor();
             acswLocalidades.Show();
         }
+
+        private void BtnCadastrarSetor_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -105,11 +105,11 @@
     <Compile Include="br.com.acs.view\ACSFornecedores.Designer.cs">
       <DependentUpon>ACSFornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSPessoa.cs">
+    <Compile Include="br.com.acs.view\ACSPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="br.com.acs.view\ACSPessoa.Designer.cs">
-      <DependentUpon>ACSPessoa.cs</DependentUpon>
+    <Compile Include="br.com.acs.view\ACSPessoas.Designer.cs">
+      <DependentUpon>ACSPessoas.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSSetores.cs">
       <SubType>Form</SubType>
@@ -152,12 +152,6 @@
     </Compile>
     <Compile Include="br.com.acs.view\ACSPatrimonios.Designer.cs">
       <DependentUpon>ACSPatrimonios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="br.com.acs.view\ACSPessoas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="br.com.acs.view\ACSPessoas.Designer.cs">
-      <DependentUpon>ACSPessoas.cs</DependentUpon>
     </Compile>
     <Compile Include="br.com.acs.view\ACSUsuarios.cs">
       <SubType>Form</SubType>
@@ -284,8 +278,8 @@
     <EmbeddedResource Include="br.com.acs.view\ACSFornecedores.resx">
       <DependentUpon>ACSFornecedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSPessoa.resx">
-      <DependentUpon>ACSPessoa.cs</DependentUpon>
+    <EmbeddedResource Include="br.com.acs.view\ACSPessoas.resx">
+      <DependentUpon>ACSPessoas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSSetores.resx">
       <DependentUpon>ACSSetores.cs</DependentUpon>
@@ -304,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSPatrimonios.resx">
       <DependentUpon>ACSPatrimonios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="br.com.acs.view\ACSPessoas.resx">
-      <DependentUpon>ACSPessoas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="br.com.acs.view\ACSUsuarios.resx">
       <DependentUpon>ACSUsuarios.cs</DependentUpon>

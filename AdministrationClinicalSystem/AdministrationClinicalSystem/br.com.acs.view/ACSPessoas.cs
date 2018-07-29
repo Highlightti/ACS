@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,79 +27,9 @@ namespace AdministrationClinicalSystem.br.com.acs.view
 
         #endregion
 
-        private void BtnCadastrarPessoa_Click(object sender, EventArgs e)
-        {
-            /*TO-DO
-             * Verificação para não perminir caracters especiais
-             * Aplicar máscara aos campos de documentos e contatos
-             * 
-             * 
-             */
-
-            if(!(txtNome.Text.Equals("") || txtSobrenome.Text.Equals("") || labelDataNascimento.Text.Equals("") || txtRg.Text.Equals("") || labelTelefone.Text.Equals("")))
-            {
-                Pessoa pessoa = new Pessoa();
-                pessoa.nome = txtNome.Text;
-                pessoa.sobrenome = txtSobrenome.Text;
-                pessoa.estadoCivil = comboEstadoCivil.SelectedItem.ToString();
-
-                if (chkFeminino.Checked)
-                {
-                    pessoa.sexo = "F";
-                }
-                else if (chkMasculino.Checked)
-                {
-                    pessoa.sexo = "M";
-                }
-
-                pessoa.dataNascimento = DateTime.Parse(labelDataNascimento.Text, new CultureInfo("pt-BR", true));
-
-                DocumentoPF documentoPF = new DocumentoPF();
-                documentoPF.registroGeral = txtRg.Text;
-                documentoPF.cadastroPessoaFisica = txtCpf.Text;
-
-                Endereco endereco = new Endereco();
-                endereco.cep = labelCep.Text;
-                endereco.logradouro = labelRua.Text;
-                endereco.numero = labelNumero.Text;
-                endereco.complemento = labelComplemento.Text;
-                endereco.bairro = labelBairro.Text;
-                endereco.estado = comboEstado.Text;
-                endereco.cidade = comboCidade.Text;
-                endereco.tipoEndereco = comboTipoEndereco.SelectedIndex;
-
-                Contato contato = new Contato();
-                contato.telefone = labelTelefone.Text;
-                contato.celular = labelCelular.Text;
-                contato.email = labelEmailPessoal.Text;
-
-                pessoa.documentoPF = documentoPF;
-                pessoa.endereco = endereco;
-                pessoa.contato = contato;
-
-                pessoa = pessoaController.CadastrarPessoa(pessoa);
-
-                if(pessoa != null)
-                {
-                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_CADASTRADOS, systemExMessages.TITLE_DADOS_CADASTRADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_FALHA_CONEXAO, systemExMessages.TITLE_FALHA_CONEXAO, MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                }
-            }
-            else
-            {
-                MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_INVALIDOS_CADASTRO, systemExMessages.TITLE_DADOS_INVALIDOS_CADASTRO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void TabConsultarPessoas_Paint(object sender, PaintEventArgs e)
-        {
-            // Recuperar todos os registros de pessoas cadastradas no sistema.
 
 
-        }
+
 
         bool opcoesAvancadasClick = false;
 
@@ -147,9 +76,99 @@ namespace AdministrationClinicalSystem.br.com.acs.view
             acswUsuarioNivelAcesso.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnDetalhesPessoa_Click(object sender, EventArgs e)
         {
+            //adicionar verificação para não permitir abrir mais de uma tela.
+            ACSWindowPessoa acswPessoa = new ACSWindowPessoa();
+            acswPessoa.Show();
+        }
 
+        private void BtnCadastrarPessoa_Click(object sender, EventArgs e)
+        {
+            if (!(txtNome.Text.Equals("") || txtSobrenome.Text.Equals("") || dateNascimento.Value == DateTime.Now || txtRg.Text.Equals("") || txtTelefone.Text.Equals("")))
+            {
+                Pessoa pessoa = new Pessoa();
+                pessoa.nome = txtNome.Text;
+                pessoa.sobrenome = txtSobrenome.Text;
+
+                // Operadores Ternários.
+                pessoa.estadoCivil = comboEstadoCivil.SelectedItem == null ? null : comboEstadoCivil.SelectedItem.ToString();
+
+                pessoa.sexo = chkFeminino.Checked ? "F" : "M";
+
+                pessoa.dataNascimento = dateNascimento.Value;
+
+
+                DocumentoPF documentoPF = new DocumentoPF();
+                documentoPF.registroGeral = txtRg.Text;
+                documentoPF.cadastroPessoaFisica = txtCpf.Text;
+
+                Endereco endereco = new Endereco();
+                endereco.cep = txtCep.Text;
+                endereco.logradouro = txtRua.Text;
+                endereco.numero = txtNumero.Text;
+                endereco.complemento = txtComplemento.Text;
+                endereco.bairro = txtBairro.Text;
+                endereco.estado = comboEstado.Text;
+                endereco.cidade = comboCidade.Text;
+
+                Contato contato = new Contato();
+                contato.telefone = txtTelefone.Text;
+                contato.celular = txtCelular.Text;
+                contato.email = txtEmailPessoal.Text;
+
+                pessoa.documentoPF = documentoPF;
+                pessoa.endereco = endereco;
+                pessoa.contato = contato;
+
+                pessoa = pessoaController.CadastrarPessoa(pessoa);
+
+                if (pessoa != null)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_CADASTRADOS, systemExMessages.TITLE_DADOS_CADASTRADOS, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_FALHA_CONEXAO, systemExMessages.TITLE_FALHA_CONEXAO, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, systemExMessages.MESSAGE_DADOS_INVALIDOS_CADASTRO, systemExMessages.TITLE_DADOS_INVALIDOS_CADASTRO, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+
+  
+
+     
+        /// <summary>
+        /// //FORM LOAD PARA FAZER O CONTROLE DE CARREGAMENTO DE LISTA QUANDO SAI DA PAGINA E VOLTA
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //private void ACSPessoas_Load(object sender, EventArgs e)
+        //{
+        //    if(MainTabsPessoas.SelectedIndex == 1)
+        //    {
+        //        MessageBox.Show("You are in the TabControl.SelectedIndexChanged event.");
+        //    }
+        //}
+
+        private void MainTabsPessoas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MainTabsPessoas.SelectedIndex == 1)
+            {
+                List<Pessoa> pessoas = new List<Pessoa>();
+
+                pessoas = pessoaController.ListarPessoas();
+
+
+                //Fill DataGrid
+
+
+                MessageBox.Show("You are in the TabControl.SelectedIndexChanged event.");
+            }
         }
     }
 }

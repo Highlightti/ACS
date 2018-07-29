@@ -310,7 +310,7 @@ namespace AdministrationClinicalSystem
 
         private void SubBtnGestãoPessoas_Click(object sender, EventArgs e)
         {
-            ACSPessoa pessoas = new ACSPessoa();
+            ACSPessoas pessoas = new ACSPessoas();
             NavigationScreen(pessoas, contentPanel);
 
             VerificarFechamentoMenu(sender, e);

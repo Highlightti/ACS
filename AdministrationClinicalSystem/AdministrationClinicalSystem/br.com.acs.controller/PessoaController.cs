@@ -36,6 +36,17 @@ namespace AdministrationClinicalSystem.br.com.acs.controller
             return pessoa;
         }
 
-        
+        public List<Pessoa> ListarPessoas()
+        {
+            PessoaDAO pessoaDAO = PessoaDAO.getInstance();
+            List<Pessoa> pessoas = new List<Pessoa>();
+
+            pessoas = pessoaDAO.ListarPessoas();
+
+            return pessoas;
+        }
+
+
+
     }
 }
