@@ -48,8 +48,15 @@
             this.leftSidePanel = new System.Windows.Forms.Panel();
             this.MainTabFinalidade = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.BtnNovaFinalidade = new System.Windows.Forms.Button();
+            this.panelNovaFinalidade = new System.Windows.Forms.Panel();
+            this.BtnCadastrarFinalidade = new System.Windows.Forms.Button();
+            this.labelDescricaoFinalidade = new MetroFramework.Controls.MetroLabel();
+            this.txtDescricaoFinalidade = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateCalibracao = new MetroFramework.Controls.MetroDateTime();
+            this.dateManutencaoPreventiva = new MetroFramework.Controls.MetroDateTime();
             this.labelTempoCalibracao = new MetroFramework.Controls.MetroLabel();
             this.comboTempoPeriodicidadeCalibracao = new MetroFramework.Controls.MetroComboBox();
             this.labelCalibracao = new MetroFramework.Controls.MetroLabel();
@@ -82,43 +89,6 @@
             this.BtnManutencaoPreventiva = new System.Windows.Forms.Button();
             this.BtnCalibrarEquipamento = new System.Windows.Forms.Button();
             this.ListaPatrimonios = new MetroFramework.Controls.MetroGrid();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.BtnOpcoesAvancadas = new System.Windows.Forms.Button();
-            this.BtnDetalhesEquipamento = new System.Windows.Forms.Button();
-            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.BtnDetalheCalibracao = new System.Windows.Forms.Button();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.BtnDetalhePreventivas = new System.Windows.Forms.Button();
-            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.BtnDetalheCorretivas = new System.Windows.Forms.Button();
-            this.metroGrid3 = new MetroFramework.Controls.MetroGrid();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.dateManutencaoPreventiva = new MetroFramework.Controls.MetroDateTime();
-            this.dateCalibracao = new MetroFramework.Controls.MetroDateTime();
-            this.panelNovaFinalidade = new System.Windows.Forms.Panel();
-            this.BtnCadastrarFinalidade = new System.Windows.Forms.Button();
-            this.labelDescricaoFinalidade = new MetroFramework.Controls.MetroLabel();
-            this.txtDescricaoFinalidade = new MetroFramework.Controls.MetroTextBox();
-            this.BtnNovaFinalidade = new System.Windows.Forms.Button();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.BottomOptionsPanel = new System.Windows.Forms.Panel();
-            this.BtnDetalhesFinalidade = new System.Windows.Forms.Button();
-            this.ListaFinalidades = new MetroFramework.Controls.MetroGrid();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Patrimonio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Equipamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -131,6 +101,15 @@
             this.Calibracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PeriodicidadeCAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnOpcoesAvancadas = new System.Windows.Forms.Button();
+            this.BtnDetalhesEquipamento = new System.Windows.Forms.Button();
+            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.BtnDetalheCalibracao = new System.Windows.Forms.Button();
+            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -141,6 +120,12 @@
             this.DataEnvio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataRetorno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProblemaApresentado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.BtnDetalhePreventivas = new System.Windows.Forms.Button();
+            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -151,6 +136,12 @@
             this.DataEnvioPreventiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataRetornoPreventivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProblemaApresentadoPreventiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.BtnDetalheCorretivas = new System.Windows.Forms.Button();
+            this.metroGrid3 = new MetroFramework.Controls.MetroGrid();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -161,9 +152,19 @@
             this.DataEnvioCorretiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataRetornoCorretiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProblemaApresentadoCorretiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.ListaFinalidades = new MetroFramework.Controls.MetroGrid();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BottomOptionsPanel = new System.Windows.Forms.Panel();
+            this.BtnDetalhesFinalidade = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.topPanel.SuspendLayout();
             this.MainTabFinalidade.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
+            this.panelNovaFinalidade.SuspendLayout();
             this.panel2.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
             this.ListPessoasPanel.SuspendLayout();
@@ -183,11 +184,10 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).BeginInit();
             this.panel6.SuspendLayout();
-            this.panelNovaFinalidade.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.BottomOptionsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListaFinalidades)).BeginInit();
+            this.BottomOptionsPanel.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
@@ -229,7 +229,6 @@
             this.MainTabFinalidade.Controls.Add(this.metroTabPage7);
             this.MainTabFinalidade.Controls.Add(this.metroTabPage8);
             this.MainTabFinalidade.Controls.Add(this.metroTabPage1);
-            this.MainTabFinalidade.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTabFinalidade.Location = new System.Drawing.Point(10, 35);
             this.MainTabFinalidade.Name = "MainTabFinalidade";
             this.MainTabFinalidade.SelectedIndex = 4;
@@ -259,6 +258,95 @@
             this.metroTabPage4.VerticalScrollbarBarColor = true;
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = true;
             this.metroTabPage4.VerticalScrollbarSize = 10;
+            // 
+            // BtnNovaFinalidade
+            // 
+            this.BtnNovaFinalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnNovaFinalidade.FlatAppearance.BorderSize = 0;
+            this.BtnNovaFinalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnNovaFinalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnNovaFinalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNovaFinalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnNovaFinalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnNovaFinalidade.Location = new System.Drawing.Point(734, 6);
+            this.BtnNovaFinalidade.Name = "BtnNovaFinalidade";
+            this.BtnNovaFinalidade.Size = new System.Drawing.Size(122, 35);
+            this.BtnNovaFinalidade.TabIndex = 45;
+            this.BtnNovaFinalidade.Text = "Nova Finalidade";
+            this.BtnNovaFinalidade.UseVisualStyleBackColor = false;
+            this.BtnNovaFinalidade.Click += new System.EventHandler(this.BtnNovaFinalidade_Click);
+            // 
+            // panelNovaFinalidade
+            // 
+            this.panelNovaFinalidade.BackColor = System.Drawing.Color.Transparent;
+            this.panelNovaFinalidade.Controls.Add(this.BtnCadastrarFinalidade);
+            this.panelNovaFinalidade.Controls.Add(this.labelDescricaoFinalidade);
+            this.panelNovaFinalidade.Controls.Add(this.txtDescricaoFinalidade);
+            this.panelNovaFinalidade.Location = new System.Drawing.Point(674, 82);
+            this.panelNovaFinalidade.Name = "panelNovaFinalidade";
+            this.panelNovaFinalidade.Size = new System.Drawing.Size(246, 175);
+            this.panelNovaFinalidade.TabIndex = 15;
+            this.panelNovaFinalidade.Visible = false;
+            // 
+            // BtnCadastrarFinalidade
+            // 
+            this.BtnCadastrarFinalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnCadastrarFinalidade.FlatAppearance.BorderSize = 0;
+            this.BtnCadastrarFinalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnCadastrarFinalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnCadastrarFinalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCadastrarFinalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnCadastrarFinalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnCadastrarFinalidade.Location = new System.Drawing.Point(47, 117);
+            this.BtnCadastrarFinalidade.Name = "BtnCadastrarFinalidade";
+            this.BtnCadastrarFinalidade.Size = new System.Drawing.Size(150, 35);
+            this.BtnCadastrarFinalidade.TabIndex = 44;
+            this.BtnCadastrarFinalidade.Text = "Cadastrar";
+            this.BtnCadastrarFinalidade.UseVisualStyleBackColor = false;
+            // 
+            // labelDescricaoFinalidade
+            // 
+            this.labelDescricaoFinalidade.AutoSize = true;
+            this.labelDescricaoFinalidade.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.labelDescricaoFinalidade.Location = new System.Drawing.Point(26, 42);
+            this.labelDescricaoFinalidade.Name = "labelDescricaoFinalidade";
+            this.labelDescricaoFinalidade.Size = new System.Drawing.Size(108, 15);
+            this.labelDescricaoFinalidade.TabIndex = 14;
+            this.labelDescricaoFinalidade.Text = "Descrição Finalidade";
+            // 
+            // txtDescricaoFinalidade
+            // 
+            // 
+            // 
+            // 
+            this.txtDescricaoFinalidade.CustomButton.Image = null;
+            this.txtDescricaoFinalidade.CustomButton.Location = new System.Drawing.Point(176, 1);
+            this.txtDescricaoFinalidade.CustomButton.Name = "";
+            this.txtDescricaoFinalidade.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtDescricaoFinalidade.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDescricaoFinalidade.CustomButton.TabIndex = 1;
+            this.txtDescricaoFinalidade.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDescricaoFinalidade.CustomButton.UseSelectable = true;
+            this.txtDescricaoFinalidade.CustomButton.Visible = false;
+            this.txtDescricaoFinalidade.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtDescricaoFinalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtDescricaoFinalidade.Lines = new string[0];
+            this.txtDescricaoFinalidade.Location = new System.Drawing.Point(24, 58);
+            this.txtDescricaoFinalidade.MaxLength = 32767;
+            this.txtDescricaoFinalidade.Name = "txtDescricaoFinalidade";
+            this.txtDescricaoFinalidade.PasswordChar = '\0';
+            this.txtDescricaoFinalidade.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDescricaoFinalidade.SelectedText = "";
+            this.txtDescricaoFinalidade.SelectionLength = 0;
+            this.txtDescricaoFinalidade.SelectionStart = 0;
+            this.txtDescricaoFinalidade.ShortcutsEnabled = true;
+            this.txtDescricaoFinalidade.Size = new System.Drawing.Size(198, 23);
+            this.txtDescricaoFinalidade.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDescricaoFinalidade.TabIndex = 0;
+            this.txtDescricaoFinalidade.UseCustomForeColor = true;
+            this.txtDescricaoFinalidade.UseSelectable = true;
+            this.txtDescricaoFinalidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDescricaoFinalidade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel25
             // 
@@ -307,6 +395,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(649, 494);
             this.panel2.TabIndex = 13;
+            // 
+            // dateCalibracao
+            // 
+            this.dateCalibracao.CustomFormat = "dd/MM/yyyy";
+            this.dateCalibracao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateCalibracao.Location = new System.Drawing.Point(349, 159);
+            this.dateCalibracao.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dateCalibracao.Name = "dateCalibracao";
+            this.dateCalibracao.Size = new System.Drawing.Size(125, 29);
+            this.dateCalibracao.TabIndex = 74;
+            // 
+            // dateManutencaoPreventiva
+            // 
+            this.dateManutencaoPreventiva.CustomFormat = "dd/MM/yyyy";
+            this.dateManutencaoPreventiva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateManutencaoPreventiva.Location = new System.Drawing.Point(349, 41);
+            this.dateManutencaoPreventiva.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dateManutencaoPreventiva.Name = "dateManutencaoPreventiva";
+            this.dateManutencaoPreventiva.Size = new System.Drawing.Size(125, 29);
+            this.dateManutencaoPreventiva.TabIndex = 73;
             // 
             // labelTempoCalibracao
             // 
@@ -896,6 +1004,78 @@
             this.ListaPatrimonios.Style = MetroFramework.MetroColorStyle.Silver;
             this.ListaPatrimonios.TabIndex = 2;
             // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // Patrimonio
+            // 
+            this.Patrimonio.HeaderText = "Patrimônio";
+            this.Patrimonio.Name = "Patrimonio";
+            this.Patrimonio.ReadOnly = true;
+            // 
+            // Equipamento
+            // 
+            this.Equipamento.HeaderText = "Equipamento";
+            this.Equipamento.Name = "Equipamento";
+            this.Equipamento.ReadOnly = true;
+            // 
+            // NumeroSerie
+            // 
+            this.NumeroSerie.HeaderText = "Nº Série";
+            this.NumeroSerie.Name = "NumeroSerie";
+            this.NumeroSerie.ReadOnly = true;
+            // 
+            // Modelo
+            // 
+            this.Modelo.HeaderText = "Modelo";
+            this.Modelo.Name = "Modelo";
+            this.Modelo.ReadOnly = true;
+            // 
+            // Finalidade
+            // 
+            this.Finalidade.HeaderText = "Finalidade";
+            this.Finalidade.Name = "Finalidade";
+            this.Finalidade.ReadOnly = true;
+            // 
+            // Setor
+            // 
+            this.Setor.HeaderText = "Setor";
+            this.Setor.Name = "Setor";
+            this.Setor.ReadOnly = true;
+            // 
+            // ManutencaoPreventiva
+            // 
+            this.ManutencaoPreventiva.HeaderText = "Manutenção Preventiva";
+            this.ManutencaoPreventiva.Name = "ManutencaoPreventiva";
+            this.ManutencaoPreventiva.ReadOnly = true;
+            // 
+            // PeriodicidadeMP
+            // 
+            this.PeriodicidadeMP.HeaderText = "Periodicidade MP";
+            this.PeriodicidadeMP.Name = "PeriodicidadeMP";
+            this.PeriodicidadeMP.ReadOnly = true;
+            // 
+            // Calibracao
+            // 
+            this.Calibracao.HeaderText = "Calibração";
+            this.Calibracao.Name = "Calibracao";
+            this.Calibracao.ReadOnly = true;
+            // 
+            // PeriodicidadeCAL
+            // 
+            this.PeriodicidadeCAL.HeaderText = "Periodicidade CAL";
+            this.PeriodicidadeCAL.Name = "PeriodicidadeCAL";
+            this.PeriodicidadeCAL.ReadOnly = true;
+            // 
+            // Observacao
+            // 
+            this.Observacao.HeaderText = "Observação";
+            this.Observacao.Name = "Observacao";
+            this.Observacao.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -1069,6 +1249,66 @@
             this.metroGrid1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroGrid1.TabIndex = 7;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Patrimônio";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Equipamento";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Nº Série";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "Modelo";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.HeaderText = "Finalidade";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.ReadOnly = true;
+            // 
+            // SetorCalibracao
+            // 
+            this.SetorCalibracao.HeaderText = "Setor";
+            this.SetorCalibracao.Name = "SetorCalibracao";
+            this.SetorCalibracao.ReadOnly = true;
+            // 
+            // VencimentoCalibracao
+            // 
+            this.VencimentoCalibracao.HeaderText = "Vencimento Calibração";
+            this.VencimentoCalibracao.Name = "VencimentoCalibracao";
+            this.VencimentoCalibracao.ReadOnly = true;
+            // 
+            // DataEnvio
+            // 
+            this.DataEnvio.HeaderText = "Data de Envio";
+            this.DataEnvio.Name = "DataEnvio";
+            this.DataEnvio.ReadOnly = true;
+            // 
+            // DataRetorno
+            // 
+            this.DataRetorno.HeaderText = "Data de Retorno";
+            this.DataRetorno.Name = "DataRetorno";
+            this.DataRetorno.ReadOnly = true;
+            // 
+            // ProblemaApresentado
+            // 
+            this.ProblemaApresentado.HeaderText = "Problema Apresentado";
+            this.ProblemaApresentado.Name = "ProblemaApresentado";
+            this.ProblemaApresentado.ReadOnly = true;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
@@ -1195,6 +1435,66 @@
             this.metroGrid2.Size = new System.Drawing.Size(966, 504);
             this.metroGrid2.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroGrid2.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Patrimônio";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "Equipamento";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Nº Série";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn3
+            // 
+            this.dataGridViewButtonColumn3.HeaderText = "Modelo";
+            this.dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
+            this.dataGridViewButtonColumn3.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn4
+            // 
+            this.dataGridViewButtonColumn4.HeaderText = "Finalidade";
+            this.dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
+            this.dataGridViewButtonColumn4.ReadOnly = true;
+            // 
+            // SetorPreventiva
+            // 
+            this.SetorPreventiva.HeaderText = "Setor";
+            this.SetorPreventiva.Name = "SetorPreventiva";
+            this.SetorPreventiva.ReadOnly = true;
+            // 
+            // DataProblema
+            // 
+            this.DataProblema.HeaderText = "Data do Problema";
+            this.DataProblema.Name = "DataProblema";
+            this.DataProblema.ReadOnly = true;
+            // 
+            // DataEnvioPreventiva
+            // 
+            this.DataEnvioPreventiva.HeaderText = "Data de Envio";
+            this.DataEnvioPreventiva.Name = "DataEnvioPreventiva";
+            this.DataEnvioPreventiva.ReadOnly = true;
+            // 
+            // DataRetornoPreventivo
+            // 
+            this.DataRetornoPreventivo.HeaderText = "Data de Retorno";
+            this.DataRetornoPreventivo.Name = "DataRetornoPreventivo";
+            this.DataRetornoPreventivo.ReadOnly = true;
+            // 
+            // ProblemaApresentadoPreventiva
+            // 
+            this.ProblemaApresentadoPreventiva.HeaderText = "Problema Apresentado";
+            this.ProblemaApresentadoPreventiva.Name = "ProblemaApresentadoPreventiva";
+            this.ProblemaApresentadoPreventiva.ReadOnly = true;
             // 
             // panel5
             // 
@@ -1323,454 +1623,6 @@
             this.metroGrid3.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroGrid3.TabIndex = 7;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.metroLabel5);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(966, 35);
-            this.panel6.TabIndex = 6;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.metroLabel5.Location = new System.Drawing.Point(38, 6);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(327, 25);
-            this.metroLabel5.TabIndex = 15;
-            this.metroLabel5.Text = "Lista de corretivas dos equipamentos";
-            this.metroLabel5.UseCustomForeColor = true;
-            // 
-            // dateManutencaoPreventiva
-            // 
-            this.dateManutencaoPreventiva.CustomFormat = "dd/MM/yyyy";
-            this.dateManutencaoPreventiva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateManutencaoPreventiva.Location = new System.Drawing.Point(349, 41);
-            this.dateManutencaoPreventiva.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dateManutencaoPreventiva.Name = "dateManutencaoPreventiva";
-            this.dateManutencaoPreventiva.Size = new System.Drawing.Size(125, 29);
-            this.dateManutencaoPreventiva.TabIndex = 73;
-            // 
-            // dateCalibracao
-            // 
-            this.dateCalibracao.CustomFormat = "dd/MM/yyyy";
-            this.dateCalibracao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateCalibracao.Location = new System.Drawing.Point(349, 159);
-            this.dateCalibracao.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dateCalibracao.Name = "dateCalibracao";
-            this.dateCalibracao.Size = new System.Drawing.Size(125, 29);
-            this.dateCalibracao.TabIndex = 74;
-            // 
-            // panelNovaFinalidade
-            // 
-            this.panelNovaFinalidade.BackColor = System.Drawing.Color.Transparent;
-            this.panelNovaFinalidade.Controls.Add(this.BtnCadastrarFinalidade);
-            this.panelNovaFinalidade.Controls.Add(this.labelDescricaoFinalidade);
-            this.panelNovaFinalidade.Controls.Add(this.txtDescricaoFinalidade);
-            this.panelNovaFinalidade.Location = new System.Drawing.Point(674, 82);
-            this.panelNovaFinalidade.Name = "panelNovaFinalidade";
-            this.panelNovaFinalidade.Size = new System.Drawing.Size(246, 175);
-            this.panelNovaFinalidade.TabIndex = 15;
-            this.panelNovaFinalidade.Visible = false;
-            // 
-            // BtnCadastrarFinalidade
-            // 
-            this.BtnCadastrarFinalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnCadastrarFinalidade.FlatAppearance.BorderSize = 0;
-            this.BtnCadastrarFinalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnCadastrarFinalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnCadastrarFinalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCadastrarFinalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnCadastrarFinalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCadastrarFinalidade.Location = new System.Drawing.Point(47, 117);
-            this.BtnCadastrarFinalidade.Name = "BtnCadastrarFinalidade";
-            this.BtnCadastrarFinalidade.Size = new System.Drawing.Size(150, 35);
-            this.BtnCadastrarFinalidade.TabIndex = 44;
-            this.BtnCadastrarFinalidade.Text = "Cadastrar";
-            this.BtnCadastrarFinalidade.UseVisualStyleBackColor = false;
-            // 
-            // labelDescricaoFinalidade
-            // 
-            this.labelDescricaoFinalidade.AutoSize = true;
-            this.labelDescricaoFinalidade.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.labelDescricaoFinalidade.Location = new System.Drawing.Point(26, 42);
-            this.labelDescricaoFinalidade.Name = "labelDescricaoFinalidade";
-            this.labelDescricaoFinalidade.Size = new System.Drawing.Size(108, 15);
-            this.labelDescricaoFinalidade.TabIndex = 14;
-            this.labelDescricaoFinalidade.Text = "Descrição Finalidade";
-            // 
-            // txtDescricaoFinalidade
-            // 
-            // 
-            // 
-            // 
-            this.txtDescricaoFinalidade.CustomButton.Image = null;
-            this.txtDescricaoFinalidade.CustomButton.Location = new System.Drawing.Point(176, 1);
-            this.txtDescricaoFinalidade.CustomButton.Name = "";
-            this.txtDescricaoFinalidade.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtDescricaoFinalidade.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDescricaoFinalidade.CustomButton.TabIndex = 1;
-            this.txtDescricaoFinalidade.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDescricaoFinalidade.CustomButton.UseSelectable = true;
-            this.txtDescricaoFinalidade.CustomButton.Visible = false;
-            this.txtDescricaoFinalidade.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtDescricaoFinalidade.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtDescricaoFinalidade.Lines = new string[0];
-            this.txtDescricaoFinalidade.Location = new System.Drawing.Point(24, 58);
-            this.txtDescricaoFinalidade.MaxLength = 32767;
-            this.txtDescricaoFinalidade.Name = "txtDescricaoFinalidade";
-            this.txtDescricaoFinalidade.PasswordChar = '\0';
-            this.txtDescricaoFinalidade.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDescricaoFinalidade.SelectedText = "";
-            this.txtDescricaoFinalidade.SelectionLength = 0;
-            this.txtDescricaoFinalidade.SelectionStart = 0;
-            this.txtDescricaoFinalidade.ShortcutsEnabled = true;
-            this.txtDescricaoFinalidade.Size = new System.Drawing.Size(198, 23);
-            this.txtDescricaoFinalidade.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDescricaoFinalidade.TabIndex = 0;
-            this.txtDescricaoFinalidade.UseCustomForeColor = true;
-            this.txtDescricaoFinalidade.UseSelectable = true;
-            this.txtDescricaoFinalidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDescricaoFinalidade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // BtnNovaFinalidade
-            // 
-            this.BtnNovaFinalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnNovaFinalidade.FlatAppearance.BorderSize = 0;
-            this.BtnNovaFinalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnNovaFinalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnNovaFinalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNovaFinalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnNovaFinalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnNovaFinalidade.Location = new System.Drawing.Point(734, 6);
-            this.BtnNovaFinalidade.Name = "BtnNovaFinalidade";
-            this.BtnNovaFinalidade.Size = new System.Drawing.Size(122, 35);
-            this.BtnNovaFinalidade.TabIndex = 45;
-            this.BtnNovaFinalidade.Text = "Nova Finalidade";
-            this.BtnNovaFinalidade.UseVisualStyleBackColor = false;
-            this.BtnNovaFinalidade.Click += new System.EventHandler(this.BtnNovaFinalidade_Click);
-            // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.Controls.Add(this.ListaFinalidades);
-            this.metroTabPage1.Controls.Add(this.BottomOptionsPanel);
-            this.metroTabPage1.Controls.Add(this.panel10);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(966, 539);
-            this.metroTabPage1.TabIndex = 5;
-            this.metroTabPage1.Text = "     Finalidades     ";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.Controls.Add(this.metroLabel6);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(966, 35);
-            this.panel10.TabIndex = 6;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.metroLabel6.Location = new System.Drawing.Point(38, 6);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(177, 25);
-            this.metroLabel6.TabIndex = 15;
-            this.metroLabel6.Text = "Lista de Finalidades";
-            this.metroLabel6.UseCustomForeColor = true;
-            // 
-            // BottomOptionsPanel
-            // 
-            this.BottomOptionsPanel.BackColor = System.Drawing.Color.Transparent;
-            this.BottomOptionsPanel.Controls.Add(this.BtnDetalhesFinalidade);
-            this.BottomOptionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomOptionsPanel.Location = new System.Drawing.Point(0, 504);
-            this.BottomOptionsPanel.Name = "BottomOptionsPanel";
-            this.BottomOptionsPanel.Size = new System.Drawing.Size(966, 35);
-            this.BottomOptionsPanel.TabIndex = 7;
-            // 
-            // BtnDetalhesFinalidade
-            // 
-            this.BtnDetalhesFinalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnDetalhesFinalidade.FlatAppearance.BorderSize = 0;
-            this.BtnDetalhesFinalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(251)))));
-            this.BtnDetalhesFinalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.BtnDetalhesFinalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDetalhesFinalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
-            this.BtnDetalhesFinalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnDetalhesFinalidade.Location = new System.Drawing.Point(0, 1);
-            this.BtnDetalhesFinalidade.Name = "BtnDetalhesFinalidade";
-            this.BtnDetalhesFinalidade.Size = new System.Drawing.Size(100, 35);
-            this.BtnDetalhesFinalidade.TabIndex = 0;
-            this.BtnDetalhesFinalidade.Text = "Detalhes";
-            this.BtnDetalhesFinalidade.UseVisualStyleBackColor = false;
-            this.BtnDetalhesFinalidade.Click += new System.EventHandler(this.BtnDetalhesFinalidade_Click);
-            // 
-            // ListaFinalidades
-            // 
-            this.ListaFinalidades.AllowUserToAddRows = false;
-            this.ListaFinalidades.AllowUserToDeleteRows = false;
-            this.ListaFinalidades.AllowUserToResizeRows = false;
-            this.ListaFinalidades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ListaFinalidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListaFinalidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.ListaFinalidades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaFinalidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.ListaFinalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaFinalidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListaFinalidades.DefaultCellStyle = dataGridViewCellStyle14;
-            this.ListaFinalidades.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListaFinalidades.EnableHeadersVisualStyles = false;
-            this.ListaFinalidades.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ListaFinalidades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ListaFinalidades.Location = new System.Drawing.Point(0, 35);
-            this.ListaFinalidades.Name = "ListaFinalidades";
-            this.ListaFinalidades.ReadOnly = true;
-            this.ListaFinalidades.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListaFinalidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.ListaFinalidades.RowHeadersWidth = 10;
-            this.ListaFinalidades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.ListaFinalidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListaFinalidades.Size = new System.Drawing.Size(966, 469);
-            this.ListaFinalidades.Style = MetroFramework.MetroColorStyle.Silver;
-            this.ListaFinalidades.TabIndex = 8;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Finalidade";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // Patrimonio
-            // 
-            this.Patrimonio.HeaderText = "Patrimônio";
-            this.Patrimonio.Name = "Patrimonio";
-            this.Patrimonio.ReadOnly = true;
-            // 
-            // Equipamento
-            // 
-            this.Equipamento.HeaderText = "Equipamento";
-            this.Equipamento.Name = "Equipamento";
-            this.Equipamento.ReadOnly = true;
-            // 
-            // NumeroSerie
-            // 
-            this.NumeroSerie.HeaderText = "Nº Série";
-            this.NumeroSerie.Name = "NumeroSerie";
-            this.NumeroSerie.ReadOnly = true;
-            // 
-            // Modelo
-            // 
-            this.Modelo.HeaderText = "Modelo";
-            this.Modelo.Name = "Modelo";
-            this.Modelo.ReadOnly = true;
-            // 
-            // Finalidade
-            // 
-            this.Finalidade.HeaderText = "Finalidade";
-            this.Finalidade.Name = "Finalidade";
-            this.Finalidade.ReadOnly = true;
-            // 
-            // Setor
-            // 
-            this.Setor.HeaderText = "Setor";
-            this.Setor.Name = "Setor";
-            this.Setor.ReadOnly = true;
-            // 
-            // ManutencaoPreventiva
-            // 
-            this.ManutencaoPreventiva.HeaderText = "Manutenção Preventiva";
-            this.ManutencaoPreventiva.Name = "ManutencaoPreventiva";
-            this.ManutencaoPreventiva.ReadOnly = true;
-            // 
-            // PeriodicidadeMP
-            // 
-            this.PeriodicidadeMP.HeaderText = "Periodicidade MP";
-            this.PeriodicidadeMP.Name = "PeriodicidadeMP";
-            this.PeriodicidadeMP.ReadOnly = true;
-            // 
-            // Calibracao
-            // 
-            this.Calibracao.HeaderText = "Calibração";
-            this.Calibracao.Name = "Calibracao";
-            this.Calibracao.ReadOnly = true;
-            // 
-            // PeriodicidadeCAL
-            // 
-            this.PeriodicidadeCAL.HeaderText = "Periodicidade CAL";
-            this.PeriodicidadeCAL.Name = "PeriodicidadeCAL";
-            this.PeriodicidadeCAL.ReadOnly = true;
-            // 
-            // Observacao
-            // 
-            this.Observacao.HeaderText = "Observação";
-            this.Observacao.Name = "Observacao";
-            this.Observacao.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Patrimônio";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Equipamento";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Nº Série";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.HeaderText = "Modelo";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            this.dataGridViewButtonColumn2.HeaderText = "Finalidade";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.ReadOnly = true;
-            // 
-            // SetorCalibracao
-            // 
-            this.SetorCalibracao.HeaderText = "Setor";
-            this.SetorCalibracao.Name = "SetorCalibracao";
-            this.SetorCalibracao.ReadOnly = true;
-            // 
-            // VencimentoCalibracao
-            // 
-            this.VencimentoCalibracao.HeaderText = "Vencimento Calibração";
-            this.VencimentoCalibracao.Name = "VencimentoCalibracao";
-            this.VencimentoCalibracao.ReadOnly = true;
-            // 
-            // DataEnvio
-            // 
-            this.DataEnvio.HeaderText = "Data de Envio";
-            this.DataEnvio.Name = "DataEnvio";
-            this.DataEnvio.ReadOnly = true;
-            // 
-            // DataRetorno
-            // 
-            this.DataRetorno.HeaderText = "Data de Retorno";
-            this.DataRetorno.Name = "DataRetorno";
-            this.DataRetorno.ReadOnly = true;
-            // 
-            // ProblemaApresentado
-            // 
-            this.ProblemaApresentado.HeaderText = "Problema Apresentado";
-            this.ProblemaApresentado.Name = "ProblemaApresentado";
-            this.ProblemaApresentado.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Patrimônio";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "Equipamento";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Nº Série";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn3
-            // 
-            this.dataGridViewButtonColumn3.HeaderText = "Modelo";
-            this.dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
-            this.dataGridViewButtonColumn3.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn4
-            // 
-            this.dataGridViewButtonColumn4.HeaderText = "Finalidade";
-            this.dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
-            this.dataGridViewButtonColumn4.ReadOnly = true;
-            // 
-            // SetorPreventiva
-            // 
-            this.SetorPreventiva.HeaderText = "Setor";
-            this.SetorPreventiva.Name = "SetorPreventiva";
-            this.SetorPreventiva.ReadOnly = true;
-            // 
-            // DataProblema
-            // 
-            this.DataProblema.HeaderText = "Data do Problema";
-            this.DataProblema.Name = "DataProblema";
-            this.DataProblema.ReadOnly = true;
-            // 
-            // DataEnvioPreventiva
-            // 
-            this.DataEnvioPreventiva.HeaderText = "Data de Envio";
-            this.DataEnvioPreventiva.Name = "DataEnvioPreventiva";
-            this.DataEnvioPreventiva.ReadOnly = true;
-            // 
-            // DataRetornoPreventivo
-            // 
-            this.DataRetornoPreventivo.HeaderText = "Data de Retorno";
-            this.DataRetornoPreventivo.Name = "DataRetornoPreventivo";
-            this.DataRetornoPreventivo.ReadOnly = true;
-            // 
-            // ProblemaApresentadoPreventiva
-            // 
-            this.ProblemaApresentadoPreventiva.HeaderText = "Problema Apresentado";
-            this.ProblemaApresentadoPreventiva.Name = "ProblemaApresentadoPreventiva";
-            this.ProblemaApresentadoPreventiva.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.HeaderText = "Patrimônio";
@@ -1831,6 +1683,153 @@
             this.ProblemaApresentadoCorretiva.Name = "ProblemaApresentadoCorretiva";
             this.ProblemaApresentadoCorretiva.ReadOnly = true;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.metroLabel5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(966, 35);
+            this.panel6.TabIndex = 6;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.metroLabel5.Location = new System.Drawing.Point(38, 6);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(327, 25);
+            this.metroLabel5.TabIndex = 15;
+            this.metroLabel5.Text = "Lista de corretivas dos equipamentos";
+            this.metroLabel5.UseCustomForeColor = true;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.Controls.Add(this.ListaFinalidades);
+            this.metroTabPage1.Controls.Add(this.BottomOptionsPanel);
+            this.metroTabPage1.Controls.Add(this.panel10);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(966, 539);
+            this.metroTabPage1.TabIndex = 5;
+            this.metroTabPage1.Text = "     Finalidades     ";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // ListaFinalidades
+            // 
+            this.ListaFinalidades.AllowUserToAddRows = false;
+            this.ListaFinalidades.AllowUserToDeleteRows = false;
+            this.ListaFinalidades.AllowUserToResizeRows = false;
+            this.ListaFinalidades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ListaFinalidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListaFinalidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.ListaFinalidades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaFinalidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.ListaFinalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListaFinalidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListaFinalidades.DefaultCellStyle = dataGridViewCellStyle14;
+            this.ListaFinalidades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListaFinalidades.EnableHeadersVisualStyles = false;
+            this.ListaFinalidades.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ListaFinalidades.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ListaFinalidades.Location = new System.Drawing.Point(0, 35);
+            this.ListaFinalidades.Name = "ListaFinalidades";
+            this.ListaFinalidades.ReadOnly = true;
+            this.ListaFinalidades.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListaFinalidades.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.ListaFinalidades.RowHeadersWidth = 10;
+            this.ListaFinalidades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.ListaFinalidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListaFinalidades.Size = new System.Drawing.Size(966, 469);
+            this.ListaFinalidades.Style = MetroFramework.MetroColorStyle.Silver;
+            this.ListaFinalidades.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Finalidade";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // BottomOptionsPanel
+            // 
+            this.BottomOptionsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.BottomOptionsPanel.Controls.Add(this.BtnDetalhesFinalidade);
+            this.BottomOptionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomOptionsPanel.Location = new System.Drawing.Point(0, 504);
+            this.BottomOptionsPanel.Name = "BottomOptionsPanel";
+            this.BottomOptionsPanel.Size = new System.Drawing.Size(966, 35);
+            this.BottomOptionsPanel.TabIndex = 7;
+            // 
+            // BtnDetalhesFinalidade
+            // 
+            this.BtnDetalhesFinalidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnDetalhesFinalidade.FlatAppearance.BorderSize = 0;
+            this.BtnDetalhesFinalidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(251)))));
+            this.BtnDetalhesFinalidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.BtnDetalhesFinalidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDetalhesFinalidade.Font = new System.Drawing.Font("Segoe UI Semilight", 10F);
+            this.BtnDetalhesFinalidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnDetalhesFinalidade.Location = new System.Drawing.Point(0, 1);
+            this.BtnDetalhesFinalidade.Name = "BtnDetalhesFinalidade";
+            this.BtnDetalhesFinalidade.Size = new System.Drawing.Size(100, 35);
+            this.BtnDetalhesFinalidade.TabIndex = 0;
+            this.BtnDetalhesFinalidade.Text = "Detalhes";
+            this.BtnDetalhesFinalidade.UseVisualStyleBackColor = false;
+            this.BtnDetalhesFinalidade.Click += new System.EventHandler(this.BtnDetalhesFinalidade_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.Controls.Add(this.metroLabel6);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(966, 35);
+            this.panel10.TabIndex = 6;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.metroLabel6.Location = new System.Drawing.Point(38, 6);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(177, 25);
+            this.metroLabel6.TabIndex = 15;
+            this.metroLabel6.Text = "Lista de Finalidades";
+            this.metroLabel6.UseCustomForeColor = true;
+            // 
             // ACSEquipamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1850,6 +1849,8 @@
             this.MainTabFinalidade.ResumeLayout(false);
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage4.PerformLayout();
+            this.panelNovaFinalidade.ResumeLayout(false);
+            this.panelNovaFinalidade.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.metroTabPage5.ResumeLayout(false);
@@ -1874,13 +1875,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panelNovaFinalidade.ResumeLayout(false);
-            this.panelNovaFinalidade.PerformLayout();
             this.metroTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ListaFinalidades)).EndInit();
+            this.BottomOptionsPanel.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.BottomOptionsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ListaFinalidades)).EndInit();
             this.ResumeLayout(false);
 
         }
